@@ -543,3 +543,424 @@ Processing by ProfilesController#show as HTML
 Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-01 10:02:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Comfy::Cms::ContentController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Site Load (0.1ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" ORDER BY "comfy_cms_sites"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.3ms)[0m  [1m[34mSELECT  "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = ? AND "comfy_cms_pages"."is_published" = ? AND "comfy_cms_pages"."full_path" = ? LIMIT ?[0m  [["site_id", 1], ["is_published", 1], ["full_path", "/"], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Layout Load (0.2ms)[0m  [1m[34mSELECT  "comfy_cms_layouts".* FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Translation Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "comfy_cms_translations" WHERE "comfy_cms_translations"."page_id" = ? LIMIT ?[0m  [["page_id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Fragment Load (0.3ms)[0m  [1m[34mSELECT "comfy_cms_fragments".* FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."record_id" = ? AND "comfy_cms_fragments"."record_type" = ?[0m  [["record_id", 1], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering inline template
+  Rendered inline template (1.7ms)
+Completed 200 OK in 113ms (Views: 3.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/staff" for 127.0.0.1 at 2018-11-01 10:02:24 -0600
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.haml within layouts/application
+  [1m[36mProfile Load (1.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" ORDER BY "profiles"."first_name" ASC[0m
+  ↳ app/views/profiles/index.html.haml:311
+  Rendered profiles/index.html.haml within layouts/application (123.4ms)
+Completed 200 OK in 364ms (Views: 354.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/staff/640" for 127.0.0.1 at 2018-11-01 10:02:35 -0600
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"640"}
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."slug" = ? LIMIT ?[0m  [["slug", "640"], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:36
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 640], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:36
+  Rendering profiles/show.html.haml within layouts/application
+  Rendered profiles/show.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 65ms (Views: 56.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-01 10:28:24 -0600
+Processing by Comfy::Admin::Cms::BaseController#jump as HTML
+  [1m[36mComfy::Cms::Site Load (0.6ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/sites/1/pages
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/sites/1/pages" for 127.0.0.1 at 2018-11-01 10:28:24 -0600
+Processing by Comfy::Admin::Cms::PagesController#index as HTML
+  Parameters: {"site_id"=>"1"}
+  [1m[36mComfy::Cms::Site Load (0.1ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = ?[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.3ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = ? ORDER BY "comfy_cms_pages"."position" ASC[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Categorization Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_categorizations".* FROM "comfy_cms_categorizations" WHERE "comfy_cms_categorizations"."categorized_type" = ? AND "comfy_cms_categorizations"."categorized_id" IN (?, ?)[0m  [["categorized_type", "Comfy::Cms::Page"], ["categorized_id", 1], ["categorized_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.1ms)[0m  [1m[34mSELECT  "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = ? AND (parent_id IS NULL) LIMIT ?[0m  [["site_id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/pages/index.html.haml within layouts/comfy/admin/cms
+  [1m[36mComfy::Cms::Category Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_categories".* FROM "comfy_cms_categories" WHERE "comfy_cms_categories"."site_id" = ? AND "comfy_cms_categories"."categorized_type" = ?[0m  [["site_id", 1], ["categorized_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Comfy::Cms::Category Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_categories".* FROM "comfy_cms_categories" WHERE "comfy_cms_categories"."site_id" = ? AND "comfy_cms_categories"."categorized_type" = ?[0m  [["site_id", 1], ["categorized_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/categories/_index.html.haml (19.2ms)
+  [1m[36mComfy::Cms::Category Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_categories".* FROM "comfy_cms_categories" INNER JOIN "comfy_cms_categorizations" ON "comfy_cms_categories"."id" = "comfy_cms_categorizations"."category_id" WHERE "comfy_cms_categorizations"."categorized_id" = ? AND "comfy_cms_categorizations"."categorized_type" = ?[0m  [["categorized_id", 1], ["categorized_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/categories/_categories.html.haml (11.1ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/categories/_categories.html.haml (0.1ms)
+  Rendered collection of /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/pages/_index_branch.html.haml [1 times] (4.7ms)
+  Rendered collection of /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/pages/_index_branch.html.haml [1 times] (30.2ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/pages/index.html.haml within layouts/comfy/admin/cms (68.3ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_head.html.haml (41.2ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_left.html.haml (16.4ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_flash.html.haml (2.2ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/files/_modal.html.haml (2.0ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_right.html.haml (8.5ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_footer_js.html.haml (753.2ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_body.html.haml (871.9ms)
+Completed 200 OK in 1234ms (Views: 1006.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/sites" for 127.0.0.1 at 2018-11-01 10:28:36 -0600
+Processing by Comfy::Admin::Cms::SitesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Site Load (0.2ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/sites/index.html.haml within layouts/comfy/admin/cms
+  [1m[36mComfy::Cms::Site Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_sites".* FROM "comfy_cms_sites"[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/sites/index.html.haml within layouts/comfy/admin/cms (13.5ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_head.html.haml (15.0ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_left.html.haml (17.4ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_flash.html.haml (2.3ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/files/_modal.html.haml (2.3ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_right.html.haml (8.1ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_footer_js.html.haml (135.2ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_body.html.haml (188.6ms)
+Completed 200 OK in 256ms (Views: 242.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admin/sites/1" for 127.0.0.1 at 2018-11-01 10:28:42 -0600
+Processing by Comfy::Admin::Cms::SitesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4GF5gsrHhd5Y1OqiekVepJ9PLMf5enYgpID2aUYKKVimCEpG8mMZYidtWy29QEy8A+cTZNAXifY+PciMNMBHOA==", "id"=>"1"}
+  [1m[36mComfy::Cms::Site Load (0.3ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Layout Load (0.3ms)[0m  [1m[34mSELECT "comfy_cms_layouts".* FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."site_id" = ?[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Layout Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_layouts".* FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."parent_id" = ?[0m  [["parent_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Revision Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_revisions".* FROM "comfy_cms_revisions" WHERE "comfy_cms_revisions"."record_id" = ? AND "comfy_cms_revisions"."record_type" = ?[0m  [["record_id", 1], ["record_type", "Comfy::Cms::Layout"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Update All (0.5ms)[0m  [1m[33mUPDATE "comfy_cms_pages" SET "layout_id" = NULL WHERE "comfy_cms_pages"."layout_id" = ?[0m  [["layout_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Layout Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."id" = ?[0m  [["id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Update All (0.1ms)[0m  [1m[33mUPDATE "comfy_cms_pages" SET "content_cache" = NULL WHERE 1=0[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Layout Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_layouts".* FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."parent_id" = ?[0m  [["parent_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Revision Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_revisions".* FROM "comfy_cms_revisions" WHERE "comfy_cms_revisions"."record_id" = ? AND "comfy_cms_revisions"."record_type" = ?[0m  [["record_id", 2], ["record_type", "Comfy::Cms::Layout"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Update All (0.1ms)[0m  [1m[33mUPDATE "comfy_cms_pages" SET "layout_id" = NULL WHERE "comfy_cms_pages"."layout_id" = ?[0m  [["layout_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Layout Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comfy_cms_layouts" WHERE "comfy_cms_layouts"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Update All (0.1ms)[0m  [1m[33mUPDATE "comfy_cms_pages" SET "content_cache" = NULL WHERE 1=0[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."site_id" = ?[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Fragment Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_fragments".* FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."record_id" = ? AND "comfy_cms_fragments"."record_type" = ?[0m  [["record_id", 1], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Fragment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."id" = ?[0m  [["id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Categorization Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_categorizations".* FROM "comfy_cms_categorizations" WHERE "comfy_cms_categorizations"."categorized_id" = ? AND "comfy_cms_categorizations"."categorized_type" = ?[0m  [["categorized_id", 1], ["categorized_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."parent_id" = ?[0m  [["parent_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Fragment Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_fragments".* FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."record_id" = ? AND "comfy_cms_fragments"."record_type" = ?[0m  [["record_id", 2], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Fragment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Categorization Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_categorizations".* FROM "comfy_cms_categorizations" WHERE "comfy_cms_categorizations"."categorized_id" = ? AND "comfy_cms_categorizations"."categorized_type" = ?[0m  [["categorized_id", 2], ["categorized_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."parent_id" = ?[0m  [["parent_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Revision Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_revisions".* FROM "comfy_cms_revisions" WHERE "comfy_cms_revisions"."record_id" = ? AND "comfy_cms_revisions"."record_type" = ?[0m  [["record_id", 2], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Translation Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_translations".* FROM "comfy_cms_translations" WHERE "comfy_cms_translations"."page_id" = ?[0m  [["page_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Revision Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_revisions".* FROM "comfy_cms_revisions" WHERE "comfy_cms_revisions"."record_id" = ? AND "comfy_cms_revisions"."record_type" = ?[0m  [["record_id", 1], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Translation Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_translations".* FROM "comfy_cms_translations" WHERE "comfy_cms_translations"."page_id" = ?[0m  [["page_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."id" = ?[0m  [["id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Fragment Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_fragments".* FROM "comfy_cms_fragments" WHERE "comfy_cms_fragments"."record_id" = ? AND "comfy_cms_fragments"."record_type" = ?[0m  [["record_id", 2], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Categorization Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_categorizations".* FROM "comfy_cms_categorizations" WHERE "comfy_cms_categorizations"."categorized_id" = ? AND "comfy_cms_categorizations"."categorized_type" = ?[0m  [["categorized_id", 2], ["categorized_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_pages".* FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."parent_id" = ?[0m  [["parent_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Revision Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_revisions".* FROM "comfy_cms_revisions" WHERE "comfy_cms_revisions"."record_id" = ? AND "comfy_cms_revisions"."record_type" = ?[0m  [["record_id", 2], ["record_type", "Comfy::Cms::Page"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Translation Load (0.0ms)[0m  [1m[34mSELECT "comfy_cms_translations".* FROM "comfy_cms_translations" WHERE "comfy_cms_translations"."page_id" = ?[0m  [["page_id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Page Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comfy_cms_pages" WHERE "comfy_cms_pages"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Snippet Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_snippets".* FROM "comfy_cms_snippets" WHERE "comfy_cms_snippets"."site_id" = ?[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::File Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_files".* FROM "comfy_cms_files" WHERE "comfy_cms_files"."site_id" = ?[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Category Load (0.1ms)[0m  [1m[34mSELECT "comfy_cms_categories".* FROM "comfy_cms_categories" WHERE "comfy_cms_categories"."site_id" = ?[0m  [["site_id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Site Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."id" = ?[0m  [["id", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 8.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'active_storage_attachments'):
+  
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:397:in `table_structure'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:113:in `columns'
+activerecord (5.2.1) lib/active_record/connection_adapters/schema_cache.rb:69:in `columns'
+activerecord (5.2.1) lib/active_record/connection_adapters/schema_cache.rb:75:in `columns_hash'
+activerecord (5.2.1) lib/active_record/model_schema.rb:466:in `load_schema!'
+activerecord (5.2.1) lib/active_record/attributes.rb:234:in `load_schema!'
+activerecord (5.2.1) lib/active_record/attribute_decorators.rb:51:in `load_schema!'
+activerecord (5.2.1) lib/active_record/model_schema.rb:459:in `block in load_schema'
+/Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/model_schema.rb:456:in `load_schema'
+activerecord (5.2.1) lib/active_record/model_schema.rb:346:in `attribute_types'
+activerecord (5.2.1) lib/active_record/model_schema.rb:370:in `type_for_attribute'
+activerecord (5.2.1) lib/active_record/table_metadata.rb:33:in `type'
+activerecord (5.2.1) lib/active_record/relation/predicate_builder.rb:51:in `build'
+activerecord (5.2.1) lib/active_record/relation/predicate_builder.rb:107:in `block in expand_from_hash'
+activerecord (5.2.1) lib/active_record/relation/predicate_builder.rb:71:in `each'
+activerecord (5.2.1) lib/active_record/relation/predicate_builder.rb:71:in `flat_map'
+activerecord (5.2.1) lib/active_record/relation/predicate_builder.rb:71:in `expand_from_hash'
+activerecord (5.2.1) lib/active_record/relation/predicate_builder.rb:21:in `build_from_hash'
+activerecord (5.2.1) lib/active_record/relation/where_clause_factory.rb:19:in `build'
+activerecord (5.2.1) lib/active_record/relation/query_methods.rb:591:in `where!'
+activerecord (5.2.1) lib/active_record/relation/query_methods.rb:584:in `where'
+activestorage (5.2.1) lib/active_storage/attached/macros.rb:88:in `block in has_many_attached'
+activerecord (5.2.1) lib/active_record/associations/builder/association.rb:52:in `instance_exec'
+activerecord (5.2.1) lib/active_record/associations/builder/association.rb:52:in `block in build_scope'
+activerecord (5.2.1) lib/active_record/associations/builder/collection_association.rb:75:in `instance_exec'
+activerecord (5.2.1) lib/active_record/associations/builder/collection_association.rb:75:in `block in wrap_scope'
+activerecord (5.2.1) lib/active_record/reflection.rb:397:in `instance_exec'
+activerecord (5.2.1) lib/active_record/reflection.rb:397:in `scope_for'
+activerecord (5.2.1) lib/active_record/associations/association.rb:134:in `extensions'
+activerecord (5.2.1) lib/active_record/associations/collection_proxy.rb:37:in `initialize'
+activerecord (5.2.1) lib/active_record/relation/delegation.rb:102:in `new'
+activerecord (5.2.1) lib/active_record/relation/delegation.rb:102:in `create'
+activerecord (5.2.1) lib/active_record/associations/collection_association.rb:35:in `reader'
+activerecord (5.2.1) lib/active_record/associations/builder/association.rb:108:in `attachments_attachments'
+activestorage (5.2.1) lib/active_storage/attached/many.rb:12:in `public_send'
+activestorage (5.2.1) lib/active_storage/attached/many.rb:12:in `attachments'
+activesupport (5.2.1) lib/active_support/core_ext/module/delegation.rb:271:in `method_missing'
+activestorage (5.2.1) lib/active_storage/attached/macros.rb:104:in `block in has_many_attached'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `instance_exec'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:261:in `block in conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:517:in `block in invoke_after'
+activesupport (5.2.1) lib/active_support/callbacks.rb:517:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:517:in `invoke_after'
+activesupport (5.2.1) lib/active_support/callbacks.rb:133:in `run_callbacks'
+activesupport (5.2.1) lib/active_support/callbacks.rb:816:in `_run_commit_callbacks'
+activerecord (5.2.1) lib/active_record/transactions.rb:346:in `committed!'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:128:in `commit_records'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:223:in `block in commit_transaction'
+/Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:213:in `commit_transaction'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:252:in `block in within_new_transaction'
+/Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:236:in `within_new_transaction'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:254:in `transaction'
+activerecord (5.2.1) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (5.2.1) lib/active_record/transactions.rb:385:in `with_transaction_returning_status'
+activerecord (5.2.1) lib/active_record/transactions.rb:305:in `destroy'
+comfortable_mexican_sofa (2.0.17) app/controllers/comfy/admin/cms/sites_controller.rb:45:in `destroy'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-01 10:28:56 -0600
+Processing by Comfy::Cms::ContentController#show as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comfy_cms_sites"[0m
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Site Load (0.2ms)[0m  [1m[34mSELECT "comfy_cms_sites".* FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."hostname" = ?[0m  [["hostname", "localhost:3000"]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::RoutingError (Site Not Found):
+  
+comfortable_mexican_sofa (2.0.17) app/controllers/comfy/cms/base_controller.rb:29:in `load_cms_site'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2018-11-01 10:29:01 -0600
+Processing by Comfy::Admin::Cms::BaseController#jump as HTML
+  [1m[36mComfy::Cms::Site Load (0.2ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" WHERE "comfy_cms_sites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mComfy::Cms::Site Load (0.2ms)[0m  [1m[34mSELECT  "comfy_cms_sites".* FROM "comfy_cms_sites" ORDER BY "comfy_cms_sites"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/sites/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/sites/new" for 127.0.0.1 at 2018-11-01 10:29:01 -0600
+Processing by Comfy::Admin::Cms::SitesController#new as HTML
+  Rendering /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/sites/new.html.haml within layouts/comfy/admin/cms
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/sites/_form.html.haml (14.0ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/comfy/admin/cms/sites/new.html.haml within layouts/comfy/admin/cms (21.0ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_head.html.haml (15.8ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_left.html.haml (16.4ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_flash.html.haml (2.6ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_right.html.haml (8.2ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_footer_js.html.haml (142.5ms)
+  Rendered /Users/nnunn/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/comfortable_mexican_sofa-2.0.17/app/views/layouts/comfy/admin/cms/_body.html.haml (189.0ms)
+Completed 200 OK in 254ms (Views: 253.2ms | ActiveRecord: 0.0ms)
+
+
