@@ -1,0 +1,307 @@
+<h2>Find Reserve Readings for My Class</h2>
+<h3>Search by Course Number</h3>
+<p>
+	(e.g. ART H 203, CH E 345, ANTHE 110, AUBIO 110)
+</p>
+<form action="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79" method="post" class="form-inline">
+	<p class="form-group">
+		<input class="form-control" name="searchdata1">
+	</p>
+	<p class="form-group">
+		<button class="btn btn-green main-search">search</button>
+	</p>
+	<p class="form-group padding-top">
+		<input name="desk" value="ANY" type="hidden"> <input name="user_id" value="WUAARCHIVE" type="hidden"> <input name="RSV_COURSE_ID" value="Lookup+Items+on+Reserve+by+Course+Number" type="hidden">
+		<select name="desk" class="form-control padding-top">
+			<option value="ANY">Any Library (Optional Limit by Library)</option>
+			<option value="CIAUCRSV">University of Alberta Augustana Reserve</option>
+			<option value="CIBSJRSV">University of Alberta Bibliotheque Saint-Jean Reserve</option>
+			<option value="CICAMRSV">University of Alberta Cameron Reserve</option>
+			<option value="CICOUTRSV">University of Alberta HT Coutts Reserve</option>
+			<option value="CIWEIRRSV">University of Alberta JA Weir Reserve</option>
+			<option value="CISCOTRSV">University of Alberta JW Scott Reserve</option>
+			<option value="CIRUTHRSV">University of Alberta Rutherford Reserve</option>
+			<option value="CISTJORSV">University of Alberta St. Joseph's Reserve</option>
+			<option value="CIWINSPRSV">University of Alberta Winspear Reserve</option>
+		</select>
+	</p>
+</form>
+<hr>
+<h3>Browse By Course</h3>
+<form action="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79/" method="post" class="form-inline"><input name="desk" value="ANY" type="hidden"><input name="RSV_COURSE_ID" value="=" type="hidden"><input name="user_id" value="WUAARCHIVE" type="hidden">
+	<p class="form-group">
+		<select name="searchdata1" class="form-control">
+			<option value="ACCTG">Accounting ACCTG</option>
+			<option value="AG EC">Agricultural Economics AG EC</option>
+			<option value="AFNS">Agricultural, Food and Nutritional Sciences AFNS</option>
+			<option value="AGFOR">Agriculture and Forestry AGFOR</option>
+			<option value="ANAES">Anaesthesia ANAES</option>
+			<option value="ANAT">Anatomy and Cell Biology ANAT</option>
+			<option value="ANDR">Andragogie* ANDR</option>
+			<option value="ANGL">Anglais* ANGL</option>
+			<option value="AN SC">Animal Science AN SC</option>
+			<option value="ANTHE">Anthropologie* ANTHE</option>
+			<option value="ANTHR">Anthropology ANTHR</option>
+			<option value="ARAB">Arabic ARAB</option>
+			<option value="ART">Art ART</option>
+			<option value="ARTSC">Art de la scène* ARTSC</option>
+			<option value="ADRAM">Art dramatique* ADRAM</option>
+			<option value="ART H">Art History ART H</option>
+			<option value="ASTRO">Astronomy ASTRO</option>
+			<option value="BIOCH">Biochemistry BIOCH</option>
+			<option value="BIOCM">Biochimie* BIOCM</option>
+			<option value="BIOLE">Biologie* BIOLE</option>
+			<option value="BIOL">Biology BIOL</option>
+			<option value="BME">Biomedical Engineering BME</option>
+			<option value="BIOEN">Bioresource Engineering BIOEN</option>
+			<option value="BOT">Botany BOT</option>
+			<option value="BUS">Business BUS</option>
+			<option value="BUEC">Business Economics BUEC</option>
+			<option value="B LAW">Business Law B LAW</option>
+			<option value="CANST">Canadian Studies CANST</option>
+			<option value="CA FR">Canadien-Français* CA FR</option>
+			<option value="CAPS">Capstone Courses CAPS</option>
+			<option value="CELL">Cell Biology CELL</option>
+			<option value="CH E">Chemical Engineering CH E</option>
+			<option value="CHEM">Chemistry CHEM</option>
+			<option value="CHIM">Chimie* CHIM</option>
+			<option value="CHINA">Chinese CHINA</option>
+			<option value="CHRTC">Christian Theology (Roman Catholic) CHRTC</option>
+			<option value="CHRTP">Christian Theology (Protestant) CHRTP</option>
+			<option value="CIV E">Civil Engineering CIV E</option>
+			<option value="CLASS">Classics CLASS</option>
+			<option value="CO ME">Community Health CO ME</option>
+			<option value="C LIT">Comparative Literature C LIT</option>
+			<option value="COMPT">Comptabilité COMPT</option>
+			<option value="CMPE">Computer Engineering CMPE</option>
+			<option value="CMPUT">Computing Science CMPUT</option>
+			<option value="CONS">Consumer Studies CONS</option>
+			<option value="CU ME">Curriculum et méthodologie* CU ME</option>
+			<option value="DAN">Dance DANCE</option>
+			<option value="DAC">Dance Activity DAC</option>
+			<option value="D HYG">Dental Hygiene D HYG</option>
+			<option value="DENT">Dentistry DENT</option>
+			<option value="DDS">Dentistry DDS</option>
+			<option value="DMED">Dentistry/Medicine DMED</option>
+			<option value="DES">Design DES</option>
+			<option value="DRA">Drama DRAMA</option>
+			<option value="EAS">Earth and Atmospheric Sciences EAS</option>
+			<option value="ECON">Economics ECON</option>
+			<option value="ECONE">Economie* ECONE</option>
+			<option value="EDUC">Education* EDUC</option>
+			<option value="EDU">Education EDU</option>
+			<option value="EDAL">Education - Administration and Leadership EDAL</option>
+			<option value="EDAE">Education - Adult EDAE</option>
+			<option value="EDBU">Education - Business EDBU</option>
+			<option value="EDCT">Education - Career Technology Studies EDCT</option>
+			<option value="EDEL">Education - Elementary EDEL</option>
+			<option value="EDES">Education - Elementary and Secondary EDES</option>
+			<option value="EDFX">Education - Field Experience EDFX</option>
+			<option value="EDFN">Education - Foundations EDFN</option>
+			<option value="EDIT">Education - Instructional Technology EDIT</option>
+			<option value="EDPS">Education - Policy Studies EDPS</option>
+			<option value="EDPY">Education - Psychology EDPY</option>
+			<option value="EDSE">Education - Secondary EDSE</option>
+			<option value="E E">Electrical Engineering E E</option>
+			<option value="EE BE">Electrical and Computer Engineering/Biomedical Engineering EE BE</option>
+			<option value="EMER">Emergency Medicine EMER</option>
+			<option value="ENCMP">Engineering, Computer ENCMP</option>
+			<option value="ENGG">Engineering, General ENGG</option>
+			<option value="ENG M">Engineering Management ENG M</option>
+			<option value="EN PH">Engineering Physics EN PH</option>
+			<option value="ENGL">English ENGL</option>
+			<option value="ESL">English as a Second Language ESL</option>
+			<option value="ENPRQ">Enseignement pratique* ENPRQ</option>
+			<option value="ENTIE">Entomologie* ENTIE</option>
+			<option value="ENT">Entomology ENT</option>
+			<option value="ENCS">Environmental and Conservation Sciences ENCS</option>
+			<option value="ENV E">Environmental Engineering ENV E</option>
+			<option value="ENVPS">Environmental Physical Sciences ENVPS</option>
+			<option value="ETCAN">Etudes canadiennes* ETCAN</option>
+			<option value="ECLSS">Etudes classiques* ECLSS</option>
+			<option value="ET RE">Etudes de la religion* ET RE</option>
+			<option value="EVAED">Evaluation en éducation* EVAED</option>
+			<option value="EXCH">Exchange Program EXCH</option>
+			<option value="FA MI">Famille* FA MI</option>
+			<option value="F MED">Family Medicine F MED</option>
+			<option value="FAM">Family Studies FAM</option>
+			<option value="F ST">Film Studies F ST</option>
+			<option value="FIN">Finance FIN</option>
+			<option value="FD ED">Fondements de l'éducation* FD ED</option>
+			<option value="FOREC">Forest Economics FOREC</option>
+			<option value="FOREN">Forest Engineering FOREN</option>
+			<option value="FOR">Forest Science FOR</option>
+			<option value="FRANC">Français* FRANC</option>
+			<option value="FREN">French Language and Literature FREN</option>
+			<option value="GENET">Genetics GENET</option>
+			<option value="GEOGE">Géographie* GEOGE</option>
+			<option value="GEOLE">Géologie* GEOLE</option>
+			<option value="GEOPH">Geophysics GEOPH</option>
+			<option value="GERM">German GERM</option>
+			<option value="GRE">Greek GREEK</option>
+			<option value="HE ED">Health Education HE ED</option>
+			<option value="H S A">Health Services Administration and Community Medicine H S A</option>
+			<option value="HEB">Hebrew HEB</option>
+			<option value="HISTE">Histoire* HISTE</option>
+			<option value="HIST">History HIST</option>
+			<option value="HECOL">Human Ecology HECOL</option>
+			<option value="HRM">Human Resource Management HRM</option>
+			<option value="HUME">Humanités* HUME</option>
+			<option value="IND R">Industrial Relations IND R</option>
+			<option value="INFOR">Informatique* INFOR</option>
+			<option value="INT D">Interdisciplinary Courses INT D</option>
+			<option value="ITAL">Italian ITAL</option>
+			<option value="JAPAN">Japanese JAPAN</option>
+			<option value="KOREA">Korean KOREA</option>
+			<option value="LAT">Latin LATIN</option>
+			<option value="LA ST">Latin American Studies LA ST</option>
+			<option value="LA">Law LAW</option>
+			<option value="LIS">Library and Information Studies LIS</option>
+			<option value="LING">Linguistics LING</option>
+			<option value="LINGQ">Linguistique* LINGQ</option>
+			<option value="LIN R">Linguistique romane* LIN R</option>
+			<option value="M EDU<">Maîtrise en sciences de l'éducation* M EDU</option>
+			<option value="MIS">Management Information Systems MIS</option>
+			<option value="MGTSC">Management Science MGTSC</option>
+			<option value="MANEC">Managerial Economics MANEC</option>
+			<option value="MA SC">Marine Science MA SC</option>
+			<option value="MARK">Marketing MARK</option>
+			<option value="MATE">Materials Engineering MATE</option>
+			<option value="MA PH">Mathematical Physics MA PH</option>
+			<option value="MAT">Mathematics MATH</option>
+			<option value="MATHQ">Mathématiques* MATHQ</option>
+			<option value="MEC E">Mechanical Engineering MEC E</option>
+			<option value="MDGEN">Medical Genetics MDGEN</option>
+			<option value="MLSCI">Medical Laboratory Science MLSCI</option>
+			<option value="MMI">Medical Microbiology and Immunology MMI</option>
+			<option value="MED">Medicine MED</option>
+			<option value="MICRB">Microbiology MICRB</option>
+			<option value="MNL E">Mineral Engineering MNL E</option>
+			<option value="MIN E">Mining Engineering MIN E</option>
+			<option value="MP E">Mining and Petroleum Engineering MP E</option>
+			<option value="MLCS">MLCS - Modern Languages and Cultural Studies</option>
+			<option value="MUS">Music MUSIC</option>
+			<option value="MUSIQ">Musique* MUSIQ</option>
+			<option value="NS">Native Studies NS</option>
+			<option value="NEURO">Neuroscience NEURO</option>
+			<option value="NORW">Norwegian NORW</option>
+			<option value="NURS">Nursing NURS</option>
+			<option value="NUTR">Nutrition NUTR</option>
+			<option value="NU FS">Nutrition and Food Sciences NU FS</option>
+			<option value="OB GY">Obstetrics and Gynaecology OB GY</option>
+			<option value="OCCTH">Occupational Therapy OCCTH</option>
+			<option value="ONCOL">Oncology ONCOL</option>
+			<option value="OPHTH">Opthalmology OPHTH</option>
+			<option value="OBIOL">Oral Biology OBIOL</option>
+			<option value="ORG A">Organizational Analysis ORG A</option>
+			<option value="PAED">Paediatrics PAED</option>
+			<option value="PALEO">Paleontology PALEO</option>
+			<option value="PATH">Pathology PATH</option>
+			<option value="PET E">Petroleum Engineering PET E</option>
+			<option value="PMCOL">Pharmacology PMCOL</option>
+			<option value="PHARM">Pharmacy PHARM</option>
+			<option value="PHILE">Philosophie* PHILE</option>
+			<option value="PHIL">Philosophy PHIL</option>
+			<option value="PAC">Physical Activity PAC</option>
+			<option value="PEDS">Physical Education and Sport PEDS</option>
+			<option value="PERLS">Physical Education, Recreation, and Leisure Studies PERLS</option>
+			<option value="PTHER">Physical Therapy PTHER</option>
+			<option value="PHYS">Physics PHYS</option>
+			<option value="PH BE">Physics/Biomedical Engineering PH BE</option>
+			<option value="PHYSL">Physiology PHYSL</option>
+			<option value="PHYSQ">Physique* PHYSQ</option>
+			<option value="PL SC">Plant Science PL SC</option>
+			<option value="POLSH">Polish POLSH</option>
+			<option value="POL S">Political Science POL S</option>
+			<option value="PGME">Postgraduate Medical Education PGME</option>
+			<option value="PSYCI">Psychiatry PSYCI</option>
+			<option value="PSYCE">Psychologie* PSYCE</option>
+			<option value="PS ED">Psychologie de l'éducation* PS ED</option>
+			<option value="PSYCO">Psychology PSYCO</option>
+			<option value="PHS">Public Health Sciences PHS</option>
+			<option value="RADDI">Radiology and Diagnostic Imaging RADDI</option>
+			<option value="RLS">Recreation and Leisure Studies RLS</option>
+			<option value="REHAB">Rehabilitation Medicine REHAB</option>
+			<option value="RELIG">Religious Studies RELIG</option>
+			<option value="REN R">Renewable Resources REN R</option>
+			<option value="R LIT">Romance Literatures R LIT</option>
+			<option value="R SOC">Rural Sociology R SOC</option>
+			<option value="RUSS">Russian RUSS</option>
+			<option value="SCAND">Scandinavian SCAND</option>
+			<option value="SCI">Science SCI</option>
+			<option value="SC PO">Science politique* SC PO</option>
+			<option value="SCSOC">Sciences sociales* SCSOC</option>
+			<option value="SLAV">Slavic and East European Studies SLAV</option>
+			<option value="SOCIE">Sociologie* SOCIE</option>
+			<option value="SO">Sociology SOC</option>
+			<option value="SOILS">Soil Science SOILS</option>
+			<option value="SPAN">Spanish SPAN</option>
+			<option value="SPA">Speech Pathology and Audiology SPA</option>
+			<option value="STAT">Statistics and Applied Probability STAT</option>
+			<option value="STATQ">Statistique* STATQ</option>
+			<option value="SURG">Surgery SURG</option>
+			<option value="SWED">Swedish SWED</option>
+			<option value="TCC">Textiles, Clothing, and Culture TCC</option>
+			<option value="THES">Thesis THES</option>
+			<option value="UKR">Ukrainian UKR</option>
+			<option value="UNTE">Université* UNTE</option>
+			<option value="UNIV">University UNIV</option>
+			<option value="W ST">Women's Studies W ST</option>
+			<option value="WKEXP">Work Experience WKEXP</option>
+			<option value="WRITE">Writing WRITE</option>
+			<option value="ZOOL">Zoology ZOOL</option>
+		</select>
+	</p>
+	<p class="form-group padding-top">
+		<button class="btn btn-green main-search">browse</button>
+	</p>
+</form>
+<hr>
+<h3>Search by Instructor</h3>
+<form action="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79" method="post" class="form-inline"><input class="form-control" name="searchdata1"><button class="btn btn-green main-search">search</button><input name="desk" value="ANY" type="hidden"><input name="user_id" value="WUAARCHIVE" type="hidden"><input name="RSV_INSTRUCTOR" value="Lookup+Items+on+Reserve+by+Instructor" type="hidden">
+	<p>
+		<select name="desk" class="form-control padding-top">
+			<option value="ANY">Any Library (Optional Limit by Library)</option>
+			<option value="CIAUCRSV">University of Alberta Augustana Reserve</option>
+			<option value="CIBSJRSV">University of Alberta Bibliotheque Saint-Jean Reserve</option>
+			<option value="CICAMRSV">University of Alberta Cameron Reserve</option>
+			<option value="CICOUTRSV">University of Alberta HT Coutts Reserve</option>
+			<option value="CIWEIRRSV">University of Alberta JA Weir Reserve</option>
+			<option value="CISCOTRSV">University of Alberta JW Scott Reserve</option>
+			
+			<option value="CIRUTHRSV">University of Alberta Rutherford Reserve</option>
+			<option value="CISTJORSV">University of Alberta St. Joseph's Reserve</option>
+			<option value="CIWINSPRSV">University of Alberta Winspear Reserve</option>
+		</select>
+	</p>
+</form>
+<hr>
+<h3>Browse by Instructor (Last Name)</h3>
+<ul class="letters">
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=A&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">A</a></li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=B&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">B</a></li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=C&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">C</a></li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=D&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">D</a></li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=E&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">E</a></li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=F&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">F</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=G&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">G</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=H&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">H</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=I&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">I</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=J&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">J</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=K&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">K</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=L&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">L</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=M&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">M</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=N&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">N</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=O&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">O</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=P&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">P</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=Q&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">Q</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=R&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">R</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=S&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">S</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=T&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">T</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=U&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">U</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=V&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">V</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=W&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">W</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=X&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">X</a> </li>
+	<li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=Y&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">Y</a></li>
+	<li> <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/79?user_id=WUAARCHIVE&searchdata1=Z&desk=ANY&RSV_INSTRUCTOR.x=68&RSV_INSTRUCTOR.y=18" target="_blank">Z</a></li>
+</ul>

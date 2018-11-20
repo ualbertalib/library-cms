@@ -1,0 +1,146 @@
+.rds .alt-nav>div>div>a{
+	display: block;
+	padding: 0 70px;
+	box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.3);
+	text-align: center;
+	padding: 25px 10px 15px 10px;
+	border-radius: 5px;
+	margin: 10px 0px 0px 0px;
+}
+.rds .alt-nav>div>div>a>h3{
+	color: #fff;
+	font-size: 27px;
+	margin-left: 0;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+.rds .alt-nav>div>div>a>p{
+	color: #efefef;
+	font-size: 17px;
+}
+.rds .alt-nav>div>div>a>h3>span{
+	display: block;
+	margin-bottom: 4px;
+}
+.rds-sub{
+  margin-bottom:40px;
+}
+.rds-sub a{
+	font-size: 17px;
+	font-weight: bold;
+	padding: 5px 10px;
+	background-color: #333;
+	text-transform: lowercase;
+	color: #fff;
+	margin: 3px;
+	border-radius: 3px;
+}
+.rds-purchase{
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 10px;
+	background-color: #333;
+	text-transform: lowercase;
+	color: #fff;
+	border-radius: 3px;
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+}
+.rds-purchase:hover{
+	background-color: #999;
+}
+.rds-sub a:hover{
+	background-color: #666;
+}
+
+.rds li{
+	margin-left: 20px;
+	list-style: disc;
+}
+.rds li li{
+	list-style: circle;
+}
+.rds h4{
+	background-color: transparent;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 0;
+}	
+.rds h4.no-margin{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.rds .quote{
+	font-size: 24px;
+	line-height: 38px;
+	color: #333;
+	margin: 20px 0px;
+}
+.rds .color1{
+	background-color: #a11a1a;
+}
+.rds .color1:hover, .rds .active-color1, .rds .active-color1:hover{
+	background-color: #c90e0e;
+	}
+.rds .color2{
+	background-color: #445d42;
+}
+.rds .color2:hover, .rds .active-color2, .rds .active-color2:hover{
+	background-color: #347c2f;
+	}
+.rds .color3{
+	background-color: #354762;
+}
+.rds .color3:hover, .rds .active-color3, .rds .active-color3:hover{
+	background-color: #1f5099;
+	}
+.rds .color4{
+	background-color: #413746;
+}
+.rds .color4:hover, .rds .active-color4, .rds .active-color4:hover{
+	background-color: #4f2162;
+	}
+.rds .active-color5, .rds .active-color5:hover{
+	background-color: #666;
+	}
+.rds h3{
+	text-transform: none;
+	font-size: 25px;
+	font-weight: normal;
+	}
+.rds h4{
+	font-size: 22px;
+	font-weight: normal;
+	padding: 10px 0;
+	background-color: transparent;
+}
+.rds p, .rds ul{
+	font-size: 18px;
+}
+.rds p{
+	line-height: 28px;
+}
+.rds ul li{
+	margin-left: 30px;
+	list-style: disc;
+	line-height: 27px;
+}
+.rds .tools-buttons{
+  margin-bottom:20px;
+}
+.rds-side{
+	background-color: #fff;
+	padding: 0 20px 20px 20px;
+	border: 1px solid #a8b2aa;
+}
+.rds-side p{
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.rds-side h3{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}

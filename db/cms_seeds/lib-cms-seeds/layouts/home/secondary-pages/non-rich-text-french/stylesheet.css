@@ -1,0 +1,12 @@
+ .winner-details p {
+  font-size: 14px; 
+  font-style:bold;
+  line-height:1.2em;
+}
+.winner-details a {
+ font-style:italic;
+}
+ .winner-image img{
+  margin-bottom: 40px;
+  width:100%;
+}

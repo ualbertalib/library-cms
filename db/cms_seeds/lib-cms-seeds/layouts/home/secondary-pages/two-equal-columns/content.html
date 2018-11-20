@@ -1,0 +1,14 @@
+[attributes]
+label: two-equal-columns
+app_layout: cms
+position: 7
+
+[content]
+<h1> {{ cms:text title }} </h1>
+	<div class="row">
+ 		<div class='left col-sm-6'> {{ cms:textarea content }}</div>
+		<div class='right col-sm-6'> {{ cms:wysiwyg right_column }}</div> 
+	</div>
+
+
+

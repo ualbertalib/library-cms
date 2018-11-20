@@ -1,0 +1,34 @@
+[attributes]
+---
+label: My Scheduler
+layout: non-rich-text
+target_page: 
+categories: []
+is_published: true
+position: 0
+
+[textarea content]
+<script src="//api3-ca.libcal.com/js/myscheduler.min.js?002"></script>
+<script>
+jQuery(function(){
+   jQuery("#mySched22885").LibCalMySched({ iid: 3750, uid: 0, gid: 0,  width: 500, height: 450 });
+});
+</script>
+<!-- Place the following link anywhere in your page. Make sure the id "mySched22885" matches with the above code: jQuery("#mySched22885")  //-->
+<button id="mySched22885" href="#">Schedule Appointment</button>
+<!-- Below is optional button styling  //-->
+<style>
+#mySched22885 {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  color: #333333;
+  font: 14px Arial, Helvetica, Verdana;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+#mySched22885:hover {
+  opacity: 0.9;
+}
+</style>
+

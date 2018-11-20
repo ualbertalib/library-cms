@@ -1,0 +1,711 @@
+[attributes]
+label: french
+layout: french-home
+target_page: 
+categories: []
+is_published: true
+position: 12
+
+[textarea content]
+ <style>
+    .services-bx{
+	background: #C97829 no-repeat center 10px;
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+	display: block;
+	border: 5px solid #C97829;
+	margin-bottom:10px;
+}
+.services-bx:hover{
+	background-color: #C1651A;
+	color: #fafbeb;
+	border: 5px solid #fafbeb;
+}
+  
+.aud .services-bx{
+	background: #4f5555 no-repeat center 10px;
+	border: 5px solid #4f5555;
+	}
+.aud .services-bx:hover{
+	background-color: #333;
+	color: #efefef;
+	border: 5px solid #757678;
+}
+.services-bx h3{
+	font-size: 21px;
+      padding-top: 55px;
+}
+#services-pane .service-box li>a{
+	font-size: 20px;
+	border:none;
+	padding: 5px 10px;
+}
+#services-pane .service-box li>ul{
+	margin-top: -7px;
+}
+#services-pane .service-box li>ul>li{
+	margin: 0;
+}
+#services-pane .service-box li>ul>li>a{
+	font-size: 15px;
+	padding:2px 0 2px 20px;
+	margin: 0;
+	border:none;
+}
+ .search-box-green {
+  background-color: #cbe1b4;
+ }
+  .search-box-grey {
+  background-color: #f4f4f4;
+ }
+   .search-header-green{
+  padding-bottom: 20px;
+ }
+   #advanced {
+    font-size: 13px;
+    padding: 0px 20px 20px 18px;
+ }
+  #everything-limit-green {
+    font-size: 17px;
+    padding: 5px 22px 5px 25px;
+ } 
+   #shelves-limit-green {
+    font-size: 17px;
+     padding: 5px 22px 5px 25px;
+ } 
+     #articles-limit-green {
+    font-size: 17px;
+       padding: 5px 20px 5px 25px;
+ }
+    #databases-limit-green {
+    font-size: 17px;
+      padding: 5px 22px 5px 25px;
+ }
+    #ejournals-limit-green {
+    font-size: 17px;
+      padding: 5px 22px 5px 25px;
+ }
+       #explore a {
+    font-size: 16px;
+      padding: 3px 3px 3px 3px;
+ }
+      .search-header {
+  padding-bottom: 33px;
+ }
+  #everything-limit {
+    font-size: 14px;
+    padding: 5px 5px 5px 20px;
+ } 
+   #shelves-limit {
+    font-size: 14px;
+     padding: 5px 5px 5px 20px;
+ } 
+     #articles-limit {
+    font-size: 14px;
+       padding: 5px 5px 5px 20px;
+ }
+    #databases-limit {
+    font-size: 14px;
+      padding: 5px 5px 5px 20px;
+ }
+    #ejournals-limit {
+    font-size: 14px;
+      padding: 5px 5px 5px 20px;
+ }
+       #explore a {
+    font-size: 14px;
+      padding: 3px 3px 3px 3px;
+ }
+   .search-help {
+     margin-left:-2px;
+   }
+   .search-help a{
+     font-size: 15px;
+   }
+   .international {
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(255,255,255,0.1);
+    color: #cdd7de;
+    display: block;
+    padding: 5px 25px 5px 45px;
+    background-image: url(/assets/inter-c567dd528b55f76d6c39a2f364cff456b7785c5230a0b3714179ec9f10ac5902.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    
+     background-size: 30px 30px;
+}
+.hours-header a {
+    font-size: 23px;
+}
+.padded-bottom {
+    padding-bottom: 10px;
+}
+.quick-links a {
+    padding: 10px 5px 10px 60px;
+    font-size: 17px;
+}
+   .search-header {
+    padding-bottom: 3px;
+     
+}
+   .new-search{
+     font-size:15px;
+   }
+</style>
+<!-- Start Search and Hours Pane -->
+    <div id="search" class="pane">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+              <div class="search-box col-md-12">
+                
+               
+
+
+
+ <!-- THIS is where outages messages should go - just add {{ cms:snippet outage-fr}} and change the outages message in snippets --> 
+               
+             
+
+                
+     
+                <div class="col-md-9">
+                <h2 class="search-header col-sm-7"><span class="glyphicon glyphicon-search"></span> Recherche dans la bibliothèque</h2><a href="http://guides.library.ualberta.ca/search" class="new-search col-sm-5 hidden-xs" data-no-turbolink="true">  <span class="glyphicon glyphicon-star"></span> Comment effectuer une recherche <span class="glyphicon glyphicon-star"></span></a>
+              
+                      {{ cms:snippet home-search-form-french}}
+                      
+
+             
+            </div>
+             <div class="col-md-3">
+             
+            <h3 class="also-explore">Explorez aussi</h3>
+                  <ul class="browse-options" id="explore">
+<li><a href="http://guides.library.ualberta.ca/az.php" >Bases de données (A-Z)</a></li> 
+                 
+                                        <li><a href="journals-search"  data-no-turbolink="true">Journaux électroniques par titre</a></li>
+    <li><a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/49?user_id=WUAARCHIVE" onClick="javascript: pageTracker._trackPageview('/outgoing/https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/49?user_id=WUAARCHIVE');"> Catalogue Classique (NEOS) </a></li>  
+                    <li><a href="http://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s5940188&groupid=main&profid=eds" onClick="javascript: pageTracker._trackPageview('/outgoing/https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/57/49?user_id=WUAARCHIVE');"> Discovery Service (EBSCO)</a></li>
+                                                                <li><a href=" http://login.ezproxy.library.ualberta.ca/login?url=http://scholar.google.ca" onClick="javascript: pageTracker._trackPageview('/outgoing/http://login.ezproxy.library.ualberta.ca/login?url=http://scholar.google.ca');"> Google Scholar</a></li>
+<li><a href="reserves" class="hidden-xs" data-no-turbolink="true">Réserve / Manuels de cours</a></li>              
+
+
+                  </ul>
+            </div>
+          </div>
+
+            <div class="row top-margin">
+ <div class="col-md-8">
+          <div class="front-box">
+            <a name="hours" id="hours-anch"></a>
+             
+          <div class="row">
+             <div class="col-md-8 lib-pick"><img src="https://web.library.ualberta.ca/2015assets/lib-icons/4.png" class="float-left padded-bottom" alt="library image" />
+            <span class="library-picker">
+              <h3 class="picker-title-fr"></h3>
+              <span class="today">Today's Hours:</span> <span class="picker-hours-fr"></span>
+               </span>
+             </div>
+                          <div class="col-md-4">
+              <div class="hours">
+              
+                </div>
+                <p class="not-your-library"><label for="hours">choose your library <span class="glyphicon glyphicon glyphicon-triangle-bottom hidden-xs"></span></label> </p>
+                <select class="form-control hours-select" id="hours">
+				</select>
+               </div>
+           </div>     
+      <div class="row">
+        
+            
+           <h2 class="hours-header col-md-6"><a href="https://library.ualberta.ca/hours" data-no-turbolink="true">Toutes les heures<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></h2>
+           <h2 class="hours-header col-md-6"><a href="https://library.ualberta.ca/locations" data-no-turbolink="true">Tous les emplacements<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></h2>
+</div>
+         </div>
+              </div>
+
+            <div class="col-md-4 quick-links">
+              
+         
+       <a href="/services/book-study-space" class="reserve-quick-link" data-no-turbolink="true">
+                Réservez une salle de groupe
+        </a>
+     
+       <a href="https://myaccount.library.ualberta.ca" class="account-quick-link">Ouvrez votre dossier avec votre CCID</a>
+          
+            <a href="http://guides.library.ualberta.ca/refworks" class="refworks-quick-link" style="background-image:none;"><span class="glyphicon glyphicon-cloud" style="font-size:20px;margin-left:-50px;padding-right:20px;"></span> Refworks</a>
+             
+      
+           </div>
+             </div>
+           </div>
+
+             <div class="col-md-3">
+                              <div class="feedback-box">
+              <a href="/support" data-no-turbolink="true" id="support">
+                <span class="glyphicon glyphicon-gift"></span> 
+Soutenir les bibliothèques</a>
+            </div>
+              <div class="front-box extra-top-margin hidden-xs" id="tweets">
+          
+                 <a class="twitter-timeline" href="https://twitter.com/bibliosaintjean" data-widget-id="613449375222665216" border-color="#ffffff" data-chrome="noheader nofooter transparent" height="365">Tweets by @bibliosaintjean</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+             </div>
+           
+            </div>
+
+           
+        </div>
+        
+
+
+        </div>
+      </div>
+   
+    <!-- End Search and Hours Pane -->
+        
+
+
+    <!-- News and Events Pane -->
+    <div id="news" class="pane">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+<h2>Nouvelles, événements, personnes, et initiatives<a name="main-news" class="anchor"></a></h2>
+</div>
+               <div class="col-sm-4 news-square hidden-xs">
+               	<a href="http://uabsj.blogspot.ca/search/label/%23Nouveaut%C3%A9s"  ><img src="https://www2.library.ualberta.ca/2015assets/fr-images/nouveautes.jpg" alt="nouveautes" class="slide"/></a>
+              </div>
+               <div class="col-sm-4 news-square">
+                <div class="news-stories">
+                  <h2 class="hidden-xs">D'autres Nouvelles
+</h2>
+                  <div id="headlines-fr">
+                    
+                  </div>
+                 
+                  <a href="http://uabsj.blogspot.ca/">toutes nos nouvelles ...<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                </div>
+              </div>
+              <div class="col-sm-4 news-square hidden-xs">
+           
+                <a href="http://uabsj.blogspot.ca/2018/04/reduire-lanxiete-des-examens-grace-la.html" >
+                  <img src="https://www2.library.ualberta.ca/2015assets/fr-images/stresse-webtile.jpg" alt="La musique classique à la rescousse" class="slide"/></a>
+              </div>
+               <div class="col-sm-4 news-square hidden-xs">
+                
+               	<a href="http://uabsj.blogspot.ca/2018/01/comment-trouver-un-livre-bibliotrucs.html"><img src="https://www2.library.ualberta.ca/2015assets/fr-images/comment-trouver-un-livre.jpg" alt="comment trouver un livre" class="slide"/></a>
+              </div>
+            
+               <div class="col-sm-4 news-square hidden-xs">
+                <div class="details">
+<h3>Denis Lacroix<br>Interim Head<br> Bibliothèque Saint-Jean</h3>
+                  
+                 <ul class="profile-links">
+
+                    <li><a href="/staff/denis-lacroix" data-no-turbolink="true">Profil du personnel: Denis Lacroix</a><br/></li>
+                  <li><a href="/staff/?unit=saint" data-no-turbolink="true">Voir tout notre personnel</a></li>
+                </ul>
+
+
+</div>
+                <img src="https://www2.library.ualberta.ca/2015assets/all-staff-photos/front-page/denis-lacroix.jpg" alt="denis lacroix" class="slide"/>
+              </div>
+              
+             
+              
+
+              
+               <div class="col-sm-4 news-square hidden-xs">
+            
+ 
+  
+                <a href="http://uabsj.blogspot.ca/2018/03/aliments-vs-amendes-est-de-retour.html" >
+                  <img src="https://www2.library.ualberta.ca/2015assets/fr-images/AlimentsVsAmendes2018-Webtile.jpg" alt="" class="slide"/></a>
+      
+
+            </div>
+          </div>
+        </div>
+      </div>    
+
+    <!-- End news and events Pane -->
+
+    <!-- Start Services Pane -->
+    <div id="services" class="pane">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-11 col-md-11">
+          	<h2>Nos services<a name="main-services" class="anchor" id="main-services"></a></h2>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <a data-scroll href="#top" class="up-arrow"><span class="glyphicon glyphicon-chevron-up"><span>top</span></span>			</a>
+          </div>
+        </div>
+        	<div class="row">
+          		<div class="col-md-3">
+                  <div class="services-box">
+                    <h3>Espaces des bibliothèques</h3>
+					<ul>
+                     <li><a href="/services/book-study-space" data-no-turbolink="true">Salles d'études</a></li>
+                     <li><a href="/services/booking-library-spaces" data-no-turbolink="true">Réservation d’espaces</a></li>                      
+                      <li><a href="https://ualberta.libcal.com/">Expositions et présentoirs</a></li>
+                      <li><a href="/hours" data-no-turbolink="true">Heures des bibliothèques</a></li>
+                      <li><a href="/locations" data-no-turbolink="true">Localisations des bibliothèques</a></li>                                             
+                      <li><a href="/about-us/policies/study-and-work-space" data-no-turbolink="true">Les espaces d'étude expliqués</a></li>
+                    </ul>
+                  </div>
+              	</div>
+              	<div class="col-md-6">
+                  <div class="services-box">
+                    <h3>L’abc des bibliothèques</h3>
+                    <div class="row">
+                      
+                   
+                 <div class="col-md-6">
+					<ul>
+                      <li><a href="https://alumni.library.ualberta.ca/">Anciens étudiants</a></li>
+                      <li><a href="/francais/question" data-no-turbolink="true">Question?</a></li>
+                      <li><a href="https://web.library.ualberta.ca/catalogue/bard/">BARD, obtenir un document du</a></li>
+                      <li><a href="/services/library-cards-and-borrowing" data-no-turbolink="true">Services de prêt</a></li>
+                      <li><a href="https://guides.library.ualberta.ca/bsj/citations-francais">Citations (fr)</a></li>
+                      <li><a href="/services/distance-students" data-no-turbolink="true">Services à distance</a></li>
+                      <li><a href="/about-us/policies/access-to-electronic-resources" data-no-turbolink="true">Accès aux ressources numériques</a></li> 
+                    </ul>
+                    </div>
+                    <div class="col-md-6">
+                    <ul>
+                  
+                      <li><a href="https://web.library.ualberta.ca/circulation/fines/appeal/">Amendes: formulaire de contestation</a></li>
+                      <li><a href="/services/interlibrary-loan" data-no-turbolink="true">Prêt entre bibliothèques</a></li>
+                      <li><a href="/services/l-pass" data-no-turbolink="true">L-Pass</a></li>
+                      <li><a href="/#account" data-no-turbolink="true">Mon Dossier / NIP</a></li>
+                      <li><a href="/services/off-campus-access" data-no-turbolink="true">Accès hors-campus</a></li>
+                      <li><a href="/francais/question" data-no-turbolink="true">Question?</a></li>
+                      
+                      <li><a href="/tutorials/francais" data-no-turbolink="true">Tutoriels (fr)</a></li>
+                      
+                    </ul>
+                    </div>
+                </div>
+                  </div>
+              	</div>
+              	<div class="col-md-3">
+                  <div class="services-box">
+                     
+                      <h3>Impression et équipement</h3>
+					<ul>
+                      <li><a href="/services/disability-services" data-no-turbolink="true">Services aux personnes handicapées</a></li>
+                      <li><a href="https://guides.library.ualberta.ca/technology/computing">Des ordinateurs</a></li>
+                      <li><a href="/services/equipment-lending" data-no-turbolink="true">Prêt d’équipement informatique</a></li>
+                      <li><a href="https://guides.library.ualberta.ca/technology/printing">Impression</a></li>
+                       <li><a href="https://guides.library.ualberta.ca/technology/scanning">Numérisation</a></li>
+                      <li><a href="/services/3dprinting" data-no-turbolink="true">Impression 3D</a></li>                     
+                    </ul>
+                  </div>
+              	</div>
+          	</div>
+         	<div class="row extra-top-margin">
+          		<div class="col-md-3">
+                  <div class="services-box">
+                     <h3>Rencontres et ateliers</h3>
+					<ul>
+                       <li><a href="https://web.library.ualberta.ca/appointment/">Consultations</a></li>
+                      <li><a href="/digital-initiatives/data-services" data-no-turbolink="true">Services de données</a></li>
+                       <li><a href="/services/personal-librarian" data-no-turbolink="true">Programme de bibliothécaire personnel(le)</a></li>
+                      <li><a href="https://guides.library.ualberta.ca/geospatial-data-maps">Données spatiales/SIG</a></li>
+                         <li><a href="/tutorials/francais" data-no-turbolink="true">Tutoriels (fr)</a></li>
+                      <li><a href="https://ualberta.libcal.com/calendar/workshops/?cid=5415&t=d&d=0000-00-00&cal%5B%5D=5415">Ateliers</a></li> 
+                     
+                    </ul>
+                  </div>
+              	</div>
+              	<div class="col-md-3">
+                  <div class="services-box">
+                    <h3>Soutien à l’enseignement
+</h3>
+					<ul>
+                      <li><a href="https://www.ualberta.ca/copyright/">Droit d’auteur</a></li>
+                      <li><a href="https://www.library.ualberta.ca/about-us/projects/eclass-integration" data-no-turbolink="true">Intégration à Eclass</a></li>
+                      <li><a href="/services/instruction" data-no-turbolink="true"> Formation</a></li>
+                      <li><a href="https://guides.library.ualberta.ca/linking-to-library-online-resources">Accéder aux ressources en ligne</a></li>
+					  <li><a href="https://web.library.ualberta.ca/readinglist/index.cfm">Service de réserve électronique</a></li>
+                      <li><a href="/reserves" data-no-turbolink="true">Réserves</a></li> 
+                    </ul>
+    				
+                  
+                  </div>
+              	</div>
+              	<div class="col-md-6">
+                  <div class="services-box col-md-12">
+                  <h3>Soutien à la recherche et à l’édition</h3>
+                 
+                    <div class="row">
+                      <div class="col-md-6">
+                       
+					<ul>
+                      <li><a href="https://guides.library.ualberta.ca/bsj/citations-francais">Citations (fr)</a></li>
+                       <li><a href="https://web.library.ualberta.ca/appointment/">Consultations</a></li>
+                      <li><a href="https://www.ualberta.ca/copyright/">Droit d’auteur</a></li>
+                      <li><a href="/research-support/era"  data-no-turbolink="true">ERA</a></li>
+                      <li><a href="/research-support/era-av" data-no-turbolink="true">ERA Audio &plus; Video</a></li>
+                      <li><a href="/research-support/impact" data-no-turbolink="true">Évaluer l’impact de la recherche</a></li>
+                     
+                     <li><a href="/research-support/open-access" data-no-turbolink="true">Libre accès</a></li>
+                      
+                      
+                    </ul>
+                      </div>
+                       
+                   <div class="col-md-6">
+                    <ul> 
+                      <li><a href="/research-support/publishing-support" data-no-turbolink="true">Services d’édition</a></li>
+                       <li><a href="/research-support/data-management" data-no-turbolink="true">Gestion des données de recherche (RDM)</a></li>
+                      
+                      <li><a href="https://guides.library.ualberta.ca/reviewprep/support">Revue systématique/examen de la portée</a></li>
+               
+                      
+                      
+                    </ul>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              	</div>
+          	</div>
+    	</div> 
+   
+
+	
+    <!-- End Services Pane -->
+    <!-- Start Subjects Pane -->
+    <div class="pane" id="subjects"><a name="main-subjects" class="anchor"></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-11 col-md-11">
+            <h2>Subject Guides</h2>
+            <a name="main-subjects" class="anchor"></a>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <a data-scroll href="#top" class="up-arrow"><span class="glyphicon glyphicon-chevron-up"><span>top</span></span></a>
+          </div>
+        </div>
+        <div class="col-md-10 top-margin">
+          <div class="row">
+            <div class="col-md-4 subjects" id="ag">
+              <div class="subject-title">
+                <h3>Agricultural, Life &amp; Environmental Sciences</h3>
+              <div><a href="http://guides.library.ualberta.ca/ales">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=116676">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="arts">
+            <div class="subject-title">
+              <h3>Arts: Humanities &amp; Social Sciences</h3>
+              <div><a href="http://guides.library.ualberta.ca/arts">guides</a>  <a href="http://guides.library.ualberta.ca/az.php?s=116677">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="aug">
+            <div class="subject-title">
+              <h3>Augustana Campus Library</h3>
+              <div>
+                <a href="/augustana" data-no-turbolink="true">home</a> 
+                <a href="http://guides.library.ualberta.ca/augustana/subject-guides">guides</a> 
+           </div> </div>
+          </div>
+             <div class="col-md-4 subjects" id="aug">
+            <div class="subject-title">
+              <h3>Bibliothèque Saint-Jean</h3>
+              <div>
+                <a href="https://guides.library.ualberta.ca/bsj">guides</a> 
+             <a href="https://www.library.ualberta.ca/francais">acceuil</a></a> 
+           </div> </div>
+          </div>
+          <div class="col-md-4 subjects" id="business">
+            <div class="subject-title">
+              <h3>Business</h3>
+              <div><a href="http://guides.library.ualberta.ca/business">guides</a>  <a href="http://guides.library.ualberta.ca/az.php?s=62041">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="ed">
+            <div class="subject-title">
+              <h3>Education</h3>
+              <div><a href="http://guides.library.ualberta.ca/education">guides</a>  <a href="http://guides.library.ualberta.ca/az.php?s=60668">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="eng"> 
+            <div class="subject-title">
+              <h3>Engineering</h3>
+              <div><a href="http://guides.library.ualberta.ca/engineering">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=62046">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="health">
+            <div class="subject-title">
+              <h3>Health Sciences</h3>
+              <div><a href="http://guides.library.ualberta.ca/health">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=62047">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="int">
+            <div class="subject-title">
+              <h3>Interdisciplinary Studies</h3>
+              <div><a href="http://guides.library.ualberta.ca/interdisciplinary">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=114140">bases de données</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 subjects" id="physed">
+              <div class="subject-title">
+                                <h3>Kinesiology, Sport, &amp; Recreation </h3>
+                <div><a href="http://guides.library.ualberta.ca/kinesiology-sport-rec">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=60632">bases de données</a></div>
+
+              </div>
+            </div>
+            <div class="col-md-4 subjects" id="law">
+              <div class="subject-title">
+                                <h3>Law</h3>
+                <div><a href="http://guides.library.ualberta.ca/law">guides</a>  <a href="http://guides.library.ualberta.ca/az.php?s=62049">bases de données</a></div>
+
+              </div>
+            </div>
+            <div class="col-md-4 subjects" id="native">
+              <div class="subject-title">
+                <h3>Native Studies</h3>
+                <div><a href="https://guides.library.ualberta.ca/?group_id=6022">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=60709">bases de données</a></div>
+              </div>
+            </div>
+            <div class="col-md-4 subjects" id="science">
+              <div class="subject-title">
+                <h3>Science</h3>
+                <div><a href="http://guides.library.ualberta.ca/science">guides</a> <a href="http://guides.library.ualberta.ca/az.php?s=62050">bases de données</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 top-margin hidden-xs">
+          <div class="browse-type">
+            <h3>Parcourir par type</h3>
+            <ul class="arrows">
+              <li><a href="http://guides.library.ualberta.ca/">UAL Library Guides</a></li>
+
+              <li><a href="http://guides.library.ualberta.ca/citing">Citation Guides</a></li>
+              <li><a href="http://guides.library.ualberta.ca/data">Data</a></li>
+              <li><a href="http://guides.library.ualberta.ca/theses-dissertations">Dissertations/Theses</a></li>
+              <li><a href="http://guides.library.ualberta.ca/ebooks">E-Books</a></li>
+                    <li><a href="http://guides.library.ualberta.ca/geospatial-data-maps">Geospatial Data &#38; Maps</a></li>
+              <li><a href="http://guides.library.ualberta.ca/government-information">Government Info</a></li>
+              <li><a href="http://guides.library.ualberta.ca/newspapers">Newspapers</a></li>
+              <li><a href="http://guides.library.ualberta.ca/patents-trademarks">Patents &#38; Trademarks</a></li>
+              <li><a href="http://guides.library.ualberta.ca/mobile-devices">Mobile Resources</a></li>
+                            <li><a href="http://guides.library.ualberta.ca/primary-sources">Primary Sources</a></li>
+             
+              <li><a href="http://guides.library.ualberta.ca/research-writing">Research and Writing</a></li>
+              <li><a href="http://guides.library.ualberta.ca/standards">Standards</a></li>
+                           <li><a href="http://guides.library.ualberta.ca/technology">Technology Guide</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</div>
+    <!-- End Subjects Pane -->
+ <!-- Start Data Management Pane -->
+    <div class="pane rds" id="research">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-11 col-md-11">
+            <h2>Soutien à la recherche</h2>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <a data-scroll href="#top" class="up-arrow"><span class="glyphicon glyphicon-chevron-up"></span></a>
+          </div>  
+        
+            
+            <div class="grid col-md-12">
+          <div class="boxes">
+          
+            <div class="col-sm-4 first-row era">
+              <div class="show-image"><p><em>Gardez-le. Partagez-le. Utilisez-le.</em><br/> Les services de dépôt numérique et de gestion des actifs de l'Université de l'Alberta. </p><a href="research-support/era" class="tool-link"  data-no-turbolink="true">ERA <span class="glyphicon glyphicon-arrow-right"></span></a>
+            </div>
+          </div>
+          <div class="col-sm-4 first-row open-access">
+            <div class="text"><h3>Libre accès</h3> <p>Notre façon de partager la recherche ne devrait-elle pas être aussi perfectionnée que l'internet? </p><a href="research-support/open-access" class="tool-link"  data-no-turbolink="true">Libre accès <span class="glyphicon glyphicon-arrow-right"></span></a></div>
+        </div>
+         <div class="col-sm-4 first-row rds">
+          <div><h3>Gestion des données de recherche</h3><p>Outils, stratégies et aide pour conserver vos données. </p><a href="https://search.library.ualberta.ca/research-support/data-management" class="tool-link">Gestion des données de recherche <span class="glyphicon glyphicon-arrow-right"></span></a></div>
+        </div>
+        <div class="col-sm-4 second-row others">
+          <div class="pub-support">
+            <h3><span class="glyphicon glyphicon-book"></span>Soutien à l'édition </h3> <p>Offre conseils et soutien pour l'édition</p><a href="/research-support/publishing-support/" class="tool-link" data-no-turbolink="true">Soutien à l'édition <span class="glyphicon glyphicon-arrow-right"></span></a>
+          </div>
+            <div class="measure">
+              <h3 class="tools-box"><span class="glyphicon glyphicon-equalizer"></span>  Évaluez votre impact</h3><p>Découvrez la façon dont votre recherche est utilisée de par le monde</p><a href="/research-support/impact" class="tool-link" data-no-turbolink="true">Évaluez votre impact <span class="glyphicon glyphicon-arrow-right"></span></a>
+        </div>
+      </div>
+             <div class="col-sm-8 second-row research">
+        </div>
+
+       
+    </div>     
+        </div>
+       </div>
+      </div>
+    </div>
+
+    <!-- End Data Management Pane -->
+
+
+    <!-- Start My Account Pane -->
+    <div class="pane" id="account"><a name="main-account" class="anchor"></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-11 col-md-11">
+            <h2>Mon Dossier <span class="small">(pour nos étudiants, professeurs et membres du personnel)</span> </h2> 
+          </div>
+          <div class="col-xs-1 col-md-1">
+             <a data-scroll href="#top" class="up-arrow dark"><span class="glyphicon glyphicon-chevron-up"></span></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="login"> 
+              <a type="button" class="btn ccid-login" href="https://myaccount.library.ualberta.ca">connexion avec votre CCID</a><br/>
+              
+              <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/x/0/0/29/1167/X/1" class="barcode">ou ouvrir une session à l'aide de votre numéro de code à barres et votre NIP</a> 
+             <h3 class="nocase">Ouvrez une session afin de...</h3>
+              <ul class="alist">
+                <li>Régler vos amendes en ligne (disponible seulement lorsque vous ouvrez une session à l'aide de votre CCID).</li>
+                <li>Vérifier l'état des documents réservés et empruntés, y compris vos demandes de prêt entre bibliothèques.</li>
+                <li>Personnaliser vos listes de périodiques électroniques et de bases de données.</li>
+                <li>Vérifier et modifier vos réservations de salles d'étude à la bibliothèque.</li>
+              </ul>
+              <h3 class="noback">Politiques et services connexes</h3>
+              <ul class="alist">
+                <li><a href="/francais/community-expectations" data-no-turbolink="true">Attentes envers la communauté des bibliothèques de l’Université de l’Alberta</a></li>
+                <li><a href="/francais/library-cards-and-borrowing-undergraduate-students" data-no-turbolink="true">Cartes de bibliothèque</a></li>
+                <li><a href="/francais/library-cards-and-borrowing-undergraduate-students" data-no-turbolink="true">Suspension des privilèges</a></li>
+                <li><a href="/ask-us/service-desks" data-no-turbolink="true">Comptoirs de service</a></li>
+                <li><a href="https://web.library.ualberta.ca/emailnotification/" data-no-turbolink="true">Service d'avis par courriel</a></li>
+                <li><a href="/francais/library-cards-and-borrowing-undergraduate-students" data-no-turbolink="true">Confidentialité des dossiers d'usager</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="login"> 
+              <h3>Amendes <a href="/francais/library-cards-and-borrowing-undergraduate-students"  data-no-turbolink="true" class="h3-right">plus d'info sur les amendes</a></h3>
+              <ul>
+                <li>Document de la réserve: <strong> 1$ par heure</strong></li>
+                <li>Document rappelé: <strong> 5$ par jour</strong></li>
+              </ul>
+            </div>
+            <div class="login hidden-xs"> 
+              <h3>Durée des prêts <a href="/francais/library-cards-and-borrowing-undergraduate-students" data-no-turbolink="true"  class="h3-right">plus d'info sur la durée des prêts</a></h3>
+               <ul>
+                <li>Pour les étudiants, enseignants et employés, la durée de prêt est égale à la durée de la session, toutefois tout document peut être rappelé après 2 semaines d’emprunt.</li>
+               
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End My Account Pane -->          
+       

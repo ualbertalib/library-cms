@@ -1,0 +1,223 @@
+
+ ul#subtopic {
+  padding-left: 15px;
+}
+#subtopic li {
+  font-family: 'Abel', sans-serif;
+}
+#subtopic li>span {
+  color:#387178;
+  font-style: italic;
+  font-weight: 700;
+}  
+ #spaces li>span {
+  color:#2c733b;
+}
+  #servs li>span {
+  color:#C1AC7F;
+
+}
+  blockquote#collections{
+    min-height:220px;    
+    border-left: 10px solid #387178;
+    border-bottom: 1px solid #387178; 
+    border-top: 1px solid #387178;
+    border-right: 1px solid #387178;
+    background: #fff;
+    margin-bottom: 20px;
+    
+}
+  #spaces>span {
+  color:#387178;
+  font-style: italic;
+  font-weight: 700;
+}
+    blockquote#spaces{
+    min-height:220px;   
+    border-left: 10px solid #2c733b;
+    border-bottom: 1px solid #2c733b; 
+    border-top: 1px solid #2c733b;
+    border-right: 1px solid #2c733b;
+    background: #FFF;
+}
+
+    blockquote#servs{
+    min-height:693px; 
+    border-left: 10px solid #C1AC7F;
+    border-bottom: 1px solid #C1AC7F;    
+    border-top: 1px solid #C1AC7F;
+    border-right: 1px solid #C1AC7F;
+    background: #fff;
+}
+  #fact{
+  font-weight: 700;
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+  #figure {
+  margin-bottom:15px;
+ font-size: 190%;
+}
+  
+  #quoteproj{
+  margin-bottom:15px;
+  border-left: none;
+  min-height:150px;
+  max-height:350px;
+} 
+  #no-left-margin {
+  margin-left: 0px;
+  padding-left: 0px;
+  }
+img#blacklight {    
+    width: 100%;
+  padding-top: 10px;
+  padding-right:0px;
+  padding-bottom: 10px;
+  float: right;
+}
+  h3#blacklight {    
+  font-size: 90%;
+  margin-top: 10px;
+      margin-bottom:5px;
+      border-bottom: 1px solid #999;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 5px;
+}
+    a#blacklight {    
+  font-size: 90%;
+  margin-top: 10px;
+      margin-bottom:5px;
+      border-bottom: 1px solid #999;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 5px;
+}
+   p#blacklight {    
+  font-size: 60%;
+     line-height: 1.4em;
+     margin-left: 0px;
+     margin-bottom: 10px;
+}
+     #blacklight {    
+  font-size: 60%;
+     line-height: 1.4em;
+}
+    blockquote {
+  background: #ECEFF4;
+  border-left: 10px solid #ccc;
+  margin: 1px 1px 35px 0px;
+  padding: 0.3em 15px;
+  min-height:250px; 
+  
+}
+   .cms h3{
+    font-size: 24px;
+}
+
+  
+
+#our-image {
+  padding: 20px 0px;
+  }
+ul.prince {
+  padding-left: 20px;
+}
+.prince li {
+  font-family: 'Abel', sans-serif;
+}
+
+  
+#number {
+    font-size:44px;
+    padding-top: 10px;
+  padding-right:0px;
+  padding-bottom: 10px;
+  }
+   
+ ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  #breadcrumbs-one{
+  background: #ECEFF4;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f5f5f5 #e5e5e5 #ccc;
+  border-radius: 0px;
+  box-shadow: 0 0 1px rgba(0,0,0,.2);
+  overflow: hidden;
+  width: 100%;
+    margin-bottom: 1.5em;
+    margin-right:-1px;
+}
+
+#breadcrumbs-one li{
+  float: left;
+}
+
+#breadcrumbs-one a{
+  padding: .7em 1em .7em 2em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  background-color: #ddd;
+  background-image: linear-gradient(to right, #ffffef2, #ddd); 
+  font-family: 'Abel', sans-serif;
+  font-size: 32px;
+}
+#breadcrumbs-one a>span{
+    font-size: 32px;
+}
+#breadcrumbs-one li:first-child a{
+  padding-left: 1em;
+  border-radius: 5px 0 0 5px;
+}
+
+#breadcrumbs-one a:hover{
+  background: #fff;
+}
+
+#breadcrumbs-one a::after,
+#breadcrumbs-one a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;   
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid;
+  right: -1em;
+}
+
+#breadcrumbs-one a::after{ 
+  z-index: 2;
+  border-left-color: #ddd;  
+}
+
+#breadcrumbs-one a::before{
+  border-left-color: #ccc;  
+  right: -1.1em;
+  z-index: 1; 
+}
+
+#breadcrumbs-one a:hover::after{
+  border-left-color: #fff;
+}
+
+#breadcrumbs-one .current,
+#breadcrumbs-one .current:hover{
+  font-weight: bold;
+  background: none;
+}
+
+#breadcrumbs-one .current::after,
+#breadcrumbs-one .current::before{
+  content: normal;  
+}
+

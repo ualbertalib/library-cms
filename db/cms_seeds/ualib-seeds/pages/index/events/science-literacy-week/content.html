@@ -1,0 +1,358 @@
+[attributes]
+---
+label: science-literacy-week
+layout: non-rich-text
+target_page: 
+categories: []
+is_published: true
+position: 0
+
+[textarea content]
+<script>
+  /* ==========================================================
+ * bootstrap-carousel.js v2.0.3
+ * http://twitter.github.com/bootstrap/javascript.html#carousel
+ * ==========================================================
+ * Copyright 2012 Twitter, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================== */
+
+
+!function ($) {
+
+  "use strict"; // jshint ;_;
+
+
+ /* CAROUSEL CLASS DEFINITION
+  * ========================= */
+
+  var Carousel = function (element, options) {
+    this.$element = $(element)
+    this.options = options
+    this.options.slide && this.slide(this.options.slide)
+    this.options.pause == 'hover' && this.$element
+      .on('mouseenter', $.proxy(this.pause, this))
+      .on('mouseleave', $.proxy(this.cycle, this))
+  }
+
+  Carousel.prototype = {
+
+    cycle: function (e) {
+      if (!e) this.paused = false
+      this.options.interval
+        && !this.paused
+        && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
+      return this
+    }
+
+  , to: function (pos) {
+      var $active = this.$element.find('.active')
+        , children = $active.parent().children()
+        , activePos = children.index($active)
+        , that = this
+
+      if (pos > (children.length - 1) || pos < 0) return
+
+      if (this.sliding) {
+        return this.$element.one('slid', function () {
+          that.to(pos)
+        })
+      }
+
+      if (activePos == pos) {
+        return this.pause().cycle()
+      }
+
+      return this.slide(pos > activePos ? 'next' : 'prev', $(children[pos]))
+    }
+
+  , pause: function (e) {
+      if (!e) this.paused = true
+      clearInterval(this.interval)
+      this.interval = null
+      return this
+    }
+
+  , next: function () {
+      if (this.sliding) return
+      return this.slide('next')
+    }
+
+  , prev: function () {
+      if (this.sliding) return
+      return this.slide('prev')
+    }
+
+  , slide: function (type, next) {
+      var $active = this.$element.find('.active')
+        , $next = next || $active[type]()
+        , isCycling = this.interval
+        , direction = type == 'next' ? 'left' : 'right'
+        , fallback  = type == 'next' ? 'first' : 'last'
+        , that = this
+        , e = $.Event('slide')
+
+      this.sliding = true
+
+      isCycling && this.pause()
+
+      $next = $next.length ? $next : this.$element.find('.item')[fallback]()
+
+      if ($next.hasClass('active')) return
+
+      if ($.support.transition && this.$element.hasClass('slide')) {
+        this.$element.trigger(e)
+        if (e.isDefaultPrevented()) return
+        $next.addClass(type)
+        $next[0].offsetWidth // force reflow
+        $active.addClass(direction)
+        $next.addClass(direction)
+        this.$element.one($.support.transition.end, function () {
+          $next.removeClass([type, direction].join(' ')).addClass('active')
+          $active.removeClass(['active', direction].join(' '))
+          that.sliding = false
+          setTimeout(function () { that.$element.trigger('slid') }, 0)
+        })
+      } else {
+        this.$element.trigger(e)
+        if (e.isDefaultPrevented()) return
+        $active.removeClass('active')
+        $next.addClass('active')
+        this.sliding = false
+        this.$element.trigger('slid')
+      }
+
+      isCycling && this.cycle()
+
+      return this
+    }
+
+  }
+
+
+ /* CAROUSEL PLUGIN DEFINITION
+  * ========================== */
+
+  $.fn.carousel = function (option) {
+    return this.each(function () {
+      var $this = $(this)
+        , data = $this.data('carousel')
+        , options = $.extend({}, $.fn.carousel.defaults, typeof option == 'object' && option)
+      if (!data) $this.data('carousel', (data = new Carousel(this, options)))
+      if (typeof option == 'number') data.to(option)
+      else if (typeof option == 'string' || (option = options.slide)) data[option]()
+      else if (options.interval) data.cycle()
+    })
+  }
+
+  $.fn.carousel.defaults = {
+    interval: 2000
+  , pause: 'hover'
+  }
+
+  $.fn.carousel.Constructor = Carousel
+
+
+ /* CAROUSEL DATA-API
+  * ================= */
+
+  $(function () {
+    $('body').on('click.carousel.data-api', '[data-slide]', function ( e ) {
+      var $this = $(this), href
+        , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
+        , options = !$target.data('modal') && $.extend({}, $target.data(), $this.data())
+      $target.carousel(options)
+      e.preventDefault()
+    })
+  })
+
+}(window.jQuery);
+// Activate Carousel
+$("#myCarousel").carousel();
+
+// Enable Carousel Indicators
+$(".slideitem").click(function(){
+    $("#myCarousel").carousel(1);
+});
+
+// Enable Carousel Controls
+$(".left").click(function(){
+    $("#myCarousel").carousel("prev");
+});
+  </script> 
+
+<style>
+
+#myCarousel .item{
+	width:400px;
+	height:500px;
+}
+
+  .carousel-inner{
+    height:500px;
+  }
+</style>
+
+
+
+
+
+<div class="row">
+ 	<div class='col-sm-9'>
+      <a href="http://scienceliteracy.ca/"><img src="https://www2.library.ualberta.ca/2015assets/slw/slw2018.png" width="100%"></a>
+ 
+   
+      <p><br/><br/>In September 2018, the UAlberta Libraries hosted a multitude of events across 5 locations to celebrate Science Literacy Week. The theme was SPACE in celebration of David Saint-Jacques upcoming mission to the International Space Station.</p>
+<p>The University of Alberta Libraries partnered with Science Literacy Week, Women in Scholarship, Engineering, Science and Technology <a href="https://www.ualberta.ca/services/wisest">(WISEST)</a> , Natural Sciences and Engineering Research Council of Canada <a href="http://www.nserc-crsng.gc.ca/index_eng.asp">(NSERC)</a> and the Canadian Space Agency <a href="http://www.asc-csa.gc.ca/eng/Default.asp">(CSA)</a> to bring a week full of science and space to the UAlberta community.</p>
+<br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VqhUaSp5rZE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    
+    <p>
+     Science Literacy Week wouldn’t be possible without our partners who provided fascinating interactive demonstrations, presentations, and displays.  
+    </p>
+    <p>Science Literacy Week is a nationwide week-long celebration of all things science. At the University of Alberta, it gives students and staff the opportunity to get up close and personal with scientific research and learn what goes on behind lab room doors from those who are passionately curious about their research and work.      
+    </p> 
+             <h5>
+         Check out these photos from Science Literacy Week 2018!
+      </h5>
+      <div class="row">
+     <div class='col-sm-5'>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Wrapper for slides -->
+  		<div class="carousel-inner">
+              <div class="item active">
+                <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-1.jpg" alt="">
+              </div>
+              
+              <div class="item">
+                <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-2.jpg" alt="">
+               </div>
+              <div class="item">
+                <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-3.jpg" alt="">
+              </div>
+     <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-4.jpg" alt="science literary week photo">
+    </div>
+         
+         <div class="item">
+    
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-5.jpg" alt="science literary week photo">
+    </div>
+    
+     <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-6.jpg" alt="science literary week photo">
+    </div>
+              
+    
+     <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-7.jpg" alt="science literary week photo">
+    </div>
+    
+    <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-8.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-9.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-10.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-11.jpg" alt="science literary week photo">
+    </div>
+     <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-12.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-13.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-14.jpg" alt="science literary week photo">
+    </div>
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-15.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-16.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-17.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-18.jpg" alt="science literary week photo">
+    </div>
+    
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-19.jpg" alt="science literary week photo">
+    </div>
+  
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-20.jpg" alt="science literary week photo">
+    </div>
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-21.jpg" alt="science literary week photo">
+    </div>
+      <div class="item">
+      <img src="https://sites.library.ualberta.ca/wp-content/uploads/2018/10/scilit-22.jpg" alt="science literary week photo">
+    </div>    
+
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+	</div>  
+  		</div>       
+      </div></div>  
+
+      <h3>This year's Collaborators: </h3><a name ="partners"></a>
+		<div class="col-sm-4"> <a href="http://www.nserc-crsng.gc.ca/index_eng.asp"><img src="https:///www2.library.ualberta.ca/2015assets/slw/Copy of CRSNG_C.jpg" width="100%" alt="nserc logo" class="logo-padding"></a>				</div>
+			<div class="col-sm-4"> <a href="http://www.wisest.ualberta.ca/"><img src="https:///www2.library.ualberta.ca/2015assets/slw/2017WISEST_purple_FullLogo.jpg" width="100%" alt="Wisest Logo" class="logo-padding"></a>
+      	</div>  
+    </div>
+  
+
+	<div class='sidebar col-sm-3'>   <p>{{ cms:snippet science-week-css }}
+      </p>
+
+	  <p><a href="/events/science-literacy-week" class="btn btn-green">Home</a>
+	  </p> 
+	  <p><a href="http://scienceliteracy.ca/" class="btn btn-turquoise">Science Literacy Week in Canada</a>
+      </p> 
+      <p><a href="/events/science-literacy-week/slw-2017" data-no-turbolink="true" class="btn btn-purple">Science Literacy Week 2017</a>
+     </p>
+     <p><a href="/events/science-literacy-week/slw-2016" data-no-turbolink="true" class="btn btn-purple">Science Literacy Week 2016</a>
+     </p>
+    <div class="front-box extra-top-margin hidden-xs" id="tweets">
+    
+		<a class="twitter-timeline" data-height="440" href="https://twitter.com/scilitweek?ref_src=twsrc%5Etfw">Tweets by scilitweek</a> 
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+     </div></div>
+</div>

@@ -1,0 +1,11 @@
+[attributes]
+label: one-column-right-nav
+app_layout: cms
+position: 4
+
+[content]
+<h1> {{ cms:text title }} </h1>
+<div class="row">
+ 	<div class='left col-sm-9'> {{ cms:textarea content }} </div>
+	<div class='right col-sm-3'> {{ cms:textarea nav_column }} </div> 
+</div>

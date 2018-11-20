@@ -1,0 +1,12 @@
+[attributes]
+label: three-equal-columns
+app_layout: cms
+position: 8
+
+[content]
+<h2> {{ cms:text title }} </h2>
+	<div class="row">
+ 		<div class='left col-sm-4'> {{ cms:textarea content }}</div>
+		<div class='right col-sm-4'> {{ cms:textarea middle_column }} </div> 
+      	<div class='right col-sm-4'> {{ cms:textarea right_column }}</div> 
+	</div>
