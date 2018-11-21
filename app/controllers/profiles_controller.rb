@@ -10,8 +10,8 @@ class ProfilesController < ApplicationController
     				:rcrf => "Research & Collections Resource Facility", :press => "Ring House 2", :rutherford => "Rutherford", 
     				:stjosephs => "St. Joseph's Library", :winspear => "Winspear Library" }
 
-        # You'll have to define "profilesEditPassword" in secrets.yml, or this will fail. Thanks, ansible. 
-	http_basic_authenticate_with name: Rails.application.secrets.profiles_edit_user, password: Rails.application.secrets.profiles_edit_password, except: [:index, :show]
+        # You'll have to define "cmsPassword" in secrets.yml, or this will fail. Thanks, ansible. 
+	http_basic_authenticate_with name: Rails.application.secrets.cms_user, password: Rails.application.secrets.cms_password, except: [:index, :show]
 
 	def index
 		path = request.url
