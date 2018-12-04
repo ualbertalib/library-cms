@@ -1,4 +1,4 @@
 tmp/
 .DS_Store
 log/development.log
-config/initializers/comfortable_mexican_sofa.rb
+config/secrets.yml
