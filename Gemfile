@@ -7,7 +7,7 @@ gem 'sqlite3'
 
 gem 'mysql2', '~> 0.5.2'
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'execjs'
 gem 'mini_racer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
