@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
     <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
-
+   <%= favicon_link_tag 'libfav.svg', :type => 'image/svg+xml' %>
     <title>
   <% if content_for(:title) %>
     <%= yield(:title) %> - UofA Libraries
