@@ -14,11 +14,13 @@
     <![endif]-->
 
     <title>Bibliothèques de l'Université de l'Alberta</title>
-    <%# favicon_link_tag asset_path('favicon.ico') %>
-      <%= favicon_link_tag 'libfav.svg', :type => 'image/svg+xml' %>
-    <%= favicon_link_tag 'ua-touch.png', :rel => 'apple-touch-icon', :type => 'image/png' %>
-  <%= stylesheet_link_tag    "application", "https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Abel" %>
-    <%= javascript_include_tag "application"%>
+      <%= favicon_link_tag 'favicon-16x16.png', :rel => 'icon' :sizes => '16x16', :type => 'image/png' %>
+      <%= favicon_link_tag 'favicon-32x32.png', :rel => 'icon' :sizes => '32x32', :type => 'image/png' %>
+      <%= favicon_link_tag 'apple-touch-icon.png', :rel => 'apple-touch-icon' :sizes => '180x180' %>
+      <%= favicon_link_tag 'safari-pinned-tab.svg', :rel => 'mask-icon' %>
+        
+      <%= stylesheet_link_tag    "application", "https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Abel" %>
+      <%= javascript_include_tag "application"%>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
