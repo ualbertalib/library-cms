@@ -29,7 +29,7 @@ gem "mini_magick", ">= 4.9.4"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "comfortable_mexican_sofa", "~> 2.0.0"
+gem "comfortable_mexican_sofa", "~> 2.0.18"
 
 gem 'friendly_id'
 
