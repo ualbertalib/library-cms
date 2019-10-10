@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-	$units = {:access => "Access Services", :archives => "Archives", :augustana => "Augustana Library", :bib => "Cataloguing & Metadata Strategies", 
+	$units = {:access => "Access Services", :archives => "Archives", :augustana => "Augustana Library", :bib => "Bibliographic Services", 
 				:saint => "Bibliothèque Saint-Jean", :business => "Business Library", :collections => "Collection Strategies", :digital => "Digital Initiatives", 
               	:education => "Education / Kinesiology, Sport & Recreation Library", :facilities => "Facilities", :finance => "Financial Systems & Analysis", 
               	:health => "Health Sciences Library", :hr => "Human Resources", :humanities => "Humanities & Social Sciences / Law Libraries", 
