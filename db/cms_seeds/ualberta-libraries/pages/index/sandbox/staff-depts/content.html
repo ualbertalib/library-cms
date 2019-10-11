@@ -1,0 +1,35 @@
+[attributes]
+---
+label: staff depts
+layout: non-rich-text
+target_page: 
+categories:
+- sandbox
+is_published: true
+position: 9
+
+[textarea content]
+<script src="//api3.libcal.com/js/roombooking.js?002"></script>
+<script>
+jQuery(function(){
+   jQuery("#room15280").LibCalRoomBooking({ "iid": 3750, "gid": 15280,  "width": 500, "height": 450, domain: "https://api3.libcal.com" });
+});
+</script>
+<!-- Place the following link anywhere in your page. Make sure the id "room15280" matches with the above code: jQuery("#room15280")  //-->
+<button id="room15280" href="#">Group and Study Rooms  (Status: Private/Hidden)</button>
+<!-- Below is optional button styling  //-->
+<style>
+#room15280 {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  color: #333333;
+  font: 14px Arial, Helvetica, Verdana;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+#room15280:hover {
+  opacity: 0.9;
+}
+</style>
+
