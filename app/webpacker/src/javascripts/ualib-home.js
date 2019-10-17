@@ -29,6 +29,7 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
 
 $(document).ready(function () {
  
+ if ($(".scrolling-page").length){
  //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($("#main-nav").offset().top > 300) {
@@ -73,6 +74,7 @@ $(function() {
         event.preventDefault();
     });
 }); 
+}
  
 
 
