@@ -75,7 +75,7 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    comfortable_mexican_sofa (2.0.18)
+    comfortable_mexican_sofa (2.0.19)
       active_link_to (>= 1.0.0)
       comfy_bootstrap_form (>= 4.0.0)
       haml-rails (>= 1.0.0)
@@ -86,7 +86,7 @@ GEM
       rails (>= 5.2.0)
       rails-i18n (>= 5.0.0)
       sassc-rails (>= 2.0.0)
-    comfy_bootstrap_form (4.0.6)
+    comfy_bootstrap_form (4.0.8)
       rails (>= 5.0.0)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
@@ -146,7 +146,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
-    public_suffix (4.0.1)
+    public_suffix (4.0.2)
     puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.0.8)
@@ -188,7 +188,7 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
-    ruby_parser (3.14.0)
+    ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
     rubyzip (2.0.0)
     sassc (2.2.1)
@@ -246,7 +246,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
-  comfortable_mexican_sofa (~> 2.0.18)
+  comfortable_mexican_sofa (~> 2.0.19)
   execjs
   friendly_id
   htmlentities
