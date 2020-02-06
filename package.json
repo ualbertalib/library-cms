@@ -7,6 +7,6 @@
     "jquery-ui": "^1.12.1"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.8.2"
+    "webpack-dev-server": "^3.10.3"
   }
 }
