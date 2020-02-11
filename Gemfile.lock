@@ -113,10 +113,10 @@ GEM
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     htmlentities (4.3.4)
-    i18n (1.7.0)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
+    jbuilder (2.10.0)
+      activesupport (>= 5.0.0)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -140,7 +140,7 @@ GEM
     mini_portile2 (2.4.0)
     mini_racer (0.2.6)
       libv8 (>= 6.9.411)
-    minitest (5.13.0)
+    minitest (5.14.0)
     msgpack (1.3.1)
     mysql2 (0.5.3)
     nio4r (2.5.2)
@@ -250,7 +250,7 @@ DEPENDENCIES
   execjs
   friendly_id
   htmlentities
-  jbuilder (~> 2.9)
+  jbuilder (~> 2.10)
   listen (>= 3.0.5, < 3.3)
   mini_magick (>= 4.9.4)
   mini_racer
