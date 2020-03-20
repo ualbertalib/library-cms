@@ -35,7 +35,7 @@ gem 'friendly_id'
 
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 4.2'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
