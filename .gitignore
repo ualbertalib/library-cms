@@ -2,6 +2,7 @@ tmp/
 .DS_Store
 log/development.log
 config/secrets.yml
+config/initializers/comfortable_mexican_sofa.rb
 
 /public/packs
 /public/packs-test

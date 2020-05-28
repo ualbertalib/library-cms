@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href='favicon.ico'>
+    <%= javascript_pack_tag '2020main' %>
+    <%= stylesheet_pack_tag '2020main' %>
+    <script src="https://kit.fontawesome.com/5dc7d61ac4.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
+    <title>
+  <% if content_for(:title) %>
+    <%= yield(:title) %> - UofA Library
+  <% elsif @cms_page %>
+    <%= @cms_page.label %> - UofA Library
+  <% else %>
+     University of Alberta Library
+  <% end %>
+</title>
+  </head>
+  <body class="d-flex flex-column">
+  
+  <%= yield %>
+
+  </body>
+</html>
