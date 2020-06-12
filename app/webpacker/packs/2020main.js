@@ -3,11 +3,14 @@ import 'jquery'
 import 'popper.js'
 import 'bootstrap'
 import '../src/stylesheets/2020main.css';
-import '../src/javascripts/2020custom.js';
+
 
 $(function() {
 
     $('[data-toggle-second="tooltip"]').tooltip();
+    $('[data-toggle-second="tooltip"]').on('click', function () {
+    	$(this).tooltip('hide')
+	})
 
 	var mode = localStorage.getItem('mode');
 

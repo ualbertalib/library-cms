@@ -1,6 +1,6 @@
 @import 'bootstrap';
-@import '@fortawesome/fontawesome-free';
-/* resets */
+
+/* resets of existing classes and elements */
 body, .sticky-footer-wrapper {
    min-height:100vh;
 }
@@ -10,11 +10,31 @@ body, .sticky-footer-wrapper {
 .dropdown-menu {
     top: 80%;
 }
-.card-header {
-    background-color: #EEFEDD;
-}
 .card {
-	border-color:#00492c;
+  border:none;
+}
+.card-header{
+  background-color:#284E36;
+  border:#00492c solid 3px;
+  border-width: 3px 3px 0 3px;
+  color:#fff;
+}
+.card-header h2{
+    color:#fff;
+}
+.card-header h2 a{
+    color:#FDE382
+}
+.card-header h2 a:hover{
+    color:#fff;
+}
+.card-body{
+  border:#00492c solid 3px;
+  border-width: 0px 3px 3px 3px;
+  border-radius:0px 0px 5px 5px;
+}
+.card>.list-group{
+  border-top:none;
 }
 .list-group-item a{
   display:block;
@@ -28,27 +48,16 @@ body, .sticky-footer-wrapper {
 .form-control{
   border-color:#00492c;
 }
+
 /* custom ual styles */
-.ual-gr-card-header{
-    background-color: #FCFCF0;
-}
-.ual-gr-card-header h4{
-  	color:#284E36;
-}
+
+/*header styles*/
 .ual-btn{
   color:#fff;
   background-color:#007C41;
 }
 .ual-btn:hover{
   background-color:#7AB800;
-  color:#fff;
-}
-.ual-btn-ltgr{
-  background-color:#7AB800;
-  color:#fff;
-}
-.ual-btn-ltgr:hover{
-  background-color:#007C41;
   color:#fff;
 }
 .ual-ltgr-line{
@@ -73,7 +82,7 @@ body, .sticky-footer-wrapper {
   padding-right: 1.5rem;
 }
 .ual-blade .navbar-nav>li>a{
-  color:#999;
+  color: #666;
   display:inline-block;
 }
 .ual-blade .navbar-nav>li>a:hover{
@@ -84,7 +93,7 @@ body, .sticky-footer-wrapper {
   width:18rem;
 }
 .ual-logo{
-	width:92%
+  width:"100%"; height:"200px"; 
 }
 .ual-blade-toggler{
   font-size:0.7em;
@@ -105,14 +114,6 @@ body, .sticky-footer-wrapper {
 .ual-stack:hover .ual-circle{
 	color:#007C41;
 }
-.ual-francaise{
-  font-size:0.8em;
-  color:#284E36;
-}
-.ual-nav>.container{
-	padding-top:1em;
-  padding-bottom:1em;
-}
 .ual-nav .navbar-nav>li{
 	border-top:1px solid #FFDB05;
   text-align:center;
@@ -127,10 +128,54 @@ body, .sticky-footer-wrapper {
 .ual-nav .navbar-nav>li>a:hover{
   color: #007C41;
 }
-.navbar-nav>li>a>br{
+.ual-nav .navbar-nav>li>a>br{
 	display:none;
 }
-/* main container */
+/* chat button pulse - must include animaation */
+.ual-pulse {
+  color:#fff;
+  display: block;
+  padding:5px 10px;
+  font-weight:bold;
+  background: #007C41;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 2s infinite;
+}
+.ual-pulse:hover {
+  animation: none;
+  color:#FCFCF0;
+  background:#7AB800;
+  text-decoration:none;
+}
+/* animation */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(122,184,0, 0.9);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(122,184,0, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(122,184,0, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(122,184,0, 0.9);
+    box-shadow: 0 0 0 0 rgba(122,184,0, 0.9);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(122,184,0, 0);
+      box-shadow: 0 0 0 10px rgba(122,184,0, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(122,184,0, 0);
+      box-shadow: 0 0 0 0 rgba(122,184,0, 0);
+  }
+}
+
+/* main container custom styles*/
 .ual-container{
   padding:2rem 1rem;
   min-height:26rem;
@@ -143,6 +188,11 @@ body, .sticky-footer-wrapper {
   border-bottom:0.1rem solid #FFDB05;
   padding-bottom:0.8rem;
  	margin-bottom:2rem;
+}
+.ual-container h1>div{
+  font-size:0.6em;
+  float:right;
+  margin-top:0.9em;
 }
 .ual-container h2{
   font-size: 1.4em;
@@ -168,10 +218,95 @@ body, .sticky-footer-wrapper {
   text-decoration: none;
   color: #284E36;
 }
-footer li{
-  padding:0.3em 0;
+.ual-container .card h2{
+  font-size:1.2em;
+  margin-bottom:0;
 }
-/*homepage*/
+.ual-large-text{
+  font-size:1.3em;
+}
+.ual-btn-lang{
+  margin-top:-2em;
+  padding:0 10px 3px 10px;
+  border-radius:0 0 5px 5px;
+}
+.ual-container a.ual-btn{
+  color:#fff;
+  text-decoration:none;
+  font-weight:normal;
+}
+
+/* footer styles */
+.ual-ft{  
+  border-top:0.3rem solid #00492c;
+  background-color:#FCFCF0;
+}
+.ual-ft-bottom{
+  height:8rem;
+  background-color:#00492c;
+  background-image:url("/pattern-sm.svg");
+  background-size:80%;
+}
+.ual-ft-nav{
+  list-style:none;
+  font-size:0.9em;
+  padding-left: 0;
+}
+.ual-ft-nav li{
+  padding:3px 0;
+}
+.ual-ft-logo{
+  max-width:300px;
+}
+.ual-ft-list{
+  padding:0;
+}
+/*darkmode styles */
+#dark-mode-toggle{
+  margin-left:0.5rem;
+  color: #007C41;
+}
+.dark-mode{
+  background:#333;
+}
+.dark-mode .ual-bg{
+  background: #ddd7ae;
+}
+.dark-mode .ual-top{
+  background:#00492c;
+}
+.dark-mode .ual-nav .navbar-nav>li>a{
+  color:#FCF9E2;
+}
+.dark-mode .card-header{
+  background:#5F3811;
+}
+.dark-mode .ual-blade, .dark-mode .card-body, .dark-mode .list-group-item, .dark-mode footer{
+  background:#DDD7AE;
+}
+.dark-mode .ual-container h4, .dark-mode .ual-container h1, .dark-mode .ual-container h2 {
+    color:#FCF9E2;
+}
+.dark-mode .ual-container p, .dark-mode .ual-container li{
+  color:#fff;
+}
+.dark-mode .ual-container p.small{
+  color:#000;
+}
+.dark-mode .ual-container a{
+  color:#7AB800;
+}
+.dark-mode .ual-container .card a, .dark-mode .ual-container .list-group a{
+  color:#007C41;
+}
+.dark-mode .ual-container .card a.ual-btn{
+    color:#fff;
+}
+.dark-mode .ual-blade .navbar-nav>li>a {
+    color: #222;
+}
+
+/*homepage styles*/
 .ual-btn-advanced{
   font-size:0.85em;
 }
@@ -182,8 +317,10 @@ footer li{
   display:block;
   padding:0.25em 0;
   border-radius:10px;
-  max-width:8rem;
 }
+.ual-container a.ual-btn-tips:hover{
+  background:#FCFCF0;
+  }
 .ual-container a.ual-find-link{
   font-size:1.1em;
   padding:1rem 0.3rem;
@@ -215,13 +352,13 @@ footer li{
   background-color:rgba(255,255,255, 0.95);
 }
 .ual-bpsc{
-  background-image:url("https://bpsc.library.ualberta.ca/assets/img/finding.jpg");
+  background-image: url(https://sites.library.ualberta.ca/wp-content/uploads/2020/06/BPSC.jpg);
+  background-size: cover;
 }
 .ual-dsc{
-  background-image:url("https://sites.library.ualberta.ca/wp-content/uploads/2020/05/dsc-bakc.png");
-  background-size:cover;
+  background-image: url(https://sites.library.ualberta.ca/wp-content/uploads/2020/06/dsc.jpg);
+  background-size: cover;
 }
-  
 /* homepage rss and twitter */
 .ual-rss{
   max-height:20rem;
@@ -249,14 +386,13 @@ footer li{
 .ual-rss .s-lc-ea-h3{
 	display:none;
 }
-.ual-twitter-ft a{
-  text-decoration:none;
-  display:inline-block;
+.ual-twitter{
+    border:#00492c solid 3px;
+    border-radius: 5px;
 }
-.ual-twitter-ft img{
-  width:110%;
-}
-/* sidebar */
+
+
+/* sidebar layout styles */
 .ual-sidebar{
 	background-color:#EEFEDD;
   border-radius:10px;
@@ -265,110 +401,8 @@ footer li{
 .ual-sidebar li{
 	list-style:none;
 }
-/* footer */
-footer{  
-  border-top:0.3rem solid #00492c;
-  background-color:#FCFCF0;
-}
-.footer-top{
-	padding-top:0;
-  padding-bottom:0;
-}
-.footer-bottom{
-	height:8rem;
-  background-color:#00492c;
-  background-image:url("/pattern-sm.svg");
-  background-size:80%;
-}
-.ual-ft-nav{
-  list-style:none;
-  font-size:0.9em;
-  padding-left: 0;
-}
-.ual-ft-nav li{
-	padding:3px 0;
-}
-.ual-ft-logo{
-	max-width:300px;
-}
-.dropdown-toggle {
-   white-space: normal;
-}
-.ual-tag{
-	font-size:1.35em;
-  color:#7AB800;
-  width: 100%;
-}
-.ual-ft-list{
-  padding:0;
-}
-.pulse {
-  color:#fff;
-  display: block;
-	padding:5px 10px;
-  font-weight:bold;
-  background: #7AB800;
-  cursor: pointer;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
-  animation: pulse 2s infinite;
-}
-.pulse:hover {
-  animation: none;
-  color:#FCFCF0;
-  background:#007C41;
-  text-decoration:none;
-}
 
-/*darkmode*/
-#dark-mode-toggle{
-	margin-left:0.5rem;
-  color: #007C41;
-}
-.dark-mode{
-  background:#333;
-}
-.dark-mode .ual-top{
-  background:#00492c;
-}
-.dark-mode .ual-nav .navbar-nav>li>a{
-	color:#FCF9E2;
-}
-.dark-mode .card-header{
-  background:#5F3811;
-}
-.dark-mode .ual-blade, .dark-mode .card-body, .dark-mode .list-group-item, .dark-mode footer{
-  background:#DDD7AE;
-}
-.dark-mode .ual-container h4, .dark-mode .ual-container h1, .dark-mode .ual-container h2 {
-    color:#FCF9E2;
-}
 
-/* animation */
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-  }
-  70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-  }
-  100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-  }
-}
-@keyframes pulse {
-  0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-  }
-  70% {
-      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-  }
-  100% {
-      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-  }
-}
 /* large breakpoint */
 @media (min-width: 992px) {
 	.ual-container a.ual-find-link{
@@ -387,7 +421,7 @@ footer{
   .ual-blade li:not(:last-child):after{
     content: "|";
     padding-left: .5rem;
-    color: #999;
+    color: #666;
   }
  	.ual-nav .navbar-nav>li{
   	border-top:0;
@@ -406,6 +440,9 @@ footer{
   }
   .ual-rss{
   overflow: scroll;
+}
+.ual-nav .navbar-nav>li>a>br{
+  display:block;
 }
 }
 /* extra large breakpoint */
