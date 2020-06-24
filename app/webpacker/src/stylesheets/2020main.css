@@ -492,6 +492,7 @@ body, .sticky-footer-wrapper {
   table-layout: fixed;
   border-collapse:collapse;
   margin-top: 20px;
+  font-size:0.8em;
 }
 .staff tbody tr:nth-child(odd) td,
 .staff tbody tr:nth-child(odd) th {
