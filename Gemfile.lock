@@ -88,13 +88,13 @@ GEM
       sassc-rails (>= 2.0.0)
     comfy_bootstrap_form (4.0.8)
       rails (>= 5.0.0)
-    concurrent-ruby (1.1.6)
+    concurrent-ruby (1.1.7)
     crass (1.0.6)
     erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.11.3)
-    friendly_id (5.3.0)
+    friendly_id (5.4.0)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -113,7 +113,7 @@ GEM
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     htmlentities (4.3.4)
-    i18n (1.8.3)
+    i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
@@ -239,7 +239,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.3.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
