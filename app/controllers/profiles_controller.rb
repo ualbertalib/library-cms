@@ -1,14 +1,15 @@
 class ProfilesController < ApplicationController
-	$units = {:access => "Access Services", :archives => "Archives", :augustana => "Augustana Library", 
-				:saint => "Bibliothèque Saint-Jean", :business => "Business Library", :bib => "Cataloguing & Metadata Strategies", :collections => "Collection Strategies", :digital => "Digital Initiatives", 
-              	:education => "Education / Kinesiology, Sport & Recreation Library", :facilities => "Facilities", :finance => "Financial Systems & Analysis", 
-              	:health => "Health Sciences Library", :hr => "Human Resources", :humanities => "Humanities & Social Sciences / Law Libraries", 
-              	:its => "Information Technology Services", :admin => "Library and Museums Administration", :science => "Science & Technology Library", :special => "Special Collections", 
+	$units = {:access => "Access Services", :archives => "Archives", :augustana => "Augustana",
+				:bib => "Cataloguing & Metadata Strategies", :collections => "Collection Strategies", :digital => "Digital Initiatives", 
+              	:facilities => "Facilities", :finance => "Financial Systems & Analysis", :health => "Health Sciences", 
+              	:hr => "Human Resources", :humanities => "Social Sciences, Humanities, and Law", 
+              	:its => "Information Technology Services", :admin => "Library and Museums Administration", 
+              	:science => "Sciences, Engineering, and Business", :special => "Special Collections", 
               	:press => "University of Alberta Press"}
     $buildings = {:augustana => "Augustana Campus Library", :bsj => "Bibliothèque Saint-Jean", :bpsc=> "Bruce Peel Special Collections",
-    				:cameron => "Cameron Library", :coutts => "Herbert T. Coutts Library ", :law => "J.A. Weir Law Library", :scott => "J.W. Scott Library",
+    				:cameron => "Cameron Library", :law => "J.A. Weir Law Library", :scott => "J.W. Scott Library",
     				:rcrf => "Research & Collections Resource Facility", :press => "Ring House 2", :rutherford => "Rutherford", 
-    				:stjosephs => "St. Joseph's Library", :winspear => "Winspear Library" }
+    				:stjosephs => "St. Joseph's Library" }
 
         # You'll have to define "cmsPassword" in secrets.yml, or this will fail. Thanks, ansible. 
 	http_basic_authenticate_with name: Rails.application.secrets.cms_user, password: Rails.application.secrets.cms_password, except: [:index, :show]
