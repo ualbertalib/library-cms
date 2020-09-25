@@ -1,9 +1,14 @@
 .row.extra-top-margin
   .col-sm-10
     - if !@unitname.nil?
-      %h1
-        = @unitname
-        Staff
+      -if @unitname.include?("Health") || @unitname.include?("Law") || @unitname.include?("Science") || @unitname.include?("Augustana")
+        %h1
+          = surround 'Faculty Engagement (',') Staff' do
+            = @unitname
+      -else
+        %h1
+          = @unitname
+          Staff
     -elsif !@buildingname.nil?
       %h1
         = @buildingname
@@ -61,9 +66,9 @@
           %td.tinycolumn
             %span.hidden
               = profile.last_name
-          %td.hidden-xs
+          %td.hidden-xs.ual-unit
             = link_to($units[profile.unit.to_sym], "/staff/?unit="+profile.unit)
-          %td.hidden-xs
+          %td.hidden-xs.ual-email
             %a{ :href => "tel:#{profile.phone}"}
               = profile.phone
             %p
