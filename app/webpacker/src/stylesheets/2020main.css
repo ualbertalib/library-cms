@@ -541,6 +541,10 @@ body, .sticky-footer-wrapper {
 .staff td.email{
   width: 200px;
 }
+.head td{
+  background-color:#fcfccc !important;
+  border-bottom: 0.1rem solid #FFDB05;
+}
 .staff-images{
   width:110px;
   height:110px;

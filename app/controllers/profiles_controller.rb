@@ -19,7 +19,10 @@ class ProfilesController < ApplicationController
     	if path.include? "unit"
     		@unit = params[:unit]
 			@unitname = $units[params[:unit].to_sym]
-			@profiles = Profile.where("unit=?", params[:unit]).order(:first_name)
+			@allunit = Profile.where(unit: @unit)
+			@heads = @allunit.where(opt_in: true).order(:last_name)
+			@staff = @allunit.where(opt_in: nil).order(:last_name)
+			@profiles = @heads + @staff
 		elsif path.include? "building"
     		@building = params[:building]
 			@buildingname = $buildings[params[:building].to_sym]
