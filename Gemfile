@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'execjs'
 gem 'mini_racer', '=0.2.14'
-gem 'libv8', '~> 7.3'
+gem 'libv8', '~> 8.4'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.10'
