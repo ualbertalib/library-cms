@@ -92,7 +92,7 @@ GEM
       sassc-rails (>= 2.0.0)
     comfy_bootstrap_form (4.0.9)
       rails (>= 5.0.0)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
     erubis (2.7.0)
@@ -119,7 +119,7 @@ GEM
     htmlentities (4.3.4)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.10.1)
+    jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
@@ -260,7 +260,7 @@ DEPENDENCIES
   execjs
   friendly_id
   htmlentities
-  jbuilder (~> 2.10)
+  jbuilder (~> 2.11)
   libv8 (~> 8.4)
   listen (>= 3.0.5, < 3.4)
   mini_magick (>= 4.9.4)
