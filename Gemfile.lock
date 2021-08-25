@@ -128,6 +128,7 @@ GEM
     kramdown (2.3.1)
       rexml
     libv8 (8.4.255.0)
+    libv8-node (15.14.0.1-x86_64-darwin-19)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
