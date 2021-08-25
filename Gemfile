@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '~> 6.1.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 gem 'mysql2', '~> 0.5.3'
 # Use Puma as the app server
-gem 'puma', '~> 5.3'
+gem 'puma', '~> 5.4'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -16,11 +16,11 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'execjs'
-gem 'mini_racer', '=0.2.14'
+gem 'mini_racer', '0.4.0'
 gem 'libv8', '~> 8.4'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder', '~> 2.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -37,7 +37,7 @@ gem 'friendly_id'
 
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
-gem 'webpacker', '~> 5.1'
+gem 'webpacker', '~> 5.4'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
