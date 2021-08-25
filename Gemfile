@@ -20,7 +20,7 @@ gem 'mini_racer', '0.4.0'
 gem 'libv8', '~> 8.4'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder', '~> 2.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
