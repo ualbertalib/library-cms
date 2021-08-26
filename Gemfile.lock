@@ -97,7 +97,7 @@ GEM
     erubi (1.10.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.15.1)
+    ffi (1.15.3)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     globalid (0.5.2)
@@ -259,8 +259,13 @@ DEPENDENCIES
   friendly_id
   htmlentities
   jbuilder (~> 2.11)
+<<<<<<< HEAD
   libv8 (~> 7.3, >= 7.3.492.27.0)
   listen (>= 3.0.5, < 3.6)
+=======
+  libv8 (~> 8.4)
+  listen (>= 3.0.5, < 3.8)
+>>>>>>> 62df7a9bf92234e3be97b8472d830161d4f2ca60
   mini_magick (>= 4.9.4)
   mysql2 (~> 0.5.3)
   puma (~> 5.4)
