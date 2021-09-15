@@ -4,8 +4,7 @@ class ProfilesController < ApplicationController
 				:digital => "Digital Initiatives", :facilities => "Facilities", :finance => "Financial Systems & Analysis", 
               	:health => "Health Sciences", :hr => "Human Resources", :humanities => "Humanities, Social Sciences & Law", 
               	:iss => "Information Services & User Engagement", :its => "Information Technology Services", :admin => "Library and Museums Administration", 
-              	:science => "Sciences, Engineering, and Business", :special => "Special Collections", 
-              	:press => "University of Alberta Press"}
+              	:science => "Sciences, Engineering, and Business", :special => "Special Collections"}
     $buildings = {:augustana => "Augustana Campus Library", :bsj => "Bibliothèque Saint-Jean", :bpsc=> "Bruce Peel Special Collections",
     				:cameron => "Cameron Library", :law => "J.A. Weir Law Library", :scott => "J.W. Scott Library",
     				:rcrf => "Research & Collections Resource Facility", :press => "Ring House 2", :rutherford => "Rutherford", 
