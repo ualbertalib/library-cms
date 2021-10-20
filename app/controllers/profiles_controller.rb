@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
               	:science => "Sciences, Engineering, and Business", :special => "Special Collections"}
     $buildings = {:augustana => "Augustana Campus Library", :bsj => "Bibliothèque Saint-Jean", :bpsc=> "Bruce Peel Special Collections",
     				:cameron => "Cameron Library", :law => "J.A. Weir Law Library", :scott => "J.W. Scott Library",
-    				:rcrf => "Research & Collections Resource Facility", :press => "Ring House 2", :rutherford => "Rutherford", 
+    				:rcrf => "Research & Collections Resource Facility", :rutherford => "Rutherford", 
     				:stjosephs => "St. Joseph's Library" }
 
         # You'll have to define "cmsPassword" in secrets.yml, or this will fail. Thanks, ansible. 
