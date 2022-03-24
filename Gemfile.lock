@@ -96,7 +96,7 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     erubis (2.7.0)
-    execjs (2.7.0)
+    execjs (2.8.1)
     ffi (1.15.3)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
