@@ -13,11 +13,8 @@ gem 'puma', '~> 5.6'
 gem 'uglifier', '>= 1.3.0'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
 
 gem 'execjs'
-#gem 'mini_racer', '<= 0.3'
-gem 'libv8', '~> 7.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11'
