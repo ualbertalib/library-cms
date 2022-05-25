@@ -19,7 +19,7 @@ import '../src/javascripts/jquery-migrate-3.1.0.min.js';
 import '../src/javascripts/jquery-ui.min.js';
 import '../src/javascripts/jquery.hoverIntent.minified.js';
 import '../src/javascripts/bootstrap.min.js';
-import '../src/javascripts/ualib-home.js';
+// import '../src/javascripts/ualib-home.js';
 import '../src/stylesheets/application.scss';
 
 
