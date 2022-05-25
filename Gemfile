@@ -15,11 +15,10 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 
 gem 'execjs'
-<<<<<<< HEAD
-=======
+
 #gem 'mini_racer', '<= 0.3'
 #gem 'libv8', '~> 7.3'
->>>>>>> 3125925d5d1c092c93e9c5c05a03d596a38ee529
+
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11'
