@@ -155,7 +155,7 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.4.5)
-    mysql2 (0.5.3)
+    mysql2 (0.5.4)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -287,7 +287,7 @@ DEPENDENCIES
   jbuilder (~> 2.11)
   listen (>= 3.0.5, < 3.8)
   mini_magick (>= 4.9.4)
-  mysql2 (~> 0.5.3)
+  mysql2 (~> 0.5.4)
   puma (~> 5.6)
   rails (~> 7.0.2)
   selenium-webdriver
