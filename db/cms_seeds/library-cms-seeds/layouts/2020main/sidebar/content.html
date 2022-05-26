@@ -1,0 +1,16 @@
+[attributes]
+---
+label: Sidebar
+app_layout: '2020'
+position: 1
+
+[content]
+<div class="row">
+ 	<div class='col-sm-8'> {{ cms:wysiwyg content }}</div>
+	<div class='col-sm-4 ual-sidebar'> {{ cms:wysiwyg sidebar }} </div>
+</div>
+
+[js]
+
+[css]
+@import "/cms-css/1/2020main.css"

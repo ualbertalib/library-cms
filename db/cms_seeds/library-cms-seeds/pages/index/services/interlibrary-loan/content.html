@@ -1,0 +1,73 @@
+[attributes]
+---
+label: Interlibrary Loan
+layout: non-rich-text
+target_page: 
+categories: []
+is_published: true
+position: 10
+
+[text_area content]
+<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> <a href="/services">Library Services</a> <span>&gt;</span> Interlibrary Loan</p>
+<style>
+.btn-iu{
+    color: #fff;
+    background-color: #007c41;
+  text-decoration:none;
+}</style>
+<h1 class="mb-2">Interlibrary Loan/Document Delivery</h1>
+<div class="row">
+  <div class="col-sm-12"> 
+
+  </div>
+
+<div class="col-sm-8"> 
+
+
+  
+       <div class="ual-covid-announce col-md-9 mb-3">
+    
+   <p class="mb-1">
+     At least 25% of ILL requests submitted are locally held or freely available online. If you can't locate an item, please check with our <a href="https://www.library.ualberta.ca/ask-us">Ask Us</a> service before submitting a request.
+   </p>
+    </div>
+  
+<h2>Request an Interlibrary Loan</h2> <br>
+
+<p><strong>Place a Request</strong>:   <a class="btn ual-btn w-180 mb-2" target="_blank" href="https://myaccount.library.ualberta.ca/relais/passthru.php"><strong>Login with CCID</strong></a>   or   <a class="btn ual-btn w-180 mb-2" href="https://aeu.relais-host.com/user/login.html?group=patron&LS=AEU"><strong>Login with Barcode and Pin</strong></a><br>
+</p>
+<hr/>
+<br />
+<h2>NEW: Request an Article - Beta Test</h2>
+<p><i>Don't wait! See instantly if you have access to an article. Use this search tool...</i>
+</p>
+  <div id="instantill"></div>
+<script src="https://instantill.org/embed.js"></script>
+<script>_oab=instantill({uid: "dw3wgEN4gpAhHFidC", config: {"time":"3-5 days","subscription":["http://resolver.library.ualberta.ca/resolver"],"subscription_type":["sfx"],"val":"10.1007/s10433-017-0447-y ","owner":"ill@ualberta.ca","institution":"University of Alberta","ill_form":"https://myaccount.library.ualberta.ca/relais/passthru.php?genre=article","ill_added_params":"&group=patron&LS=AEU&UT=P","problem":"ill@ualberta.ca","intro_off":true,"ill_if_sub_off":true,"sid":"SI"}});</script>
+
+<p>Tell us how this worked for you: <a href="emailto:ill@ualberta.ca">ill@ualberta.ca</a>
+</p>
+  <br />
+<h2>Online Download Service</h2>
+<p>When possible, we provide downloads of requested articles and book chapters from the collections from other libraries. Access the requested item without coming to the Library. Please note the instructions in your email, as the links will expire!
+</p>
+  <p>
+    <b>UAlberta library materials scanning service for UAlberta students and staff:</b>
+  </p><p>
+  You may request a scan of a book chapter or print journal article that is held in the UAlberta Library collection by completing the interlibrary loan form linked above.</p>
+  <p>
+    Content will be reproduced and provided or communicated pursuant to the <a href="https://www.ualberta.ca/faculty-and-staff/copyright/student-staff-guide/ualberta-policies-procedures/fair-dealing-guidelines.html">University of Alberta Fair Dealing Guidelines</a>. Questions? Contact ill@ualberta.ca.
+  </p>
+
+</div>
+
+
+<div class="sidebar col-sm-4"> 
+  {{cms:snippet ill-sidebar}}
+
+ </div>
+</div>
+
+
+[wysiwyg sidebar]
+<p>{{cms:snippet ill-sidebar}}</p>

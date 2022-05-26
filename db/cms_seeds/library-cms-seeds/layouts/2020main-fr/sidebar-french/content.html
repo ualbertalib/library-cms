@@ -1,0 +1,17 @@
+[attributes]
+---
+label: Sidebar French
+app_layout: '2020'
+position: 1
+
+[content]
+<h1> {{ cms:text title }} </h1>
+<div class="row">
+ 	<div class='left-large col-sm-8'> {{ cms:wysiwyg content }}</div>
+	<div class='sidebar col-sm-4'> {{ cms:wysiwyg sidebar }} </div>
+</div>
+
+[js]
+
+[css]
+@import "/cms-css/1/2020main.css"

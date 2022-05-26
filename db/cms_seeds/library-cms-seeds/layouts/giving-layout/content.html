@@ -1,0 +1,254 @@
+[attributes]
+---
+label: Giving Layout
+app_layout: giving
+position: 3
+
+[content]
+<div class="container-fluid ualib">
+<div class="container">
+    <a href="https://library.ualberta.ca"><img src="https://www2.library.ualberta.ca/2015assets/giving/UA-LIBR-COLOUR-png.png" class="img-fluid d-lg-none"></a>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto row">
+      <li class="nav-item col first">
+        <a class="nav-link ua-first-nav" href="/support">Giving Home</a>
+      </li>
+      <li class="nav-item col">
+        <a class="nav-link" href="/support/projects">Our<br/>Projects</a>
+      </li>
+          <li class="nav-item col">
+        <a class="nav-link" href="/support/donor-stories">Donor Stories</a>
+      </li>
+          <li class="nav-item col ua-logo d-none d-lg-block">
+        <a href="https://library.ualberta.ca"><img src="https://www2.library.ualberta.ca/2015assets/giving/UA-LIBR-COLOUR-png.png" class="ua-nav-logo"></a>
+      </li>
+          <li class="nav-item col">
+        <a class="nav-link ua-nav-text-right" href="/support/ways-to-give">Ways to Give</a>
+      </li>
+          <li class="nav-item col">
+        <a class="nav-link ua-nav-text-right" href="/support/about-our-vision">About Our Vision</a>
+      </li>
+         <li class="nav-item col last">
+        <a class="nav-link ua-nav-call ua-nav-text-right" href="https://ualberta.alumniq.com/giving/to/libraries_museums"  target="_blank">Give<br>Now!</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+<div class="ua-page-content">
+  {{ cms:textarea content }}
+  </div>
+<div class="container-fluid ua-dark-border ua-footer mt-5">
+   <div class="container py-4">
+     <div class="row">
+				<div class="col">
+          <address>
+  Office of Advancement<br>
+	Justine Zahara <a href="mailto:justine.zahara@ualberta.ca">justine.zahara@ualberta.ca</a><br>
+4-40B Cameron Library <br>
+University of Alberta
+            </address>
+     		</div>
+      <div class="col text-center">
+  <a href="https://library.ualberta.ca/"><img src="https://www2.library.ualberta.ca/2015assets/giving/UA-LIBR-COLOUR-png.png" width="300px;"></a>
+     </div>
+       <div class="col ua-nav-text-right">
+  			<p class="d-block">We are located on Treaty 6 and Métis territory<br/>
+ 				<a href="https://library.ualberta.ca/about-us/policies/privacy-policy">Web Site Privacy Policy</a><br/>
+ 				<a href="https://library.ualberta.ca/about-us/policies/re-use">Creative Commons License</a><br/>
+          <a href="https://ualberta.ca">University of Alberta</a></p>
+     </div>
+          </div>
+  </div>
+</div>
+
+<footer class="container-fluid ua-pattern py-5 ua-bk-gr">
+</footer>
+ 
+
+[js]
+
+[css]
+@import url('https://fonts.googleapis.com/css?family=Engagement');
+
+html,
+body {
+  height: 100%;
+  font-family:"DIN pro",sans-serif;
+}
+.ua-page-content {
+  flex: 1 0 auto;
+}
+.ua-footer {
+  flex-shrink: none;
+}
+a{
+  color: #00863f;
+}
+a:hover{
+  color: #0a492c;
+}
+.ua-no-border{
+  border:none;
+}
+.ua-btn-primary{
+  color:#fff;
+  background-color: #00863f;
+}
+.ua-btn-primary:hover{
+  background-color: #0a492c;
+  color:#efefef;
+}
+.ualib{
+  border-top:5px solid #81c441;
+}
+.ualib .navbar-light .navbar-nav{
+  padding:30px 0;
+}
+.ualib .navbar-light .navbar-nav .nav-link{
+  color:#0a492c;
+  font-weight:bold;
+	padding:7px;
+  border-top:3px solid #fff;
+  border-bottom:3px solid #fff;
+  transition: border 0.4s ease;
+  font-size:0.93em;
+}
+.ualib .navbar-light .navbar-nav .nav-link:hover{
+  border-top:3px solid #ffdb05;
+  border-bottom:3px solid #ffdb05;
+  color:#666;
+  transition: border 0.4s ease;
+}
+.ualib .navbar-light .navbar-nav .ua-nav-call{
+	background-color:#fde382;
+  text-align:center;
+}
+.ua-nav-text-right{
+  text-align:left;
+}
+.ua-logo{
+  margin-top:-15px;
+}
+.ua-bordered-image{
+  outline-offset: 8px;
+	outline: 7px solid #ffdb05;
+  margin-top:15px;
+}
+.ua-text{
+	font-size:1.12em;
+  line-height:1.6em;
+}
+.ua-pattern{
+  background-image:url();
+  background-size:70%;
+  background-position:right center;
+}
+.ua-lighten-pattern{
+  background:rgba(255,255,255,0.75);
+}
+.ua-call{
+	font-weight:normal;
+  font-size:0.92em;
+  display:block;
+  line-height:40px;
+  color:#666;
+  padding:10px;
+  transition: background-color 0.75s linear;
+}
+.ua-call:hover{
+  text-decoration:none;
+  color:#000;
+  background-color:#fde382;
+  transition: background-color 0.75s linear;
+}
+.ua-sub-head{
+	color:#284E36;
+  padding-bottom:20px;
+  margin-bottom:25px;
+  border-bottom:5px solid #FFDB05;
+}
+.ua-opp .ua-caption{
+ 	-moz-transform: rotate(353deg);
+	-webkit-transform: rotate(353deg);
+	-o-transform: rotate(353deg);
+	-ms-transform: rotate(353deg);
+	transform: rotate(353deg);
+  color:#000;
+  padding:10px 0;
+  font-size:1.3em;
+	transition: transform 0.5s linear;
+}
+.ua-opp:hover .ua-caption{
+   	-moz-transform: rotate(356deg);
+	-webkit-transform: rotate(356deg);
+	-o-transform: rotate(356deg);
+	-ms-transform: rotate(356deg);
+	transform: rotate(356deg);
+}
+.ua-borders{
+  border-top:5px solid #ffdb05;
+  border-bottom:5px solid #81c441;
+}
+.ua-brd-bt-dkgr{
+   border-bottom:5px solid #0a492c;
+}
+.ua-dark-border{
+  border-top:5px solid #0a492c;
+}
+.ua-bk-gr{
+   background-color: #81c441;
+}
+.ua-bk-yl{
+     background-color: #fde382;
+}
+.ua-bk-dyl{
+     background-color: #ffdb05;
+}
+
+@media (min-width: 992px) {
+	.ua-banner{
+		background-image:url(https://www2.library.ualberta.ca/2015assets/new-giving/banner.png);
+  	background-size:100%;
+		background-repeat:no-repeat;
+	}
+	.ua-banner h2{
+  	font-size:9em;
+  	color:#ffdb05;
+  	font-family: 'Engagement', cursive;
+  	padding-bottom:48px;
+  	padding-top:150px;
+    text-align:center;
+  	text-shadow: 2px 2px 4px #000000;
+ 		-moz-transform: rotate(352deg);
+		-webkit-transform: rotate(352deg);
+		-o-transform: rotate(352deg);
+		-ms-transform: rotate(352deg);
+		transform: rotate(352deg);
+	}
+  .ua-nav-text-right{
+  	text-align:right;
+	}
+  .ua-nav-logo{
+  	width:300px;
+  }
+  .first{
+  	padding-left:0;
+	}
+	.last{
+  	padding-right:0;
+	}
+}
+@media (min-width: 1200px) {
+	.ua-banner h2{
+     padding-top:320px;
+  }
+  .ua-nav-logo{
+  		width:380px;
+  }
+}

@@ -1,0 +1,39 @@
+[attributes]
+---
+label: staffhub
+app_layout: '2020'
+position: 16
+
+[content]
+  <h1 style="margin-top:-20px;">{{ cms:text title }}</h1>
+
+	<div class="row" >
+      <div class="col-sm-12">
+                                
+{{ cms:snippet staffhub-topnav }}
+        <div class="row">
+                 		<div class='left col-sm-4'id="popular"> {{ cms:textarea content}}
+ </div> 
+      	<div class='sidebar col-sm-4' style="background-color: #ECEFF4; border-radius: 10px;  border-style: solid;  border-width: 1px;  border-color: black;  padding: 5px 5px 5px 15px;margin-top: 20px;"> {{ cms:textarea right_column}}</div> 
+                
+      <div class='right col-sm-4' style="margin-right:-23px;margin-left:23px">{{ cms:textarea sidebar }} </div>
+        </div>
+
+      </div>
+      
+
+	</div>
+<div class="row">
+  <hr>
+<div class='right col-sm-12'> {{ cms:textarea middle_column }}</div>  
+</div>
+
+	
+
+
+[js]
+
+
+[css]
+
+

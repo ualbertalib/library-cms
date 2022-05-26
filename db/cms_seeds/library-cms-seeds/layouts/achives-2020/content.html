@@ -1,0 +1,184 @@
+[attributes]
+---
+label: Achives-2020
+app_layout: '2020'
+position: 7
+
+[content]
+<body class="d-flex flex-column h-100 uaa">
+	<main role="main" class="flex-shrink-0">
+ 		{{ cms:textarea content }}
+	</main>
+	<footer class="footer mt-auto uaa-footer">
+  	<div class="container">
+    	<div class="row p-3">
+      	<div class="col-md-4">
+         
+         <p class="text-center text-lg-left mr-4 small mt-3">
+            <a href="/" aria-label="UA Library Home" class="text-white">University of Alberta Library</a><br/>This site is licensed under a <br/><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-white">Creative Commons License</a><br/> <a href="/about-us/policies/privacy-policy" class="text-white">Website Privacy Policy</a>
+          </p>
+      	</div>
+      	<div class="col-md-4">
+   
+          <a href="https://www.ualberta.ca" aria-label="UA Home" >
+						<img src="https://www.ualberta.ca/_assets/images/ua-logo-reversed-white.svg" width="65%" type="image/svg+xml" alt="UA Library Logo" class="mt-lg-4 m-4 pl-4 pl-lg-0">
+    			</a>
+      	</div>
+  			<div class="col-md-4">
+    			<p class="text-center text-lg-right small">The University of Alberta Archives acknowledges that we are located on Treaty 6 and Métis territory. We respect the histories, languages, and cultures of First Nations, Métis, Inuit, and all First Peoples, whose presence continues to enrich our vibrant community.</p>
+       </div>
+  		</div>
+    </div>
+</footer>
+</body>
+[js]
+
+[css]
+body{
+  background-color:#000;
+}
+.w-95{
+  width:95%;
+}
+.uaa-nav li{
+  margin-right:0.3rem;
+}
+.navbar-nav{
+	margin-right:-10px;
+}
+.navbar-dark .navbar-nav .nav-link{
+	color:#fff;
+  background-color:#333;
+  text-decoration:none;
+  display:block;
+  font-weight:normal;
+  font-size:1em;
+  border-bottom: none;
+}
+.navbar-brand{
+	border-bottom:none;
+} 
+.uaa-nav li a i{
+  color:#fcdc4b;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  background-color:#444;
+}
+.uaa-nav li a:hover i{
+  color:#fff;
+}
+.uaa-footer{
+ 	background-color:#333;
+ 	color:#fff;
+}
+p.welcome{
+  color:#fff;
+}
+p.welcome a{
+  color:#fff;
+  font-weight:bold;
+  text-decoration:underline;
+  font-size:0.9em;
+  border-bottom: none;
+}
+p.welcome a:hover{
+  color:#FFEF7B;
+}
+.img-hover-zoom{
+  overflow:hidden;
+  }
+.img-hover-zoom img {
+   transition: all 1s ease-in-out;
+  opacity:0.8;
+}
+ .img-hover-zoom:hover img{
+     transform: scale(1.1);
+     opacity:1;
+}
+.img-hover-zoom a i {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index:1000;
+  font-size:2em;
+  opacity:0;
+  transition: opacity 0.5s ease-in-out;
+  color:#333;
+  border-radius:5px;
+  padding:0 3px;
+}
+.img-hover-zoom:hover i{
+    opacity:0.75;
+  background-color:#fff;
+}
+.uaa-btn{
+  background-color:#ffe335;
+  color:#000;
+}
+.footer a{
+  border-bottom: none;
+}
+.uaa-content-card{
+	padding:2.1rem;
+  background-color:#fff;
+}
+.uaa-content{
+	padding:0;
+  background-color:#fff;
+}
+.uaa-content-card a{
+	text-decoration: none;
+	padding-bottom: 1px;
+  color:#084F55;
+	border-bottom: 1px solid #084F55;
+}
+.uaa-content-card a:hover{
+border-bottom: none;
+  	text-decoration: none;
+}
+.uaa-content-card .list-group a{
+  border-bottom:none;
+}
+.uaa-content-card p{
+	line-height:1.7em;
+  font-size:1.1em;
+}
+.uaa-card{
+	border:1px solid #333;
+    background-color:#FEF8D7;
+  border-radius:4px;
+  padding:1rem 1rem 0 1rem;
+  margin-bottom:1rem;
+}
+.uaa-2nd-eq{
+  background-color:#FEF8D7;
+}
+.uaa-sidebar{
+  background-color:#FEF8D7;
+  padding:1.5em;
+}
+.uaa-small{
+  font-size:60%;
+}
+h1{
+  background:#444;
+  padding:0.5rem 1.5rem;
+  margin-bottom:0;
+  font-weight:200;
+	color:#fff;
+  letter-spacing:0.05em;
+   font-size: 1.4em;
+}
+h2{
+  color:#333;
+  font-size:1.8em;
+}
+h3{
+   color:#333;
+	font-size:1.4em;
+}
+@media (min-width: 48em) {
+	h1 {
+	  font-size: 2.1em;
+	}

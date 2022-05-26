@@ -1,0 +1,62 @@
+[attributes]
+---
+label: DSC
+layout: non-rich-text
+target_page: 
+categories: []
+is_published: true
+position: 7
+
+[text_area content]
+{{ cms:snippet location-css }}
+ <p class="ual-breadcrumbs"><a href="/">University of Alberta Library Home</a> <span>&gt;</span> <a href="/locations">Library Locations</a> <span>&gt;</span> The Digital Scholarship Centre</p>
+<div class="ual-banner ual-banner-dsc">
+	<h1>The Digital Scholarship Centre</h1>
+</div>
+       	<div class="row mt-3">
+      		<div class="col-md-5">
+              	<h2><span class="red">Closed due to COVID-19</span></h2>
+            <h2>
+               Digital Scholarship Centre
+            </h2>
+            <p>The Digital Scholarship Centre (DSC) is a research and teaching  support service for students and faculty at the University of Alberta. The DSC offers physical and digital spaces for the university community across all disciplines to create, collaborate, and explore new ideas.</p>
+
+<p>Please visit the <a href="https://dsc.library.ualberta.ca">Digital Scholarship Centre Website</a> for more information or to book spaces and equiptment. </p>
+
+			</div>
+          <div class="col-md-4"> 
+         		 <div id="map" style="height:300px; width:280px; margin-top:10px"> </div>
+         		<script>
+      function initMap() {
+        var uluru = {lat: 53.526951, lng: -113.523347 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          label: "DSC - Second Floor"
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMpxXccO1kaBQjU_7bD-KpLSoplburpyM&callback=initMap">
+    </script>
+          </div>
+   			<div class="col-md-3 address">
+             
+          <h3>DSC Contact Information</h3> 
+            <p>2-20 Cameron Science &amp; Technology Library</p> 
+              <p>11231 Saskatchewan Drive<br /> 
+          University of Alberta<br /> 
+          Edmonton, Alberta, T6G 2J8 </p>
+            
+<p><a href="mailto:dsc.library@ualberta.ca"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> dsc.library@ualberta.ca</a></p>
+
+              <a href="https://dsc.library.ualberta.ca" class="btn ual-btn" data-no-turbolink="true">DSC Website (Bookings and More Information)</a>
+  
+   </div>
+      </div>
+    
+
