@@ -23,9 +23,9 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 
 1. `git clone git@github.com:ualbertalib/library-cms.git`
 2. `cd library-cms`
-3. `bundle install`
+3. `bundle install && yarn install`
 4. `docker-compose up -d`
-5. `rake db:migrate`
+5. `rake db:create && rake db:migrate`
 6. change default credentials for your development environment by editing `config/initializers/comfortable_mexican_sofa.rb`:
 ```
     ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = 'dev-username'
