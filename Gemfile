@@ -39,7 +39,7 @@ gem 'friendly_id'
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'webpacker', '~> 5.4'
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

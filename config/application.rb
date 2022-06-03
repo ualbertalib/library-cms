@@ -12,7 +12,7 @@ module HomeCms
     # route. Without this file serving routes are inaccessible.
     config.railties_order = [ActiveStorage::Engine, :main_app, :all]
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.0
     config.exceptions_app = self.routes
 
     # Settings in config/environments/* take precedence over those specified here.
