@@ -127,6 +127,9 @@ GEM
     htmlentities (4.3.4)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.2)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -218,6 +221,8 @@ GEM
       ffi (~> 1.0)
     regexp_parser (2.4.0)
     rexml (3.2.5)
+    ruby-vips (2.1.4)
+      ffi (~> 1.12)
     ruby_parser (3.19.0)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
@@ -286,9 +291,9 @@ DEPENDENCIES
   execjs
   friendly_id
   htmlentities
+  image_processing (~> 1.12, >= 1.12.2)
   jbuilder (~> 2.11)
   listen (>= 3.0.5, < 3.8)
-  mini_magick (>= 4.9.4)
   mysql2 (~> 0.5.4)
   puma (~> 5.6)
   rails (~> 7.0.3)
