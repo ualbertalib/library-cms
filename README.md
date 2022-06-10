@@ -42,6 +42,17 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 10. Seed database: `rake 'comfy:cms_seeds:import[library-cms-seeds, ualberta-libraries]'` may take a couple of minutes
 11. visit http://localhost:3000 and you will see the library homepage. 
 
+## Features
+
+![image](https://user-images.githubusercontent.com/1220762/173146961-b8430fca-4d41-4c8c-a413-8bd0ac6cc929.png)
+
+![image](https://user-images.githubusercontent.com/1220762/173147029-3d5f952c-5bae-415e-a9ee-29dc8fc656a8.png)
+
+![image](https://user-images.githubusercontent.com/1220762/173147203-eb68a6f7-73c4-4a5d-ab57-95169d3d0f16.png)
+
+![image](https://user-images.githubusercontent.com/1220762/173147294-715b940e-66dd-4c40-b874-cf4051ba0169.png)
+
+
 
 
 
