@@ -49,9 +49,7 @@
             building
       - @profiles.each do |profile|
         %tr{:class => ("head" unless profile.opt_in.nil?)}
-          - require 'uri'
-          - @photo_link_dirty = "https://www2.library.ualberta.ca/2015assets/all-staff-photos/thumbs/"+profile.first_name.downcase+"-"+profile.last_name.downcase+".jpg"
-          - @photo_link = URI.encode_www_form_component(@photo_link_dirty)
+          - @photo_link = "https://www2.library.ualberta.ca/2015assets/all-staff-photos/thumbs/#{profile.first_name.downcase}-#{profile.last_name.downcase}.jpg"
           - @no_photo = "staff-photos/thumbs/none.jpg"
           %td.staff-images
             = link_to image_tag(@photo_link), profile_path(profile)
