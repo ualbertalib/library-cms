@@ -32,6 +32,10 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
     ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = 'dev-username'
     ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = 'dev-password'
 ```
+    also add default credentials in 'app/controllers/profiles_controller.rb' :
+    http_basic_authenticate_with name: Rails.application.secrets.cms_user, password: Rails.application.secrets.cms_password, except: [:index, :show]
+    replace Rails.application.secrets.cms_user with "dev-username" and Rails.application.secrets.cms_password with "dev-password"
+    
 7. `rails s`
 8. visit http://localhost:3000/admin - You'll be prompted to enter username and password (use the ones you created in step 6)
 9. In the admin area create a site called "ualberta-libraries"
