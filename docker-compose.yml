@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:5.5 # matches staging/production
+    image: mariadb:5.5 # matches staging/production
     environment:
       MYSQL_ROOT_PASSWORD: mysecretpassword
     volumes:
