@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.11'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-gem "mini_magick", ">= 4.9.4"
+gem 'image_processing', '~> 1.12', '>= 1.12.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,7 +39,7 @@ gem 'friendly_id'
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'webpacker', '~> 5.4'
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,8 +51,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.8'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', '>= 3.0'
 end
 
 group :test do
