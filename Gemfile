@@ -32,7 +32,7 @@ gem 'image_processing', '~> 1.12', '>= 1.12.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "comfortable_mexican_sofa", "~> 2.0.19"
+gem "comfortable_mexican_sofa", git: 'https://github.com/restarone/comfortable-mexican-sofa', tag: '3.4'
 
 gem 'friendly_id'
 
