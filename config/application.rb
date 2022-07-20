@@ -22,5 +22,9 @@ module HomeCms
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Rails decided to deem Symbol safe
+    # https://github.com/rails/rails/pull/45584
+    config.active_record.yaml_column_permitted_classes = [Symbol]
   end
 end
