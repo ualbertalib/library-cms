@@ -26,5 +26,11 @@ module HomeCms
     # Rails decided to deem Symbol safe
     # https://github.com/rails/rails/pull/45584
     config.active_record.yaml_column_permitted_classes = [Symbol]
+
+    # this is for the cms edit page preview and update buttons.  
+    # app/views/comfy/admin/cms/pages/_form.html.haml
+    # https://github.com/ualbertalib/library-cms/issues/378
+    # Behaviour changes when using Ruby 3.0 so can likely remove after that point.
+    config.action_view.automatically_disable_submit_tag = false
   end
 end
