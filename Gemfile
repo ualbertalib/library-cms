@@ -8,7 +8,7 @@ gem 'sqlite3'
 
 gem 'mysql2', '~> 0.5.4'
 # Use Puma as the app server
-gem 'puma', '~> 5.6'
+gem 'puma', '~> 6.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
