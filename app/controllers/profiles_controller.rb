@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
 	$units = {:access => "Access Services", :archives => "Archives", :augustana => "Augustana", 
 				:bib => "Cataloguing & Metadata Strategies", :collections => "Collection Strategies", 
 				:digital => "Digital Initiatives", :facilities => "Facilities", :finance => "Financial Systems & Analysis", 
-              	:health => "Health Sciences", :hr => "Human Resources", :humanities => "Humanities, Social Sciences & Law", 
+              	:health => "Health Sciences", :hr => "Human Resources", :humanities => "Social Sciences, Humanities & Law", 
               	:iss => "Information Services & User Engagement", :its => "Information Technology Services", :admin => "Library and Museums Administration", 
               	:science => "Sciences, Engineering, and Business", :special => "Special Collections"}
     $buildings = {:augustana => "Augustana Campus Library", :bsj => "Bibliothèque Saint-Jean", :bpsc=> "Bruce Peel Special Collections",
