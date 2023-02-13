@@ -1,14 +1,37 @@
 class ProfilesController < ApplicationController
-	$units = {:access => "Access Services", :archives => "Archives", :augustana => "Augustana", 
-				:bib => "Cataloguing & Metadata Strategies", :collections => "Collection Strategies", 
-				:digital => "Digital Initiatives", :facilities => "Facilities", :finance => "Financial Systems & Analysis", 
-              	:health => "Health Sciences", :hr => "Human Resources", :humanities => "Social Sciences + Humanities", 
-              	:iss => "Information Services & User Engagement", :its => "Information Technology Services", :admin => "Library and Museums Administration", 
-              	:science => "Natural + Applied Sciences", :special => "Special Collections"}
-    $buildings = {:augustana => "Augustana Campus Library", :bsj => "Bibliothèque Saint-Jean", :bpsc=> "Bruce Peel Special Collections",
-    				:cameron => "Cameron Library", :law => "J.A. Weir Law Library", :scott => "J.W. Scott Library",
-    				:rcrf => "Research & Collections Resource Facility", :rutherford => "Rutherford", 
-    				:stjosephs => "St. Joseph's Library" }
+	$units = {:access => "Access Services", 
+		:archives => "Archives", 
+		:copyright => "Copyright",
+		:augustana => "Faculty Engagement (Augustana)", 
+		:bib => "Cataloguing Strategies", 
+		:collections => "Collection Strategies", 
+		:digital => "Digital Production & Preservation Services", 
+		:digrepo => "Digital Repository & Data Services", 
+		:dsc => "Digital Scholarship Centre",
+		:facilities => "Facilities", 
+              	:health => "Faculty Engagement (Health Sciences)", 
+		:metadata => "Metadata Strategies", 
+		:humanities => "Faculty Engagement (Social Sciences + Humanities)", 
+              	:iss => "Information Services & User Engagement", 
+		:its => "Specialized Technical Support", 
+		:las => "Library Application Support", 
+		:lad => "Library Application Development",
+		:admin => "Library Administration", 
+		:researchimpact => "Research Impact",
+		:rdm => "Research Data Management",
+		:open => "Open Publishing & Digitization Services",
+              	:science => "Faculty Engagement (Natural + Applied Sciences)", 
+		:stratigic => "Strategic Partnerships",
+		:special => "Special Collections", 
+		:ux => "User Experience"}
+    $buildings = {:augustana => "Augustana Campus Library", 
+	    :bsj => "Bibliothèque Saint-Jean", 
+	    :bpsc=> "Bruce Peel Special Collections", 
+	    :cameron => "Cameron Library", 
+	    :scott => "J.W. Scott Library", 
+	    :rcrf => "Research & Collections Resource Facility", 
+	    :rutherford => "Rutherford", 
+	    :stjosephs => "St. Joseph's Library" }
 
         # You'll have to define "cmsPassword" in secrets.yml, or this will fail. Thanks, ansible. 
 	http_basic_authenticate_with name: Rails.application.secrets.cms_user, password: Rails.application.secrets.cms_password, except: [:index, :show]
