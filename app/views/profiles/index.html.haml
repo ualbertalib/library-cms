@@ -1,6 +1,11 @@
 .row.extra-top-margin
   .col-sm-10
     - if !@unitname.nil?
+      -if @unitname.include?("Health") || @unitname.include?("Law") || @unitname.include?("Science") || @unitname.include?("Augustana")
+        %h1
+          = surround 'Faculty Engagement (',') Staff' do
+            = @unitname
+      -else
         %h1
           = @unitname
           Staff
