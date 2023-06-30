@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # TODO: revisit config.active_record.yaml_column_permitted_classes when this gets bumped
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.0.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
