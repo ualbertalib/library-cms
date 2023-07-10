@@ -9,7 +9,7 @@ This is the CMS for the University of Alberta Libraries website. It uses Comfy M
 ## Development environment
 
 + Ruby 3.1.4
-+ Rails 7.0.2
++ Rails 7.0.x
 + MariaDB 5.5
 + Docker and docker-compose
 + yarn and nodejs 16+
