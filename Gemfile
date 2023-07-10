@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # TODO: revisit config.active_record.yaml_column_permitted_classes when this gets bumped
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.0.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 gem 'mysql2', '~> 0.5.5'
 # Use Puma as the app server
-gem 'puma', '~> 6.1'
+gem 'puma', '~> 6.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
