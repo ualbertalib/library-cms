@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
 	    :bsj => "Bibliothèque Saint-Jean", 
 	    :bpsc=> "Bruce Peel Special Collections", 
 	    :cameron => "Cameron Library", 
-	    :scott => "J.W. Scott Library", 
+	    :sperber => "Sperber Library", 
 	    :rcrf => "Research & Collections Resource Facility", 
 	    :rutherford => "Rutherford Library", 
 	    :stjosephs => "St. Joseph's Library" }
