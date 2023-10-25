@@ -23,6 +23,7 @@ class ProfilesController < ApplicationController
 		:its => "Specialized Technical Support", 
 		:special => "Special Collections", 
 		:stratigic => "Strategic Partnerships",
+		:tl => "Teaching & Learning",
 		:ux => "User Experience"}
     $buildings = {:augustana => "Augustana Campus Library", 
 	    :bsj => "Bibliothèque Saint-Jean", 
