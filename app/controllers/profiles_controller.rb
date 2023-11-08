@@ -8,7 +8,6 @@ class ProfilesController < ApplicationController
 		:digrepo => "Digital Repository & Data Services", 
 		:dsc => "Digital Scholarship Centre",
 		:facilities => "Facilities", 
-		:augustana => "Faculty Engagement (Augustana)",
               	:health => "Faculty Engagement (Health Sciences)", 
 		:science => "Faculty Engagement (Natural + Applied Sciences)",
 		:humanities => "Faculty Engagement (Social Sciences + Humanities)", 
