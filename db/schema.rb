@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
-  create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+ActiveRecord::Schema[7.1].define(version: 2022_06_03_215834) do
+  create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_blobs", charset: "utf8", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -39,21 +39,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "comfy_cms_categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_categories", charset: "utf8", force: :cascade do |t|
     t.integer "site_id", null: false
     t.string "label", null: false
     t.string "categorized_type", null: false
     t.index ["site_id", "categorized_type", "label"], name: "index_cms_categories_on_site_id_and_cat_type_and_label", unique: true
   end
 
-  create_table "comfy_cms_categorizations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_categorizations", charset: "utf8", force: :cascade do |t|
     t.integer "category_id", null: false
     t.string "categorized_type", null: false
     t.integer "categorized_id", null: false
     t.index ["category_id", "categorized_type", "categorized_id"], name: "index_cms_categorizations_on_cat_id_and_catd_type_and_catd_id", unique: true
   end
 
-  create_table "comfy_cms_files", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_files", charset: "utf8", force: :cascade do |t|
     t.integer "site_id", null: false
     t.string "label", default: "", null: false
     t.text "description"
@@ -63,7 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["site_id", "position"], name: "index_comfy_cms_files_on_site_id_and_position"
   end
 
-  create_table "comfy_cms_fragments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_fragments", charset: "utf8", force: :cascade do |t|
     t.string "record_type"
     t.bigint "record_id"
     t.string "identifier", null: false
@@ -79,7 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["record_type", "record_id"], name: "index_comfy_cms_fragments_on_record_type_and_record_id"
   end
 
-  create_table "comfy_cms_layouts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_layouts", charset: "utf8", force: :cascade do |t|
     t.integer "site_id", null: false
     t.integer "parent_id"
     t.string "app_layout"
@@ -95,7 +95,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["site_id", "identifier"], name: "index_comfy_cms_layouts_on_site_id_and_identifier", unique: true
   end
 
-  create_table "comfy_cms_pages", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_pages", charset: "utf8", force: :cascade do |t|
     t.integer "site_id", null: false
     t.integer "layout_id"
     t.integer "parent_id"
@@ -114,7 +114,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["site_id", "full_path"], name: "index_comfy_cms_pages_on_site_id_and_full_path"
   end
 
-  create_table "comfy_cms_revisions", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_revisions", charset: "utf8", force: :cascade do |t|
     t.string "record_type", null: false
     t.integer "record_id", null: false
     t.text "data", size: :medium
@@ -122,7 +122,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["record_type", "record_id", "created_at"], name: "index_cms_revisions_on_rtype_and_rid_and_created_at"
   end
 
-  create_table "comfy_cms_sites", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_sites", charset: "utf8", force: :cascade do |t|
     t.string "label", null: false
     t.string "identifier", null: false
     t.string "hostname", null: false
@@ -133,7 +133,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["hostname"], name: "index_comfy_cms_sites_on_hostname"
   end
 
-  create_table "comfy_cms_snippets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_snippets", charset: "utf8", force: :cascade do |t|
     t.integer "site_id", null: false
     t.string "label", null: false
     t.string "identifier", null: false
@@ -145,7 +145,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["site_id", "position"], name: "index_comfy_cms_snippets_on_site_id_and_position"
   end
 
-  create_table "comfy_cms_translations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "comfy_cms_translations", charset: "utf8", force: :cascade do |t|
     t.string "locale", null: false
     t.integer "page_id", null: false
     t.integer "layout_id"
@@ -159,7 +159,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["page_id"], name: "index_comfy_cms_translations_on_page_id"
   end
 
-  create_table "friendly_id_slugs", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "friendly_id_slugs", id: :integer, charset: "utf8", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 50
@@ -171,7 +171,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_215834) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "profiles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "profiles", charset: "utf8", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "job_title"
