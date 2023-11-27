@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Comfy::Cms::Site.create!(identifier: 'ualberta-libraries', hostname: 'localhost')
+Rake::Task['comfy:cms_seeds:import'].invoke('library-cms-seeds', 'ualberta-libraries')
