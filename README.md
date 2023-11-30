@@ -29,7 +29,7 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 5. `bin/rails db:setup`
 6. `bin/rails s`
 7. visit http://localhost:3000 and you will see the library homepage.
-8. If you need to visit the admin section (http://localhost:3000/admin) - You'll be prompted to enter username and password (use the ones in your config/secrets.yml, which by default are 'username' and 'password')
+8. If you need to visit the admin section (http://localhost:3000/admin) - You'll be prompted to enter username and password (use the ones in your config/secrets.yml, which by default are 'admin' and 'mysecretpassword')
 
 ## Features
 
