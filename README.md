@@ -2,7 +2,7 @@
 
 This is the CMS for the University of Alberta Libraries website. It uses Comfy Mexican Sofa. This repository also contains the staff profiles application.
 
-## Applications 
+## Applications
 
 + MariaDB database for profiles application and CMS
 
@@ -26,21 +26,10 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 2. `cd library-cms`
 3. `bundle install && yarn install`
 4. `docker-compose up -d`
-5. `rake db:create && rake db:migrate`
-6. change default credentials for your development environment by editing `config/initializers/comfortable_mexican_sofa.rb`:
-```
-    ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = 'dev-username'
-    ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = 'dev-password'
-```
-    also add default credentials in 'app/controllers/profiles_controller.rb' :
-    http_basic_authenticate_with name: Rails.application.secrets.cms_user, password: Rails.application.secrets.cms_password, except: [:index, :show]
-    replace Rails.application.secrets.cms_user with "dev-username" and Rails.application.secrets.cms_password with "dev-password"
-    
-7. `rails s`
-8. visit http://localhost:3000/admin - You'll be prompted to enter username and password (use the ones you created in step 6)
-9. In the admin area create a site called "ualberta-libraries"
-10. Seed database: `rake 'comfy:cms_seeds:import[library-cms-seeds, ualberta-libraries]'` may take a couple of minutes
-11. visit http://localhost:3000 and you will see the library homepage. 
+5. `bundle exec rails db:setup`
+6. `bundle exec rails server`
+7. visit [http://localhost:3000](http://localhost:3000) and you will see the library homepage.
+8. If you need to visit the admin section ([http://localhost:3000/admin](http://localhost:3000/admin)) - You'll be prompted to enter username and password (use the ones in your `config/secrets.yml`, which by default are 'admin' and 'mysecretpassword')
 
 ## Features
 
@@ -51,10 +40,3 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 ![image](https://user-images.githubusercontent.com/1220762/173147203-eb68a6f7-73c4-4a5d-ab57-95169d3d0f16.png)
 
 ![image](https://user-images.githubusercontent.com/1220762/173147294-715b940e-66dd-4c40-b874-cf4051ba0169.png)
-
-
-
-
-
-
-
