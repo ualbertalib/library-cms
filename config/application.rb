@@ -29,5 +29,9 @@ module HomeCms
     # Behaviour changes when using Ruby 3.0 so can likely remove after that point.
     # TODO: Appears to still be an issue in Ruby 3.0, need to investigate this further.
     config.action_view.automatically_disable_submit_tag = false
+
+    # We currently use mini_magick for ActiveStorage. VIPS is now the default. So we need to explicitly specify this.
+    # Delete this line if we ever migrate to VIPS
+    config.active_storage.variant_processor = :mini_magick
   end
 end
