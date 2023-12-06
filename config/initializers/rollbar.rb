@@ -55,12 +55,12 @@ Rollbar.configure do |config|
   # The :host key is mandatory and must include the URL scheme (e.g. 'http://'), all other fields
   # are optional.
   #
-  # config.proxy = {
-  #   host: 'http://some.proxy.server',
-  #   port: 80,
-  #   user: 'username_if_auth_required',
-  #   password: 'password_if_auth_required'
-  # }
+  config.proxy = {
+    host: Rails.application.secrets.rollbar_proxy_host,
+    port: Rails.application.secrets.rollbar_proxy_port,
+    user: Rails.application.secrets.rollbar_proxy_user,
+    password: Rails.application.secrets.rollbar_proxy_password
+  }
 
   # If you run your staging application instance in production environment then
   # you'll want to override the environment reported by `Rails.env` with an
