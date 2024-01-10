@@ -1,8 +1,12 @@
 
-import 'jquery'
-import 'popper.js'
-import 'bootstrapv462'
-import '../src/stylesheets/2020main.css';
+// Importing and adding jQuery which is required for our legacy js (pre-bootstrap 5 layouts), remove one fully migrated.
+import jquery from 'jquery'
+window.jQuery = jquery
+window.$ = jquery
+
+import '@popperjs/core'
+import 'bootstrap'
+import '../src/stylesheets/2020main-bootstrapv5.css';
 
 
 $(function() {
