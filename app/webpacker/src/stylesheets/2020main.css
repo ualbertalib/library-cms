@@ -1,4 +1,4 @@
-@import 'bootstrapv462';
+@import 'bootstrap-v462';
 
 /* resets of existing classes and elements */
 body, .sticky-footer-wrapper {
@@ -680,7 +680,7 @@ body, .sticky-footer-wrapper {
 }
 }
 /* extra large breakpoint */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .ual-about>a>.d-xl-block{
 		display:inline!important;
 	}
