@@ -1,7 +1,7 @@
 
 import 'jquery'
 import 'popper.js'
-import 'bootstrap'
+import 'bootstrap-v462'
 import '../src/stylesheets/2020main.css';
 
 
@@ -29,6 +29,6 @@ $(function() {
 		});
 	}
 
-    
+
 });
- 
+
