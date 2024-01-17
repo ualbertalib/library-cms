@@ -16,8 +16,8 @@ $(function() {
 	var mode = localStorage.getItem('mode');
 	if (mode == 'dark') {
 		$('body').addClass('dark-mode');
-		$("#dark-mode-toggle").click(function() {
-			$("body").toggleClass("dark-mode");
+		$('#dark-mode-toggle').click(function() {
+			$('body').toggleClass('dark-mode');
 			localStorage.setItem('mode', 'lite');
 			mode = localStorage.getItem('mode');
 		});
