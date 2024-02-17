@@ -5,7 +5,7 @@ ruby '3.1.4'
 
 gem 'rails', '~> 7.1.3'
 
-gem 'mysql2', '~> 0.5.5'
+gem 'mysql2', '~> 0.5.6'
 # Use Puma as the app server
 gem 'puma', '~> 6.4'
 
