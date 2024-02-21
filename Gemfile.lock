@@ -251,7 +251,7 @@ GEM
     reline (0.4.2)
       io-console (~> 0.5)
     rexml (3.2.6)
-    rollbar (3.5.1)
+    rollbar (3.5.2)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
