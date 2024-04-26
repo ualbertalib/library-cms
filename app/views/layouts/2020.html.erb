@@ -9,26 +9,46 @@
     <%= stylesheet_pack_tag '2020main' %>
     <script src="https://kit.fontawesome.com/5dc7d61ac4.js" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QT07E47HT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5QT07E47HT');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QT07E47HT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5QT07E47HT');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PVV4HQM4');
+    </script>
+    <!-- End Google Tag Manager -->
     <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
     <title>
-  <% if content_for(:title) %>
-    <%= yield(:title) %> - UofA Library
-  <% elsif @cms_page %>
-    <%= @cms_page.label %> - UofA Library
-  <% else %>
-     University of Alberta Library
-  <% end %>
-</title>
+      <% if content_for(:title) %>
+        <%= yield(:title) %> - UofA Library
+      <% elsif @cms_page %>
+        <%= @cms_page.label %> - UofA Library
+      <% else %>
+        University of Alberta Library
+      <% end %>
+    </title>
   </head>
   <body class="d-flex flex-column">
-  
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVV4HQM4"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
   <%= yield %>
 
   </body>
