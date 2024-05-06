@@ -28,7 +28,7 @@ jobs:
       mysql:
         image: mariadb:10.11
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: true
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
