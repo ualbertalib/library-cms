@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Install packages
-        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libvips postgresql-client libpq-dev
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libvips libjemalloc2 default-mysql-client default-libmysqlclient-dev
 
       - name: Checkout code
         uses: actions/checkout@v4
