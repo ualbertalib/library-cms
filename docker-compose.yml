@@ -1,12 +1,12 @@
 services:
   mysql:
-    image: mariadb:5.5 # matches staging/production
+    image: mariadb:10.11 # matches staging/production
     environment:
       MYSQL_ROOT_PASSWORD: mysecretpassword
     volumes:
       - mysql:/var/lib/mysql
     ports:
-      - "3306:3306"     
+      - "3306:3306"
 volumes:
   mysql:
     driver: local
