@@ -18,7 +18,7 @@ gem 'rollbar'
 gem 'execjs'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.11'
+gem 'jbuilder', '~> 2.12'
 
 # Use ActiveStorage variant
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
