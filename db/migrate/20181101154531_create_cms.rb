@@ -1,9 +1,7 @@
 class CreateCms < ActiveRecord::Migration[5.2]
-
   LIMIT = 16777215
 
   def change
-
     # -- Sites -----------------------------------------------------------------
     create_table :comfy_cms_sites, force: true do |t|
       t.string :label,        null: false
@@ -29,8 +27,8 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.integer :position,    null: false, default: 0
       t.timestamps
 
-      t.index [:parent_id, :position]
-      t.index [:site_id, :identifier], unique: true
+      t.index [ :parent_id, :position ]
+      t.index [ :site_id, :identifier ], unique: true
     end
 
     # -- Pages -----------------------------------------------------------------
@@ -48,9 +46,9 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.boolean :is_published,    null: false, default: true
       t.timestamps
 
-      t.index [:site_id, :full_path]
-      t.index [:parent_id, :position]
-      t.index [:is_published]
+      t.index [ :site_id, :full_path ]
+      t.index [ :parent_id, :position ]
+      t.index [ :is_published ]
     end
 
     # -- Translations ----------------------------------------------------------
@@ -63,9 +61,9 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.boolean :is_published,    null: false, default: true
       t.timestamps
 
-      t.index [:page_id]
-      t.index [:locale]
-      t.index [:is_published]
+      t.index [ :page_id ]
+      t.index [ :locale ]
+      t.index [ :is_published ]
     end
 
     # -- Fragments -------------------------------------------------------------
@@ -78,9 +76,9 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.datetime    :datetime
       t.timestamps
 
-      t.index [:identifier]
-      t.index [:datetime]
-      t.index [:boolean]
+      t.index [ :identifier ]
+      t.index [ :datetime ]
+      t.index [ :boolean ]
     end
 
     # -- Snippets --------------------------------------------------------------
@@ -92,8 +90,8 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.integer :position,    null: false, default: 0
       t.timestamps
 
-      t.index [:site_id, :identifier], unique: true
-      t.index [:site_id, :position]
+      t.index [ :site_id, :identifier ], unique: true
+      t.index [ :site_id, :position ]
     end
 
     # -- Files -----------------------------------------------------------------
@@ -104,7 +102,7 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.integer :position,    null: false, default: 0
       t.timestamps
 
-      t.index [:site_id, :position]
+      t.index [ :site_id, :position ]
     end
 
     # -- Revisions -------------------------------------------------------------
@@ -114,7 +112,7 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.text      :data,        limit: LIMIT
       t.datetime  :created_at
 
-      t.index [:record_type, :record_id, :created_at],
+      t.index [ :record_type, :record_id, :created_at ],
       name: "index_cms_revisions_on_rtype_and_rid_and_created_at"
     end
 
@@ -124,7 +122,7 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.string  :label,            null: false
       t.string  :categorized_type, null: false
 
-      t.index [:site_id, :categorized_type, :label],
+      t.index [ :site_id, :categorized_type, :label ],
       unique: true,
       name:   "index_cms_categories_on_site_id_and_cat_type_and_label"
     end
@@ -134,7 +132,7 @@ class CreateCms < ActiveRecord::Migration[5.2]
       t.string  :categorized_type,  null: false
       t.integer :categorized_id,    null: false
 
-      t.index [:category_id, :categorized_type, :categorized_id],
+      t.index [ :category_id, :categorized_type, :categorized_id ],
       unique: true,
       name:   "index_cms_categorizations_on_cat_id_and_catd_type_and_catd_id"
     end
