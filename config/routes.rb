@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   match '/500', to: 'errors#internal_server_error', via: :all
   # Ensure that this route is defined last
   comfy_route :cms, path: "/"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

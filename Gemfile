@@ -18,7 +18,7 @@ gem 'rollbar'
 gem 'execjs'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.11'
+gem 'jbuilder', '~> 2.12'
 
 # Use ActiveStorage variant
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
@@ -33,6 +33,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'webpacker', '~> 5.4'
 
+gem "rdoc", ">= 6.6.3.1"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -42,7 +44,7 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 
-  gem 'listen', '>= 3.0.5', '< 3.9'
+  gem 'listen', '>= 3.0.5', '< 3.10'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '>= 3.0'
 end
