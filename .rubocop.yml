@@ -1,3 +1,45 @@
-# Omakase Ruby styling for Rails
+require:
+  - rubocop-capybara
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rails
+  - standard
+
 inherit_gem:
-  rubocop-rails-omakase: rubocop.yml
+  standard: config/base.yml
+
+AllCops:
+  SuggestExtensions: false
+  TargetRubyVersion: 3.3
+  NewCops: enable
+
+Minitest/MultipleAssertions:
+  Max: 10 # default 3
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+# These below cops are good practice going forward, but due to legacy we exclude some migrations
+Rails/CreateTableWithTimestamps:
+  Exclude:
+    - db/migrate/20181101154531_create_cms.rb
+    - db/migrate/20220603215833_create_active_storage_variant_records.active_storage.rb
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - db/migrate/20220603215832_add_service_name_to_active_storage_blobs.active_storage.rb
+
+Rails/BulkChangeTable:
+  Exclude:
+    - db/migrate/20181101154602_create_friendly_id_slugs.rb
+    - db/migrate/20181101154832_add_slug_to_profiles.rb
+
+Rails/ThreeStateBooleanColumn:
+  Exclude:
+    - db/migrate/20181101154627_create_profiles.rb
+
+# Below are cops that are currently disabled, where we should fix in the future
+# TODO: Fix ProfilesController so we don't need to use global vars
+Style/GlobalVars:
+  Exclude:
+    - app/controllers/profiles_controller.rb

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   resources :staff, as: :profiles, controller: :profiles
   comfy_route :cms_admin, path: "/admin"

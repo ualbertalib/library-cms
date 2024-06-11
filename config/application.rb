@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails/all"
@@ -14,8 +16,8 @@ module HomeCms
     # Configuration for the application, engines, and railties goes here.
     # Ensuring that ActiveStorage routes are loaded before Comfy's globbing
     # route. Without this file serving routes are inaccessible.
-    config.railties_order = [ ActiveStorage::Engine, :main_app, :all ]
-    config.exceptions_app = self.routes
+    config.railties_order = [ActiveStorage::Engine, :main_app, :all]
+    config.exceptions_app = routes
 
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
