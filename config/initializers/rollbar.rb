@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rollbar.configure do |config|
   # Without configuration, Rollbar is enabled in all environments.
   # To disable in specific environments, set config.enabled=false.
@@ -31,9 +33,7 @@ Rollbar.configure do |config|
   # 'ignore' will cause the exception to not be reported at all.
   # config.exception_level_filters.merge!('MyCriticalException' => 'critical')
   #
-  config.exception_level_filters.merge!({
-    'ActionController::RoutingError' => 'ignore'
-  })
+  config.exception_level_filters["ActionController::RoutingError"] = "ignore"
 
   # You can also specify a callable, which will be called with the exception instance.
   # config.exception_level_filters.merge!('MyCriticalException' => lambda { |e| 'critical' })
@@ -71,5 +71,5 @@ Rollbar.configure do |config|
   # environment variable like this: `ROLLBAR_ENV=staging`. This is a recommended
   # setup for Heroku. See:
   # https://devcenter.heroku.com/articles/deploying-to-a-custom-rails-environment
-  config.environment = ENV['ROLLBAR_ENV'].presence || Rails.env
+  config.environment = ENV["ROLLBAR_ENV"].presence || Rails.env
 end

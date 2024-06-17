@@ -11,14 +11,14 @@ class CmsTest < ActionDispatch::IntegrationTest
   end
 
   test "hours and locations page" do
-    get comfy_cms_render_page_path(cms_path: 'hours-locations')
+    get comfy_cms_render_page_path(cms_path: "hours-locations")
 
     assert_response :success
     assert_select "h1", /Hours & Locations/
   end
 
   test "about us page" do
-    get comfy_cms_render_page_path(cms_path: 'about-us')
+    get comfy_cms_render_page_path(cms_path: "about-us")
 
     assert_response :success
     assert_select "h1", /About Us/
