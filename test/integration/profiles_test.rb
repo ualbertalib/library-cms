@@ -57,10 +57,4 @@ class ProfilesTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to profiles_url
   end
-
-  # TODO: There is no route for this endpoint?
-  # test "should get units" do
-  #   get units_profiles_url
-  #   assert_response :success
-  # end
 end
