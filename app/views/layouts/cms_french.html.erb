@@ -16,22 +16,22 @@
   <% if content_for(:title) %>
     <%= yield(:title) %> - Bibliothèques
   <% elsif @cms_page %>
-    <%= @cms_page.label %> - Bibliothèques 
+    <%= @cms_page.label %> - Bibliothèques
   <% else %>
      Bibliothèques de l'Université de l'Alberta
   <% end %>
 </title>
-  
+
   <link rel="icon" href='favicon.ico' %>
-   
+
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
   <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Abel" %>
-  <%= javascript_pack_tag 'application' %>
-  <%= stylesheet_pack_tag 'application' %>
-  
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'application' %>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QT07E47HT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -40,7 +40,7 @@
   gtag('config', 'G-5QT07E47HT');
 </script>
     <%= csrf_meta_tags %>
-    <%= content_for(:head) %> 
+    <%= content_for(:head) %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

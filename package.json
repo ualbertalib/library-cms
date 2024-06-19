@@ -4,15 +4,16 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@popperjs/core": "^2.11.8",
-    "@rails/webpacker": "^5.4.4",
     "bootstrap": "^5.3.3",
     "bootstrap-v462": "npm:bootstrap@4.6.2",
-    "glob-parent": "^6.0.2",
+    "esbuild": "^0.21.5",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.13.3",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "sass": "^1.70.0"
   },
-  "devDependencies": {
-    "webpack-dev-server": "^4.15.2"
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_module && sass ./app/assets/stylesheets/2020main.css:./app/assets/builds/2020main.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/2020main-bootstrap-v5.css:./app/assets/builds/2020main-bootstrap-v5.css --no-source-map --load-path=node_modules"
   }
 }

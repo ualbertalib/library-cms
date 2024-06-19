@@ -5,7 +5,6 @@ window.$ = jquery
 
 import '@popperjs/core'
 import 'bootstrap'
-import '../src/stylesheets/2020main-bootstrap-v5.css';
 
 $(function() {
 	$('[data-toggle-second="tooltip"]').tooltip();

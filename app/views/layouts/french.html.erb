@@ -15,7 +15,7 @@
 
     <title>Bibliothèques de l'Université de l'Alberta</title>
     <%= favicon_link_tag 'https://www.ualberta.ca/favicon.svg' %>
-   
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -23,8 +23,8 @@
        <script
   src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Abel" %>
-    <%= javascript_pack_tag 'application' %>
-    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'application' %>
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QT07E47HT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -60,7 +60,7 @@
         <div class="row header">
           <div class="container">
             <div class="col-xs-8 col-md-5 col-sm-5">
-              <h1><a data-scroll href="#top"><%= image_pack_tag "ualib-logo-french.png", :class => "ualogo", :alt => "University of Alberta Libraries" %></a></h1>
+              <h1><a data-scroll href="#top"><%= image_tag "ualib-logo-french.png", :class => "ualogo", :alt => "University of Alberta Libraries" %></a></h1>
             </div>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <h2>menu</h2><!-- Mobile menu button -->
@@ -74,9 +74,9 @@
                 <li><a href="/francais/question" class="ask-main" data-no-turbolink="true">question?</a></li>
                      <li><a href="/francais/question" class="hidden-xs" data-no-turbolink="true">chat</a></li>
                 <li><a href="/francais/question" class="hidden-xs" data-no-turbolink="true">courriel</a></li>
-                <li><a href="/about-us" class="hidden-xs" data-no-turbolink="true">En bref</a></li> 
+                <li><a href="/about-us" class="hidden-xs" data-no-turbolink="true">En bref</a></li>
                 <li><a href="/site-search" class="hidden-xs" data-no-turbolink="true">recherche du site</a></li>
-                <li><a href="/locations" class="hidden-xs" data-no-turbolink="true">localisations</a></li> 
+                <li><a href="/locations" class="hidden-xs" data-no-turbolink="true">localisations</a></li>
                 <li><a href="/hours" class="last hidden-xs" data-no-turbolink="true">heures</a></li>
               </ul>
             </div>
@@ -104,32 +104,32 @@
            <div class="col-sm-15 col-xs-15" id="news-nav">
             <div>
                <h3 class="top-padded"><a class="page-scroll" href="#news"><span></span>Nouvelles</a></h3>
-              
+
             </div>
           </div>
           <div class="col-sm-15 col-xs-15" id="services-nav">
             <div>
                <h3 class="top-padded"><a class="page-scroll" href="#services"><span></span>Services</a></h3>
-             
+
             </div>
           </div>
           <div class="col-sm-15 col-xs-15" id="subjects-nav">
             <div>
               <h3><a class="page-scroll" href="#subjects"><span></span>Guides par sujet</a></h3>
-          
+
             </div>
           </div>
-         
+
           <div class="col-sm-15 col-xs-15" id="research-nav">
             <div>
                <h3 class="top-padded"><a class="page-scroll" href="#research"><span></span>Recherche</a></h3>
-              
+
             </div>
           </div>
           <div class="col-sm-15 col-xs-15" id="account-nav">
             <div>
                <h3 class="top-padded"><a class="page-scroll" href="#account"><span></span>Mon Dossier</a></h3>
-            
+
             </div>
           </div>
         </div><!-- End non-mobile navigation -->
@@ -151,7 +151,7 @@
   ga('send', 'pageview');
 
 </script>
- 
- 
+
+
   </body>
 </html>
