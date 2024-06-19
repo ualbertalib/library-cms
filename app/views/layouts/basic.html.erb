@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title> 
+      <% if content_for(:title) %>
+        <%= yield(:title) %>
+      <% elsif @cms_page %>
+        <%= @cms_page.label %>
+      <% else %>
+        Library
+      <% end %>
+    </title>
+    <link href="https://www.ualberta.ca/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link color="#275d38" href="https://www.ualberta.ca/safari-pinned-tab.svg" rel="mask-icon">
+    <link href="https://www.ualberta.ca/favicon.svg" rel="icon">
+    <link href="https://www.ualberta.ca/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="https://www.ualberta.ca/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5abf36224f.js" crossorigin="anonymous"></script>
+    <link href="https://www.ualberta.ca/_assets/css/framework-v2.css" media="screen" rel="stylesheet">
+    <script src="https://ualberta.libanswers.com/load_chat.php?hash=baadd67c0b9382719dabca82069083e2e6b6d873103a32cc235ec09ad41f22a5"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QT07E47HT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5QT07E47HT');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PVV4HQM4');
+    </script>
+    <!-- End Google Tag Manager -->
+    <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
+    <%= javascript_include_tag comfy_cms_render_js_path(@cms_site.id, @cms_layout.identifier) %>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVV4HQM4" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <%= yield %>
+  </body>
+</html>
