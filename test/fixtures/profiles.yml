@@ -1,0 +1,19 @@
+one:
+  first_name: Jane
+  last_name: Doe
+  unit: Library
+  email: jane@ualberta.ca
+  phone: 780-123-4567
+  campus_address: 1234 Rutherford Library
+  expertise: Library Science
+  introduction: Jane is a librarian at the University of Alberta.
+  publications: Jane has published many articles on library science.
+  staff_since: 2010
+  links: http://www.jane.ualberta.ca
+  orcid: 0000-0000-0000-0000
+  committees: Library Committee
+  personal_interests: Reading, gardening, and hiking.
+  opt_in: true
+  liason: Jane is the liason librarian for the Faculty of Science.
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

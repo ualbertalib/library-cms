@@ -99,12 +99,6 @@ class ProfilesController < ApplicationController
     redirect_to profiles_path
   end
 
-  def units
-    @unit = params[:id]
-    @unitname = $units[params[:id].to_sym]
-    @profiles = Profile.where("unit=?", params[:id])
-  end
-
   private
 
   def profile_params
