@@ -31,6 +31,19 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 7. visit [http://localhost:3000](http://localhost:3000) and you will see the library homepage.
 8. If you need to visit the admin section ([http://localhost:3000/admin](http://localhost:3000/admin)) - You'll be prompted to enter username and password (use the ones in your `config/secrets.yml`, which by default are 'admin' and 'mysecretpassword')
 
+
+## Testing
+To run the tests for the library-cms application, you can use the following command once your application has been setup from above:
+
+```
+bundle exec rails test
+```
+
+This will execute all the test cases and provide you with the test results.
+
+NOTE: We preload the test database with all the seed CMS data (pages/layouts/etc) before tests are ran. This happens only once. 
+So if you make a change to the CMS seed data, you must drop the test DB for your changes to be reflected in the test database.
+
 ## Features
 
 ![image](https://user-images.githubusercontent.com/1220762/173146961-b8430fca-4d41-4c8c-a413-8bd0ac6cc929.png)
