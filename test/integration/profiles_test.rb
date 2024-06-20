@@ -20,15 +20,13 @@ class ProfilesTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_profile_url,
-      headers: {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+    get new_profile_url, headers: admin_authorization_headers
 
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_profile_url(profiles(:one)),
-      headers: {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+    get edit_profile_url(profiles(:one)), headers: admin_authorization_headers
 
     assert_response :success
   end
@@ -37,7 +35,7 @@ class ProfilesTest < ActionDispatch::IntegrationTest
     assert_difference("Profile.count") do
       post profiles_url,
         params: {profile: {first_name: "John", last_name: "Doe", email: "email@ualberta.ca"}},
-        headers: {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+        headers: admin_authorization_headers
     end
 
     assert_redirected_to profile_url(Profile.last)
@@ -46,7 +44,7 @@ class ProfilesTest < ActionDispatch::IntegrationTest
   test "should update profile" do
     patch profile_url(@profile),
       params: {profile: {first_name: "John"}},
-      headers: {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+      headers: admin_authorization_headers
 
     @profile.reload
 
@@ -56,8 +54,7 @@ class ProfilesTest < ActionDispatch::IntegrationTest
 
   test "should destroy profile" do
     assert_difference("Profile.count", -1) do
-      delete profile_url(@profile),
-        headers: {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+      delete profile_url(@profile), headers: admin_authorization_headers
     end
 
     assert_redirected_to profiles_url
