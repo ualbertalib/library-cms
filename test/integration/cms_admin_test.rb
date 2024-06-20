@@ -3,6 +3,12 @@
 require "test_helper"
 
 class CmsAdminTest < ActionDispatch::IntegrationTest
+  test "unauthorized access to admin gets unauthorized response" do
+    get comfy_admin_cms_path
+
+    assert_response :unauthorized
+  end
+
   test "/admin redirects to first site's pages index" do
     get comfy_admin_cms_path,
       headers: {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
