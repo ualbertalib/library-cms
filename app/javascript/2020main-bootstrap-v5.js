@@ -3,7 +3,7 @@ import jquery from 'jquery'
 window.jQuery = jquery
 window.$ = jquery
 
-import '@popperjs/core'
+import { createPopper } from '@popperjs/core';
 import 'bootstrap'
 
 $(function() {
