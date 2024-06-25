@@ -1,12 +1,12 @@
 
-import 'jquery'
-import 'popper.js'
-import 'bootstrap-v462'
-import '../src/stylesheets/2020main.css';
+import jquery from 'jquery'
+window.jQuery = jquery
+window.$ = jquery
 
+import Popper from 'popper.js'
+import 'bootstrap-v462'
 
 $(function() {
-
     $('[data-toggle-second="tooltip"]').tooltip();
     $('[data-toggle-second="tooltip"]').on('click', function () {
     	$(this).tooltip('hide')
@@ -31,4 +31,3 @@ $(function() {
 
 
 });
-

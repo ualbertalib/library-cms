@@ -3,9 +3,8 @@ import jquery from 'jquery'
 window.jQuery = jquery
 window.$ = jquery
 
-import '@popperjs/core'
+import { createPopper } from '@popperjs/core';
 import 'bootstrap'
-import '../src/stylesheets/2020main-bootstrap-v5.css';
 
 $(function() {
 	$('[data-toggle-second="tooltip"]').tooltip();

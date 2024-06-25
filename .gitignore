@@ -40,13 +40,14 @@
 # Ignore for Build
 /vendor/bundle
 
-# Webpacker stuff
-/public/packs
-/public/packs-test
+# JS/CSS Assets
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
 
 # Our custom ignores
 .DS_Store

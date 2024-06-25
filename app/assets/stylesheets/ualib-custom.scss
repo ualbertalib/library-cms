@@ -100,15 +100,15 @@ h2{
         text-align: left;
         overflow: hidden;
     }
-    
-    a.skip:active, 
-    a.skip:focus, 
+
+    a.skip:active,
+    a.skip:focus,
     a.skip:hover {
-        left: 0; 
+        left: 0;
         top: 0;
-        width: auto; 
-        height: auto; 
-        overflow: visible; 
+        width: auto;
+        height: auto;
+        overflow: visible;
     }
 .navbar-nav{
 	float: right;
@@ -178,7 +178,7 @@ h2{
 	background-color: #fff;
 }
 .banner-container{
-	background: url("~images/banner-bg2.jpg") repeat-x bottom #1b4a26;
+	background: url("../assets/images/banner-bg2.jpg") repeat-x bottom #1b4a26;
 }
 .nav-container{
 	background-color: #eceff4;
@@ -212,22 +212,22 @@ h2{
 }
 .lib-nav li#home-nav
  a{
-	background-image: url("~images/home-icon.png");
+	background-image: url("../assets/images/home-icon.png");
 }
 .lib-nav li#services-nav a{
-	background-image: url("~images/services-icon.png");
+	background-image: url("../assets/images/services-icon.png");
 }
 .lib-nav li#subjects-nav a{
-	background-image: url("~images/subjects-icon.png");
+	background-image: url("../assets/images/subjects-icon.png");
 }
 .lib-nav li#research-nav a{
-	background-image: url("~images/research-icon.png");
+	background-image: url("../assets/images/research-icon.png");
 }
 .lib-nav li#news-nav a{
-	background-image: url("~images/news-icon.png");
+	background-image: url("../assets/images/news-icon.png");
 }
 .lib-nav li#account-nav a{
-	background-image: url("~images/account-icon.png");
+	background-image: url("../assets/images/account-icon.png");
 }
 .lib-nav li a:hover{
 	background-color: #fefdf6;
@@ -257,7 +257,7 @@ h2{
 /* Custom styles - Footer
 -------------------------------------------------- */
 .footer{
-	  background: url("~images/footer-bg.jpg") #1b4724 repeat-x;
+	  background: url("../assets/images/footer-bg.jpg") #1b4724 repeat-x;
 	  padding-bottom: 5px;
 }
 .footer p{
@@ -441,7 +441,7 @@ ul.ask{
 	margin-top: -27px;
 	border-right: none;
 	margin-left: 5px;
-	background: url("~images/ask-icon.png") no-repeat left bottom;
+	background: url("../assets/images/ask-icon.png") no-repeat left bottom;
 	-webkit-background-size: 24%;
 	background-size: 24%;
 	padding-left: 20px;
@@ -502,23 +502,23 @@ ul.ask{
 	padding-right: 0;
 }
 #main-nav #services-nav h3{
-	background: url("~images/services-icon.png") no-repeat 10px 10px;
+	background: url("../assets/images/services-icon.png") no-repeat 10px 10px;
 }
 
 #main-nav #subjects-nav h3{
-	background: url("~images/subjects-icon.png") no-repeat 10px 10px;
+	background: url("../assets/images/subjects-icon.png") no-repeat 10px 10px;
 }
 #main-nav #research-nav h3{
-	background: url("~images/research-icon.png") no-repeat  10px 10px;
+	background: url("../assets/images/research-icon.png") no-repeat  10px 10px;
 }
 #main-nav #news-nav h3{
-	background: url("~images/news-icon.png") no-repeat  10px 10px;
+	background: url("../assets/images/news-icon.png") no-repeat  10px 10px;
 }
 #main-nav #news-nav h3 em{
 	font-style:normal;
 }
 #main-nav #account-nav h3{
-	background: url("~images/account-icon.png") no-repeat  10px 10px;
+	background: url("../assets/images/account-icon.png") no-repeat  10px 10px;
 }
 #main-nav.small h3{
 	background:none;
@@ -667,7 +667,7 @@ ul.ask{
 	margin-bottom: 5px;
 }
 .reserve-quick-link{
-		background-image: url("~images/room.png");
+		background-image: url("../assets/images/room.png");
 		background-position: 8px 8px;
 }
 .quick-links a:hover{
@@ -675,11 +675,11 @@ ul.ask{
 	background-color: #38566c;
 }
 .account-quick-link{
-		background-image: url("~images/account-icon-white.png");
+		background-image: url("../assets/images/account-icon-white.png");
 		background-position: 8px 10px;
 }
 .quick-links a.refworks-quick-link{
-		background-image: url("~images/eresources-icon.png");
+		background-image: url("../assets/images/eresources-icon.png");
     background-size: 35px;
 		background-position: 12px 12px;
 }
@@ -796,7 +796,7 @@ label.mod{
 	background-color: #C7D28A;
 }
 #research .research{
-	background: url("~images/research-image.jpg") no-repeat center center #fff;
+	background: url("../assets/images/research-image.jpg") no-repeat center center #fff;
 }
 
 .services-box{
@@ -989,7 +989,7 @@ label.mod{
 	margin-top: 5px;
 }
 .btn-blue{
-	background: url("~images/search-choice-icon.png") #4C6F84 no-repeat 6px center;
+	background: url("../assets/images/search-choice-icon.png") #4C6F84 no-repeat 6px center;
 	-webkit-background-size: 8px;
 	background-size: 8px;
 	color: #fff;
@@ -999,7 +999,7 @@ label.mod{
 	margin-top: 5px;
 }
 .btn-help{
-	background: url("~images/question.png") #4C6F84 no-repeat left 7px;
+	background: url("../assets/images/question.png") #4C6F84 no-repeat left 7px;
 	padding: 4px 8px 4px 20px;
 	font-size: 13px;
 	margin-left: 5px;
@@ -1014,7 +1014,7 @@ label.mod{
 	color: #fff;
 }
 .btn-ltblue{
-background: url("~images/search-choice-icon.png") #4C6F84 no-repeat 6px center;
+background: url("../assets/images/search-choice-icon.png") #4C6F84 no-repeat 6px center;
 	background-color: #B2C6D1;
 	background-size: 8px;
 	color: #444;
@@ -1044,7 +1044,7 @@ background: url("~images/search-choice-icon.png") #4C6F84 no-repeat 6px center;
 	margin-left: 5px;
 	}
 .btn-green-small{
-	background:url("~images/adv.png") #4C6F84 no-repeat center bottom;
+	background:url("../assets/images/adv.png") #4C6F84 no-repeat center bottom;
 	color: #efefef;
 	font-size: 11px;
 	padding: 3px 5px 22px 3px;
@@ -1263,7 +1263,7 @@ padding: 0px 15px 10px 15px;
 }
 #tweets{
 	padding: 5px 10px;
-	background-image: url("~images/twitter_normal.png");
+	background-image: url("../assets/images/twitter_normal.png");
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1300,7 +1300,7 @@ padding: 0px 15px 10px 15px;
 	color: #cdd7de;
 	display: block;
 	padding:12px 10px;
-	background-image: url("~images/inter.png");
+	background-image: url("../assets/images/inter.png");
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	padding-left: 115px;
@@ -1421,7 +1421,7 @@ ul.foot-nav{
 	font-size: 14px;
 }
 #footer{
-	  background: url("~images/footer-bg.jpg") #1b4724 repeat-x;
+	  background: url("../assets/images/footer-bg.jpg") #1b4724 repeat-x;
 	  padding-bottom: 5px;
 }
 #footer p{
@@ -1513,16 +1513,16 @@ ul.foot-nav{
 	height:90%;
 }
 .boxes .open-access{
-	background-image: url("~images/crystal.jpg");
+	background-image: url("../assets/images/crystal.jpg");
 	background-repeat: no-repeat;
 	background-position: bottom center;
 }
 .boxes .rds{
-	background-image: url("~images/rds.jpg");
+	background-image: url("../assets/images/rds.jpg");
 	background-repeat: no-repeat;
 }
 .boxes .era{
-	background-image: url("~images/era.jpg");
+	background-image: url("../assets/images/era.jpg");
 	background-repeat: no-repeat;
 }
 .boxes .era p{
@@ -1649,7 +1649,7 @@ ul.foot-nav{
 }
 .staff th h3{
 	font-size: 19px;
-	background: url("~images/sort.png") no-repeat right center;
+	background: url("../assets/images/sort.png") no-repeat right center;
 	padding-right: 31px;
 	display: inline;
 	font-weight:bold;
@@ -1816,7 +1816,7 @@ ul.foot-nav{
   font-size:12px;
   font-family:"arial", sans-serif;
 }
-/*location list page style*/  
+/*location list page style*/
 .location-libraries{
   padding:0;
 }
@@ -1862,7 +1862,7 @@ ul.foot-nav{
     margin:10px;
     font-size:30px;
   }
-/*foudational tutorial styles*/  
+/*foudational tutorial styles*/
 .tutorial-breadcrumbs{
   margin:-15px 0 10px -15px;
   }
@@ -1970,7 +1970,7 @@ ul.foot-nav{
 		display: none;
 	}
 	.header{
-		background: url("~images/banner.png") #1b4724 no-repeat center;
+		background: url("../assets/images/banner.png") #1b4724 no-repeat center;
 	 	background-size: 100% 100%;
 	 	padding-bottom: 3px;
 	}
@@ -1988,7 +1988,7 @@ ul.foot-nav{
 		font-size: 15px;
 	}
 	#banner-back{
-		background: url("~images/banner-bg.jpg") repeat-x center 38px #fff;
+		background: url("../assets/images/banner-bg.jpg") repeat-x center 38px #fff;
 	}
 	.col-sm-15 {
         width: 20%;
@@ -2110,47 +2110,47 @@ ul.foot-nav{
 		padding-top: 40px;
 	}
 	#writing{
-		background-image: url("~images/writing-icon.png");
+		background-image: url("../assets/images/writing-icon.png");
 		background-size: 55px 55px;
 	}
 	#reserve-room{
-		background-image: url("~images/room.png");
+		background-image: url("../assets/images/room.png");
 		background-size: 63px 60px;
 	}
 	#workshops{
-		background-image: url("~images/workshop.png");
+		background-image: url("../assets/images/workshop.png");
 		background-size: 65px 65px;
 	}
 	#tutorials{
-		background-image: url("~images/tutorial-icon.png");
+		background-image: url("../assets/images/tutorial-icon.png");
 		background-size: 65px 65px;
 	}
 	#space-dir{
-		background-image: url("~images/space-icon.png");
+		background-image: url("../assets/images/space-icon.png");
 		background-size: 60px 60px;
 	}
 	#eresources{
-		background-image: url("~images/eresources-icon.png");
+		background-image: url("../assets/images/eresources-icon.png");
 		background-size: auto 55px;
 	}
 	#librarians{
-		background-image: url("~images/librarians-icon.png");
+		background-image: url("../assets/images/librarians-icon.png");
 		background-size: 78px 65px;
 	}
 	#reserves{
-		background-image: url("~images/reserves-icon.png");
+		background-image: url("../assets/images/reserves-icon.png");
 		background-size: 78px 60px;
 	}
 	#refworks{
-		background-image: url("~images/refworks-icon.png");
+		background-image: url("../assets/images/refworks-icon.png");
 		background-size: 65px 65px;
 	}
 	#interloans{
-		background-image: url("~images/interloan-icon.png");
+		background-image: url("../assets/images/interloan-icon.png");
 		background-size: 65px 65px;
 	}
 	#ask-service{
-		background-image: url("~images/ask-service.png");
+		background-image: url("../assets/images/ask-service.png");
 		background-size: 65px 65px;
 	}
 	.subjects{
@@ -2294,27 +2294,27 @@ ul.foot-nav{
   		font-size: 13px;
   	}
   	#main-nav.small #home-nav h3{
-		background: url("~images/home-icon.png") no-repeat left 0px;
+		background: url("../assets/images/home-icon.png") no-repeat left 0px;
 		-webkit-background-size: 20px;
 		background-size: 20px;
 	}
 	#main-nav.small #services-nav h3{
-		background: url("~images/services-icon.png") no-repeat left 0px;
+		background: url("../assets/images/services-icon.png") no-repeat left 0px;
 		-webkit-background-size: 20px;
 		background-size: 20px;
 	}
 	#main-nav.small #subjects-nav h3{
-		background: url("~images/subjects-icon.png") no-repeat left 0px;
+		background: url("../assets/images/subjects-icon.png") no-repeat left 0px;
 		-webkit-background-size: 20px;
 		background-size: 20px;
 	}
 	#main-nav.small #research-nav h3{
-		background: url("~images/research-icon.png") no-repeat left 0px;
+		background: url("../assets/images/research-icon.png") no-repeat left 0px;
 		-webkit-background-size: 20px;
 		background-size: 20px;
 	}
 	#main-nav.small #news-nav h3{
-		background: url("~images/news-icon.png") no-repeat left 0px;
+		background: url("../assets/images/news-icon.png") no-repeat left 0px;
 		-webkit-background-size: 20px;
 		background-size: 20px;
 	}
@@ -2322,7 +2322,7 @@ ul.foot-nav{
 		display:none;
 	}
 	#main-nav.small #account-nav h3{
-		background: url("~images/account-icon.png") no-repeat left 0px;
+		background: url("../assets/images/account-icon.png") no-repeat left 0px;
 		-webkit-background-size: 20px;
 		background-size: 20px;
 	}
@@ -2410,7 +2410,7 @@ ul.foot-nav{
 		font-size: 18px;
 		letter-spacing: 1px;
 		margin: 5px 0px 0px 5px;
-		background: url("~images/ask-icon.png") no-repeat left bottom;
+		background: url("../assets/images/ask-icon.png") no-repeat left bottom;
 		-webkit-background-size: 24px;
 		background-size: 24px;
 		float: right;
@@ -2641,7 +2641,7 @@ ul.foot-nav{
   margin-right:10px;
 }
 .tutorials li a{
-  padding:5px 15px 5px 5px; 
+  padding:5px 15px 5px 5px;
   background-color:#eceff4;
 }
 .tutorials li a:hover{
@@ -2662,7 +2662,7 @@ ul.foot-nav{
 }
 
   .tut-list li{
-    font-size: 12px;  
+    font-size: 12px;
     margin-left: -22px;
     line-height: 16px;
 }
@@ -2672,20 +2672,20 @@ ul.foot-nav{
     margin-top: 15px;
 }
    .tut-list h4{
-    font-size: 22px; 
+    font-size: 22px;
  	margin-top: 0;
 
 }
    .tut-list h5{
-    font-size: 12px; 
+    font-size: 12px;
     line-height: 2px;
-    padding: 0; 
+    padding: 0;
     font-family: 'Open sans', sans serif;
 }
      .tut-list h6{
-    font-size: 16px; 
+    font-size: 16px;
     line-height: 2px;
-    padding: 0; 
+    padding: 0;
 }
   .tut-list p{
     font-size: 12px;
@@ -2694,12 +2694,12 @@ ul.foot-nav{
 }
    .tut-list h4 span{
     color:#337AB7;
-   
+
 }
   .tut-list h5 span{
     font-weight:700;
     font-family: 'Open sans', sans serif;
-} 
+}
   #tut-list{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -2837,7 +2837,7 @@ height:80px;
 	font-size: 15px;
 	font-weight: bold;
 	padding: 0;
-}	
+}
 .rds h4.no-margin{
 	margin-bottom: 0;
 	padding-bottom: 0;
@@ -2956,22 +2956,22 @@ height:80px;
 }
  /* About Us 2017 Pages */
 
-#bq-200{  
-    background: #ECEFF4;  
+#bq-200{
+    background: #ECEFF4;
     margin: 1px 1px 15px 1px;
     padding: .3em 15px;
     min-height: 200px;
     max-height: 200px;
 }
-#bq-250{  
-    background: #ECEFF4;   
+#bq-250{
+    background: #ECEFF4;
     margin: 1px 1px 15px 1px;
     padding: .3em 15px;
     min-height: 250px;
     max-height: 250px;
 }
-#bq-300{  
-    background: #ECEFF4;  
+#bq-300{
+    background: #ECEFF4;
     margin: 1px 1px 15px 1px;
     padding: .3em 15px;
     min-height: 263px;
@@ -2992,7 +2992,7 @@ p#partner-content {
 
 #partner-title {
     font-size: 17px;
-    margin-top: 15px;    
+    margin-top: 15px;
     margin-bottom: 5px;
     font-weight: 700;
     display: block;
@@ -3056,7 +3056,7 @@ h3#partner-content {
     margin: 20px 0 10px;
 }
 
-a#project-title {    
+a#project-title {
   	font-size: 95%;
  	margin-top: 15px;
   	margin-bottom:5px;
@@ -3067,8 +3067,8 @@ a#project-title {
   	line-height: 1.2em;
     color:#333333;
 }
-  
-h4#project-content {    
+
+h4#project-content {
   	font-size: 95%;
     text-align: left;
 	margin-top: 15px;
@@ -3078,20 +3078,20 @@ h4#project-content {
     font-family: 'Open Sans', sans-serif;
 
 }
-  
-a#project-divide {    
+
+a#project-divide {
   	font-size: 65%;
 	font-weight: 700;
   	display: block;
     font-family: 'Open Sans', sans-serif;
 }
-  
-#project-content {    
+
+#project-content {
   font-size: 60%;
   line-height: 1.4em;
 }
-  
-a#project-content {    
+
+a#project-content {
  	font-size: 95%;
 	margin-top: 15px;
 	margin-left: 0px;
@@ -3101,9 +3101,9 @@ a#project-content {
     padding-bottom: 5px;
     font-family: 'Open Sans', sans-serif;
   	color:#333333;
-} 
-  
-img#project-content {    
+}
+
+img#project-content {
   float: right;
   margin-left:-15px;
   width: 100%;
@@ -3115,8 +3115,8 @@ img#project-content {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-  
-p#project-content {    
+
+p#project-content {
 	font-size: 65%;
     line-height: 1.4em;
     margin-top:10px;
@@ -3132,7 +3132,7 @@ p#project-content {
 }
 
 
-h3#project-content {    
+h3#project-content {
   font-size: 90%;
   margin-top: 10px;
 }
@@ -3141,7 +3141,7 @@ h3#project-content {
 
   /* About Us 2017 Pages  - XSmall Devices, Tablets */
     @media only screen and (max-width : 768px) {
-      
+
       #bq-200 {
 
 min-height:110px;
@@ -3155,7 +3155,7 @@ max-height: 500px;
       #bq-300  {
 
  min-height:110px;
- max-height: 700px; 
+ max-height: 700px;
 }
       #quoteproj{
 
@@ -3179,7 +3179,7 @@ a#project-title
            img#project-content  {
        width: 75%;
      }
-    } 
+    }
     /*  About Us 2017 Pages - Small Devices, Tablets */
    @media (min-width: 769px) and (max-width : 991px) {
            #quoteproj{
@@ -3203,14 +3203,14 @@ a#project-title
 	 font-size:60%;
 
 	 }
-     
+
      img#project-content  {
        width: 90%;
      }
-     
+
 }
-     
-     
+
+
   /* About Us 2017 Pages  -  Medium Devices, Tablets */
     @media (min-width: 992px) and (max-width : 1199px) {
 
@@ -3222,4 +3222,4 @@ a#project-title
 
 
 
-    } 
+    }
