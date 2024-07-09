@@ -3,8 +3,7 @@ import jquery from 'jquery'
 window.jQuery = jquery
 window.$ = jquery
 
-import Popper from 'popper.js'
-import 'bootstrap-v462'
+import * as bootstrap from  'bootstrap-v462'
 
 $(function() {
     $('[data-toggle-second="tooltip"]').tooltip();

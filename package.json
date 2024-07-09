@@ -9,11 +9,26 @@
     "esbuild": "^0.21.5",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.13.3",
+    "nodemon": "^3.1.4",
     "popper.js": "^1.16.1",
-    "sass": "^1.70.0"
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.6"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:css": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_module && sass ./app/assets/stylesheets/2020main.scss:./app/assets/builds/2020main.css --no-source-map --load-path=node_modules && sass ./app/assets/stylesheets/2020main-bootstrap-v5.scss:./app/assets/builds/2020main-bootstrap-v5.css --no-source-map --load-path=node_modules"
-  }
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "build:css:compile_application": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:compile_2020main": "sass ./app/assets/stylesheets/2020main.scss:./app/assets/builds/2020main.css --no-source-map --load-path=node_modules",
+    "build:css:compile_2020_bootstrap_v5": "sass ./app/assets/stylesheets/2020main-bootstrap-v5.scss:./app/assets/builds/2020main-bootstrap-v5.css --no-source-map --load-path=node_modules",
+    "build:css:compile": "yarn build:css:compile_application && yarn build:css:compile_2020main && yarn build:css:compile_2020_bootstrap_v5",
+    "build:css:prefix_application": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
+    "build:css:prefix_2020main": "postcss ./app/assets/builds/2020main.css --use=autoprefixer --output=./app/assets/builds/2020main.css",
+    "build:css:prefix_2020_bootstrap_v5": "postcss ./app/assets/builds/2020main-bootstrap-v5.css --use=autoprefixer --output=./app/assets/builds/2020main-bootstrap-v5.css",
+    "build:css:prefix": "yarn build:css:prefix_application && yarn build:css:prefix_2020main && yarn build:css:prefix_2020_bootstrap_v5",
+    "build:css": "yarn build:css:compile && yarn build:css:prefix",
+    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
