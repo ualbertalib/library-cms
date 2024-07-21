@@ -20,7 +20,7 @@
         %li
           %a.dropdown-item{"href" => "/staff"}
             ALL STAFF
-        - $units.each_with_index do |(key, value), index|
+        - @units.each_with_index do |(key, value), index|
           %li
             %a.dropdown-item{"href" => "/staff/?unit="+"#{key}"}
               = "#{value}"
@@ -60,13 +60,13 @@
             %span.hidden
               = profile.last_name
           %td.hidden-xs.ual-unit
-            = link_to($units[profile.unit.to_sym], "/staff/?unit="+profile.unit)
+            = link_to(@units[profile.unit.to_sym], "/staff/?unit="+profile.unit)
           %td.hidden-xs.ual-email
             %a{ :href => "tel:#{profile.phone}"}
               = profile.phone
             %p
               = mail_to profile.email, profile.email
-          %td.hidden-xs      
-            = link_to($buildings[profile.campus_address.to_sym], "/locations/"+profile.campus_address) 
-   
+          %td.hidden-xs
+            = link_to(@buildings[profile.campus_address.to_sym], "/locations/"+profile.campus_address)
+
 

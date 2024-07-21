@@ -37,9 +37,3 @@ Rails/BulkChangeTable:
 Rails/ThreeStateBooleanColumn:
   Exclude:
     - db/migrate/20181101154627_create_profiles.rb
-
-# Below are cops that are currently disabled, where we should fix in the future
-# TODO: Fix ProfilesController so we don't need to use global vars
-Style/GlobalVars:
-  Exclude:
-    - app/controllers/profiles_controller.rb
