@@ -1,10 +1,10 @@
 # library-cms
 
-This is the CMS for the University of Alberta Libraries website. It uses Comfy Mexican Sofa. This repository also contains the staff profiles application.
+This is the CMS for the University of Alberta Libraries website. It uses Comfy Mexican Sofa.
 
 ## Applications
 
-+ MariaDB database for profiles application and CMS
++ MariaDB database for CMS
 
 ## Development environment
 

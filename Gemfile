@@ -27,8 +27,6 @@ gem "image_processing", "~> 1.12", ">= 1.12.2"
 
 gem "comfortable_mexican_sofa", github: "restarone/comfortable-mexican-sofa", tag: "3.5"
 
-gem "friendly_id"
-
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
