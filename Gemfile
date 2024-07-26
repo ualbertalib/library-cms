@@ -23,7 +23,7 @@ gem "execjs"
 gem "jbuilder", "~> 2.12"
 
 # Use ActiveStorage variant
-gem "image_processing", "~> 1.12", ">= 1.12.2"
+gem "image_processing", "~> 1.13"
 
 gem "comfortable_mexican_sofa", github: "restarone/comfortable-mexican-sofa", tag: "3.5"
 
