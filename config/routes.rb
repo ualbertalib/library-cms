@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :staff, as: :profiles, controller: :profiles
   comfy_route :cms_admin, path: "/admin"
+
+  get "/staff", to: redirect("https://guides.library.ualberta.ca/az/library-staff-directory")
 
   match "/404", to: "errors#file_not_found", via: :all
   match "/422", to: "errors#unprocessable", via: :all

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_06_03_215834) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_25_183306) do
   create_table "active_storage_attachments", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -157,42 +157,6 @@ ActiveRecord::Schema[7.1].define(version: 2022_06_03_215834) do
     t.index ["is_published"], name: "index_comfy_cms_translations_on_is_published"
     t.index ["locale"], name: "index_comfy_cms_translations_on_locale"
     t.index ["page_id"], name: "index_comfy_cms_translations_on_page_id"
-  end
-
-  create_table "friendly_id_slugs", id: :integer, charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "slug", null: false
-    t.integer "sluggable_id", null: false
-    t.string "sluggable_type", limit: 50
-    t.string "scope"
-    t.datetime "created_at", precision: nil
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, length: { slug: 70, scope: 70 }
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", length: { slug: 140 }
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
-  end
-
-  create_table "profiles", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "job_title"
-    t.string "unit"
-    t.string "email"
-    t.string "phone"
-    t.string "campus_address"
-    t.string "expertise"
-    t.text "introduction"
-    t.text "publications"
-    t.integer "staff_since"
-    t.string "links"
-    t.string "orcid"
-    t.string "committees"
-    t.text "personal_interests"
-    t.boolean "opt_in"
-    t.string "liason"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_profiles_on_slug"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
