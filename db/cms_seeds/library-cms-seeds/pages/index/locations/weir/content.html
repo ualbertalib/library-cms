@@ -5,55 +5,55 @@ layout: non-rich-text
 target_page: 
 categories: []
 is_published: true
-position: 41
-
+position: 10
 [text_area content]
 {{ cms:snippet hours-cal-style }} 
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Libraries Home</a> <span>&gt;</span> <a href="/locations">Library Locations</a> 
-        	<span>&gt;</span> Weir Library
-      </p> 
-<h1>Weir <em class="small mr-4">Law Library</em><div>
-    <a href="https://library.ualberta.ca/staff/?unit=humanities">Law Unit Staff</a>
-  </div>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
+<li aria-current="page" class="breadcrumb-item active">Weir Library</li>
+</ol>
+</nav>
+ 
+<h1>Weir <span class="h3">Law Library</span>
 </h1>
+<div class="alert alert-secondary alert-dismissible fade show" role="alert">
+   <h4>
+     
+<i class="fas fa-exclamation-circle"></i> Weir Law Library is <u>Closed</u> for Spring and Summer</h4>
+
+     <p class="mb-2">
+If you require materials, please place a hold in the catalogue and choose another Library location for pick-up. </p>
+  <p class="mb-2">To request Course Materials, please email <a href="mailto:coursemat@ualberta.ca">coursemat@ualberta.ca</a>. </p>
+        <p class="mb-0">
+Reference &amp; Information Services are available online, in-person at the Rutherford Service desk, and by appointment with a Librarian. Please <a href="/ask-us">Ask Us</a>.       
+       
+          </p> 
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
+</div>
+    
 <div class="row">
   <div class="col-md-4 ual-location-actions">
-    
-      <!--     <div class="ual-well mb-3">
-      <h4 class="red">
-        REOPENING MONDAY, FEB 28TH
-      </h4>
-      <ul class="mb-0">
-        <li>Until Feb 28th, UAlberta students/staff may borrow items from Weir by placing them on <strong>hold</strong> for pickup at <a href="/locations/cameron">Cameron Library</a>, <a href="/locations/bsj">BSJ</a> (CSJ students/staff only), or <a href="/locations/augustana">Augustana</a> (students/staff in Camrose)</li>
-         
-         <li> <strong>Course Materials</strong> from Weir, currently at <a href="/locations/cameron">Cameron</a>, will be relocated back to Weir as of Feb 28th. They will be unavailable Feb 25th-27th during the relocation.</li>
-         
-        <li>  For more information please see our <a href="/covid19info">Covid-19 Information page</a>.</li>
 
-       </ul>
-    </div> -->
-    
-    
-    
-    
-    
      <p>The Weir Library has a strong research collection in primary and secondary materials from the common law Anglo-American jurisdictions. <a href="#more">More about the Weir Library</a>. </p>
-    <a href="https://www.ualberta.ca/maps.html?l=53.524286,-113.518569&z=17&campus=north_campus&b=lc" class="btn ual-btn mb-3" target="_blank"><i class="fas fa-map-marked-alt h4 mr-2"></i> Map and Directions to Weir</a>
+    <a href="https://www.ualberta.ca/maps.html?l=53.524286,-113.518569&z=17&campus=north_campus&b=lc" class="btn ual-btn mb-3" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to Weir</a>
+    
+    
+<!-- hiding book study space button for the summer -->    
+<!--    
     <a href="https://ualberta.libcal.com/spaces?lid=448&gid=915" class="btn ual-btn mb-3"><i class="fas fa-chalkboard-teacher h4 mr-2"></i> Book Study Space in Weir</a>
-    <a href="/services/study-area-directory#weir" class="btn ual-btn mb-3"><i class="fas fa-headphones h4 mr-2"></i> Weir Noise / Study Zones</a>
-      <a href="/services/accessibility-services/locations-accessibility#weir" class="btn ual-btn mb-3"><i class="fab fa-accessible-icon h4 mr-2"></i> Weir Accessibility Information</a>
+--> 
+    
+    
+    <a href="/services/study-area-directory#weir" class="btn ual-btn mb-3">​<i class="fa-solid fa-headphones mr-2"></i> Weir Noise / Study Zones</a>
+      <a href="/services/accessibility-services/locations-accessibility#weir" class="btn ual-btn mb-3"><i class="fa-brands fa-accessible-icon mr-2"></i> Weir Accessibility Information</a>
    <p>
      
      Book return next to the service desk (during library hours). After hours book return at the Weir entrance during Law Centre hours. </p> 
-    <p class="m-0">    <strong>Policies: </strong> </p>
-    <ul>
-     
-<li><a href="/services/library-cards-and-borrowing">Library Cards and Borrowing Privileges</a></li> 
-	<li><a href="/about-us/policies/community-expectations/">Community Expectations at the Library</a></li>
-
-<li><a href="/services/study-area-directory">Study Area Directory &amp; Noise Zones</a></li>
-<li><a href="/about-us/policies/study-and-work-space">Study and Work Space in the Library</a></li>
-    </ul>
+    {{ cms:snippet policies-location }}
+    
+    
      </div>
   <div class="col-md-8">
     <h2>
@@ -72,21 +72,28 @@ var s_lc_mhw_3750_5497 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_5497"), { iid: 
 <hr/>
 <div class="row">
   <div class="col-md-9">
-    <p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/download-2.jpg" alt="Weir Library" class="rounded float-left my-2 mr-3"/>The Weir Library has a strong research collection in primary and secondary materials from the common law Anglo-American jurisdictions. It consists largely of English language material, with some French language material from Quebec. Selected materials are collected from the European Union and Pacific Rim countries. While the emphasis is on common law, civil law material is collected for Quebec, Scotland, and Louisiana. The government documents collection of Canadian federal and provincial government documents includes parliamentary, legislative and departmental materials, and administrative decisions. Material is available in print and/or electronic format.</p>
+    <p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/download-2.jpg" alt="Weir Library" class="rounded float-start my-2 me-3"/>The Weir Library has a strong research collection in primary and secondary materials from the common law Anglo-American jurisdictions. It consists largely of English language material, with some French language material from Quebec. Selected materials are collected from the European Union and Pacific Rim countries. While the emphasis is on common law, civil law material is collected for Quebec, Scotland, and Louisiana. The government documents collection of Canadian federal and provincial government documents includes parliamentary, legislative and departmental materials, and administrative decisions. Material is available in print and/or electronic format.</p>
   <p>Do you have questions? <a href="/askus" data-no-turbolink="true">Ask Us</a> for help at the service desk. </p>
    <p>
      You can also find subject specific information in our subject guides:
     </p>
  <a href="https://guides.library.ualberta.ca/law" class="btn ual-btn mb-3 ml-1">Law Subject Guides</a>
   </div>
- <div class="col-md-3 address ual-well">   
+ <div class="col-md-3">   
+   <div class="ual-well">
+     
+ <h4>
+  Weir Law Library
+     </h4>
    <p>8820 111 Street<br> 
           University of Alberta<br>
           Edmonton, Alberta<br>
           </p>
     
    <p><a href="tel:780-492-5791"> 780-492-5791</a></p>
-<p><a href="mailto:RutherfordHelp@ualberta.ca"> RutherfordHelp@ualberta.ca</a></p>    
- <a href="https://library.ualberta.ca/staff/?unit=humanities" class="btn ual-btn"><i class="fas fa-users h4 mr-1"></i> Law Unit Staff</a>
+<p><a href="https://library.ualberta.ca/ask-us/email-us">Email Us</a></p>   
+ <a href="https://library.ualberta.ca/staff/?unit=humanities" class="btn ual-btn"><i class="fa-solid fa-users-medical mr-1"></i> Law Unit Staff</a>
    </div>
+     </div>
 </div>
+[text translated-url]

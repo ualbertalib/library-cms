@@ -5,13 +5,17 @@ layout: non-rich-text
 target_page: 
 categories: []
 is_published: true
-position: 50
-
+position: 9
 [text_area content]
   {{ cms:snippet hours-cal-style }} 
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Libraries Home</a> <span>&gt;</span> <a href="/locations">Library Locations</a> 
-        	<span>&gt;</span> St. Joseph’s College Library
-      </p> 
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
+<li aria-current="page" class="breadcrumb-item active">St. Joseph's College Library</li>
+</ol>
+</nav>
+
 <h1>
 St. Joseph’s College Library
 </h1>
@@ -38,17 +42,11 @@ St. Joseph’s College Library
     
     
      <p>The Library is located on two levels in the basement of the east wing of the College and contains about 25,000 books as well as DVDs and periodicals. <a href="#more">More about the St. Joseph’s Library</a>. </p>
-    <a href="https://www.ualberta.ca/maps.html?l=53.524506,-113.524577&z=17&campus=north_campus&b=sj" class="btn ual-btn mb-3" target="_blank"><i class="fas fa-map-marked-alt h4 mr-2"></i> Map and Directions to St. Joseph’s</a>
-      <a href="/services/accessibility-services/locations-accessibility#stjoes" class="btn ual-btn mb-3"><i class="fab fa-accessible-icon h4 mr-2"></i> St. Joseph’s Accessibility Information</a>
-    <p class="m-0">  <strong>Policies</strong></p>
-    <ul>
-     
-<li><a href="/services/library-cards-and-borrowing">Library Cards and Borrowing Privileges</a></li> 
-	<li><a href="/about-us/policies/community-expectations/">Community Expectations at the Library</a></li>
-
-<li><a href="/services/study-area-directory">Study Area Directory &amp; Noise Zones</a></li>
-<li><a href="/about-us/policies/study-and-work-space">Study and Work Space in the Library</a></li>
-    </ul>
+    <a href="https://www.ualberta.ca/maps.html?l=53.524506,-113.524577&z=17&campus=north_campus&b=sj" class="btn ual-btn mb-3" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to St. Joseph’s</a>
+      <a href="/services/accessibility-services/locations-accessibility#stjoes" class="btn ual-btn mb-3"><i class="fa-brands fa-accessible-icon mr-2"></i> St. Joseph’s Accessibility Information</a>
+    
+    {{ cms:snippet policies-location }}
+   
      </div>
   <div class="col-md-8">
     <h2>
@@ -67,22 +65,25 @@ var s_lc_mhw_3750_5700 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_5700"), { iid: 
 <hr/>
 <div class="row">
   <div class="col-md-9">
-    <p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/sjc.jpg" alt="St. Joseph’s Library" class="rounded float-left my-2 mr-3"/>The Library is located on two levels in the basement of the east wing of the College and contains about 25,000 books as well as DVDs and periodicals. The collection is eclectic, but the focus is on Christian theology, philosophy, ethics, the Bible, and Catholic studies.</p>
+    <p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/sjc.jpg" alt="St. Joseph’s Library" class="rounded float-start my-2 me-3"/>The Library is located on two levels in the basement of the east wing of the College and contains about 25,000 books as well as DVDs and periodicals. The collection is eclectic, but the focus is on Christian theology, philosophy, ethics, the Bible, and Catholic studies.</p>
 
-    <p>The Library is open to everyone. External library cards are free and can be acquired at the service desk. A ONEcard printer/scanner/photocopier is on site for University staff and students, and money can be put on your card at the desk. Public work stations, study space, and an after hours book drop are available. Services for persons with disabilities are available upon request. Contact:<a href="tel:780-492-7684"> 780-492-7684</a></p>.
+    <p>The Library is open to everyone. External library cards are free and can be acquired at the service desk. A ONEcard printer/scanner/photocopier is on site for University staff and students, and money can be put on your card at the desk. Public work stations, study space, and an after hours book drop are available. Services for persons with disabilities are available upon request.</p>
 
 		
   </div>
- <div class="col-md-3 address ual-well">     
-        
-           <p><strong>St. Joseph's College</strong><br> 
-             11325 89 Ave NW<br> 
+ <div class="col-md-3">     
+        <div class="ual-well">
+          
+ 
+          <h4>St. Joseph's College Library</h4>
+            <p> 11325 89 Ave NW<br> 
 University of Alberta<br> 
              Edmonton, Alberta, T5G 2J5</p>
      <p><a href="tel:780-492-7684"> 780-492-7684</a></p>
-           
+           <p class="mb-1"><a href="mailto:sjclib@ualberta.ca"> sjclib@ualberta.ca</a></p>
 
-   
+     </div>
 
    </div>
 </div>
+[text translated-url]

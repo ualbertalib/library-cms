@@ -6,9 +6,15 @@ target_page:
 categories: []
 is_published: true
 position: 2
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> <a href="/publishing">Publishing</a> <span>&gt;</span> Publishing Policies</p>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li class="breadcrumb-item"><a href="/publishing">Publishing at the Library</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Publishing Policies</li>
+</ol>
+</nav>
 <h1>Copyright and Self-Archiving for University of Alberta Open Access Journals
 </h1>
 <p><a href="https://library.ualberta.ca/publishing/open-journals">Journals participating in the University of Alberta’s Open Access Journal Publishing Program</a> operate under a Diamond Open Access model: articles are openly available online immediately on publication, and authors are not charged any fees to submit or to publish.
@@ -19,3 +25,4 @@ position: 2
 </p>You can see all of our journals listed on our <a href="https://library.ualberta.ca/publishing/open-journals">Open Journals List</a>.
 [wysiwyg sidebar]
 <p>{{ cms:snippet publishing-sidebar }}</p>
+[text translated-url]

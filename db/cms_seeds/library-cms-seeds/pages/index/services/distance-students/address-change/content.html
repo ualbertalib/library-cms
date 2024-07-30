@@ -6,18 +6,23 @@ target_page:
 categories: []
 is_published: true
 position: 0
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Library Home</a> &gt; <a href="/services">Library Services</a> &gt; <a href="/services/distance-students">Distance Services</a> &gt; Address/Status Change
-</p>
-<h1>Distance Services - Address/Status Changes</h1>
-<p>When your address changes from the one you registered with as a distance patron, it needs to be updated...<br>
-</p>
-<ul>
+<h1>Address/Status Changes</h1><p>When your address changes from the one you registered with as a distance patron, it needs to be updated...<br>
+</p><ul>
 	<li>Change your address in <a href="https://www.beartracks.ualberta.ca/" target="_blank">Bear Tracks</a></li>
 	<li>Contact Distance Services at <strong>depository@ualberta.ca</strong></li>
-</ul>
-<p>Contact us at <strong>depository@ualberta.ca</strong> if you no longer want to be registered as a distance patron.
+</ul><p>Contact us at <strong>depository@ualberta.ca</strong> if you no longer want to be registered as a distance patron.
 </p>
-[wysiwyg sidebar]
-<p>{{cms:snippet distance-students-nav}}</p>
+[text_area sidebar]
+{{cms:snippet distance-students-nav}}
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li class="breadcrumb-item"><a href="/services/distance-students">Distance Services</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Address/Status Change</li>
+</ol>
+</nav>

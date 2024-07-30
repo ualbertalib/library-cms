@@ -1,14 +1,13 @@
 [attributes]
 ---
-label: web archive
+label: Web Archive
 layout: one-column-sidebar
 target_page: "/digital-initiatives/digital-collections"
 categories: []
 is_published: true
 position: 14
-
-[textarea content]
-<h3>Search All UofA Archive-It Collections</h3><form action="http://www.archive-it.org/organizations/401" target="_blank" class="form-inline">
+[wysiwyg content]
+<h1>Search the U of A Archive-It Collections</h1><form action="http://www.archive-it.org/organizations/401" target="_blank" class="form-inline">
 	<p class="form-group">
 		<input type="text" name="q" class="form-control">
 		<input type="hidden" name="show" value="ArchivedPages">
@@ -16,10 +15,13 @@ position: 14
 	<p class="form-group">
 		<input type="submit" name="go" value="Search Web Archive" class="form-control btn btn-primary">
 	</p>
-</form><form action="http://www.archive-it.org/organizations/401" target="_blank" class="form-inline"><p class="form-group"><br></p></form><p>
-	<a href="https://docs.google.com/a/ualberta.ca/forms/d/1SiOhUAWxZaCa177xJr3z9CR8Kc-PsinlGR3w2CpdQcA/viewform" class="btn btn-primary">Nominate a Website for inclusion in the University of Alberta Libraries Web Archive</a>
+</form><form action="http://www.archive-it.org/organizations/401" target="_blank" class="form-inline">
+	<p class="form-group"><br>
+	</p>
+</form><p>
+	<a href="https://docs.google.com/a/ualberta.ca/forms/d/1SiOhUAWxZaCa177xJr3z9CR8Kc-PsinlGR3w2CpdQcA/viewform" class="btn btn-primary">Nominate a Website for inclusion in the University of Alberta Library's Web Archive</a>
 </p><h3>Browse Archive-It Collections</h3><ul class="clean-list">
-	<li><a href="http://www.archive-it.org/organizations/401" class="first">All University of Alberta Libraries Archive-It Collections</a></li>
+	<li><a href="http://www.archive-it.org/organizations/401" class="first">All University of Alberta Library's Archive-It Collections</a></li>
 	<li><a href="http://www.archive-it.org/collections/2014">Alberta Education Curriculum Collection</a></li>
 	<li><a href="http://www.archive-it.org/collections/3747">Alberta Floods June 2013</a></li>
 	<li><a href="http://www.archive-it.org/collections/3940">Alberta Oil Sands</a></li>
@@ -32,9 +34,21 @@ position: 14
 	<li><a href="http://www.archive-it.org/collections/3490" class="cc">Idle No More</a></li>
 	<li><a href="http://www.archive-it.org/collections/3835">La francophonie de l'ouest canadien / Western Canadian Francophonie</a></li>
 	<li><a href="http://www.archive-it.org/collections/2402">Prairie Provinces Politics & Economics</a></li>
-	<li><a href="http://www.archive-it.org/collections/1830">University of Alberta Websites</a></li><li><a href="http://archive-it.org/collections/6296">Western Canadian Film</a></li>
+	<li><a href="http://www.archive-it.org/collections/1830">University of Alberta Websites</a></li>
+	<li><a href="http://archive-it.org/collections/6296">Western Canadian Film</a></li>
 </ul><p>
 	The collection policy for web archiving describes the scope of these collections: 
 	<a href="http://www2.library.ualberta.ca/aboutus/collection/policy/Web%20Archiving%20Policy.pdf">Web Archiving Policy</a>.
 </p>
+[text_area sidebar]
+{{ cms:snippet di-sidebar }}
+[text translated-url]
 
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/digital-initiatives">Digital Initiatives</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Web Archive</li>
+</ol>
+</nav>

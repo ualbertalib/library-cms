@@ -1,23 +1,25 @@
 [attributes]
 ---
 label: Services
-layout: 2020main-fr
+layout: non-rich-text-french
 target_page: 
 categories: []
 is_published: true
-position: 12
-
+position: 11
 [text_area content]
-<a href="/services" class="btn ual-btn float-right ual-btn-lang">english version</a>
-<p class="ual-breadcrumbs"><a href="/francais" >University of Alberta Library Accueil</a> <span>&gt;</span> Services</p>
-
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/francais">Francais <span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li aria-current="page" class="breadcrumb-item active">Services</li>
+</ol>
+</nav>
 
 <h1>Nos Services</h1>
 <div class="row ual-services">
   <div class="col-md-6">
 		<div class="card">
     	<div class="card-header">
-				<h2>Principes de base de la bibliothèque</h2>
+				<h2 class="mb-0">Principes de base de la bibliothèque</h2>
       </div>
       <div class="card-body">
 				<div class="row">
@@ -28,10 +30,10 @@ position: 12
             	<li class="list-group-item"><a href="https://alumni.library.ualberta.ca/">Anciens Étudiants</a></li>
            		<li class="list-group-item"><a href="/francais/question">Question? (Fr)</a></li>
            		<li class="list-group-item"><a href="/services/library-cards-and-borrowing">Services de Prêt</a></li>
-           		<li class="list-group-item"><a href="https://guides.library.ualberta.ca/bsj/citations-francais">Citations (Fr)</a></li>
+           		<li class="list-group-item"><a href="https://guides.library.ualberta.ca/bsj/citation">Citations (Fr)</a></li>
              
-           		<li class="list-group-item"><a href="/services/distance-students">Services à Distance</a></li>
-           		<li class="list-group-item"><a href="https://web.library.ualberta.ca/circulation/fines/appeal/">Contestations d'Amendes</a></li>
+           		<li class="list-group-item"><a href="/francais/service-a-distance">Services à Distance (Fr)</a></li>
+           		<li class="list-group-item"><a href="/francais/services/renseignements-sur-votre-compte">Renseignements sur votre compte</a></li>
 						</ul>   
 					</div>
         	<div class="col-md-6">
@@ -42,7 +44,7 @@ position: 12
             	<li class="list-group-item"><a href="/services/off-campus-access">Accès Hors-Campus</a></li>
               <li class="list-group-item"><a href="https://web.library.ualberta.ca/recommend_purchase/index.cfm" >Recommandations d'Achats</a></li>
            		<li class="list-group-item"><a href="/francais/question">Services de Référence</a></li>
-           		<li class="list-group-item"><a href="/tutorials/francais">Tutoriels (Fr)</a></li>
+           		<li class="list-group-item"><a href="/francais/tutoriels">Tutoriels (Fr)</a></li>
 						</ul>
 				</div>
       </div>
@@ -50,18 +52,18 @@ position: 12
     </div>
 		<div class="card mt-4">
     			<div class="card-header">
-						<h2>Soutien à la Recherche et à l’Édition</h2>
+						<h2 class="mb-0">Soutien à la Recherche et à l’Édition</h2>
           </div>
                <div class="card-body">
          	<div class="row">
       			<div class="col-md-6">
   						<ul class="list-group list-group-flush">
-              	<li class="list-group-item"><a href="https://guides.library.ualberta.ca/bsj/citations-francais">Citations (Fr)</a></li>
+              	<li class="list-group-item"><a href="https://guides.library.ualberta.ca/bsj/citation">Citations (Fr)</a></li>
                       <li class="list-group-item"><a href="https://web.library.ualberta.ca/appointment/">Consultations</a></li>
                      <li class="list-group-item"><a href="https://www.ualberta.ca/copyright/">Droit d’Auteur</a></li>
                       <li class="list-group-item"><a href="/research-support/era">ERA</a></li>
                       <li class="list-group-item"><a href="/research-support/era-av">ERA Audio &plus; Video</a></li>
-                         <li class="list-group-item"><a href="/about-us/policies/access-to-electronic-resources">Accès aux Ressources Numériques</a></li>   
+                         <li class="list-group-item"><a href="/about/policies/access-to-electronic-resources">Accès aux Ressources Numériques</a></li>   
                 <li class="list-group-item"><a href="/research-support/open-access">Libre Accès</a></li>
               </ul>
               </div>     
@@ -71,7 +73,7 @@ position: 12
                      <li class="list-group-item"><a href="/publishing">Services d’Édition</a></li>
                       <li class="list-group-item"><a href="/research-support/data-management">Gestion des Données de Recherche (RDM)</a></li>
                         <li class="list-group-item"><a href="/francais/evaluez-votre-impact">Évaluer l’Impact de la Recherche (Fr)</a></li>   
-                      <li class="list-group-item"><a href="https://guides.library.ualberta.ca/reviewprep/support">Revue Systématique/Examen de la Portée</a></li>
+                      <li class="list-group-item"><a href="https://guides.library.ualberta.ca/systematic-reviews">Revue Systématique / Examen de la Portée</a></li>
                        <li class="list-group-item"><a href="/digital-initiatives/data-services/text-mining">Fouille de Textes</a></li>
 
                     </ul>
@@ -85,7 +87,7 @@ position: 12
   <div class="col-md-3 order-md-first">
 		<div class="card mt-4 mt-lg-0">
     	<div class="card-header">
-				<h2>Espaces à la Bibliothèque</h2>
+				<h2 class="mb-0">Espaces à la Bibliothèque</h2>
     	</div>
        <div class="card-body">
 			<ul class="list-group list-group-flush">
@@ -94,45 +96,73 @@ position: 12
         <li class="list-group-item"><a href="https://ualberta.libcal.com/">Expositions/Présentoirs</a></li>
         <li class="list-group-item"><a href="/hours-locations">Horaires</a></li>
         <li class="list-group-item"><a href="/hours-locations">Emplacement</a></li>       
-        <li class="list-group-item"><a href="/about-us/policies/study-and-work-space">Aires d’Étude (Politique d’Utilisation)</a></li>
+        <li class="list-group-item"><a href="/about/policies/study-and-work-space">Aires d’Étude (Politique d’Utilisation)</a></li>
 			</ul>
 		</div>
     </div>
   	<div class="card mt-4">
     			<div class="card-header">
-     				<h2>Consultation et Ateliers</h2>
+     				<h2 class="mb-0">Consultation et Ateliers</h2>
         	</div>
        <div class="card-body">
 					<ul class="list-group list-group-flush">
        			<li class="list-group-item"><a href="https://web.library.ualberta.ca/appointment/">Consultation</a></li>
 						<li class="list-group-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Oe-VCUrGefVG8UUCejXenhfZqlPMG0PETxXJMPBZiHilKQ/viewform">Aide sur les Données</a></li>
-						<li class="list-group-item"><a href="https://guides.library.ualberta.ca/geospatial-data-maps">Données Spatiales / DGS</a></li>
+						<li class="list-group-item"><a href="https://guides.library.ualberta.ca/geospatial-data-and-maps">Données Spatiales / DGS</a></li>
 						<li class="list-group-item"><a href="/tutorials/francais">Tutoriels (Fr)</a></li>
 						<li class="list-group-item"><a href="https://ualberta.libcal.com/calendar/workshops/?cid=5415&t=d&d=0000-00-00&cal%5B%5D=5415">Ateliers</a></li> 
 					</ul>
 				</div>
-  </div>
+        </div>
+    
+   
+  
+    
+  	<div class="card mt-4">
+    			<div class="card-header">
+     				<h2 class="mb-0">Innovation numériques</h2>
+        	</div>
+       <div class="card-body">
+					<ul class="list-group list-group-flush">
+       			
+						<li class="list-group-item"><a href="/digital-initiatives/digitization">Numérisation</a></li>
+						<li class="list-group-item"><a href="/digital-initiatives/preservation">Archivage électronique</a></li>
+						
+						<li class="list-group-item"><a href="/digital-initiatives/data-services">Services de données</a></li> 
+            <li class="list-group-item"><a href="https://dsc.library.ualberta.ca/">Digital Scholarship Centre</a></li>
+					</ul>
+				</div>    
+        </div>
+      
+    
+      
+      
+      
+
   </div>
 	
 		<div class="col-md-3">
       <div class="card mt-4 mt-lg-0">
     	<div class="card-header">
-				<h2>Impression et Équipement</h2>
+				<h2 class="mb-0">La Technologie</h2>
 			</div>
          <div class="card-body">
 				<ul class="list-group list-group-flush">
-         	<li class="list-group-item"><a href="/services/technology">La Technologie</a></li>
-    
-     
-          <li class="list-group-item"><a href="/services/technology/printing-and-scanning">Imprimer</a></li>
-					<li class="list-group-item"><a href="/services/3dprinting">Imprimer 3D</a></li> 
+          <li class="list-group-item"><a href="/services/3dprinting">Imprimer 3D</a></li> 
+         	<li class="list-group-item"><a href="https://guides.library.ualberta.ca/iag">Utilisation de l'IA générative (Fr)</a></li>
+    <li class="list-group-item"><a href="/services/technology/printing-scanning">Impression et numérisation</a></li>
+<li class="list-group-item"><a href="/services/technology/multimedia-equipment-lending">Prêt d'équipement multimédia</a></li>
+<li class="list-group-item"><a href="a/services/technology/specialized-equipment">Équipement spécialisé
+</a></li>
+<li class="list-group-item"><a href="/services/technology/workstations">Postes de travail et logiciels</a></li>
+					
 				</ul>
 			</div>
       </div>
 
      <div class="card mt-4">
     	<div class="card-header">
-				<h2>Soutien à l’Enseignement</h2>
+				<h2 class="mb-0">Soutien à l’Enseignement</h2>
        </div>
         <div class="card-body">
 					<ul class="list-group list-group-flush">
@@ -141,10 +171,14 @@ position: 12
            <li class="list-group-item"><a href="/francais/bloc-eclass">Intégration à Eclass (Fr)</a></li>
            <li class="list-group-item"><a href="/services/instruction">Formation</a></li>
            <li class="list-group-item"><a href="https://guides.library.ualberta.ca/accessing-library-online-resources">Accéder aux Ressources en Ligne</a></li>
-            <li class="list-group-item"><a href="/francais/liste-de-lecture">Service de matériels de cours & de liste de lecture</a></li> 
+            <li class="list-group-item"><a href="/francais/liste-de-lecture">Service de matériels de cours + de liste de lecture</a></li> 
+            <li class="list-group-item"><a href="/francais/rel">Ressources éducatives libres (Fr)</a></li>  
+            
+          
         	</ul>
 				</div>
       </div>
   </div>
       
-
+[text translated-url]
+/services

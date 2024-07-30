@@ -5,53 +5,72 @@ layout: non-rich-text
 target_page: 
 categories: []
 is_published: true
-position: 43
-
+position: 5
 [text_area content]
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Libraries Home</a> <span>&gt;</span> <a href="/locations">Library Locations</a> 
-        	<span>&gt;</span> Digital Scholarship Centre
-      </p> 
-<h1>DSC <em class="small mr-4">Digital Scholarship Centre</em>
+  {{ cms:snippet hours-cal-style }}
+
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/hours-locations">Hours + Locations</a></li>
+<li aria-current="page" class="breadcrumb-item active">DSC</li>
+</ol>
+</nav>
+<h1>DSC <span class="h3">Digital Scholarship Centre</span>
 
 </h1>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-4">
      <p>  
      Visit the <a href="https://dsc.library.ualberta.ca">DSC Website</a> to get more information about the Digital Scholarship Centre including <a href="https://dsc.library.ualberta.ca/services/services-overview/"> services</a> and <a href="https://ualberta.libcal.com/calendar/dsc-workshops/?cid=7583&t=d&d=0000-00-00&cal=7583&inc=0">workshops</a>.</p>
     
-    <a href="https://dsc.library.ualberta.ca/" class="btn ual-btn mb-3 w-75 text-left"><i class="fas fa-globe h4 mr-2 mb-0"></i> DSC Website</a><br/>
-    <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" class="btn ual-btn mb-3 w-75 text-left" target="_blank"><i class="fas fa-map-marked-alt h4 mr-2"></i> Map and Directions to DSC</a>
-    <a href="mailto:dsc@ualberta.ca" class="btn ual-btn mb-3 w-75 text-left"><i class="fas fa-chalkboard-teacher h4 mr-2"></i> Make an Appointment at the DSC</a>
+    <a href="https://dsc.library.ualberta.ca/" class="btn ual-btn mb-3 w-75 text-start"><i class="fa-solid fa-globe-pointer mr-2 mb-0"></i>DSC Website</a><br/>
+    <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" class="btn ual-btn mb-3 w-75 text-start" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to DSC</a>
+    <a href="https://ualberta.libcal.com/appointments/dsc" class="btn ual-btn mb-3 w-75 text-start"><i class="fa-solid fa-chalkboard-user mr-2"></i> Make an Appointment at the DSC</a>
     
-      <a href="/services/accessibility-services/locations-accessibility#dsc" class="btn ual-btn mb-3 w-75 text-left"><i class="fab fa-accessible-icon h4 mr-2"></i> DSC Accessibility Information</a>
+      <a href="/services/accessibility-services/locations-accessibility#dsc" class="btn ual-btn mb-3 w-75 text-start"><i class="fa-brands fa-accessible-icon mr-2"></i>DSC Accessibility Information</a>
     
-<p>2-20 Cameron Science &amp; Technology Library<br/>
-11231 Saskatchewan Drive<br> 
-          University of Alberta<br> 
-          Edmonton, Alberta, T6G 2J8 </p>
-
-    <p><a href="mailto:dsc.library@ualberta.ca">dsc.library@ualberta.ca</a></p> 
-     </div>
-  <div class="col-md-6">
+        </div>
+  <div class="col-md-8">
     <h2>
      DSC Hours 
     </h2>
-    <div class="ual-well mb-3">
-<!--      <h4 class="red">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
+<div id="s_lc_mhw_3750_6687"></div> 
+<script>
+$(function(){ 
+var s_lc_mhw_3750_6687 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_6687"), { iid: 3750, lid: 6687, months: 4, show_past: 2,  systemTime: false }); 
+});
+</script> 
+  </div>
+  </div>  
+  
+  <!--      <h4 class="red">
         CLOSED UNTIL FEB 28TH
       </h4>
       <p class="mb-0">
  For more information please see the <a href="https://dsc.library.ualberta.ca/">DSC website</a>
 </div> -->
-    
-     
-<p>
-  <strong>By Appointment Only</strong>.</p>
-    <p> 
-    
-       Appointments are available Monday to Friday between 12pm and 5pm.</p>  <p>Email <a href="mailto:dsc.library@ualberta.ca">dsc.library@ualberta.ca</a> to set up an appointment.
+<hr/>
+<div class="row">
+   <div class="col-md-9">
+<p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/Vis-Lab-18_bnw_smaller-e1563220363575-1024x512-1.jpg" alt="dsc" class="rounded float-start my-2 me-3" width="350" height="225"/>
+       The Digital Scholarship Centre (DSC) is a research and teaching facility for faculty, students, and staff at the University of Alberta. The DSC grows expertise in research methods and practices using technologies. </p>  <p>Email <a href="mailto:dsc.library@ualberta.ca">dsc.library@ualberta.ca</a> to set up an appointment.
     </p> 
-    <img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/Vis-Lab-18_bnw_smaller-e1563220363575-1024x512-1.jpg" alt="dsc" class="rounded img-responsive"/>
+    </div>
+      
+ <div class="col-md-3">
+   <div class="ual-well">
+     
+  <h4>
+    Digital Scholarship Centre
+     </h4>
+   				 <p>2-20 Cameron Science + Technology Library<br> 
+             11231 Saskatchewan Drive<br> 
+         		 University of Alberta<br> 
+         		 Edmonton, Alberta, T6G 2J8 </p>
+<p><a href="https://library.ualberta.ca/ask-us/email-us">Email Us</a></p>
+   </div>
   </div>
-  </div>
-
+[text translated-url]

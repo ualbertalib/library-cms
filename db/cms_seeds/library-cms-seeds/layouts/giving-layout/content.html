@@ -2,12 +2,17 @@
 ---
 label: Giving Layout
 app_layout: basic
-position: 3
-
+position: 5
 [content]
 <div class="container-fluid ualib">
+   
 <div class="container">
-    <a href="https://library.ualberta.ca"><img src="https://www2.library.ualberta.ca/2015assets/giving/UA-LIBR-COLOUR-png.png" class="img-fluid d-lg-none"></a>
+ <div class="">
+     
+        <a href="https://library.ualberta.ca"><img src="https://www.ualberta.ca/_assets/images/ua-logo-green.svg" class="ua-nav-logo mt-2"></a>
+      <p class="h4 d-inline">Give to the U of A Library</p>
+  </div>
+    <a href="https://library.ualberta.ca"><img src="https://www.ualberta.ca/_assets/images/ua-logo-green.svg" class="img-fluid d-lg-none"></a>
 <nav class="navbar navbar-expand-lg navbar-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,17 +28,15 @@ position: 3
           <li class="nav-item col">
         <a class="nav-link" href="/support/donor-stories">Donor Stories</a>
       </li>
-          <li class="nav-item col ua-logo d-none d-lg-block">
-        <a href="https://library.ualberta.ca"><img src="https://www2.library.ualberta.ca/2015assets/giving/UA-LIBR-COLOUR-png.png" class="ua-nav-logo"></a>
+        
+          <li class="nav-item col">
+        <a class="nav-link" href="/support/ways-to-give">Ways to Give</a>
       </li>
           <li class="nav-item col">
-        <a class="nav-link ua-nav-text-right" href="/support/ways-to-give">Ways to Give</a>
-      </li>
-          <li class="nav-item col">
-        <a class="nav-link ua-nav-text-right" href="/support/about-our-vision">About Our Vision</a>
+        <a class="nav-link" href="/support/about-our-vision">About Our Vision</a>
       </li>
          <li class="nav-item col last">
-        <a class="nav-link ua-nav-call ua-nav-text-right" href="https://ualberta.alumniq.com/giving/to/libraries_museums"  target="_blank">Give<br>Now!</a>
+        <a class="nav-link ua-nav-call" href="https://ualberta.alumniq.com/giving/to/libraries_museums"  target="_blank">Give<br>Now!</a>
       </li>
     </ul>
   </div>
@@ -55,7 +58,7 @@ University of Alberta
             </address>
      		</div>
       <div class="col text-center">
-  <a href="https://library.ualberta.ca/"><img src="https://www2.library.ualberta.ca/2015assets/giving/UA-LIBR-COLOUR-png.png" width="300px;"></a>
+  <a href="https://library.ualberta.ca/"><img src="https://www.ualberta.ca/_assets/images/ua-logo-green.svg" width="300px;"></a>
      </div>
        <div class="col ua-nav-text-right">
   			<p class="d-block">We are located on Treaty 6 and Métis territory<br/>
@@ -69,8 +72,7 @@ University of Alberta
 
 <footer class="container-fluid ua-pattern py-5 ua-bk-gr">
 </footer>
-
-
+ 
 [js]
 
 [css]
@@ -108,7 +110,7 @@ a:hover{
   border-top:5px solid #81c441;
 }
 .ualib .navbar-light .navbar-nav{
-  padding:30px 0;
+  padding:0;
 }
 .ualib .navbar-light .navbar-nav .nav-link{
   color:#0a492c;
@@ -235,7 +237,8 @@ a:hover{
   	text-align:right;
 	}
   .ua-nav-logo{
-  	width:300px;
+  	width:200px;
+    margin-right:20px;
   }
   .first{
   	padding-left:0;
@@ -248,7 +251,5 @@ a:hover{
 	.ua-banner h2{
      padding-top:320px;
   }
-  .ua-nav-logo{
-  		width:380px;
-  }
+
 }

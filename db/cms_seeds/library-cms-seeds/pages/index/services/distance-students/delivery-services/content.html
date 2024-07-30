@@ -6,10 +6,14 @@ target_page:
 categories: []
 is_published: true
 position: 1
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> <a href="/services">Library Services</a> <span>&gt;</span> <a href="/services/distance-students">Distance Services</a> <span>&gt;</span> Delivery Services</p>
 <h1>Delivery Services</h1>
+<ul class="list-group list-group-horizontal mb-5 mt-2">
+	<li class="list-group-item"><a href="/services/distance-students/delivery-services#articles">Obtaining articles, books + more</a></li>
+	<li class="list-group-item"><a href="/services/distance-students/delivery-services#books">Reciprocal Borrowing Agreements</a></li>
+	<li class="list-group-item"><a href="/services/distance-students/delivery-services#returning">Returning Books</a></li>
+	<li class="list-group-item"><a href="/services/distance-students/delivery-services#loan-periods">Loan Periods/Renewals</a></li>
+</ul>
 <h2><a name="articles"></a>Obtaining articles, books & more</h2>
 <p>As a registered <a href="https://www.library.ualberta.ca/services/distance-students">Distance Services</a> patron, you can place a request in two ways…
 </p>
@@ -40,11 +44,11 @@ position: 1
 <p><br>
 </p>
 <h2><a name="books"></a>Reciprocal Borrowing Agreements</h2>
-<p>You can also borrow books from your local library anywhere in Canada. The UofA has reciprocal borrowing agreements with other institutions. Check if these apply to your local libraries:
+<p>You can also borrow books from your local library anywhere in Canada. The University of Alberta has reciprocal borrowing agreements with other institutions. Check if these apply to your local libraries:
 </p>
 <p><strong>ONEcard</strong> - Your <a href="http://www.onecard.ualberta.ca/" target="_blank">ONEcard</a> allows you to obtain books from the UofA Library and <a href="https://www.neoslibraries.ca/member-libraries/" target="_blank">NEOS member libraries</a>. You can request books through our catalogues, but you can also borrow them in person with your ONEcard.
 </p>
-<p><strong>TAL card</strong> - You can borrow materials from any Alberta library that is a member of <a href="http://www.thealbertalibrary.ab.ca/" target="_blank">The Alberta Library (TAL)</a>. To obtain your TAL card, contact Interlibrary Loan via email at ill@ualberta.ca.
+<p><strong>TAL card</strong> - You can borrow materials from any Alberta library that is a member of <a href="https://www.thealbertalibrary.ca/" target="_blank">The Alberta Library (TAL)</a>. To obtain your TAL card, contact Interlibrary Loan via email at ill@ualberta.ca.
 </p>
 <p><strong>COPPUL card</strong> - UofA students, faculty, and staff may borrow materials directly from university and college libraries across Canada, using the <a href="http://www.curba.ca/" target="_blank">COPPUL card</a>. To obtain your COPPUL card, contact Interlibrary Loan via email at ill@ualberta.ca.
 </p>
@@ -64,14 +68,26 @@ position: 1
 </ol>
 <p>If you run out of packaging and labels, please contact <strong>depository@ualberta.ca</strong>
 </p>
-<p><em>*To avoid fines, return items prior to the due date, leaving enough time for us to receive the item prior to it being due (3-4 days).</em>
+<p><em>*To avoid fines, return items prior to the due date, leaving enough time for us to receive the item prior to it being due (3-4 days). Sometimes, due to mailing time and recalls, your borrowing period is shortened too much. In this case, just let us know by emailing us at depository@ualberta.ca and we'll ensure you can have the item for a minimum of two weeks. </em>
 </p>
-<p><em><br></em>
+<p>If you're a registered distance student/faculty member, have items that you borrowed directly at the University of Alberta and need to return them via mail, please contact depository@ualberta.ca for your options.
+</p>
+<p>If you're not a registered distance student/faculty member, have items that you borrowed directly at the University of Alberta and need to return them via mail, please mail them to:
+</p>
+<p>RCRF
+	<br>
+	University of Alberta
+	<br>
+	6304 115A Street NW
+	<br>Edmonton, Alberta, T6H 2V8
+</p>
+<p><br>
 </p>
 <h2><a name="loan-periods"></a>Loan Periods/Renewals<br><br></h2>
 <h3>Books held by the UofA Library:</h3>
 <ul>
 	<li>Term loan (Loans will be up to Jan. 31, May 30, or Sept. 30, and must be received by the library by the due date).</li>
+	<li>Note that all items are subject to recall. If your item has been recalled, and you need to return the item before you've had the item for two weeks, please contact us at depository@ualberta.ca. </li>
 </ul>
 <p>There is a maximum 4 renewals for UofA books as long as there are no requests (holds)
 </p>
@@ -87,13 +103,9 @@ position: 1
 </p>
 <h3>Books through Interlibrary Loan (green band):</h3>
 <ul>
-	<li>Check the green band on the book.
-	<ul>
-		<li>If it says "Renewable: Yes", you may contact Interlibrary Loan for a renewal.</li>
-	</ul></li>
-	<li>Interlibrary loan books may be renewed once only for all borrowers.</li>
 	<li>Interlibrary loan books are NOT renewable through My Account, contact Interlibrary Loan via email at ill@ualberta.ca.</li>
 </ul>
+<h3><br></h3>
 <h3>Avoid Fines</h3>
 <ul>
 	<li>Renew & return materials on time</li>
@@ -106,5 +118,16 @@ position: 1
 </p>
 <p><br>
 </p>
-[wysiwyg sidebar]
-<p>{{cms:snippet distance-students-nav}}</p>
+[text_area sidebar]
+{{cms:snippet distance-students-nav}}
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li class="breadcrumb-item"><a href="/services/distance-students">Distance Services</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Delivery Services</li>
+</ol>
+</nav>

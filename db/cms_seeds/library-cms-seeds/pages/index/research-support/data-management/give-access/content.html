@@ -6,10 +6,16 @@ target_page:
 categories: []
 is_published: true
 position: 3
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Library Home</a> &gt; <a href="/services">Library Services</a>  &gt;  <a href="/research-support/data-management"> Research Data Management </a> &gt; Share My Data
-</p>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li class="breadcrumb-item"><a href="/research-support/data-management">Research Data Management</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Share My Data</li>
+</ol>
+</nav>
+
 <p>{{ cms:snippet rds-top-menu }}
 </p>
 <h1 class="mt-2">Share My Data</h1>
@@ -19,6 +25,7 @@ position: 3
 </p>
 <p>Data sharing is a foundational norm in a number of research fields where scientists are expected to make their data available to other researchers.
 </p>
+<hr>
 <h3>Factors that make sharing data difficult</h3>
 <p>Parts of datasets involving human subjects or sensitive information, such as breeding grounds of endangered species, may not be shared if the data contain identifying information.
 </p>
@@ -26,19 +33,23 @@ position: 3
 </p>
 <p>We can guide you through the process. Contact <a href="mailto:data@ualberta.ca">data@ualberta.ca</a>
 </p>
+<hr>
 <h3>Metadata</h3>
 <p>The main purpose of metadata is to facilitate in the discovery of relevant information. If you want to share your data, you will need to document the context in which you collected or accessed your data; this documentation is part of the metadata
 </p>
 <p>Metadata should follow defined standards in order to maximize its findability and usability. Common standards include:
 </p>
 <ul>
-	<li><a href="http://casrai.org/">CASRAI</a>: describes research administrative information</li>
 	<li><a href="http://www.ddialliance.org/">DDI</a>: describes observational data in the social and behavioural sciences</li>
 	<li><a href="http://www.fgdc.gov/standards/projects/incits-l1-standards-projects/NAP-Metadata">NAP</a>: describes spatial data in North America coordinates</li>
 	<li><a href="https://knb.ecoinformatics.org/#external//emlparser/docs/eml-2.1.1/index.html">EML</a>: describes ecological data</li>
 </ul>
+<p>
+	The Digital Curation Centre additionally offers an extensive overview of a wide range of <a href="https://www.dcc.ac.uk/guidance/standards/metadata">disciplinary specific metadata</a>.
+</p>
 <p>Need guidance? Contact <a href="mailto:data@ualberta.ca">data@ualberta.ca</a>
 </p>
+<hr>
 <h3>Citation</h3>
 <p>DataCite recommends one of the following citation formats (examples below):
 </p>
@@ -49,6 +60,7 @@ position: 3
 </ul>
 <p>Please note: Dataverse will automatically generate a citation including the DOI.
 </p>
+<hr>
 <h3>Find a repository</h3>
 <p>An institutional data repository allows researchers to deposit, document, and share their research data. Library staff can advise on available repositories in your field: contact us at <a href="mailto:data@ualberta.ca">data@ualberta.ca</a>.
 </p>
@@ -57,9 +69,8 @@ position: 3
 <ul>
 	<li><a href="http://databib.org/">DataBib</a></li>
 	<li><a href="http://www.re3data.org/">re3data</a></li>
-	<li><a href="http://wokinfo.com/products_tools/multidisciplinary/dci/">Data Citation Index</a></li>
 </ul>
-<p>On campus, we support <a href="https://dataverse.library.ualberta.ca/dvn/">Dataverse</a>, a cross-disciplinary data repository supporting online management and access to data, as well as the <a href="https://era.library.ualberta.ca/">Education and Research Archive (ERA)</a>, a campus repository where small datasets can be archived (please contact <a href="mailto:data@ualberta.ca">data@ualberta.ca</a> for help choosing between these two options).
+<p>On campus, we support <a href="https://borealisdata.ca/dataverse/ualberta" target="_blank">Dataverse</a>, a cross-disciplinary data repository supporting online management and access to data, as well as the <a href="https://era.library.ualberta.ca/">Education and Research Archive (ERA)</a>, a campus repository where small datasets can be archived (please contact <a href="mailto:data@ualberta.ca">data@ualberta.ca</a> for help choosing between these two options).
 </p>
 <p>Some journals and funders require you to deposit to a specific repository, for example:
 </p>
@@ -67,12 +78,14 @@ position: 3
 	<li><a href="http://datadryad.org/">Dryad</a></li>
 	<li><a href="https://www.icpsr.umich.edu/web/pages/deposit/index.html">ICPSR</a></li>
 </ul>
+<hr>
 <h3>Some Tips For Getting Credit For Sharing</h3>
 <p>Create a free account on <a href="http://orcid.org/">ORCiD</a>, <a href="https://impactstory.org/">ImpactStory</a> and/or <a href="http://scholar.google.ca/">Google Scholar</a>. Next, link your ORCiD to DOIs and other scholarly works such as presentations, research project websites, or white papers to reveal your full research impact on the web.
 </p>
-<p>Questions, concerns, comments - contact us: <a href="mailto:data@ualberta.ca">data@ualberta.ca</a>
+<p>Questions, concerns, comments? Contact <a href="mailto:data@ualberta.ca">data@ualberta.ca</a>
 </p>
 [text title]
 Share My Data
 [wysiwyg sidebar]
-<h3>Tools for Sharing Data</h3><p><a href="https://dataverse.library.ualberta.ca/dvn/" class="btn btn-primary">DATAVERSE</a></p><p>Dataverse is one way to share copies of your data (and keep previous versions). You have the ability to set permissions for your data so members on a research team or students can use it or you can share a copy with the world.</p><p>Dataverse system issues your file a persistent identifier (known as a DOI) upon upload. The DOI is registered with DataCite. <a href="http://www.datacite.org/">DataCite</a> allows discovery of your data through a variety of search tools.</p><p>DOI's provides the persistent link that can be published with your related research articles this encourages reuse and data citation, which adds to your research profile.</p>
+<h3>Tools for Sharing Data</h3><p><a href="https://borealisdata.ca/dataverse/ualberta" class="btn btn-primary" target="_blank">DATAVERSE</a></p><p>Dataverse is one way to share copies of your data (and keep previous versions). You have the ability to set permissions for your data so members on a research team or students can use it or you can share a copy with the world.</p><p>Dataverse system issues your file a persistent identifier (known as a DOI) upon upload. The DOI is registered with DataCite. <a href="http://www.datacite.org/">DataCite</a> allows discovery of your data through a variety of search tools.</p><p>DOI's provide a persistent link that can be published with your related research articles. This encourages reuse and data citation, which adds to your research profile.</p>
+[text translated-url]

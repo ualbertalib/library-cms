@@ -6,11 +6,9 @@ target_page:
 categories: []
 is_published: true
 position: 2
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> <a href="/services">Library Services</a> <span>&gt;</span> <a href="/services/interlibrary-loan">Interlibrary Loan</a> <span>&gt;</span> Fee Schedule and Lending Policy</p>
-<h2>Fee Schedule</h2>
-<table class="ill-table">
+<h2>Fee Schedule + Lending Policy</h2>
+<table class="table">
 <tbody>
 <tr>
 	<td>
@@ -105,7 +103,7 @@ position: 2
 	<td>U.S. and International not-for-profit organizations
 	</td>
 	<td>
-		$25.00
+		$15.00
 	</td>
 </tr>
 <tr>
@@ -120,5 +118,19 @@ position: 2
 </table>
 <p class="red">We no longer provide a rush service (same day service).
 </p>
-[wysiwyg sidebar]
-<p>{{cms:snippet ill-sidebar}}</p>
+<p>When using EFTS or IFM for payment, the above fees are in US dollars.
+</p>
+[text_area sidebar]
+
+{{cms:snippet ill-sidebar}}
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li class="breadcrumb-item"><a href="/services/interlibrary-loan">Interlibrary Loan</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Fee Schedule + Lending Policy</li>
+</ol>
+</nav>

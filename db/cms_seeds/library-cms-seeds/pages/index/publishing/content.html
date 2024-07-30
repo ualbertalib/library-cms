@@ -5,23 +5,21 @@ layout: one-column-sidebar
 target_page: 
 categories: []
 is_published: true
-position: 24
-
+position: 22
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> Publishing</p>
-
-<h1>Publishing at the University of Alberta Library</h1>
+<h1>Publishing at the Library</h1>
 <p>The University of Alberta Library is an important stakeholder for scholarly publishing in Canada. Our open access publishing program supports open, sustainable, and responsible models of scholarly communication and helps to create a more equitable and robust scholarly communications ecosystem. Currently, we partner with Canadian organizations and individuals to publish fully open access scholarly journals, and with University of Alberta community members to publish open course textbooks.
 </p>
 <h2>Journal Publishing
 </h2>
 <p>The University of Alberta Library provides significant support to over 60 Canadian open access journals through our no-fee publishing program. We provide web hosting for journals using the <a href="https://pkp.sfu.ca/ojs/" target="_blank">Open Journal Systems (OJS)</a> publishing software and provide several value-added publishing services. All journals partnering with the Library in this program operate under a “Diamond Open Access” model and do not charge fees to authors.
 </p>
-<p>Note: <strong>We are not currently accepting proposals for new titles for our program.</strong> Please contact us to request an email notification when we resume reviewing new submissions.<br>
+<p>Read more about our program in our <a href="https://drive.google.com/file/d/1XrvtQvzjZI810UQ8_o-sZNd2WM7T-qt6/view?usp=sharing">2022-2023 annual report</a>.
 </p>
-<h3><a href="/publishing/open-journals" target="_blank">Browse our list of open journals
+<h3><a href="/publishing/open-journals">Browse our list of open journals
 </a>
 </h3>
+<h3><a href="/publishing/journal-proposal">Propose a new journal</a></h3>
 <h3><a href="/publishing/policies">Read our publishing policies</a></h3>
 <p><br>
 </p>
@@ -39,5 +37,14 @@ position: 24
 <p><br>
 </p>
 <h3><a href="https://pressbooks.library.ualberta.ca/home/catalog/" target="_blank" "="">Browse the list of Open Textbooks published by Open Education Alberta</a></h3>
-[wysiwyg sidebar]
-<p>  {{ cms:snippet publishing-sidebar }}</p>
+[text_area sidebar]
+{{ cms:snippet publishing-sidebar }}
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li aria-current="page" class="breadcrumb-item active">Publishing at the Library</li>
+</ol>
+</nav>
