@@ -2,25 +2,24 @@
 ---
 label: Peel Prairie Provinces
 app_layout: basic
-position: 10
-
+position: 4
 [content]
 <div class="container-fluid pp-beige">
 
 <div class="container">
   <div class="row py-2">
-    <div class="col-2 pt-3">
-  <a href="https://ualberta.ca"><img src="https://www.ualberta.ca/_assets/images/ua-logo-green.svg" width="153px" class="pt-3"></a>
+    <div class="col-sm-2 col-9 pt-sm-3">
+      <a href="https://ualberta.ca"><img src="https://www.ualberta.ca/_assets/images/ua-logo-green.svg" alt="University of Alberta logo" width="153px" class="pt-3"></a>
     </div>
-    <div class="col-7">
-      <h1 class="pt-4"><a href="/sandbox/peel">Peel's Prairie Provinces</a></h1>
-
+    <div class="col-sm-7 col-9">
+      <h1 class="pt-sm-2"><a href="/peel" class="text-dark">Peel's Prairie Provinces</a></h1>
+ 
         </div>
     <div class="col-3 pt-2 text-right pp-nav-links">
-			<a href="/sandbox/peel/about">About Peel's Prairie Provinces</a><br/>
-      <a href="/sandbox/peel/how-to-use-this-collection">How to Use this Collection</a> <br/>
-      <a href="https://library.ualberta.ca">University of Alberta Library</a>
-
+			<a href="/peel/about">About <span class="d-none d-sm-inline">Peel's Prairie Provinces</span></a><br/> 
+      <a href="/peel/how-to-use-this-collection">How to <span class="d-none d-sm-inline">Use this Collection</span></a> <br/>
+      <a href="https://library.ualberta.ca"><span class="d-none d-sm-inline">University of Alberta</span> Library</a> 
+            
     </div>
 </div>
    </div>
@@ -35,22 +34,22 @@ position: 10
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/sandbox/peel">Home </a>
+            <a class="nav-link" href="/peel">Home </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sandbox/peel/newspapers">Newspapers</a>
+            <a class="nav-link" href="/peel/newspapers">Newspapers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sandbox/peel/postcards">Postcards</a>
+            <a class="nav-link" href="/peel/postcards">Postcards</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="/sandbox/peel/maps">Maps</a>
+            <a class="nav-link" href="/peel/maps">Maps</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link pp-nav-last" href="/sandbox/peel/books">Books &amp; Other Print Materials</a>
+            <a class="nav-link pp-nav-last" href="/peel/books">Books &amp; Other Print Materials</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link pp-nav-last" href="/sandbox/peel/featured-collections">Featured Collections</a>
+            <a class="nav-link pp-nav-last" href="/peel/featured-collections">Featured Collections</a>
           </li>
         </ul>
         </div>
@@ -60,75 +59,137 @@ position: 10
     <main role="main">
  <div class="container">
 {{ cms:textarea content }}
-
+ 
       </div>
           </main>
 
-    <footer>
+    <footer class="py-3">
       <div class="container">
-        <p class="my-3"><a href="https://www.library.ualberta.ca/">University of Alberta Library</a> | <a href="mailto:digitization@ualberta.ca">Contact the Project</a> | <a href="https://www.library.ualberta.ca/digital-initiatives/digital-collections/rights">Copyright and Terms of Use</a></p>
+        <div class="row">
+          
+      <div class="col-md-6">
+        
+        
+       <a href="https://www.library.ualberta.ca/">University of Alberta Library</a> <br/> <a href="/peel/contact">Contact Us</a>  </div> 
+          <div class="col-md-6 text-right">   <a href="/digital-initiatives/digital-collections/rights">Copyright and Terms of Use</a><br/> <a href="/harmful-language-statement">Statement on Catalogue and Resource Descriptions</a></div>
+        
+   
+            </div>
          </div>
     </footer>
  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-
+     
 <script>
-// external js: isotope.pkgd.js
-
-// store filter for each group
+ // store filter for each group
 var buttonFilters = {};
 var buttonFilter;
 // quick search regex
 var qsRegex;
 
-// init Isotope
+
+  function getHashFilter() {
+  // get filter=filterName
+  var matches = location.hash.match( /filter=([^&]+)/i );
+  var hashFilter = matches && matches[1];
+  return hashFilter && decodeURIComponent( hashFilter );
+}
+
+// filter functions
+var filterFns = {};
 var $grid = $('.grid').isotope({
   itemSelector: '.item',
   filter: function() {
     var $this = $(this);
-    var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
-    var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+    var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+    var buttonResult = buttonFilter ? $this.is(buttonFilter) : true;
     return searchResult && buttonResult;
   },
 });
 
-$('.filters').on( 'click', '.button', function() {
+// Use value of search field to filter
+var $quicksearch = $('.quicksearch').on('keyup', debounce(function() {
+  qsRegex = new RegExp($quicksearch.val(), 'gi');
+  $grid.isotope();
+}, 200));
+
+// Function to update hash based on filter
+function updateHashFilter(filter) {
+  location.hash = 'filter=' + encodeURIComponent(filter);
+}
+
+// Define $filterButtonGroup
+var $filterButtonGroup = $('.filters');
+
+// Bind filter button click
+$filterButtonGroup.on('click', '.button', function() {
   var $this = $(this);
-  // get group key
-  var $buttonGroup = $this.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
-  // set filter for group
-  buttonFilters[ filterGroup ] = $this.attr('data-filter');
-  // combine filters
-  buttonFilter = concatValues( buttonFilters );
-  // Isotope arrange
-  $grid.isotope();
+  var filterValue = $this.attr('data-filter');
+  
+  // Update hash based on filter button click
+  updateHashFilter(filterValue);
 });
 
-// use value of search field to filter
-var $quicksearch = $('.quicksearch').keyup( debounce( function() {
-  qsRegex = new RegExp( $quicksearch.val(), 'gi' );
-  $grid.isotope();
-}) );
 
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
+  
+// Define onHashChange function
+function onHashChange() {
+  var hashFilter = getHashFilter();
+  // Filter isotope only if hashFilter exists
+  if (hashFilter) {
+    $grid.isotope({
+      itemSelector: '.element-item',
+      // use filterFns
+      filter: filterFns[hashFilter] || hashFilter
+    });
+    
+    // Set selected class on button
+    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+  }
+}
+
+// Trigger onHashChange function initially
+onHashChange();
+
+// Bind onHashChange to hashchange event
+$(window).on('hashchange', onHashChange);
+
+// Use value of search field to filter
+var $quicksearch = $('.quicksearch').on('keyup', debounce(function() {
+  qsRegex = new RegExp($quicksearch.val(), 'gi');
+  $grid.isotope();
+}, 200));
+
+// Bind filter button click
+$('.filters').on('click', '.button', function() {
+  var $this = $(this);
+  var filterValue = $this.attr('data-filter');
+  
+  // Update hash based on filter button click
+  updateHashFilter(filterValue);
 });
 
-// flatten object by concatting values
+// -- utils --- //
+
+  // flatten object by concatting values
 function concatValues( obj ) {
   var value = '';
   for ( var prop in obj ) {
     value += obj[ prop ];
   }
   return value;
+}
+  
+// replacement for Object.values
+function getObjectValues( obj ) {
+  var values = [];
+  for ( var key in obj ) {
+    values.push( obj[ key ] );
+  }
+  return values;
 }
 
 // debounce so filtering doesn't happen every millisecond
@@ -145,25 +206,34 @@ function debounce( fn, threshold ) {
     timeout = setTimeout( delayed, threshold );
   };
 }
-
+$('#clearFilter').on('click', function () {
+    console.log("Clear Filter button clicked");
+    // Clear hash from URL
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // Reload the page
+    location.reload();
+});
 </script>
-
+    
 [js]
 
 [css]
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap');
+@import "/cms-css/1/english-main.css";
 html {
   position: relative;
   min-height: 100%;
 }
-body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+main {
+	margin-bottom:100px;
+}
+h1{
+  font-size: 2.5rem;
 }
 h1, h2{
   font-family: 'Zen Old Mincho', serif;
   color:#3D2203;
 }
-
 h3{
   font-family: 'Zen Old Mincho', serif;
   color:#3D2203;
@@ -175,14 +245,21 @@ h4 {
   font-family: 'Zen Old Mincho', serif;
   	color: #3D2203;
 }
+h5{
+	background-color:#3D2203;
+  color:#fff;
+  padding:5px;
+  margin-top:10px;
+}
 a{
   color:#0A2F03;
+  text-decoration:none;
 }
-p a{
+p a, li a{
 	color:#6D0816;
   text-decoration:underline;
 }
-p a:hover{
+p a:hover, li a:hover{
 	text-decoration:none;
   color:#35030A;
 }
@@ -201,12 +278,12 @@ p{
   padding:5px 8px;
   font-size:0.8em;
   border-radius:4px;
-  background-color:#F7F4E6;
+  background-color:#fff;
   color:#3D2203;
   margin-bottom:3px;
 }
 .pp-nav-links a:hover{
-  background-color:#fff;
+  background-color:#F7F4E6;
   text-decoration:none;
 }
 .navbar-dark .navbar-nav .nav-link{
@@ -214,12 +291,14 @@ p{
   padding:20px;
   background-color:#3D2203;
   border-left:1px solid #e9d098;
+   text-decoration:none;
 }
 .pp-nav-last{
     border-right:1px solid #e9d098;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
 	background-color:#4D2E10;
+   text-decoration:underline;
 }
 .quicksearch{
 	padding:5px;
@@ -242,17 +321,25 @@ p{
     padding:10px;
     font-size:22px;
     border-bottom:1px solid black;
+    margin-top:0;
   }
   .item h5>a{
     color:#2B3458;
     display:block;
+    text-decoration:underline;
   }
+ .item h5>a:hover{
+   text-decoration:none;
+}
   .item p{
     margin-bottom:5px;
     line-height:auto;
   }
 .item hr{
 	margin:3px 0;
+}
+.bog p{
+  margin-left:20px;
 }
 .pp-fc a{
 	font-size:1em;
@@ -268,7 +355,7 @@ footer{
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 100px;
 }
 footer a{
   color:#F9F7DD;
@@ -280,4 +367,37 @@ footer a:hover{
   text-decoration:underline;
 }
 
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #2a4b52 !important;
+}
+.btn-primary:hover{
+  background-color:#000;
+}
+.carousel-control-prev-icon {
+  padding:15px;
+  border-radius:5px;
+  background-color:#fff;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
 
+.carousel-control-next-icon {
+    padding:15px;
+  border-radius:5px;
+  background-color:#fff;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+  .carousel-caption{
+    color:#333;
+    background-color:rgba(255, 255, 255, 0.8);
+
+  }
+.carousel-item {
+    width: 100%;
+    height: 400px;
+}
+.btn-dark:hover{
+	background-color:#000;
+}
+.bg-peel{
+  background-color:#007c41;
+}

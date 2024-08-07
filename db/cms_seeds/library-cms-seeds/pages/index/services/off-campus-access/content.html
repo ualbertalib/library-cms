@@ -5,33 +5,27 @@ layout: one-column-sidebar
 target_page: 
 categories: []
 is_published: true
-position: 13
-
+position: 11
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Library Home</a> &gt; <a href="/services">Library Services</a> &gt; Off Campus Access
-</p>
-<h1>Off Campus Access</h1>
-<p>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Off-Campus Access</li>
+</ol>
+</nav><h1>Off Campus Access</h1><p>
 	Access to many of the resources on the University of Alberta website
         are restricted to students, faculty, and staff.
-
 	Simply navigate to the e-journal or database you wish to use via
             the Library Home Page and 
 	<strong>log in</strong> using your
 	<strong>Campus Computing ID and Password.</strong>
-</p>
-<hr>
-<h2>EZProxy</h2>
-<p>
+</p><hr><h2>EZProxy</h2><p>
 	Are you having an Ezproxy login problem from off-campus?
-</p>
-<ul>
+</p><ul>
 	<li>Use our
-	<a href="https://web.library.ualberta.ca/offcampusaccess/index.cfm"><strong>report a
-        problem form
-	</strong></a> to allow us to respond.</li>
-</ul>
-<p>The library's 
+	<a href="/ask-us/report-problem"><strong>report a        problem form</strong></a> to allow us to respond.</li>
+</ul><p>The library's 
 	<strong>EZProxy server</strong> is especially
         configured for library resources. You don't need to do anything special
         to access it: you will automatically be directed to the EZProxy log-in
@@ -39,102 +33,68 @@ position: 13
         password. You do not need to make any changes to your browser's
         configuration.
 	<br>
-</p>
-<p>
+</p><p>
 	EZProxy uses cookies to keep track of your session, so that you
         don't have to log in again to access new resources. EZProxy will not
         work if your browser does not accept cookies. These cookies contain
         only your session key, and expire when you close your browser.
-</p>
-<p>
+</p><p>
 	Once you have logged in using your 
-	<strong><a href="https://ist.ualberta.ca/services/ccid-passwords/campus-computing-id">Campus Computing ID</a></strong>,
+	<strong><a href="https://www.ualberta.ca/information-services-and-technology/services/ccid-passwords/index.html">Campus Computing ID</a></strong>,
         you will be able to access any of the library's restricted resources
         without having to log in again. Your log-in will expire after two hours
         of inactivity, or whenever you close your browser; after that you will
         be directed to the log-in screen again before you can access another
         restricted resource.
-</p>
-<hr>
-<h2>EZProxy prefix</h2>
-<p>
+</p><hr><h2>EZProxy prefix</h2><p>
 	To facilitate off-campus access to our online resources, add the
         EZProxy prefix "https://login.ezproxy.library.ualberta.ca/login?url=" before the web address.
-</p>
-<p style="margin-left: 20px;">For example, the following is a URL for an online article:
-</p>
-<p style="margin-left: 20px;"><a href="http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a>
-</p>
-<p style="margin-left: 20px;">Once the EZProxy prefix is included, the link will appear as follows:
-</p>
-<p style="margin-left: 20px;"><a href="http://login.ezproxy.library.ualberta.ca/login?url=http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://login.ezproxy.library.ualberta.ca/login?url=https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a>
-</p>
-<p>
+</p><p style="margin-left: 20px;">For example, the following is a URL for an online article:
+</p><p style="margin-left: 20px;"><a href="http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a>
+</p><p style="margin-left: 20px;">Once the EZProxy prefix is included, the link will appear as follows:
+</p><p style="margin-left: 20px;"><a href="http://login.ezproxy.library.ualberta.ca/login?url=http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://login.ezproxy.library.ualberta.ca/login?url=https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a>
+</p><p>
 	For more information go to <a href="https://guides.library.ualberta.ca/accessing-library-online-resources">Accessing Library Online Resources</a>.
-</p>
-<hr>
-<h2>EZProxy URLs</h2>
-<p>
+</p><hr><h2>EZProxy URLs</h2><p>
 	While you are using the EZProxy server to access a restricted
         resource, the URL in your browser's address box will be modified. For
         example, a database might have a URL like this when you access it on
         campus:
-</p>
-<p><em>https://www.mrw.interscience.wiley.com/kirk/index.html</em>
-</p>
-<p>
+</p><p><em><a href="https://onlinelibrary.wiley.com">https://onlinelibrary.wiley.com</a></em>
+</p><p>
 	With EZProxy, it will look like this:
-</p>
-<p><em>https://www.mrw.interscience.wiley.com.login.ezproxy.library.ualberta.ca/kirk/index.html</em>
-</p>
-<p>
+</p><p><em><a href="https://onlinelibrary-wiley-com.login.ezproxy.library.ualberta.ca">https://onlinelibrary-wiley-com.login.ezproxy.library.ualberta.ca</a></em>
+</p><p>
 	If you want to extract the "original" URL from an EZProxy URL, just
         remove the ".login.ezproxy.library.ualberta.ca" from the end of the
-        domain name.  Leave the rest of the URL as it is.
-</p>
-<hr>
-<h2>Shibboleth Authentication</h2>
-<p>A number of vendors support Shibboleth authentication that will allow you to login directly at the vendor web site.  Look for a "Login" link and then select University of Alberta (often located under the label Canadian Access Federation or CAF).  Vendors that currently support Ualberta login credentials include:<br>
-</p>
-<ul>
+        domain name. Usually you can leave the rest of the URL as it is, or you may have to modify the hyphens into periods as in the case above.
+</p><hr><h2>Shibboleth Authentication</h2><p>A number of vendors support Shibboleth authentication that will allow you to login directly at the vendor web site.  Look for a "Login" link and then select University of Alberta (often located under the label Canadian Access Federation or CAF).  Vendors that currently support UAlberta login credentials include:<br>
+</p><ul>
 	<li>HathiTrust</li>
 	<li>Taylor and Francis</li>
-</ul>
-<hr>
-<h2>UAL Bookmarklet</h2>
-<p>
+</ul><hr><h2 id="bookmarklet">UAL Bookmarklet</h2><p>
 	Sometimes you want to access library e-resources from off-campus         without going through the library website Maybe somebody sent you an         email or a Twitter link to a great journal article, or you found         something through 
 	<a href="https://scholar.google.ca/">Google Scholar</a>. Rather than hitting a paywall, you         can use these bookmarklets to quickly authenticate yourself as a University of Alberta         user and access the full text. It's quick and easy to install in your         Web browser.
-</p>
-<p>
+</p><p>
 	Internet Explorer users:  right-click this link 
 	<a href="javascript:o=location.href;location.href='http://www.doi.org/cgi-bin/pushcookie.cgi?BASE-URL=http%3A//resolver.library.ualberta.ca/resolver&Redirect=http%3A//login.ezproxy.library.ualberta.ca/login?url='+escape(o)">UA Access</a> and select "Add to Favorites".. You may be prompted with a security warning, but it         is safe to click "Yes". Firefox/Safari/Chrome/Opera users: click and drag this link to your Bookmarks toolbar: <a href="javascript:o=location.href;location.href='http://www.doi.org/cgi-bin/pushcookie.cgi?BASE-URL=http%3A//resolver.library.ualberta.ca/resolver&Redirect=http%3A//login.ezproxy.library.ualberta.ca/login?url='+escape(o)">UA Access</a>
-</p>
-<p>
+</p><p>
 	Please note that this bookmarklet does not work for some resources.         If you are still having trouble accessing a particular resource, use         the 
 	<a href="/"> library catalogue</a>, <a href="https://guides.library.ualberta.ca/az.php?">database </a>, or <a href="/ejournals ">e-journal search instead </a>.
-</p>
-<p>
+</p><p>
 	Code: 
 	<br>
 	javascript:o=location.href;location.href='http://www.doi.org/cgi-bin/pushcookie.cgi?BASE-URL=http%3A//resolver.library.ualberta.ca/resolver&Redirect=http%3A//login.ezproxy.library.ualberta.ca/login?url='+escape(o)
-</p>
-<p>Watch our helpful video on <a href="https://www.youtube.com/watch?v=3zSyXhN9PzM">How to Access Full-Text Articles</a>
-</p>
-<hr>
-<h2>3rd party citation managers</h2>
-<p>
+</p><p>Watch our helpful video on <a href="https://www.youtube.com/watch?v=3zSyXhN9PzM">How to Access Full-Text Articles</a>
+</p><hr><h2>3rd party citation managers</h2><p>
 	With EndNote and other research products to search Scopus, Web of         Science, PubMed, and other University of Alberta Library subscribed items, you may         be prompted to enter in the following information:
-</p>
-<p>
+</p><p>
 	Institutional Link Resolver Address: 
 	<strong><a href="http://resolver.library.ualberta.ca/resolver">https://resolver.library.ualberta.ca/resolver</a></strong>
-</p>
-<p>
+</p><p>
 	Ezproxy Address:         
 	<strong><a href="http://login.ezproxy.library.ualberta.ca/login?url=">https://login.ezproxy.library.ualberta.ca/login?url...</a></strong>
-</p>
-<p>
+</p><p>
 	When using Papers, click here for more information: 
 	<a href="/databases_help/papers"> https://www.library.ualberta.ca/databases_help/papers</a>
 </p>
@@ -145,3 +105,4 @@ position: 13
 	<li><a href="https://library.ualberta.ca/services/distance-students" data-no-turbolink="true">Services for Distance Students</a></li>
 	<li><a href="https://library.ualberta.ca/about-us/policies/access-to-electronic-resources" data-no-turbolink="true">Access to University of Alberta Library Electronic Resources</a></li>
 </ul>
+[text translated-url]

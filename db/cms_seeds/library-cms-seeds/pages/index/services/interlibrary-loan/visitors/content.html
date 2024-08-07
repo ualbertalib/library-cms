@@ -6,13 +6,24 @@ target_page:
 categories: []
 is_published: true
 position: 6
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> <a href="/services">Library Services</a> <span>&gt;</span> <a href="/services/interlibrary-loan">Interlibrary Loan</a> <span>&gt;</span> Visitors</p>
+
 <h1>Visitors and Interlibrary Loan </h1>
-<p>Visitors affiliated with a <a href="https://curba.ca/">CURBA</a> (Canadian University Reciprocal Borrowing Agreement) institution may use the UofA’s interlibrary loan service while carrying out research or studies at the UofA. Please visit a library service desk to set up your library account.
+<p>Visitors affiliated with a <a href="https://curba.ca/">CURBA</a> (Canadian University Reciprocal Borrowing Agreement) institution may use the University of Alberta’s interlibrary loan service while carrying out research or studies at the U of A. Please visit a library service desk to set up your library account.
 </p>
-<p>Visitors/external borrowers without an affiliation to the UofA or CURBA institution should request interlibrary loan service from their local public library.
+<p>Visitors/external borrowers without an affiliation to the U of A or CURBA institution should request interlibrary loan service from their local public library.
 </p>
-[wysiwyg sidebar]
-<p>{{cms:snippet ill-sidebar}}</p>
+[text_area sidebar]
+
+{{cms:snippet ill-sidebar}}
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li class="breadcrumb-item"><a href="/services/interlibrary-loan">Interlibrary Loan</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Visitors</li>
+</ol>
+</nav>

@@ -6,12 +6,11 @@ target_page:
 categories: []
 is_published: true
 position: 6
-
 [wysiwyg content]
-<p class="ual-breadcrumbs"><a href="/" >University of Alberta Library Home</a> <span>&gt;</span> <a href="/services">Library Services</a> <span>&gt;</span> Distance Services</p>
+
 <h1>Distance Services</h1>
 <h2>Distance Delivery</h2>
-<p>Current students and faculty may register for delivery of library materials to a home/work address, if one of the following applies:<br>
+<p>Current University of Alberta students and faculty may register for delivery of library materials to a home/work address, if one of the following applies:<br>
 </p>
 <ul>
 	<li>You reside within Canada and more than 50 km outside of Edmonton*</li>
@@ -21,7 +20,7 @@ position: 6
 </p>
 <ul>
 	<li>Current 
-	<a title="Campus Computing ID" href="https://ist.ualberta.ca/services/ccid-passwords/campus-computing-id" target="_blank">CCID</a></li>
+	<a title="Campus Computing ID" href="https://www.ualberta.ca/information-services-and-technology/services/ccid-passwords/index.html" target="_blank">CCID</a></li>
 	<li><a title="ONEcard" href="http://www.onecard.ualberta.ca/" target="_blank">ONEcard</a> or <a title="Distance Student Library Card" href="https://www.ualberta.ca/onecard/get-a-onecard/virtual-onecard.html" target="_blank">Virtual ONEcard</a></li>
 </ul>
 <p><i>*If you're taking courses, or teaching, at a University of Alberta location outside of Edmonton you will need to reside 50 km from that location.</i><br>
@@ -31,6 +30,15 @@ position: 6
 </p>
 <p><i>For obtaining a <a href="http://www.curba.ca/" target="_blank">COPPUL card</a>, contact Interlibrary Loan via email at<strong> ill@ualberta.ca</strong>.<br></i>
 </p>
-[wysiwyg sidebar]
-<p><strong></strong>{{cms:snippet distance-students-nav}}
-</p>
+[text_area sidebar]
+{{cms:snippet distance-students-nav}}
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/services">Library Services</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Distance Services</li>
+</ol>
+</nav>

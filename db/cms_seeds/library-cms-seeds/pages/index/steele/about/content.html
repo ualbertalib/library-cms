@@ -5,12 +5,17 @@ layout: non-rich-text
 target_page: 
 categories: []
 is_published: true
-position: 1
-
+position: 0
 [text title]
 Sir Samuel Steele Collection - About Collection
 [text_area content]
-<p class="ual-breadcrumbs"><a href="/">University of Alberta Library Home</a> &gt; <a href="/sandbox/steele">The Sir Samuel Steele Collection</a> &gt; About the Collection</p>              
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/steele">Sir Samuel Steele Collection</a></li>
+<li aria-current="page" class="breadcrumb-item active">About</li>
+</ol>
+</nav>              
 <h1>
   The Sir Samuel Steele Collection - About the Collection
 </h1>
@@ -25,3 +30,4 @@ Sir Samuel Steele Collection - About Collection
 </div>
 [wysiwyg nav_column]
 <p>{{ cms:snippet steele-nav }}</p>
+[text translated-url]

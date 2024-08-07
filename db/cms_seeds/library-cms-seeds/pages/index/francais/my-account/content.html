@@ -1,18 +1,20 @@
 [attributes]
 ---
 label: My Account
-layout: 2020main-fr
+layout: non-rich-text-french
 target_page: 
 categories: []
 is_published: true
-position: 13
-
+position: 6
 [text_area content]
-<a href="/my-account" class="btn ual-btn float-right ual-btn-lang">english version</a>
-<p class="ual-breadcrumbs"><a href="/francais" >University of Alberta Library Accueil</a> <span>&gt;</span> Mon dossier</p>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/francais">Francais <span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li aria-current="page" class="breadcrumb-item active">Mon Dossier</li>
+</ol>
+</nav>
 
-
-<h1>Mon Dossier <span class="small">(pour nos étudiants, professeurs et membres du personnel)</span></h1> 
+<h1>Mon Dossier</h1> 
 
 <div class="row">
 	<div class="col-md-7">
@@ -27,7 +29,7 @@ position: 13
 		</div>
 		<h2>Ouvrez une session afin de...</h2>
 		<ul>
-			<li>Régler vos amendes en ligne (disponible seulement lorsque vous ouvrez une session à l'aide de votre CCID).</li>
+			<li>Régler vos amendes en ligne.</li>
 			<li>Vérifier l'état des documents réservés et empruntés, y compris vos demandes de prêt entre bibliothèques.</li>
 		</ul>
 		<h2>Politique et services connexes</h2>
@@ -37,7 +39,7 @@ position: 13
 			<li><a href="/about-us/policies/circulation-records">Confidentialité des documents de circulation</a></li>
 			<li><a href="/francais/community-expectations">Attentes envers la communauté de la bibliothèque de l’Université de l’Alberta</a></li>
       <li><a href="/about-us/policies/study-and-work-space">Politiques d'espace d'étude  pour la bibliothèque de l'Université de l'Alberta</a></li>
-      <li><a href="https://www.myonecard.ualberta.ca/OneWeb/Deposit/Exact">Ajouter de l'argent à votre ONEcard</a></li>
+      <li><a href="https://secure.touchnet.net/C22406_oneweb">Ajouter de l'argent à votre ONEcard</a></li>
 		</ul>
 	</div>
 	<div class="col-md-5">
@@ -55,4 +57,5 @@ position: 13
 	</div>
 </div>
 
-
+[text translated-url]
+/my-account

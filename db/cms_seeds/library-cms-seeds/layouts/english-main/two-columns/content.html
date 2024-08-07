@@ -1,0 +1,15 @@
+[attributes]
+---
+label: Two Columns
+app_layout: basic
+position: 2
+[content]
+<h1> {{ cms:text title }} </h1>
+	<div class="row">
+ 		<div class='col-sm-6'> {{ cms:wysiwyg left_column }}</div>
+		<div class='col-sm-6'> {{ cms:wysiwyg right_column }}</div> 
+	</div>
+[js]
+
+[css]
+@import "/cms-css/1/english-main.css"

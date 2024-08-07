@@ -1,0 +1,24 @@
+[attributes]
+---
+label: Search Google Scholar
+layout: one-column-sidebar
+target_page: 
+categories: []
+is_published: true
+position: 1
+[text translated-url]
+
+[text_area breadcrumbs]
+
+[text_area sidebar]
+<p>{{ cms:snippet google-scholar-nav }}</p>
+[wysiwyg content]
+<p class="row mt-3">
+	<img src="https://sites.library.ualberta.ca/wp-content/uploads/2019/05/scholar_logo_64dp-1.png" class="img-fluid" alt="Google Scholar logo">
+</p><form id="scholarbounce" action="https://scholar.google.com/scholar" method="get" name="q">
+	<input name="q" type="text" class="form-control input-lg">
+	<input type="hidden" name="inst" value="4934119621948471250">
+	<span class="input-group-btn">
+	<button type="submit" class="btn ual-btn ml-2">Search</button>
+	</span>
+</form>

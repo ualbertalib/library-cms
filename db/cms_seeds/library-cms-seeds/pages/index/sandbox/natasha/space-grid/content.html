@@ -1,0 +1,71 @@
+[attributes]
+---
+label: Space Grid
+layout: non-rich-text
+target_page: 
+categories: []
+is_published: true
+position: 51
+[text_area content]
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  function jsgetUserName(token){
+	var options = {
+		url: 'https://ualberta.libcal.com/1.1/oauth/token',
+		type: "POST",
+ 		client_id: "231",
+	client_secret: "e9aeae42b3ecc40a3ab2ff0e313ff21a",
+	grant_type: "client_credentials"
+
+		}
+	};
+	jQuery.ajax();
+
+
+var apis4librarians_roomAvailable = (function() {
+var getRoomAvailability = function() {
+$.getJSON(
+"https://ualberta.libcal.com/1.1/springshare/libcal/passthrough?what=/space/category/2950?availability",
+function(result) {
+let roomsArr = result[0].items;
+let now = new Date();
+let soon = new Date(roomsArr[0].availability[1].from);
+
+        var secondArr = roomsArr.map(room => {
+          var roomsUL = document.getElementById("quiet-rooms-list");
+          roomsUL.insertAdjacentHTML("beforeend", `<li id="${room.id}">${room.name} `);
+
+          return {
+            roomID: room.id,
+            soonTime: room.availability[1].from /* [1] and not [0] because of a delay on their end. This is safer. */
+          };
+        });
+        secondArr.map(pieces => {
+          let piecesTime = new Date(pieces.soonTime);
+
+          if (piecesTime - now <= 600000 /* 10 minutes in milliseconds */) {
+            var individualRoom = document.getElementById(pieces.roomID);
+            individualRoom.insertAdjacentHTML(
+              "beforeend",
+              `<i class="fa fa-check"  title="Room currently available." aria-label="Room currently available."></i>`
+            );
+          } else {
+            var individualRoom = document.getElementById(pieces.roomID);
+            individualRoom.insertAdjacentHTML(
+              "beforeend",
+              `<i class="fa fa-lock"  title="Room currently unavailable." aria-label="Room currently unavailable."></i>`
+            );
+          }
+        });
+      }
+    );
+
+};
+getRoomAvailability();
+})();
+  </script>
+
+<div id="quiet-rooms-container">
+    <h4 id="quiet-rooms-header">Quiet Study Rooms</h4>
+    <ul id="quiet-rooms-list"></ul>
+</div>
