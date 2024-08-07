@@ -12,7 +12,8 @@ This is the CMS for the University of Alberta Libraries website. It uses Comfy M
 + Rails 7.0.x
 + MariaDB 5.5
 + Docker and docker-compose
-+ yarn and nodejs 16+
++ yarn 
++ nodejs v18+
 
 ## Requirements
 
@@ -24,10 +25,8 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 
 1. `git clone git@github.com:ualbertalib/library-cms.git`
 2. `cd library-cms`
-3. `bundle install && yarn install`
-4. `docker-compose up -d`
-5. `bundle exec rails db:setup`
-6. `bundle exec rails server`
+3. `bin/setup`
+6. `bin/dev`
 7. visit [http://localhost:3000](http://localhost:3000) and you will see the library homepage.
 8. If you need to visit the admin section ([http://localhost:3000/admin](http://localhost:3000/admin)) - You'll be prompted to enter username and password (use the ones in your `config/secrets.yml`, which by default are 'admin' and 'mysecretpassword')
 

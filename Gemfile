@@ -14,10 +14,14 @@ gem "puma", "~> 6.4"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
 
-gem "rollbar"
+# Assets
+gem "cssbundling-rails"
+gem "jsbundling-rails"
+gem "sprockets-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
 
-# See https://github.com/rails/execjs#readme for more supported runtimes
-gem "execjs"
+gem "rollbar"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.12"
@@ -30,8 +34,6 @@ gem "comfortable_mexican_sofa", github: "restarone/comfortable-mexican-sofa", ta
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
-
-gem "webpacker", "~> 5.4"
 
 gem "rdoc", ">= 6.6.3.1"
 
