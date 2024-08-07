@@ -40,9 +40,7 @@
 # Ignore for Build
 /vendor/bundle
 
-# Webpacker stuff
-/public/packs
-/public/packs-test
+# Javascript/CSS stuff
 /node_modules
 /yarn-error.log
 yarn-debug.log*
