@@ -4,13 +4,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title> 
-      <% if content_for(:title) %>
-        <%= yield(:title) %>
-      <% elsif @cms_page %>
-        <%= @cms_page.label %>
-      <% else %>
-        Library
-      <% end %>
+    U of A Library
     </title>
     <link href="https://www.ualberta.ca/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link color="#275d38" href="https://www.ualberta.ca/safari-pinned-tab.svg" rel="mask-icon">
@@ -21,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5abf36224f.js" crossorigin="anonymous"></script>
     <link href="https://www.ualberta.ca/_assets/css/framework-v2.css" media="screen" rel="stylesheet">
+    <link rel="stylesheet" href="https://library.ualberta.ca/cms-css/1/english-main.css">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -28,8 +23,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MX43PRW2');</script>
     <!-- End Google Tag Manager -->
-    <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
-    <%= javascript_include_tag comfy_cms_render_js_path(@cms_site.id, @cms_layout.identifier) %>
   </head>
   <body>
    <!-- Google Tag Manager (noscript) -->
@@ -48,17 +41,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         		<div class="site-title">
             	<a href="/">Library</a>
            	</div>  
-            <div class="nav-right-buttons language-width">
-               <div class="language-selector notranslate">
-               <a id="dark-mode-toggle" data-toggle-second="tooltip" data-bs-placement="left" title="dark mode" tabindex="0" aria-label="dark mode" data-original-title="Dark/Light Mode" type="button"><span aria-hidden="true" class="fa-solid fa-moon" id="mode"></span></a> 
-    <span class="d-block d-lg-none"><a aria-label="Language Selector" class="btn nav-language-btn  language-toggle notranslate" data-language="fr-CA" href="{{ cms:text translated-url }}" type="button">FR</a></span>
-<span class="d-none d-lg-block"><a aria-label="Language Selector" class="btn nav-language-btn d-none d-lg-block language-toggle notranslate" data-language="fr-CA" href="{{ cms:text translated-url }}" type="button">Français</a></span>
-
-              <a aria-label="Site Search" class="nav-search-btn btn" data-bs-target="#navSearchBanner" data-toggle-second="tooltip" data-bs-placement="right" title="site search" id="navSearchButton" type="button" href="/site-search">
-								<span aria-hidden="true" class="m-search fa fa-search"></span>
-							</a>
-						</div>
-					</div>
 					<div class="standard-nav nav-order nav-width">
          		<nav>
             	<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Menu" class="navbar-toggler nav-menu-btn btn" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" title="Menu" type="button">
