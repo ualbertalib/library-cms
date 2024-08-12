@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title> 
+    <title>
     U of A Library
     </title>
     <link href="https://www.ualberta.ca/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
@@ -23,6 +23,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MX43PRW2');</script>
     <!-- End Google Tag Manager -->
+
+    <%# Currently CSS/JS is coming from Ualberta's main website or external CDN's. To use the asset pipeline, uncomment the next two lines of code %>
+    <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%#= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
   <body>
    <!-- Google Tag Manager (noscript) -->
@@ -40,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        		<a aria-label="University of Alberta" class="navbar-brand en-logo" href="https://www.ualberta.ca/index.html"></a>
         		<div class="site-title">
             	<a href="/">Library</a>
-           	</div>  
+           	</div>
 					<div class="standard-nav nav-order nav-width">
          		<nav>
             	<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Menu" class="navbar-toggler nav-menu-btn btn" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" title="Menu" type="button">
@@ -54,7 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                   <li class="nav-item">
                                                              <a class="nav-link standard-nav toggle-link d-none d-lg-block nav-button" href="/services" role="button">Library Services</a>
                                                         <a class="nav-link d-block d-lg-none" href="/services">Library Services</a>
-                                               
+
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link d-block d-lg-none" href="/subject-guides">Subject Guides</a>
@@ -86,7 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
         <main class="main-content container-fluid">
             <a name="main"></a>
-         
+
 	  <%= yield %>
       </main>
  <div id="libchat_baadd67c0b9382719dabca82069083e2e6b6d873103a32cc235ec09ad41f22a5"></div>
@@ -120,7 +124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <a href="/about/employment">Careers + Employment</a>
                         </li>
                       <li>  <a href="/harmful-language-statement">Harmful Language in Records + Descriptions</a></li>
-                 
+
                     </ul>
                 </div>
                 <div class="link-group">
@@ -144,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>
                             <a href="/ask-us"> Ask Us</a>
                         </li>
-                      
+
                     </ul>
                 </div>
                 <div class="link-group">
@@ -152,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul>
                          <li>
                             <a href="/my-account">My Account</a>
-                        </li>  
+                        </li>
                       <li>
                             <a href="https://www.beartracks.ualberta.ca/">Bear Tracks</a>
                         </li>
@@ -168,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                        <li>
                             <a href="https://www.library.ualberta.ca/staff">Library Staff Directory</a>
                         </li>
-                     
+
                        <li>
                             <a href="https://www.ualberta.ca/onecard/index.html">ONEcard</a>
                         </li>
@@ -195,16 +199,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                        <li>
                             <a href="https://www.ualberta.ca/faculty-and-staff/copyright/index.html">Copyright Office</a>
                         </li>
-                     
-                   
+
+
                     </ul>
                 </div>
-             
+
             </div>
-                   
+
             <div class="final">
                 <div class="social-links">
-            
+
                     <a href="https://twitter.com/uofalibrary" title="UAlberta Twitter">
                         <i aria-hidden="true" class="fab fa-x-twitter"></i>
                     </a>
@@ -214,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="https://www.youtube.com/channel/UCtrypim7fRY5dOOa1G9FW5Q" title="UAlberta YouTube">
                         <i aria-hidden="true" class="fab fa-youtube"></i>
                     </a>
-                 
+
                 </div>
                 <div class="logo en-logo">
                     <a aria-label="University of Alberta" href="https://www.ualberta.ca/index.html"></a>
