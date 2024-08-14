@@ -2,14 +2,14 @@
 
 ComfortableMexicanSofa.configure do |config|
   # Title of the admin area
-  #   config.cms_title = 'ComfortableMexicanSofa CMS Engine'
+  config.cms_title = "U of A Library CMS"
 
   # Controller that is inherited from CmsAdmin::BaseController
   #   config.base_controller = 'ApplicationController'
 
   # Module responsible for authentication. You can replace it with your own.
   # It simply needs to have #authenticate method. See http_auth.rb for reference.
-  #   config.admin_auth = 'ComfyAdminAuthentication'
+  config.admin_auth = "ComfyAdminAuthentication"
 
   # Module responsible for authorization on admin side. It should have #authorize
   # method that returns true or false based on params and loaded instance
@@ -81,15 +81,16 @@ end
 
 # Default credentials for ComfortableMexicanSofa::AccessControl::AdminAuthentication
 # YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = Rails.application.secrets.cms_user
-ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = Rails.application.secrets.cms_password
+# ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = Rails.application.secrets.cms_user
+# ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = Rails.application.secrets.cms_password
 
-# Uncomment this module and `config.admin_auth` above to use custom admin authentication
-# module ComfyAdminAuthentication
-#   def authenticate
-#     return true
-#   end
-# end
+module ComfyAdminAuthentication
+  def authenticate
+    unless current_admin
+      redirect_to new_admin_session_path
+    end
+  end
+end
 
 # Uncomment this module and `config.admin_authorization` above to use custom admin authorization
 # module ComfyAdminAuthorization

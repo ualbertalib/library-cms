@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root controller: "comfy/cms/content", cms_path: "", action: "show"
+
+  devise_for :admins
   comfy_route :cms_admin, path: "/admin"
 
   get "/staff", to: redirect("https://guides.library.ualberta.ca/az/library-staff-directory")
