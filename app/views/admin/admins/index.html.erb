@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to 'New Admin',  new_admin_admin_path, class: 'btn btn-secondary float-right' %>
+  <h2>Admins</h2>
+</div>
+
+<%= paginate @admins, theme: 'comfy' %>
+
+
+<ul class="list">
+  <% @admins.each do |admin| %>
+    <li>
+      <div class="row">
+        <div class="col-md-8 item">
+          <div class="item-content">
+            <div class="item-title">
+              <%= link_to admin.email, admin_admin_path(admin) %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-md-end">
+          <div class="btn-group btn-group-sm">
+            <%= link_to 'Edit', edit_admin_admin_path(admin), class: 'btn btn-outline-secondary' %>
+            <%= link_to 'Delete', admin_admin_path(admin), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+          </div>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<%= paginate @admins, theme: 'comfy' %>
+

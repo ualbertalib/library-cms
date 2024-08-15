@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h2>Admin</h2>
+</div>
+
+<dl>
+  <dt>Email</dt>
+  <dd><%= @admin.email %></dd>
+
+  <dt>Created at</dt>
+  <dd><%= @admin.created_at %></dd>
+
+  <dt>Updated at</dt>
+  <dd><%= @admin.updated_at %></dd>
+
+  <dt>Sign in count</dt>
+  <dd><%= @admin.sign_in_count %></dd>
+
+  <dt>Current sign in at</dt>
+  <dd><%= @admin.current_sign_in_at %></dd>
+
+  <dt>Last sign in at</dt>
+  <dd><%= @admin.last_sign_in_at %></dd>
+
+  <dt>Current sign in ip</dt>
+  <dd><%= @admin.current_sign_in_ip %></dd>
+
+  <dt>Last sign in ip</dt>
+  <dd><%= @admin.last_sign_in_ip %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_admin_admin_path(@admin), class: 'btn btn-secondary' %>
+<%= link_to 'Delete', admin_admin_path(@admin), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+<%= link_to 'Back', admin_admins_path, class: 'btn btn-secondary' %>

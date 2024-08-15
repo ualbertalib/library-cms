@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :admins
+  end
+
   root controller: "comfy/cms/content", cms_path: "", action: "show"
 
   devise_for :admins
