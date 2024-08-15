@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Admin::AdminsController < Comfy::Admin::BaseController
   before_action :build_admin, only: [:new, :create]
   before_action :load_admin, only: [:show, :edit, :update, :destroy]
@@ -20,25 +22,25 @@ class Admin::AdminsController < Comfy::Admin::BaseController
 
   def create
     @admin.save!
-    flash[:success] = "Admin created"
+    flash[:success] = t(".admin_created_successfully")
     redirect_to action: :show, id: @admin
   rescue ActiveRecord::RecordInvalid
-    flash.now[:danger] = "Failed to create Admin"
+    flash.now[:danger] = t(".admin_creation_failed")
     render action: :new
   end
 
   def update
     @admin.update!(admin_params)
-    flash[:success] = "Admin updated"
+    flash[:success] = t(".admin_updated_successfully")
     redirect_to action: :show, id: @admin
   rescue ActiveRecord::RecordInvalid
-    flash.now[:danger] = "Failed to update Admin"
+    flash.now[:danger] = t(".admin_update_failed")
     render action: :edit
   end
 
   def destroy
     @admin.destroy
-    flash[:success] = "Admin deleted"
+    flash[:success] = t(".admin_deleted_successfully")
     redirect_to action: :index
   end
 
@@ -51,7 +53,7 @@ class Admin::AdminsController < Comfy::Admin::BaseController
   def load_admin
     @admin = Admin.find(params[:id])
   rescue ActiveRecord::RecordNotFound
-    flash[:danger] = "Admin not found"
+    flash[:danger] = t("admin.admins.admin_not_found")
     redirect_to action: :index
   end
 
