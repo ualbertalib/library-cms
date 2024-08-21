@@ -5,6 +5,10 @@ require:
   - rubocop-rails
   - standard
 
+# TODO: update reference once merged.
+inherit_from:
+  - https://raw.githubusercontent.com/ualbertalib/library_applications_development_inclusive_language/cds/initial-commit/inclusive_language_rubocop.yml
+
 inherit_gem:
   standard: config/base.yml
 
