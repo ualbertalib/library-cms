@@ -17,8 +17,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+end
 
-  def admin_authorization_headers
-    {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+module ActionDispatch
+  class IntegrationTest
+    include Devise::Test::IntegrationHelpers
   end
 end
