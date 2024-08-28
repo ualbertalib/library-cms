@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+  admin:
+    admins:
+      admin_not_found: "Admin not found"
+      create:
+        admin_created_successfully: "Admin created successfully"
+        admin_creation_failed: "Admin creation failed"
+      update:
+        admin_updated_successfully: "Admin updated successfully"
+        admin_update_failed: "Admin update failed"
+      destroy:
+        admin_deleted_successfully: "Admin deleted successfully"

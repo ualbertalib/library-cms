@@ -1,0 +1,7 @@
+<%= form.text_field :email %>
+<%= form.password_field :password %>
+
+<%= form.form_actions do %>
+  <%= form.submit class: "btn btn-primary ml-sm-1" %>
+  <%= link_to 'Cancel', admin_admins_path, class: "btn btn-link" %>
+<% end %>

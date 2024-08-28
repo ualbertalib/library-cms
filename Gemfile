@@ -23,6 +23,8 @@ gem "stimulus-rails"
 
 gem "rollbar"
 
+gem "kaminari"
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.12"
 
