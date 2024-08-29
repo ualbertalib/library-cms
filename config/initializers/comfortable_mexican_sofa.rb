@@ -19,7 +19,7 @@ ComfortableMexicanSofa.configure do |config|
   # Module responsible for public authentication. Similar to the above. You also
   # will have access to @cms_site, @cms_layout, @cms_page so you can use them in
   # your logic. Default module doesn't do anything.
-  #   config.public_auth = 'ComfyPublicAuthentication'
+  config.public_auth = "ComfyPublicAuthentication"
 
   # Module responsible for public authorization. It should have #authorize
   # method that returns true or false based on params and loaded instance
@@ -99,11 +99,16 @@ ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = Rails.appl
 # end
 
 # Uncomment this module and `config.public_auth` above to use custom public authentication
-# module ComfyPublicAuthentication
-#   def authenticate
-#     return true
-#   end
-# end
+module ComfyPublicAuthentication
+  def authenticate
+    protected_paths = ["secret"]
+
+    return unless protected_paths.any? { |protected_path| params["cms_path"].include?(protected_path) }
+    authenticate_or_request_with_http_basic do |username, password|
+      username == Rails.application.secrets.cms_user && password == Rails.application.secrets.cms_password
+    end
+  end
+end
 
 # Uncomment this module and `config.public_authorization` above to use custom public authorization
 # module ComfyPublicAuthorization
