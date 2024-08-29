@@ -103,7 +103,8 @@ module ComfyPublicAuthentication
   def authenticate
     protected_paths = ["secret"]
 
-    return unless protected_paths.any? { |protected_path| params["cms_path"].include?(protected_path) }
+    return unless protected_paths.any? { |protected_path| params["cms_path"]&.include?(protected_path) }
+
     authenticate_or_request_with_http_basic do |username, password|
       username == Rails.application.secrets.cms_user && password == Rails.application.secrets.cms_password
     end
