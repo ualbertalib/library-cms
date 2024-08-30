@@ -130,6 +130,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.9)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     drb (2.2.1)
     erubi (1.13.0)
     execjs (2.9.1)
@@ -411,6 +414,7 @@ DEPENDENCIES
   comfortable_mexican_sofa!
   cssbundling-rails
   devise (~> 4.9)
+  devise_invitable (~> 2.0)
   htmlentities
   image_processing (~> 1.13)
   jbuilder (~> 2.12)
