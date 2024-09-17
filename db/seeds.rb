@@ -10,3 +10,8 @@
 
 Comfy::Cms::Site.create!(identifier: "ualberta-libraries", hostname: "localhost")
 Rake::Task["comfy:cms_seeds:import"].invoke("library-cms-seeds", "ualberta-libraries")
+
+Admin.create(
+  email: "admin@ualberta.ca",
+  password: "password"
+)
