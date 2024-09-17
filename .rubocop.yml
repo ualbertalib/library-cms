@@ -5,6 +5,9 @@ require:
   - rubocop-rails
   - standard
 
+inherit_from:
+  - https://raw.githubusercontent.com/ualbertalib/library_applications_development_inclusive_language/main/inclusive_language_rubocop.yml
+
 inherit_gem:
   standard: config/base.yml
 
