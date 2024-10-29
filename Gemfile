@@ -24,7 +24,7 @@ gem "stimulus-rails"
 gem "rollbar"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.12"
+gem "jbuilder", "~> 2.13"
 
 # Use ActiveStorage variant
 gem "image_processing", "~> 1.13"
