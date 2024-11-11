@@ -19,7 +19,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "nodemon": "^3.1.7",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "postcss-cli": "^11.0.0",
     "sass": "^1.80.4"
   },
