@@ -9,7 +9,7 @@ gem "rails", "~> 7.1.3"
 
 gem "mysql2", "~> 0.5.6"
 # Use Puma as the app server
-gem "puma", "~> 6.5"
+gem "puma", "~> 6.6"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
