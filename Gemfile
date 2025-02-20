@@ -27,7 +27,7 @@ gem "rollbar"
 gem "jbuilder", "~> 2.13"
 
 # Use ActiveStorage variant
-gem "image_processing", "~> 1.13"
+gem "image_processing", "~> 1.14"
 
 gem "comfortable_mexican_sofa", github: "restarone/comfortable-mexican-sofa", tag: "3.5"
 
