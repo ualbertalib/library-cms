@@ -13,7 +13,7 @@ inherit_gem:
 
 AllCops:
   SuggestExtensions: false
-  TargetRubyVersion: 3.4
+  TargetRubyVersion: 3.3
   NewCops: enable
 
 Minitest/MultipleAssertions:
