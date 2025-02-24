@@ -278,7 +278,7 @@ GEM
     regexp_parser (2.10.0)
     reline (0.5.10)
       io-console (~> 0.5)
-    rexml (3.4.0)
+    rexml (3.4.1)
     rollbar (3.6.1)
     rubocop (1.71.2)
       json (~> 2.3)
@@ -319,7 +319,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (4.28.0)
+    selenium-webdriver (4.29.1)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
