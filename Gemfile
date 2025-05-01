@@ -3,13 +3,15 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.4"
+ruby ">= 3.1.4", "< 3.5"
 
 gem "rails", "~> 7.1.3"
 
 gem "mysql2", "~> 0.5.6"
 # Use Puma as the app server
 gem "puma", "~> 6.6"
+# But we use passenger in production
+gem "passenger", "~> 6.0", ">= 6.0.27"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
