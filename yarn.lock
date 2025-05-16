@@ -783,10 +783,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-sass@^1.85.0:
-  version "1.85.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.85.0.tgz#0127ef697d83144496401553f0a0e87be83df45d"
-  integrity sha512-3ToiC1xZ1Y8aU7+CkgCI/tqyuPXEmYGJXO7H4uqp0xkLXUqp88rQQ4j1HmP37xSJLbCJPaIiv+cT1y+grssrww==
+sass@^1.89.0:
+  version "1.89.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.89.0.tgz#6df72360c5c3ec2a9833c49adafe57b28206752d"
+  integrity sha512-ld+kQU8YTdGNjOLfRWBzewJpU5cwEv/h5yyqlSeJcj6Yh8U4TDA9UA5FPicqDz/xgRPWRSYIQNiFks21TbA9KQ==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"
