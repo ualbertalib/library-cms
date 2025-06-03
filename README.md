@@ -48,5 +48,3 @@ So if you make a change to the CMS seed data, you must drop the test DB for your
 ![image](https://github.com/user-attachments/assets/28428b92-5e93-4cfc-860a-c51692087bdd)
 
 ![image](https://github.com/user-attachments/assets/47d199ff-0712-43ac-b997-0d8633c4eb83)
-
-![image](https://github.com/user-attachments/assets/47d199ff-0712-43ac-b997-0d8633c4eb83)
