@@ -15,7 +15,7 @@
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
     "@popperjs/core": "^2.11.8",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "nodemon": "^3.1.9",
