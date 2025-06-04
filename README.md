@@ -8,7 +8,7 @@ This is the CMS for the University of Alberta Libraries website. It uses Comfy M
 
 ## Development environment
 
-+ Ruby 3.1.4
++ Ruby < 3.5
 + Rails 7.0.x
 + MariaDB 5.5
 + Docker and docker-compose
@@ -45,10 +45,6 @@ So if you make a change to the CMS seed data, you must drop the test DB for your
 
 ## Features
 
-![image](https://user-images.githubusercontent.com/1220762/173146961-b8430fca-4d41-4c8c-a413-8bd0ac6cc929.png)
+![image](https://github.com/user-attachments/assets/28428b92-5e93-4cfc-860a-c51692087bdd)
 
-![image](https://user-images.githubusercontent.com/1220762/173147029-3d5f952c-5bae-415e-a9ee-29dc8fc656a8.png)
-
-![image](https://user-images.githubusercontent.com/1220762/173147203-eb68a6f7-73c4-4a5d-ab57-95169d3d0f16.png)
-
-![image](https://user-images.githubusercontent.com/1220762/173147294-715b940e-66dd-4c40-b874-cf4051ba0169.png)
+![image](https://github.com/user-attachments/assets/47d199ff-0712-43ac-b997-0d8633c4eb83)
