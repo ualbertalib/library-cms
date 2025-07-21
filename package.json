@@ -2,7 +2,7 @@
   "name": "home-cms",
   "private": true,
   "devDependencies": {
-    "esbuild": "^0.25.5"
+    "esbuild": "^0.25.8"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
