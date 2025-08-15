@@ -8,7 +8,7 @@ Rollbar.configure do |config|
   if Rails.env.local?
     config.enabled = false
   else
-    config.access_token = ENV['ROLLBAR_ACCESS_TOKEN']
+    config.access_token = ENV["ROLLBAR_ACCESS_TOKEN"]
   end
 
   # By default, Rollbar will try to call the `current_user` controller method
@@ -60,10 +60,10 @@ Rollbar.configure do |config|
   # are optional.
   #
   config.proxy = {
-    host: ENV['ROLLBAR_PROXY_HOST'],
-    port: ENV['ROLLBAR_PROXY_PORT'],
-    user: ENV['ROLLBAR_PROXY_USER'],
-    password: ENV['ROLLBAR_PROXY_PASSWORD'],
+    host: ENV["ROLLBAR_PROXY_HOST"],
+    port: ENV["ROLLBAR_PROXY_PORT"],
+    user: ENV["ROLLBAR_PROXY_USER"],
+    password: ENV["ROLLBAR_PROXY_PASSWORD"]
   }
 
   # If you run your staging application instance in production environment then
