@@ -19,6 +19,6 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 
   def admin_authorization_headers
-    {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(Rails.application.secrets.cms_user, Rails.application.secrets.cms_password)}
+    {Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(ENV["CMS_USER"], ENV["CMS_PASSWORD"])}
   end
 end
