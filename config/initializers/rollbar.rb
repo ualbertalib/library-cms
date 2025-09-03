@@ -8,7 +8,7 @@ Rollbar.configure do |config|
   if Rails.env.local?
     config.enabled = false
   else
-    config.access_token = Rails.application.secrets.rollbar_access_token
+    config.access_token = Settings.rollbar_access_token
   end
 
   # By default, Rollbar will try to call the `current_user` controller method
@@ -60,10 +60,10 @@ Rollbar.configure do |config|
   # are optional.
   #
   config.proxy = {
-    host: Rails.application.secrets.rollbar_proxy_host,
-    port: Rails.application.secrets.rollbar_proxy_port,
-    user: Rails.application.secrets.rollbar_proxy_user,
-    password: Rails.application.secrets.rollbar_proxy_password
+    host: Settings.rollbar_proxy_host,
+    port: Settings.rollbar_proxy_port,
+    user: Settings.rollbar_proxy_user,
+    password: Settings.rollbar_proxy_password
   }
 
   # If you run your staging application instance in production environment then

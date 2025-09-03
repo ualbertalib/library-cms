@@ -26,15 +26,15 @@ Pagination is handled by either Kaminari or WillPaginate. Make sure you have one
 1. `git clone git@github.com:ualbertalib/library-cms.git`
 2. `cd library-cms`
 3. `bin/setup`
-6. `bin/dev`
-7. visit [http://localhost:3000](http://localhost:3000) and you will see the library homepage.
-8. If you need to visit the admin section ([http://localhost:3000/admin](http://localhost:3000/admin)) - You'll be prompted to enter username and password (use the ones in your `config/secrets.yml`, which by default are 'admin' and 'mysecretpassword')
-
+4. `bin/dev`
+5. visit [http://localhost:3000](http://localhost:3000) and you will see the library homepage.
+6. If you need to visit the admin section ([http://localhost:3000/admin](http://localhost:3000/admin)) - You'll be prompted to enter username and password (use the ones in your `config/settings/development.yml` (managed by the [Config Gem](https://www.rubydoc.info/gems/config/5.1.0)), which by default are 'admin' and 'mysecretpassword')
 
 ## Testing
+
 To run the tests for the library-cms application, you can use the following command once your application has been setup from above:
 
-```
+``` bash
 bundle exec rails test
 ```
 
