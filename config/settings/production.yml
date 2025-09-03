@@ -14,4 +14,4 @@
 # rollbar_proxy_host: <%= ENV['ROLLBAR_PROXY_HOST'] %>
 # rollbar_proxy_port: <%= ENV['ROLLBAR_PROXY_PORT'] %>
 # rollbar_proxy_user: <%= ENV['ROLLBAR_PROXY_USER'] %>
-# rollbar_proxy_password: <%= ENV['ROLLBAR_PROXY_PASSWORD'] %>:we
+# rollbar_proxy_password: <%= ENV['ROLLBAR_PROXY_PASSWORD'] %>
