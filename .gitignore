@@ -50,3 +50,11 @@ yarn-debug.log*
 .DS_Store
 # This is ignored due to Ansible I assume:
 config/initializers/comfortable_mexican_sofa.rb
+
+# Config Gem: local dev overrides
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# Added to filesystem by: bundle exec rubocop
+.rubocop-https---raw-githubusercontent-com-ualbertalib-library-applications-development-inclusive-language-main-inclusive-language-rubocop-yml
