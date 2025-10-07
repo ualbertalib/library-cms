@@ -1,0 +1,2 @@
+# Shared settings across all environments: https://www.rubydoc.info/gems/config/5.1.0:
+# Overriden by: ./config/settings/#{environment}.yml

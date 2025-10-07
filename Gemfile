@@ -23,6 +23,8 @@ gem "sprockets-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 
+gem "config"
+
 gem "rollbar"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

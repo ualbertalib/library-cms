@@ -1,0 +1,4 @@
+# Development environment settings managed via Config Gem https://www.rubydoc.info/gems/config/5.1.0:
+
+cms_user: 'admin'
+cms_password: 'mysecretpassword'
