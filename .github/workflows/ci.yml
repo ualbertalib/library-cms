@@ -46,9 +46,14 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Read Node version from .tool-versions
+        id: node_version
+        run: |
+          echo "node_version=$(grep nodejs .tool-versions | awk '{print $2}')" >> $GITHUB_OUTPUT
+
       - uses: actions/setup-node@v5
         with:
-          node-version: 18
+          node-version: ${{ steps.node_version.outputs.node_version }}
 
       - name: Get yarn cache
         id: yarn-cache
