@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "node_version=$(grep nodejs .tool-versions | awk '{print $2}')" >> $GITHUB_OUTPUT
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ steps.node_version.outputs.node_version }}
 
