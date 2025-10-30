@@ -9,7 +9,7 @@ gem "rails", "~> 7.2.2"
 
 gem "mysql2", "~> 0.5.6"
 # Use Puma as the app server
-gem "puma", "~> 6.6"
+gem "puma", "~> 7.1"
 # But we use passenger in production
 gem "passenger", "~> 6.0", ">= 6.0.27"
 
