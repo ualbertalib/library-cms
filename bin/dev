@@ -1,5 +1,4 @@
-#!/usr/bin/env sh
-
+#!/usr/bin/env ruby
 if ! gem list foreman -i --silent; then
   echo "Installing foreman..."
   gem install foreman
@@ -14,3 +13,4 @@ export RUBY_DEBUG_OPEN="true"
 export RUBY_DEBUG_LAZY="true"
 
 exec foreman start -f Procfile.dev "$@"
+# exec "./bin/rails", "server", *ARGV
