@@ -44,16 +44,5 @@ module HomeCms
     # Delete this line if we ever migrate to VIPS
     config.active_storage.variant_processor = :mini_magick
 
-    ###
-    # Disable automatic column serialization into YAML.
-    # To keep the historic behavior, you can set it to `YAML`, however it is
-    # recommended to explicitly define the serialization method for each column
-    # rather than to rely on a global default.
-    ###
-    # Rails.application.config.active_record.default_column_serializer = nil
-    # comfortable_mexican_sofa v3.5 https://github.com/restarone/comfortable-mexican-sofa.git
-    # not updated for Rails 7.1 to specify serialization method for the
-    # Comfy::Cms::Fragment and Comfy::Cms::Revision models
-    Rails.application.config.active_record.default_column_serializer = YAML
   end
 end
