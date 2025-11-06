@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-ComfortableMexicanSofa.configure do |config|
+ComfortableMediaSurfer.configure do |config|
   # Title of the admin area
-  #   config.cms_title = 'ComfortableMexicanSofa CMS Engine'
+  #   config.cms_title = 'ComfortableMediaSurfer CMS Engine'
 
   # Controller that is inherited from CmsAdmin::BaseController
   #   config.base_controller = 'ApplicationController'
@@ -79,10 +79,10 @@ ComfortableMexicanSofa.configure do |config|
   #   config.reveal_cms_partials = false
 end
 
-# Default credentials for ComfortableMexicanSofa::AccessControl::AdminAuthentication
+# Default credentials for ComfortableMediaSurfer::AccessControl::AdminAuthentication
 # YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-ComfortableMexicanSofa::AccessControl::AdminAuthentication.username = Settings.cms_user
-ComfortableMexicanSofa::AccessControl::AdminAuthentication.password = Settings.cms_password
+ComfortableMediaSurfer::AccessControl::AdminAuthentication.username = Settings.cms_user
+ComfortableMediaSurfer::AccessControl::AdminAuthentication.password = Settings.cms_password
 
 # Uncomment this module and `config.admin_auth` above to use custom admin authentication
 # module ComfyAdminAuthentication
