@@ -10,25 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_25_183306) do
+ActiveRecord::Schema[8.1].define(version: 2025_11_06_234626) do
   create_table "active_storage_attachments", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
     t.datetime "created_at", precision: nil, null: false
+    t.string "name", null: false
+    t.bigint "record_id", null: false
+    t.string "record_type", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
   create_table "active_storage_blobs", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum"
+    t.string "content_type"
     t.datetime "created_at", precision: nil, null: false
+    t.string "filename", null: false
+    t.string "key", null: false
+    t.text "metadata"
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
@@ -40,38 +40,38 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_25_183306) do
   end
 
   create_table "comfy_cms_categories", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "site_id", null: false
-    t.string "label", null: false
     t.string "categorized_type", null: false
+    t.string "label", null: false
+    t.integer "site_id", null: false
     t.index ["site_id", "categorized_type", "label"], name: "index_cms_categories_on_site_id_and_cat_type_and_label", unique: true
   end
 
   create_table "comfy_cms_categorizations", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "category_id", null: false
-    t.string "categorized_type", null: false
     t.integer "categorized_id", null: false
+    t.string "categorized_type", null: false
+    t.integer "category_id", null: false
     t.index ["category_id", "categorized_type", "categorized_id"], name: "index_cms_categorizations_on_cat_id_and_catd_type_and_catd_id", unique: true
   end
 
   create_table "comfy_cms_files", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "site_id", null: false
-    t.string "label", default: "", null: false
-    t.text "description"
-    t.integer "position", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
+    t.text "description"
+    t.string "label", default: "", null: false
+    t.integer "position", default: 0, null: false
+    t.integer "site_id", null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["site_id", "position"], name: "index_comfy_cms_files_on_site_id_and_position"
   end
 
   create_table "comfy_cms_fragments", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "record_type"
-    t.bigint "record_id"
-    t.string "identifier", null: false
-    t.string "tag", default: "text", null: false
-    t.text "content", size: :medium
     t.boolean "boolean", default: false, null: false
-    t.datetime "datetime", precision: nil
+    t.text "content", size: :medium
     t.datetime "created_at", precision: nil, null: false
+    t.datetime "datetime", precision: nil
+    t.string "identifier", null: false
+    t.bigint "record_id"
+    t.string "record_type"
+    t.string "tag", default: "text", null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["boolean"], name: "index_comfy_cms_fragments_on_boolean"
     t.index ["datetime"], name: "index_comfy_cms_fragments_on_datetime"
@@ -80,34 +80,34 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_25_183306) do
   end
 
   create_table "comfy_cms_layouts", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "site_id", null: false
-    t.integer "parent_id"
     t.string "app_layout"
-    t.string "label", null: false
-    t.string "identifier", null: false
     t.text "content", size: :medium
-    t.text "css", size: :medium
-    t.text "js", size: :medium
-    t.integer "position", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
+    t.text "css", size: :medium
+    t.string "identifier", null: false
+    t.text "js", size: :medium
+    t.string "label", null: false
+    t.integer "parent_id"
+    t.integer "position", default: 0, null: false
+    t.integer "site_id", null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["parent_id", "position"], name: "index_comfy_cms_layouts_on_parent_id_and_position"
     t.index ["site_id", "identifier"], name: "index_comfy_cms_layouts_on_site_id_and_identifier", unique: true
   end
 
   create_table "comfy_cms_pages", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "site_id", null: false
+    t.integer "children_count", default: 0, null: false
+    t.text "content_cache", size: :medium
+    t.datetime "created_at", precision: nil, null: false
+    t.string "full_path", null: false
+    t.boolean "is_published", default: true, null: false
+    t.string "label", null: false
     t.integer "layout_id"
     t.integer "parent_id"
-    t.integer "target_page_id"
-    t.string "label", null: false
-    t.string "slug"
-    t.string "full_path", null: false
-    t.text "content_cache", size: :medium
     t.integer "position", default: 0, null: false
-    t.integer "children_count", default: 0, null: false
-    t.boolean "is_published", default: true, null: false
-    t.datetime "created_at", precision: nil, null: false
+    t.integer "site_id", null: false
+    t.string "slug"
+    t.integer "target_page_id"
     t.datetime "updated_at", precision: nil, null: false
     t.index ["is_published"], name: "index_comfy_cms_pages_on_is_published"
     t.index ["parent_id", "position"], name: "index_comfy_cms_pages_on_parent_id_and_position"
@@ -115,44 +115,45 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_25_183306) do
   end
 
   create_table "comfy_cms_revisions", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.text "data", size: :medium
     t.datetime "created_at", precision: nil
+    t.text "data", size: :medium
+    t.integer "record_id", null: false
+    t.string "record_type", null: false
     t.index ["record_type", "record_id", "created_at"], name: "index_cms_revisions_on_rtype_and_rid_and_created_at"
   end
 
   create_table "comfy_cms_sites", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "label", null: false
-    t.string "identifier", null: false
-    t.string "hostname", null: false
-    t.string "path"
-    t.string "locale", default: "en", null: false
     t.datetime "created_at", precision: nil, null: false
+    t.string "hostname", null: false
+    t.string "identifier", null: false
+    t.string "label", null: false
+    t.string "locale", default: "en", null: false
+    t.string "path"
     t.datetime "updated_at", precision: nil, null: false
     t.index ["hostname"], name: "index_comfy_cms_sites_on_hostname"
   end
 
   create_table "comfy_cms_snippets", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "site_id", null: false
-    t.string "label", null: false
-    t.string "identifier", null: false
     t.text "content", size: :medium
-    t.integer "position", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false
+    t.string "identifier", null: false
+    t.string "label", null: false
+    t.boolean "markdown", default: false
+    t.integer "position", default: 0, null: false
+    t.integer "site_id", null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["site_id", "identifier"], name: "index_comfy_cms_snippets_on_site_id_and_identifier", unique: true
     t.index ["site_id", "position"], name: "index_comfy_cms_snippets_on_site_id_and_position"
   end
 
   create_table "comfy_cms_translations", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+    t.text "content_cache", size: :medium
+    t.datetime "created_at", precision: nil, null: false
+    t.boolean "is_published", default: true, null: false
+    t.string "label", null: false
+    t.integer "layout_id"
     t.string "locale", null: false
     t.integer "page_id", null: false
-    t.integer "layout_id"
-    t.string "label", null: false
-    t.text "content_cache", size: :medium
-    t.boolean "is_published", default: true, null: false
-    t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["is_published"], name: "index_comfy_cms_translations_on_is_published"
     t.index ["locale"], name: "index_comfy_cms_translations_on_locale"

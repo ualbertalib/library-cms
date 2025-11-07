@@ -33,7 +33,7 @@ gem "jbuilder", "~> 2.14"
 # Use ActiveStorage variant
 gem "image_processing", "~> 1.14"
 
-gem 'comfortable_media_surfer', '~> 3.1.0'
+gem "comfortable_media_surfer", "~> 3.1.0"
 
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb

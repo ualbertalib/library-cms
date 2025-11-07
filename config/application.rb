@@ -43,6 +43,5 @@ module HomeCms
     # We currently use mini_magick for ActiveStorage. VIPS is now the default. So we need to explicitly specify this.
     # Delete this line if we ever migrate to VIPS
     config.active_storage.variant_processor = :mini_magick
-
   end
 end
