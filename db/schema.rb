@@ -138,7 +138,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_11_06_234626) do
     t.datetime "created_at", precision: nil, null: false
     t.string "identifier", null: false
     t.string "label", null: false
-    t.boolean "markdown", default: false
+    t.boolean "markdown", default: false, null: false
     t.integer "position", default: 0, null: false
     t.integer "site_id", null: false
     t.datetime "updated_at", precision: nil, null: false
