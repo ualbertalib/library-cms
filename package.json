@@ -18,7 +18,7 @@
     "autoprefixer": "^10.4.21",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "nodemon": "^3.1.10",
+    "nodemon": "^3.1.11",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "sass": "^1.91.0"
