@@ -1,0 +1,322 @@
+[attributes]
+---
+label: People2
+layout: left-navigation-html
+target_page:
+categories:
+- sandbox
+is_published: true
+position: 1
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/dsc">About the Library</a></li>
+  <li class="breadcrumb-item"><a href="/dsc/about">People</a></li>
+</ol>
+</nav>
+[text_area sidebar]
+{{cms:snippet charla-about2-nav}}                
+[text_area content]
+<style>
+  .btn-wide {
+   width: 239px; /* Adjust as needed */
+   font-size: 24px !important;
+   text-transform: none !important;
+   font-family: "Roboto", serif;
+   font-weight: 400;
+   line-height: 1.3;
+  }
+  .btn.btn-wide {
+  font-size: 15px !important;
+}
+    .btn-wide i {
+  color: #8393a9;
+}
+  .button-row-tight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; 
+}
+  .btn.dropdown-toggle::after {
+  margin-left: 0.75rem; /* adds space between text and arrow */
+  color: #9cb0cc;
+  border-top-color: #9cb0cc;
+}
+  .card-head {
+  height: 8px;
+  width: 100%;
+}
+.info-card {
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+  .searchable-directory-btn {
+    display: block;
+    margin-top: 15px;
+    clear: both; 
+}
+  /* Shorter Shadowbox */
+  .shadowbox {
+    background: white;
+    padding: 10px;
+    border-radius: 0px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  /* Square images cropped from bottom */
+ .shadowbox.card {
+  padding: 0; /* Remove padding so image can go to the edges */
+  border-radius: 0px;
+  overflow: hidden; /* Ensure rounded corners clip the image */
+}
+.square-img {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0; /* Ensure no margin around image container */
+}
+  .square-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; /* Keeps the top visible, crops the bottom */
+  }
+  /* Align card body properly */
+  .card-body {
+    text-align: center;
+    padding: 20px;
+  }
+  /* Responsive fixes */
+  @media (max-width: 991px) {
+    .right-column {
+      border-left: none;
+      padding-left: 0;
+      padding-right: -20;
+      margin-top: 20px;
+    }
+  }
+  .priorities-grid h2 {
+  font-family: "Roboto Slab", serif;
+  color: #353839;
+  font-weight: 600;
+}
+.card-title {
+  margin-bottom: 1rem; /* or 1rem or whatever spacing you like */
+}
+
+</style>
+
+<h1 class="display-3">People2</h1>
+
+<div class="button-row-tight mt-4">
+   
+  <!-- Button 1 -->
+  <a href="https://guides.library.ualberta.ca/az/library-staff-directory"
+     class="btn btn-square btn-wide"
+     style="background-color: #e4eaf2; color: black;">
+    Staff Directory <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+  </a>
+
+  <!-- Button 2 -->
+  <a href="https://www.library.ualberta.ca/about/staff/subject-librarians"
+     class="btn btn-square btn-wide"
+     style="background-color: #e4eaf2; color: black;">
+    Subject Librarians <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+  </a>
+
+  <!-- Dropdown: Committees -->
+  <div class="dropdown">
+    <button class="btn btn-square btn-wide dropdown-toggle"
+            type="button"
+            id="dropdownCommittees"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="background-color: #e4eaf2; color: black;">
+      Committees
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownCommittees">
+      <li><a class="dropdown-item" href="/slac">Student Library Advisory Committee (SLAC)</a></li>
+      <li><a class="dropdown-item" href="/about/liseg">Library Indigenous Student Engagement Group (LISEG)</a></li>
+    </ul>
+  </div>
+
+  <!-- Dropdown: Employment -->
+  <div class="dropdown">
+    <button class="btn btn-square btn-wide dropdown-toggle"
+            type="button"
+            id="dropdownEmployment"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="background-color: #e4eaf2; color: black;">
+      Employment
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownEmployment">
+      <li><a class="dropdown-item" href="https://apps.ualberta.ca/careers">Academic + Support Staff</a></li>
+      <li><a class="dropdown-item" href="/about/employment/">Students + Casual Staff</a></li>
+      <li><a class="dropdown-item" href="/about/projects/teaching-library">Internships, Practicums &amp; More</a></li>
+    </ul>
+ 			
+	</div>
+</div>
+
+
+
+<h2 class="mt-5">
+Chief Librarian + Leadership Team
+</h2>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/dale-askey-full.jpg" alt="Dale Askey">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dale Askey</h3>
+              <p class="card-text">Vice-Provost (Library + Museums) and Chief Librarian</p>
+              <a href="mailto:dale.askey@ualberta.ca">email</a> |
+              <a href="tel:780-492-5170">780-492-5170</a>
+              | <a href="https://guides.library.ualberta.ca/az/library-staff-directory/askey-dale">full   															profile</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/sonya-betz-full.jpg" 												alt="Sonya Betz">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Sonya Betz</h3>
+              <p class="card-text">Acting Associate University Librarian + Head, Open Publishing and 																	Digitization Services</p>
+               <p class="contact"><a href="mailto:sharon.murphy@ualberta.ca">email</a> | 
+                 <a href="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/sonya-betz-full.jpg">full 														profile</a></p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/trish-chatterley-full.jpg"  alt="Trish Chatterley" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Trish Chatterley</h3>
+              <p class="card-text">Associate University Librarian</p>
+              <p class="contact"><a href="mailto:trish.chatterley@ualberta.ca">email</a> | <a href="tel:780-													492-7933">780-492-7933</a> | 
+              <a href="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/trish-chatterley.jpg">full 												profile</a></p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/geoff-harder-full.jpg" 												alt="Geoff Harder">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Geoff Harder</h3>
+              <p class="card-text">Associate University Librarian</p>
+              <p class="contact"><a href="mailto:geoff.harder@ualberta.ca">email</a> | 
+                <a href="tel:780-492-7914">780-492-7914</a> | 
+                <a href="https://guides.library.ualberta.ca/az/library-staff-																													directory/harder-geoff">full profile</a></p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/denise-lafitte-full.jpg"                          alt="Denise LaFitte">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Denise LaFitte</h3>
+              <p class="card-text">Associate University Librarian (On Leave)</p>
+              <p class="contact"><a href="mailto:denise.lafitte@ualberta.ca">email</a>  |   
+              <a href="tel:780-492-5331">780-492-5331</a> | 
+              <a href="https://guides.library.ualberta.ca/az/library-staff-directory/lafitte-denise">full 														profile</a></p> 
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/weiwei-shi-440.jpg" 														alt="Weiwei Shi">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Weiwei Shi</h3>
+              <p class="card-text">Associate University Librarian</p>
+             <p class="contact"><a href="mailto:weiwei.shi@ualberta.ca">email</a> | 
+               <a href="tel:780-492-7802">780-492-7802</a> |  
+               <a href="https://guides.library.ualberta.ca/az/library-staff-directory/shi-weiwei">full 													profile</a></p>													
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://d1qywhc7l90rsa.cloudfront.net/customers/154/images/justine-zahara-full.jpg" 												alt="Justine Zahara">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Justine Zahara</h3>
+              <p class="card-text">Managing Director, Advancement</p>
+               <p class="contact"><a href="mailto:justine.zahara@ualberta.ca">email</a> | 
+                 <a href="https://guides.library.ualberta.ca/az/library-staff-directory/zahara-justine" data-										noturbolink="true">full profile</a></p>  
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="shadowbox card">
+            <div class="square-img">
+              <img src="https://sites.library.ualberta.ca/wp-content/uploads/2025/06/image-unavailable.png" 												alt="image unavailable">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Rehana Bennett</h3>
+              <p class="card-text">Administrative Services Manager</p>
+              <p class="contact"><a href="mailto:
+												rehana.bennett@ualberta.ca">email</a> | 
+               <a href="https://guides.library.ualberta.ca/az/library-staff-directory/bennett-rehana">full 														profile</a></p> 
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+    </div>
+
+                
+ 
