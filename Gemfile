@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby ">= 3.1.4", "< 3.5"
 
-gem "rails", "~> 7.2.2"
+gem "rails", "~> 8.1.1"
 
 gem "mysql2", "~> 0.5.6"
 # Use Puma as the app server
@@ -33,7 +33,7 @@ gem "jbuilder", "~> 2.14"
 # Use ActiveStorage variant
 gem "image_processing", "~> 1.14"
 
-gem "comfortable_mexican_sofa", github: "restarone/comfortable-mexican-sofa", tag: "3.5"
+gem "comfortable_media_surfer", "~> 3.1.0"
 
 gem "htmlentities"
 # Reduces boot times through caching; required in config/boot.rb
