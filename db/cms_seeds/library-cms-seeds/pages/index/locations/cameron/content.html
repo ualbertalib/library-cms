@@ -2,22 +2,20 @@
 ---
 label: Cameron
 layout: non-rich-text
-target_page: 
+target_page:
 categories: []
 is_published: true
 position: 4
 [text_area content]
-  {{ cms:snippet hours-cal-style }} 
 <style>
-.s-lc-mhw-sub-loc, .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-  display:block;
-  }
-  .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-      font-size:11px;
-    margin-top:8px;
-  }
-    
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-7732, .s-lc-w-lid-4610>.s-lc-w-name {display:none;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-time, .s-lc-allday{font-weight:bold;} 
+  td.s-lc-w-name{padding:5px 5px 5px 0;}
+  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-65px;}
+  .box{background-color:#fff; padding:10px 20px;}
 </style>
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -25,99 +23,190 @@ position: 4
 <li aria-current="page" class="breadcrumb-item active">Cameron Library</li>
 </ol>
 </nav>
-
-<!---    <p class="alert alert-info alert-dismissible fade show" role="alert">
-	<strong>NOTE: The entire Cameron Library building is closed on Monday, June 17, 2024 all day for a scheduled power outage. Visit another <a href="https://www.library.ualberta.ca/hours-locations"> U of A Library location </a> during this time.</strong>
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	<span aria-hidden="true">×</span>
-	</button>
-</p> --->
-
-
-
-
+<div class="page-title">
 <h1>
- Cameron <span class="h3">Science &amp; Engineering Library</span>
+Cameron Library
 </h1>
-<div class="alert alert-info alert-dismissible fade show" role="alert">
-  <i class="fa-sharp fa-solid fa-circle-info"></i> 
-  Late Night Study Space (Main + Basement Levels) for Summer term: July 8 - August 15
+</div>
+
+
+<h2>Visit the library</h2>
+
+
+<div class="row g-0">
+  <div class="col-md-5">
     
  
-      <ul class="mb-0 pl-4">
-                <li>Monday–Sunday: Open until 10:00 PM
-        </li>
-        
-       <!--- <li>Friday–Sunday: Open until 10:00 PM</li> --->
-        <li><strong>ONECARD REQUIRED FOR ENTRY</strong></li>
+<img src="https://sites.library.ualberta.ca/wp-content/uploads/2025/10/UofALib2021-247-scaled.jpg" alt="Cameron Library" class="h-md-100">
 
-  </ul><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
-    
-</div>
-  
-<div class="row">
-  <div class="col-md-4 ual-location-actions">
-
-    <p>The Cameron Library provides collections and services in support of the research and teaching of the faculties in the <a href="https://www.ualberta.ca/natural-applied-sciences/index.html">College of Natural and Applied Sciences</a>: Science, Engineering, and Agricultural, Life + Environmental Sciences. <a href="#more">More about the Cameron Library</a>. </p>
-    <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" class="btn ual-btn mb-3" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to Cameron</a>
-    <a href="https://ualberta.libcal.com/seats?lid=441&gid=909&c=-1" class="btn ual-btn mb-3"><i class="fa-solid fa-chalkboard-user mr-2"></i> Book Study Space in Cameron</a>
-    <a href="https://www.library.ualberta.ca/services/study-area-directory#cam" class="btn ual-btn mb-3">​<i class="fa-solid fa-headphones"></i> Cameron Noise / Study Zones</a>
-      <a href="/services/accessibility-services/locations-accessibility#cameron" class="btn ual-btn mb-3"><i class="fa-brands fa-accessible-icon mr-2"></i> Cameron Accessibility Information</a>
-    <a href="/services/3dprinting" class="btn ual-btn mb-3"><i class="fa-solid fa-cubes"></i>Cameron Library - 3D Printing</a>
-    <p>
-      After hours book return available in Cameron Library, just outside the glass entry doors on the main level. </p>
-    <p>NOTE: ONEcard required for access to Cameron during extended hours.</p>
-    {{ cms:snippet policies-location }}
-    
-  
-    
-     </div>
-  <div class="col-md-8">
-    <h2>
-      Cameron Hours 
-    </h2>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
-<div id="s_lc_mhw_3750_4610"></div> 
+ </div>
+  <div class="col-md-3">
+<div class="box border h-100">
+<h3>
+  Today's Hours
+</h3>
+<script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
+<div id="s_lc_tdh_3750_4610"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_4610 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_4610"), { iid: 3750, lid: 4610, months: 4, show_past: 2,  systemTime: false }); 
+var s_lc_tdh_3750_4610 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4610"), { iid: 3750, lid: 4610 }); 
 });
-</script> 
+</script>  
+  
+<p>
+  
+ <a href="/locations/cameron/cameron-monthly-hours">Monthly hours calendar >></a> </p>
+{{ cms:snippet upcoming-closures}}
+  </div>
+      </div>
+ <div class="col-md-4 ps-4">
+   <p class="mb-2 small pt-3 pt-md-0">
+  <i class="fa-solid fa-phone me-2"></i><a href="tel:780-492-8440">780-492-8440</a></p>
+    <p class="mb-2 small"><i class="fa-solid fa-envelope me-2"></i><a href="/ask-us/email-us">Email us</a></p>
+ <p class="mb-2 small"><i class="fa-solid fa-user-group me-2"></i><a href="https://guides.library.ualberta.ca/az/library-staff-directory?cf=202:Cameron%20Library">Cameron staff</a></p>
+   
+    <p class="mb-2 small">
+      
+      <strong>Cameron Library</strong><br/>
+    
+      University of Alberta, 11208 89 Avenue<br/>
+      Edmonton, AB, T6G 2J8<br/>
+       <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl">View on campus map</a>  <br/>
+    </p>
+ 
+   <p class="mt-2 mt-md-5 mb-2"> <i class="fa-brands fa-accessible-icon me-2"></i><a href="https://www.library.ualberta.ca/services/accessibility-services/locations-accessibility#cameron">Cameron accessibility</a></p>
+   <p><i class="fa-solid fa-books me-2"></i><a href="/services/borrowing/returning-renewing#north">Book returns</a></p>
   </div>
   </div>
+
+<hr/>
+<div class="row">
+  <h2>Find a Study Space</h2>
+ 
+   <div class="col-md-4">
+     
+  
+    <h3>Study Rooms</h3>
+
+<p>There are 18 bookable study rooms 
+  available on the main floor and basement level of Cameron Library.</p>
+<a href="https://ualberta.libcal.com/seats?lid=441&gid=909" class="btn btn-green btn-square mt-2">Book a study room</a>
+  </div>
+  <div class="col-md-4">
+    <h3>24/7 Study Space</h3>
+<p>
+  The Knowledge Common and Study Hall, located on the basement level are open 24/7 to staff and students only. ONEcard is required for entry.<br>
+     <a href="/services/study-area-directory#cam" class="btn btn-green btn-square mt-2">Study Area Directory room</a>
+     </p>
+  </div>
+  <div class="col-md-4">
+    <h3>
+      Computer Workstations
+    </h3>
+    <p>
+      Available on a first come, first serve basis, Cameron Library has over 400 Windows computing workstations.<br>
+      <a href="/services/technology/workstations" class="btn btn-green btn-square mt-2">more about computer workstations</a>
+    </p>
+  </div>
+  </div>
+    
 
 
 <hr/>
-<div class="row mt-4">
-  <div class="col-md-9">
-<p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/download.jpg" alt="Cameron Library" class="rounded float-start my-2 me-3"/>Cameron Library provides collections and services in support of the research and teaching of the Faculty of Engineering, the Faculty of Science, and the Faculty of Agricultural, Life and Environmental Sciences. Collections include the William C. Wonders Map Collection and the Canadian Circumpolar Collection. Cameron is also home to the Library's <a href="https://www.library.ualberta.ca/services/3dprinting">3D printing program</a>. Cameron seats 1650 with 400+ computers. It has 18 group study rooms, two treadmill desks, and a mix of comfortable seating. Cameron is <a href="https://www.library.ualberta.ca/services/study-area-directory#cam">zoned for three levels of noise</a>: silent/no food, quiet, and collaborative. Cameron Library is located near a Starbucks, and is the home of the <a href="https://dsc.library.ualberta.ca/">Digital Scholarship Centre</a>.
-  <p>Do you have questions? <a href="/askus" data-no-turbolink="true">Ask Us</a> for help at the service desk on the main floor. </p>
-   <p>
-     You can also find subject specific information in our subject guides:
-    </p>
-   <a href="http://guides.library.ualberta.ca/science" class="btn ual-btn mb-3">Science Subject Guides</a>
-        <a href="http://guides.library.ualberta.ca/engineering" class="btn ual-btn mb-3">Engineering Subject Guides</a>
-            <a href="http://guides.library.ualberta.ca/ales" class="btn ual-btn mb-3">ALES Subject Guides</a>
+<div class="row">
+      <h2>
+      Explore Cameron
+    </h2>
+  <div class="col-md-8">
 
-		
-  </div>
- <div class="col-md-3">     
-    <div class="ual-well">
-      
+    <h3>
+      Digital Scholarship Centre (DSC)
+    </h3>
+    <p>
+     Located on the second floor of Cameron Library, the DSC is research centre that offers a variety of makerspace equipment and digital technology. Learn new ways to support your research with the help of our qualified media and technology experts.<br>
+     <a href="/dsc" class="mt-2">More about DSC</a> 
+    </p>
+ 
+    <h3>
+      Mediated 3D Printing
+    </h3>
+    <p>
+      Cameron Library is one of two libraries that offer mediated 3D printing services. This service is free to University of Alberta students, faculty, and staff wanting to print a 3D object for educational purposes.<br>
+      <a href="/services/3dprinting" class="mt-2">More about mediated 3D Printing</a>
+    </p>
+      <h3>
+     William C. Wonders map collection
+    </h3>
+       <p> The William C. Wonders map collection, located on the 4th floor of Cameron Library, holds approximately 500,000 print maps, 800,000 aerial photographs and over 5,000 atlases. <br/>  <a href="https://guides.library.ualberta.ca/map-collection-resources/home" class="mt-2">More about  William C. Wonders map collection</a>
+    </p>
+    <h3>
+      Cameron Library Listening Space
+    </h3>
+    <p>
+   This unique space combines natural and hybrid soundscapes to provide an immersive, therapeutic and relaxing environment for staff and students. Located on the main floor of the library (1-40)<br>
+      <a href="/locations/cameron/listening-space" class="mt-2">More about Cameron Listening Space</a>
+    </p>
     
-    <h4>
-      Cameron Library
-   </h4>
-          
-         <p>11231 Saskatchewan Drive<br> 
-          University of Alberta<br> 
-          Edmonton, Alberta, T6G 2J8 </p>
-           
-   <p><a href="tel:780-492-8440"> 780-492-8440</a></p>
-<p><a href="https://library.ualberta.ca/ask-us/email-us">Email Us</a></p> 
- <a href="/staff/?building=cameron" class="btn ual-btn"><i class="fa-solid fa-users-medical mr-1"></i> Cameron Staff</a>
-   </div>
-</div></div>    
-          
+  </div>
+</div>
+
+<hr/>
+<div class="row">
+  <div class="col-md-11">
+<h2>About the Library</h2>
+<p>The Cameron Library provides collections and services in support of the research and teaching of the faculties in the College of Natural and Applied Sciences: Science, Engineering, and Agricultural, Life + Environmental Sciences. Collections include the William C. Wonders Map Collection and the Canadian Circumpolar Collection. Cameron Library is also the home of the Digital Scholarship Centre.</p>
+
+
+
+<p class="mb-2">Policies:</p>
+    <ul>
+  <li> <a href="/about/policies/community-expectations/">Community Expectations</a></li>
+   <li>  <a href="/services/study-area-directory">Study Area Directory + Noise Zones</a></li>
+ 
+   <li> <a href="/about/policies/food-and-drink">Food + Drink Policy</a></li>
+    </ul>
+ 
+
+  </div>
+</div>
+
+
 [text translated-url]
+
+[text_area breadcrumbs]
+  {{ cms:snippet hours-cal-style }} 
+
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
+<li aria-current="page" class="breadcrumb-item active">Cameron Library</li>
+</ol>
+</nav>
+[text_area sidebar]
+ <ul class="level-0">
+<li aria-current="page" class="current-section folder active-folder"><a class="folder px-4" href="/services/library-cards-and-borrowing">
+  <span class="text">Cameron Library
+</span></a>
+	</li>
+</ul>
+<ul class="list-group list-group-flush ps-4">		<li class="list-group-item"><a href=" https://ualberta.libcal.com/reserve/spaces/cameron">Book Study Space</a></li>
+    <li class="list-group-item"><a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" target="_blank">Map + Directions</a></li>
+    <li class="list-group-item"><a href="/services/study-area-directory/#cam">Noise / Study Zones</a></li>
+  <li class="list-group-item"><a href="/services/accessibility-services/locations-accessibility#cameron">Cameron Accessibility Information</a></li>
+    <li class="list-group-item"><a href="/services/3dprinting">3D Printing</a></li>
+     <li class="list-group-item"><a href="/locations/cameron/listening-space">Listening Space</a></li>
+  </ul>
+
+ <div class="ual-well mt-4">
+     
+
+      <p><span class="fw-bold">Cameron Library</span><br/>
+        11231 Saskatchewan Drive<br/>
+University of Alberta<br/>
+Edmonton, Alberta<br/> T6G 2J8 <br/><a href="tel:780-492-8440"> 780-492-8440</a></p>
+
+
+   </div>
+
+ {{ cms:snippet new-policies-locations }}

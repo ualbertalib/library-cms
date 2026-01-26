@@ -2,88 +2,98 @@
 ---
 label: St. Joseph's
 layout: non-rich-text
-target_page: 
+target_page:
 categories: []
 is_published: true
-position: 9
+position: 11
+[text translated-url]
+
 [text_area content]
-  {{ cms:snippet hours-cal-style }} 
+    <style>
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .loc5700>.hours-col-loc {display:none;}
+  .s-lc-time{font-size:18px; padding-bottom:15px; font-weight:bold;}
+      .box{background-color:#fff; padding:10px 20px;}
+</style>
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
 <li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
-<li aria-current="page" class="breadcrumb-item active">St. Joseph's College Library</li>
+<li aria-current="page" class="breadcrumb-item active">St. Joseph’s College Library</li>
 </ol>
 </nav>
-
+<div class="page-title">
 <h1>
 St. Joseph’s College Library
 </h1>
-<div class="row">
+</div>
 
-  <div class="col-md-4 ual-location-actions">
-    
-       <!--  <div class="ual-well mb-3">
-      <h4 class="red">
-        REOPENING MONDAY, FEB 28TH
-      </h4>
-      <ul class="mb-0">
-        <li>Until Feb 28th, UAlberta students/staff may borrow items from St. Joseph's by placing them on <strong>hold</strong> for pickup at <a href="/locations/cameron">Cameron</a>, <a href="/locations/bsj">BSJ</a> (CSJ students/staff only), or <a href="/locations/augustana">Augustana</a> (students/staff in Camrose).</li>
-        
-     
-        <li><strong>Course Materials</strong> from St. Joseph’s are currently being relocated to <a href="/locations/cameron">Cameron</a>. They will be relocated back to St. Joseph's as of Feb 28th, but will be unavailable Feb 25th-27th during the relocation. </li> 
-        
-        <li>  For more information please see our <a href="/covid19info">Covid-19 Information page</a>.</li>
 
-       </ul>
-    </div> -->
+<h2>Visit the library</h2>
+
+
+<div class="row g-0">
+  <div class="col-md-5">
     
-    
-    
-    
-     <p>The Library is located on two levels in the basement of the east wing of the College and contains about 25,000 books as well as DVDs and periodicals. <a href="#more">More about the St. Joseph’s Library</a>. </p>
-    <a href="https://www.ualberta.ca/maps.html?l=53.524506,-113.524577&z=17&campus=north_campus&b=sj" class="btn ual-btn mb-3" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to St. Joseph’s</a>
-      <a href="/services/accessibility-services/locations-accessibility#stjoes" class="btn ual-btn mb-3"><i class="fa-brands fa-accessible-icon mr-2"></i> St. Joseph’s Accessibility Information</a>
-    
-    {{ cms:snippet policies-location }}
+ 
+<img src="https://sites.library.ualberta.ca/wp-content/uploads/2025/10/stjoes-1024x768-1.jpg" alt="St. Joseph’s" class="h-md-100">
+
+ </div>
+  <div class="col-md-3">
+<div class="box border h-100">
+<h3>
+  Today's Hours
+</h3>
+<script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
+
+<div id="api_hours_today_iid3750_lid5700"></div><script src="https://ualberta.libcal.com/api_hours_today.php?lid=5700&format=js&systemTime=0&context=object"> </script>
+  
+<p class="pt-3">
+   <a href="/locations/stjosephs/stjoseph-monthly-hours" >Monthly hours calendar >></a> </p>
+{{ cms:snippet upcoming-closures}}
+  </div>
+      </div>
+ <div class="col-md-4 ps-4">
+   <p class="mb-2 small pt-3 pt-md-0">
+  <i class="fa-solid fa-phone me-2"></i><a href="tel:780-492-7684">780-492-7684</a></p>
+    <p class="mb-2 small"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:sjclib@ualberta.ca">sjclib@ualberta.ca</a></p>
+
    
-     </div>
-  <div class="col-md-8">
-    <h2>
-      St. Joseph’s Hours 
-    </h2>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
-<div id="s_lc_mhw_3750_5700"></div> 
-<script>
-$(function(){ 
-var s_lc_mhw_3750_5700 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_5700"), { iid: 3750, lid: 5700, months: 3, show_past: 2, systemTime: false }); 
-});
-</script> 
+    <p class="mb-2 small">
+      
+     
+    
+      11325 89 Ave NW<br/>
+University of Alberta<br/>
+Edmonton, Alberta, T5G 2J5<br/>
+       <a href="https://www.ualberta.ca/en/maps.html?l=53.524506,-113.524577&z=17&campus=north_campus&b=sj">View on campus map</a>  <br/>
+    </p>
+ 
+   <p class="mt-2 mt-md-5 mb-2"> <i class="fa-brands fa-accessible-icon me-2"></i><a href="https://library.ualberta.ca/services/accessibility-services/locations-accessibility#stjoes">St. Joseph’s accessibility</a></p>
+
   </div>
   </div>
+
+
 <hr/>
 <div class="row">
-  <div class="col-md-9">
-    <p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/sjc.jpg" alt="St. Joseph’s Library" class="rounded float-start my-2 me-3"/>The Library is located on two levels in the basement of the east wing of the College and contains about 25,000 books as well as DVDs and periodicals. The collection is eclectic, but the focus is on Christian theology, philosophy, ethics, the Bible, and Catholic studies.</p>
+  <div class="col-md-8">
+<h2>About the Library</h2>
+<p>
+  
+  The Library is located on two levels in the basement of the east wing of the College and contains about 25,000 books as well as DVDs and periodicals. The collection is eclectic, but the focus is on Christian theology, philosophy, ethics, the Bible, and Catholic studies.  </p>
 
-    <p>The Library is open to everyone. External library cards are free and can be acquired at the service desk. A ONEcard printer/scanner/photocopier is on site for University staff and students, and money can be put on your card at the desk. Public work stations, study space, and an after hours book drop are available. Services for persons with disabilities are available upon request.</p>
+<p>The Library is open to everyone. External library cards are free and can be acquired at the service desk. A ONEcard printer/scanner/photocopier is on site for University staff and students, and money can be put on your card at the desk. Public work stations, study space, and an after hours book drop are available. Services for persons with disabilities are available upon request.  </p>
 
-		
-  </div>
- <div class="col-md-3">     
-        <div class="ual-well">
-          
+<p class="mb-2">Policies:</p>
+    <ul>
+  <li> <a href="/about/policies/community-expectations/">Community Expectations</a></li>
+   <li>  <a href="/services/study-area-directory">Study Area Directory + Noise Zones</a></li>
  
-          <h4>St. Joseph's College Library</h4>
-            <p> 11325 89 Ave NW<br> 
-University of Alberta<br> 
-             Edmonton, Alberta, T5G 2J5</p>
-     <p><a href="tel:780-492-7684"> 780-492-7684</a></p>
-           <p class="mb-1"><a href="mailto:sjclib@ualberta.ca"> sjclib@ualberta.ca</a></p>
+   <li> <a href="/about/policies/food-and-drink">Food + Drink Policy</a></li>
+    </ul>
+ 
 
-     </div>
+  </div>
+    
 
-   </div>
-</div>
-[text translated-url]
