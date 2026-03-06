@@ -194,7 +194,8 @@ GEM
     mini_mime (1.1.5)
     minitest (5.26.0)
     msgpack (1.8.0)
-    mysql2 (0.5.6)
+    mysql2 (0.5.7)
+      bigdecimal
     net-imap (0.5.9)
       date
       net-protocol
@@ -416,7 +417,7 @@ DEPENDENCIES
   jbuilder (~> 2.14)
   jsbundling-rails
   listen (>= 3.0.5, < 3.10)
-  mysql2 (~> 0.5.6)
+  mysql2 (~> 0.5.7)
   passenger (~> 6.0, >= 6.0.27)
   puma (~> 6.6)
   rails (~> 7.2.2)
