@@ -2,75 +2,194 @@
 ---
 label: DSC
 layout: non-rich-text
-target_page: 
+target_page:
 categories: []
 is_published: true
 position: 5
-[text_area content]
-  {{ cms:snippet hours-cal-style }}
+[text translated-url]
 
+[text_area breadcrumbs]
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
 <li class="breadcrumb-item"><a href="/hours-locations">Hours + Locations</a></li>
 <li aria-current="page" class="breadcrumb-item active">DSC</li>
 </ol>
+   <div class="alert alert-info" role="alert">
+     <i class="fa-sharp fa-solid fa-circle-info"></i>
+    <strong>NOTE:</strong> The DSC's operating hours have changed for Winter 2025.
+</div>
 </nav>
-<h1>DSC <span class="h3">Digital Scholarship Centre</span>
+[text_area sidebar]
+ <ul class="level-0">
+<li aria-current="page" class="current-section folder active-folder"><a class="folder px-4" href="/dsc">
+  <span class="text">DSC
+</span></a>
+	</li>
+</ul>
+<ul class="list-group list-group-flush ps-4">		<li class="list-group-item"><a href="/dsc/spaces">DSC Spaces</a></li>
+    <li class="list-group-item"><a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" target="_blank">Map + Directions</a></li>
+    <li class="list-group-item"><a href="https://ualberta.libcal.com/appointments/dsc?_gl=1*8sxuu*_ga*NDc2MTk1MjQ4LjE3NDE2MzE1MTQ.*_ga_JFD4RYC4BZ*MTc0MTYzMTUxMy4xLjEuMTc0MTYzNDE3MS4wLjAuMA..">Make an appointment</a></li>
+  <li class="list-group-item"><a href="/services/accessibility-services/locations-accessibility#dsc">DSC Accessibility Information</a></li>
+  </ul>
 
+ <div class="ual-well mt-4">
+     <p><span class="fw-bold">Digital Scholarship Centre</span><br/>
+        2-20 Cameron Science + Technology Library<br/>
+        11231 Saskatchewan Drive<br/>
+University of Alberta<br/>
+        Edmonton, Alberta T6G 2J8 </p>
+       <p><a href="mailto:dsc.library@ualberta.ca">Email the DSC</a></p>
+   </div>
+
+ {{ cms:snippet new-policies-locations }}
+[text_area content]
+    <style>
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-6687>.s-lc-w-name {display:none;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-time, .s-lc-allday{font-weight:bold;} 
+  td.s-lc-w-name{padding:5px 5px 5px 0;}
+      .box{background-color:#fff; padding:10px 20px;}
+</style>
+
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
+<li aria-current="page" class="breadcrumb-item active">Digital Scholarship Centre</li>
+</ol>
+</nav>
+<div class="page-title">
+<h1>
+Digital Scholarship Centre
 </h1>
-<div class="row">
-  <div class="col-md-4">
-     <p>  
-     Visit the <a href="https://dsc.library.ualberta.ca">DSC Website</a> to get more information about the Digital Scholarship Centre including <a href="https://dsc.library.ualberta.ca/services/services-overview/"> services</a> and <a href="https://ualberta.libcal.com/calendar/dsc-workshops/?cid=7583&t=d&d=0000-00-00&cal=7583&inc=0">workshops</a>.</p>
+</div>
+
+
+<h2>Visit the Centre</h2>
+
+
+<div class="row g-0">
+  <div class="col-md-5">
     
-    <a href="https://dsc.library.ualberta.ca/" class="btn ual-btn mb-3 w-75 text-start"><i class="fa-solid fa-globe-pointer mr-2 mb-0"></i>DSC Website</a><br/>
-    <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" class="btn ual-btn mb-3 w-75 text-start" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to DSC</a>
-    <a href="https://ualberta.libcal.com/appointments/dsc" class="btn ual-btn mb-3 w-75 text-start"><i class="fa-solid fa-chalkboard-user mr-2"></i> Make an Appointment at the DSC</a>
-    
-      <a href="/services/accessibility-services/locations-accessibility#dsc" class="btn ual-btn mb-3 w-75 text-start"><i class="fa-brands fa-accessible-icon mr-2"></i>DSC Accessibility Information</a>
-    
-        </div>
-  <div class="col-md-8">
-    <h2>
-     DSC Hours 
-    </h2>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
-<div id="s_lc_mhw_3750_6687"></div> 
+ 
+<img src="https://sites.library.ualberta.ca/wp-content/uploads/2025/08/DSC-UAL-website-hours-location-page.png" alt="Digital Scholarship Centre" class="h-md-100">
+
+ </div>
+  <div class="col-md-3">
+<div class="box border h-100">
+<h3>
+  Today's Hours
+</h3>
+<script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
+<div id="s_lc_tdh_3750_6687"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_6687 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_6687"), { iid: 3750, lid: 6687, months: 4, show_past: 2,  systemTime: false }); 
+var s_lc_tdh_3750_6687 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_6687"), { iid: 3750, lid: 6687 }); 
 });
 </script> 
-  </div>
-  </div>  
   
-  <!--      <h4 class="red">
-        CLOSED UNTIL FEB 28TH
-      </h4>
-      <p class="mb-0">
- For more information please see the <a href="https://dsc.library.ualberta.ca/">DSC website</a>
-</div> -->
+<p>
+ 
+ <a href="/locations/dsc/dsc-monthly-hours">Monthly hours calendar >></a> </p>
+{{ cms:snippet upcoming-closures}}
+  </div>
+      </div>
+ <div class="col-md-4 ps-4">
+   <p class="mb-2 small pt-3 pt-md-0">
+    <p class="mb-2 small"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:dsc.library@ualberta.ca">Email us</a></p>
+ <p class="mb-2 small"><i class="fa-solid fa-user-group me-2"></i><a href="/dsc/about/our-people">DSC staff</a></p>
+   
+    <p class="mb-2 small">
+      
+      <strong>Cameron Library</strong><br/>
+    
+      11231 Saskatchewan Dr NW #2-20<br/>
+      11405 87 Avenue NW<br/>
+      Edmonton, AB, T6G 2J8<br/>
+       <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl">View on campus map</a>  <br/>
+    </p>
+ 
+   <p class="mt-2 mt-md-5 mb-2"> <i class="fa-brands fa-accessible-icon me-2"></i><a href="/services/accessibility-services/locations-accessibility#dsc">Digital Scholarship Centre accessibility</a></p>
+   <p><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><a href="/dsc">Digital Scholarship Centre</a></p>
+  </div>
+  </div>
+
 <hr/>
 <div class="row">
-   <div class="col-md-9">
-<p id="more"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2021/07/Vis-Lab-18_bnw_smaller-e1563220363575-1024x512-1.jpg" alt="dsc" class="rounded float-start my-2 me-3" width="350" height="225"/>
-       The Digital Scholarship Centre (DSC) is a research and teaching facility for faculty, students, and staff at the University of Alberta. The DSC grows expertise in research methods and practices using technologies. </p>  <p>Email <a href="mailto:dsc.library@ualberta.ca">dsc.library@ualberta.ca</a> to set up an appointment.
-    </p> 
-    </div>
-      
- <div class="col-md-3">
-   <div class="ual-well">
-     
-  <h4>
-    Digital Scholarship Centre
-     </h4>
-   				 <p>2-20 Cameron Science + Technology Library<br> 
-             11231 Saskatchewan Drive<br> 
-         		 University of Alberta<br> 
-         		 Edmonton, Alberta, T6G 2J8 </p>
-<p><a href="https://library.ualberta.ca/ask-us/email-us">Email Us</a></p>
-   </div>
+  <h2>Find a Creative Space</h2>
+  <div class="col-md-4">
+    
+    <h3>Makerspaces</h3>
+
+<p>Certify to use our tools and book time to make your designs and prototypes come to life in our makerspace.</p>
+<a href="/dsc/makerspace" class="btn btn-green btn-square mt-2">Browse Makerspace</a>
   </div>
-[text translated-url]
+  <div class="col-md-4">
+    <h3>Studio Space</h3>
+<p>
+Jump into the world of digitization, gaming, or virtual reality, or get certified in our media production studios to capture your audio, photography, or videography projects.<br/>
+  <a href="/dsc/spaces/studio" class="btn btn-green btn-square mt-2">Browse Studios</a>
+      </p>
+  </div>
+  <div class="col-md-4">
+    <h3>
+      High Performance Computers
+    </h3>
+    <p>
+     Take advantage of in-person or remote access to one of our high-performance computers and a wide range of specialized software and applications.<br>
+      <a href="/dsc/technology/software" class="btn btn-green btn-square mt-2">Browse Software + Applications</a>
+    </p>
+  </div>
+  </div>
+<hr/>
+     <h2>
+ Our Expertise
+     </h2>
+   <div class="col-md-8">
+       <h3>
+     Workshops
+    </h3>
+    <p>We offer free workshops throughout the year on a variety of tools and research techniques.<br>
+      <a href="https://library.ualberta.ca/dsc/workshops" class="mt-2">Register for workshops</a>
+    </p>
+ <h3>
+     Book a Consultation
+    </h3>
+    <p>
+    Book a time to talk to one of our knowledgeable team members about questions or help with a project, digital tools, makerspace technology and more.<br>
+      <a href="https://ualberta.libcal.com/appointments/dsc?_gl=1*1n37ei*_ga*MTY2NzkwMTczMi4xNzQzNTI4NDI4*_ga_JFD4RYC4BZ*czE3NTc2OTY2NjkkbzIwMyRnMSR0MTc1NzY5NjkwOCRqNjAkbDAkaDA." class="mt-2">Book a consultation</a>
+    </p>
+     <h3>
+      Certification Practice Sessions
+    </h3>
+    <p>
+   Once you've completed your online makerspace or studio module, book in your practice session to complete the certification process<br>     
+      <a href="https://ualberta.libcal.com/appointments/dsc?_gl=1*ei6th9*_ga*MTY2NzkwMTczMi4xNzQzNTI4NDI4*_ga_JFD4RYC4BZ*czE3NTc2OTY2NjkkbzIwMyRnMSR0MTc1NzY5NzAyMyRqNjAkbDAkaDA." class="mt-2">Book a certification practice session</a>
+    </p>
+  
+    
+  </div>
+
+<p>
+  
+    </p>
+<hr/>
+<div class="row">
+  <div class="col-md-11">
+<h2>About the Digital Scholarship Centre</h2>
+<p>   The Digital Scholarship Centre is a research and training facility for faculty, students, and staff at the University of Alberta. The Digital Scholarship Centre grows expertise in research methods and practices using technologies. Visit the <a href="/dsc">Digital Scholarship Centre website</a> to discover the full range of resources and services. </p>
+
+
+
+<p class="mb-2">Policies:</p>
+    <ul>
+      <li><a href="/dsc/makerspace/policies">Makerspace Policies + Expectations</a></li>
+  <li> <a href="/about/policies/community-expectations/">Community Expectations</a></li>
+   <li>  <a href="/services/study-area-directory">Study Area Directory + Noise Zones</a></li>
+    <li> <a href="/about/policies/food-and-drink">Food + Drink Policy</a></li>
+    </ul>
+ 
+
+  </div>
+</div>

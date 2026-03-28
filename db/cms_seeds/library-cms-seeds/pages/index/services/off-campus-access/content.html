@@ -1,11 +1,11 @@
 [attributes]
 ---
 label: Off Campus Access
-layout: one-column-sidebar
-target_page: 
+layout: secondary-pages
+target_page:
 categories: []
 is_published: true
-position: 11
+position: 10
 [wysiwyg content]
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
@@ -20,6 +20,7 @@ position: 11
             the Library Home Page and 
 	<strong>log in</strong> using your
 	<strong>Campus Computing ID and Password.</strong>
+</p><p>Databases and ejournals should work the same way whether you are on campus accessing them directly, or off campus accessing them through the EZProxy server. If you encounter any difficulties when using the EZProxy server, please send details (including the URL you were trying to access) to our <a href="https://web.archive.org/web/20250210061234/https://library.ualberta.ca/askus/" "="">Ask Us</a> Services.<span class="redactor-invisible-space" style="text-decoration-line: line-through;"></span><br>
 </p><hr><h2>EZProxy</h2><p>
 	Are you having an Ezproxy login problem from off-campus?
 </p><ul>
@@ -52,10 +53,7 @@ position: 11
 </p><p style="margin-left: 20px;">For example, the following is a URL for an online article:
 </p><p style="margin-left: 20px;"><a href="http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a>
 </p><p style="margin-left: 20px;">Once the EZProxy prefix is included, the link will appear as follows:
-</p><p style="margin-left: 20px;"><a href="http://login.ezproxy.library.ualberta.ca/login?url=http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://login.ezproxy.library.ualberta.ca/login?url=https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a>
-</p><p>
-	For more information go to <a href="https://guides.library.ualberta.ca/accessing-library-online-resources">Accessing Library Online Resources</a>.
-</p><hr><h2>EZProxy URLs</h2><p>
+</p><p style="margin-left: 20px;"><a href="http://login.ezproxy.library.ualberta.ca/login?url=http://pubs.acs.org/doi/pdf/10.1021/bi8006143">https://login.ezproxy.library.ualberta.ca/login?url=https://pubs.acs.org/doi/pdf/10.1021/bi8006143</a></p><hr><h2>EZProxy URLs</h2><p>
 	While you are using the EZProxy server to access a restricted
         resource, the URL in your browser's address box will be modified. For
         example, a database might have a URL like this when you access it on
@@ -76,16 +74,11 @@ position: 11
 	Sometimes you want to access library e-resources from off-campus         without going through the library website Maybe somebody sent you an         email or a Twitter link to a great journal article, or you found         something through 
 	<a href="https://scholar.google.ca/">Google Scholar</a>. Rather than hitting a paywall, you         can use these bookmarklets to quickly authenticate yourself as a University of Alberta         user and access the full text. It's quick and easy to install in your         Web browser.
 </p><p>
-	Internet Explorer users:  right-click this link 
-	<a href="javascript:o=location.href;location.href='http://www.doi.org/cgi-bin/pushcookie.cgi?BASE-URL=http%3A//resolver.library.ualberta.ca/resolver&Redirect=http%3A//login.ezproxy.library.ualberta.ca/login?url='+escape(o)">UA Access</a> and select "Add to Favorites".. You may be prompted with a security warning, but it         is safe to click "Yes". Firefox/Safari/Chrome/Opera users: click and drag this link to your Bookmarks toolbar: <a href="javascript:o=location.href;location.href='http://www.doi.org/cgi-bin/pushcookie.cgi?BASE-URL=http%3A//resolver.library.ualberta.ca/resolver&Redirect=http%3A//login.ezproxy.library.ualberta.ca/login?url='+escape(o)">UA Access</a>
+	Click and drag this link to your bookmarks bar to install the UA Access bookmarklet:
+</p><p><a href="javascript:(function()%7Bfunction%20extractDOI(text)%7Blet%20match%3Dtext%26%26text.match(/10%5C.%5Cd%7B4%2C9%7D%5C%2F%5B%5E%5Cs%22'%3C%3E%26%5D%2B/i)%3Bif(!match)%20return%20null%3Blet%20doi%3Dmatch%5B0%5D%3Bdoi%3Ddoi.replace(/%5E%5B%5E%5Cd%5D*%2810%5C.%5Cd%7B4%2C9%7D%5C%2F%29/,'%24%31')%3Bdoi%3Ddoi.replace(/%5B%5Cs%2E%2C%3B%3A%5D%2B%24/,'')%3Breturn%20doi%3B%7Dlet%20doi%3DextractDOI(window.location.href)%3Bif(!doi)%7Bdoi%3DextractDOI(document.body.innerText)%3B%7Dif(doi)%7Bvar%20openurl%3D'https%3A%2F%2Fualberta.primo.exlibrisgroup.com%2Fdiscovery%2Fopenurl%3Finstitution%3D01UOA_INST%26vid%3D01UOA_INST%3AUOA%26rft_id%3Dinfo%3Adoi%2F'%2BencodeURIComponent(doi)%2B'%26ctx_ver%3DZ39.88-2004'%3Bwindow.location.href%3Dopenurl%3B%7Delse%7Balert('DOI%20not%20found%20in%20URL%20or%20page%20text.')%3B%7D%7D)()" onclick="return false">UA Access</a>
 </p><p>
 	Please note that this bookmarklet does not work for some resources.         If you are still having trouble accessing a particular resource, use         the 
 	<a href="/"> library catalogue</a>, <a href="https://guides.library.ualberta.ca/az.php?">database </a>, or <a href="/ejournals ">e-journal search instead </a>.
-</p><p>
-	Code: 
-	<br>
-	javascript:o=location.href;location.href='http://www.doi.org/cgi-bin/pushcookie.cgi?BASE-URL=http%3A//resolver.library.ualberta.ca/resolver&Redirect=http%3A//login.ezproxy.library.ualberta.ca/login?url='+escape(o)
-</p><p>Watch our helpful video on <a href="https://www.youtube.com/watch?v=3zSyXhN9PzM">How to Access Full-Text Articles</a>
 </p><hr><h2>3rd party citation managers</h2><p>
 	With EndNote and other research products to search Scopus, Web of         Science, PubMed, and other University of Alberta Library subscribed items, you may         be prompted to enter in the following information:
 </p><p>

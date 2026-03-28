@@ -1,20 +1,13 @@
 [attributes]
 ---
 label: Re-use
-layout: secondary-pages
-target_page: 
+layout: left-navigation-html
+target_page:
 categories: []
 is_published: true
 position: 9
-[wysiwyg content]
-<nav aria-label="breadcrumb">
-<ol class="breadcrumb bg-white">
-	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
-	<li class="breadcrumb-item"><a href="/about">About</a></li>
-	<li class="breadcrumb-item"><a href="/about/policies">Policies</a></li>
-	<li aria-current="page" class="breadcrumb-item active">Re-use</li>
-</ol>
-</nav>
+[text_area content]
+
 <h1>Library Re-use and Attribution Statement</h1>
 <p>Website content authored by employees of the University of Alberta Library falls under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> unless otherwise noted.  The license does not apply to content for which the University of Alberta is not the copyright owner.  Logos, third-party photographs and website images have been licensed separately or reproduced with permission from the original copyright owner and are not included in this Creative Commons License.
 </p>
@@ -29,3 +22,15 @@ position: 9
 <p>For questions regarding use of library content under this license please contact the University of Alberta Copyright Office through <a href="https://www.ualberta.ca/faculty-and-staff/copyright/index.html">their website</a> or at copyright@ualberta.ca.
 </p>
 [text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/about">About</a></li>
+	<li class="breadcrumb-item"><a href="/about/policies">Policies</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Re-use</li>
+</ol>
+</nav>
+[text_area sidebar]
+{{ cms:snippet policies-nav }} 

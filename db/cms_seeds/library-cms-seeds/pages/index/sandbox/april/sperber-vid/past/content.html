@@ -1,0 +1,186 @@
+[attributes]
+---
+label: past
+layout: non-rich-text
+target_page:
+categories: []
+is_published: true
+position: 0
+[text_area content]
+<head>
+    <title>Availability Grid</title>
+    <style>
+        span {
+            color: green;
+            border: 1px solid black;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+        }
+    </style>
+   
+</head>
+
+
+<div class="sperb-banner">
+<h3 class="ml-4">Room Bookings <small><em>at the Geoffrey &amp; Robyn Sperber Health Sciences Library</em></small>
+  </h3></div>
+
+<div class="sperb-container"> 
+
+<div class="row">
+
+<div class="col-4"> 
+
+<div class="row">
+<div class="col-5 sperb-chunk">
+<!-- <p class="sperb-room-name">1-141</p> 
+<p class="sperb-room-info">Group Study Room <span class="text-muted">|</span> <i class="fas fa-users"></i></p>     -->
+  </div>  
+<div class="col-7 pl-0 pr-2">
+   <!--  <div id="availgrid">
+        No availability
+   </div> -->
+	
+		<div id="rooms">Rooms:
+			
+			</div>
+
+    <script>
+		const LIBURL = "https://ualberta.libcal.com"; //your libcal url	
+		const CLIENT_ID = 231;
+        const CLIENT_SEC = "e9aeae42b3ecc40a3ab2ff0e313ff21a";	
+		let myToken = loadToken();
+		//  Add the room ID's and the corresponding room names below.
+		rooms = [
+			{
+				"id":26570,
+				"name": "1-141",
+			},
+			{
+				"id":26575,
+				"name": "1-142",
+			},
+			{
+				"id":26548,
+				"name": "L1-140A",
+			},
+			{
+				"id":26549,
+				"name": "L1-140B",
+			},
+			{
+				"id":26550,
+				"name": "L1-140C",
+			},
+			{
+				"id":26551,
+				"name": "L1-140E",
+			},
+		
+		];
+		
+		
+		rooms.forEach(createDiv);
+		
+		rooms.forEach(loadTimes);
+		
+		
+		// load the times for each room in the rooms array
+		function loadTimes(room){
+		//alert(room.id);
+			roomDiv = document.getElementById(room.id);
+			
+			getNextAvailability(room.id, function(e){
+										parseOutAvailableTime(JSON.parse(e.response), roomDiv);
+										
+								   }
+							);
+		}
+		
+		// builds the html of the rooms
+		function createDiv(room){
+			
+			d = document.createElement("div");				
+			d.innerText = room.name;			
+			r = document.getElementById("rooms");
+			newNote = r.appendChild(d);
+			
+			d2 = document.createElement("span");
+			d2.setAttribute("id",room.id);
+			d2.innerText = "Not Available";	
+			newNote.appendChild(d2);
+			
+		}
+		
+		
+		
+	
+		// get's the availability given the roomId.  The callBack will parse the availability see parseOutAvailableTime()
+		function getNextAvailability(roomId, callBack){
+			var xhttp = new XMLHttpRequest();	
+			
+			xhttp.onload = function() {callBack(this);}
+			 
+			 // needs to be sychroneously (false param) otherwise the times to load into the correct div
+			xhttp.open("GET", LIBURL + "/1.1/space/item/" + roomId + "?availability=next_only", false);
+			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhttp.setRequestHeader('Authorization', myToken);
+            xhttp.send();
+			
+			
+			
+		}
+		
+		
+		function loadToken(){
+			var xhttp = new XMLHttpRequest();
+			
+            xhttp.open("POST", LIBURL + "/1.1/oauth/token", false);
+            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhttp.send("client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SEC + "&grant_type=client_credentials");	
+			   auth = xhttp.response.replace(/["']/g, "").split(",")[0].split(":"); 
+			   token1 = 'Bearer ' + auth[1];
+			// getAvailability(SPACE_ID);    
+			return token1;
+		}
+		
+
+		
+		// when given the availability from the API call it will parse out the available Time. 
+		// then attach it to the room parameter which is a div/span element in the html
+		function parseOutAvailableTime(availability, room){
+			let a = availability[0].availability;  
+			
+                let f;
+                let t;
+                let curhour = -1;
+               
+                if (a) {
+                    
+                    //loop through the available times
+                    a.forEach(slot => {
+                        f = new Date(slot.from);
+                        t = new Date(slot.to);
+                        //new hour started so create row
+                        if (f.getHours() != curhour) {
+                            curhour = f.getHours();
+                          // console.log(curhour);
+                          //curhourdiv = createHourDiv(f.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' }));
+						  availableTime = f.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' });
+						  
+                          console.log(availableTime);
+						  console.log(room);
+                            room.innerText = availableTime;
+                        }                     
+                    });
+					
+                }	
+			
+		}
+		
+			
+    </script>
+  </div>
+   </div> 
+

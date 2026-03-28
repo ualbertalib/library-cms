@@ -2,84 +2,107 @@
 ---
 label: Francais
 layout: french-main
-target_page: 
+target_page:
 categories: []
 is_published: true
-position: 10
+position: 11
 [text_area content]
+<!-- Script that converts the query string into valid parameter -->
+<script type="text/javascript">
+function searchPrimo() {
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+</script>
 {{ cms:snippet homepage-carousel-styles }}
 
-<!--
-/* This is a placeholder for outage messages */
- <div class="alert alert-warning alert-dismissible fade show mt-3 mx-3 m-auto" role="alert">
-    <i class="fa-solid fa-triangle-exclamation"></i> This is an outage message - Replace with outage message text!
-   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
-    </div> -->
 
-<div class="row row-full-width bg-grey">
-              <div class="col-4 d-none d-lg-block">
-                    <div class="card rounded-0 border-0 bg-transparent h-100 d-flex flex-column justify-content-center align-items-center"><img alt="" class="card-img rounded-0" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/UA_057_RGB.png"></div>
-                </div>
-                <div class="col-md col-12">
+<div class="row row-full-width bg-search pb-4">
+              
+                <div class="col-md-10 offset-md-2">
                     <div class="h-100 d-flex flex-column justify-content-center">
-                        <div class="py-5">
+                        <div class="pt-3 pt-md-5 pb-md-3">
                             <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
-                                <h2 class="text-uppercase">Rechercher dans la bibliothèque</h2>
+                                <h2 class="text-uppercase text-white">Effectuer une recherche</h2>
                                
                             </div>
- <!-- EBSCO Search Box Begins -->
-                   
-<form action="https://searchbox.ebsco.com/search/"  class="ebsco-single-search">
-  <input name="schemaId" value="search" type="hidden" />
-  <input name="custid" value="s5940188" type="hidden" />
-  <input name="groupid" value="main" type="hidden" />
-  <input name="profid" value="eds" type="hidden" />
-  <input name="authtype" value="ip" type="hidden" />
-  <input name="proxy" value="https://login.ezproxy.library.ualberta.ca/login?url={targetURL}" type="hidden" />
-  <input name="scope" value="site" type="hidden" />
-  <input name="site" value="eds-live" type="hidden" />
-  <input name="direct" value="true" type="hidden" />
-   <input name="lang" value="fr" type="hidden" />
- 
- <label class="mb-1" for="catalogOnly">
-        <input class="eb-search__input" id="catalogOnly" name="limiter-fc" value="Y" type="checkbox" />
-           <span class="eb-search__span small">
-  Limiter votre recherche au catalogue de la bibliothèque</span>
-      </label>
-        <div class="search-box">
+     
+<!-- Search Box -->
+ <form id="simple" name="searchForm" method="get" target="_self" action="https://search.library.ualberta.ca/discovery/search"  onsubmit="searchPrimo()">
+  <!-- Hidden fields for Primo -->
+  <input type="hidden" name="vid" value="01UOA_INST:UOA">
+  <input type="hidden" name="lang" value="fr">
+  <input type="hidden" name="facet" value="rtype,exclude,reviews,lk">
+  <input type="hidden" name="query" id="primoQuery">
 
-        <div class="input-wrapper">
-         
-          <input id="eb-sbb-search-input" name="bquery" type="text" placeholder="Recherchez des livres, des articles et plus encore ..."/> </div>
-     <button class="submit-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
-        
-         </div>
-<div class="mt-1">
-  
-<a class="small" href="https://searchbox.ebsco.com/search/?authtype=ip&schemaId=search&custid=s5940188 &groupid=main&profid=eds&proxy=https%3A%2F%2Flogin.ezproxy.library.ualberta.ca%2Flogin%3Furl%3D%7BtargetURL%7D&setup=1&scope=site&site=eds-live&direct=true">Recherche avancée</a>  |  <a class="small" href="/guest">Catalogue public</a>  </div>
-   
-  
+<div class="d-flex flex-wrap align-items-stretch input-group input-group-lg">
 
+  <!-- Input field -->
+  <input 
+    type="text" 
+    class="form-control bg-pure-white text-dark rounded-start-1 rounded-end-0" 
+    id="primoQueryTemp" 
+    aria-label="Search query" 
+  />
+
+  <!-- Dropdown -->
+  <div class="custom-select-wrapper">
+    <select 
+      class="form-select rounded-0 py-3 pe-3" 
+      id="search_scope" 
+      name="search_scope" 
+      aria-label="Search scope"
+    >
+      <option value="MyInst_and_CI">Tout</option>
+      <option value="MyInstitution">Catalogue de la bibliothèque</option>
+      <option value="CentralIndex">Articles</option>
+    </select>
+  </div>
+
+  <!-- Search button -->
+  <button 
+    class="btn btn-dark rounded-end-1" 
+    type="submit" 
+    aria-label="Search"
+  >
+    <i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>
+  </button>
+
+  <!-- Line break on small screens only -->
+  <div class="w-100 d-block d-md-none mt-2"></div>
+
+  <!-- Advanced Search link -->
+  <a 
+    class="btn btn-primary advanced-link rounded-end-1 rounded-start-0 pt-md-3 mt-2 mt-md-0 ms-md-2" 
+    href="https://search.library.ualberta.ca/discovery/search?vid=01UOA_INST:UOA&lang=fr&mode=advanced">RECHERCHE AVANCEÉ
+  </a>
+</div>
 
 </form>
-<!-- EBSCO Search Box Ends -->
-                       
-                       
-                      
+                          
                       </div>
-                        <div>
-                            <p>Autres outils de recherche : </p>
+                        <div class="ual-tools">
+                         
+                          <p class="text-white"><strong>Autres outils de recherche : </strong></p>
                             <div class="mt-1">
                                 <a class="btn btn-green btn-outline" href="/databases">Bases de données</a>
-                               <a class="btn btn-green btn-outline" href="https://resolver.library.ualberta.ca/resolver/journalsearch?&lang=fre">Revues électroniques</a>
+                               <a class="btn btn-green btn-outline" href="https://search.library.ualberta.ca/discovery/jsearch?vid=01UOA_INST:UOA&lang=fr">Périodiques</a>
                                 <a class="btn btn-green btn-outline" href="/google-scholar">Google Scholar</a>
                                
                                 <a class="btn btn-green btn-outline" href="/subject-guides">Guides par sujet</a>
+                               <a class="btn btn-green btn-outline" href="https://guides.library.ualberta.ca/LibrarySearch">Guide de recherche</a>
+                            </div>
+                    
                             </div>
                         </div>
                     </div>
                 </div>
-</div>
+<div class="row row-full-width bg-ua-teal mt-0">
+  <h2 class="text-center pt-3 h3">Bienvenue dans la Nouvelle Expérience de Recherche en Bibliothèque</h2>
+<p class="text-center">
+  La nouvelle plateforme de services de la bibliothèque est maintenant en ligne, avec une interface de recherche améliorée, un nouveau tableau de bord « Mon compte » et des services améliorés. <a href="/ask-us/email-us" class="bg-transparent">Dites-nous ce que vous en pensez >></a>
+  </p></div>
+
 
             <div class="row py-4">
                 <div class="col">
@@ -97,6 +120,8 @@ position: 10
                     </div>
                 </div>
             </div>
+
+
             <div class="row row-full-width bg-ua-gold">
                 <div class="col-md col-12">
                     <div class="h-100 d-flex flex-column justify-content-center">
@@ -151,9 +176,18 @@ position: 10
                       </div>
                                                                     </div>
                             </div>
-              <div class="row">
-                <div class="col mt-5">
-                    <h2 class="text-uppercase">Nouvelles, événements &amp; ateliers</h2>
+               <div class="row">
+                <div class="col-md-6 mt-5">
+                    <h2 class="text-uppercase" id="ual-title-news">Nouvelles, événements &amp; ateliers</h2>
+              </div><div class="col-md-6 mt-3">
+              
+                             <div class="row white ms-4">
+
+                             
+            
+              </div></div>         
+                     
+</div>
                   <div class="row news-events g-2">
                     
                   <div class="col-md-6 mb-4">
@@ -177,7 +211,7 @@ position: 10
                 </div>
                     <div class="row mt-0">
                   <div class="col-md-6">
-                    <a class="btn btn-green btn-outline" href="https://news.library.ualberta.ca/">Actualités</a>
+                    <a class="btn btn-green btn-outline" href="https://news.library.ualberta.ca/blog/category/francais/">Actualités</a>
                       </div>
                        <div class="col-md-6 ps-2">
                     <a class="btn btn-green btn-outline ms-5" href="https://ualberta.libcal.com/calendar/events-exhibits/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0">Tous événements &amp; ateliers</a>

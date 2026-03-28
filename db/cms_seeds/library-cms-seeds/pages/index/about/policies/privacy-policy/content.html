@@ -1,20 +1,13 @@
 [attributes]
 ---
 label: Privacy Policy
-layout: secondary-pages
-target_page: 
+layout: left-navigation-html
+target_page:
 categories: []
 is_published: true
 position: 8
-[wysiwyg content]
-<nav aria-label="breadcrumb">
-<ol class="breadcrumb bg-white">
-	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
-	<li class="breadcrumb-item"><a href="/about">About</a></li>
-	<li class="breadcrumb-item"><a href="/about/policies">Policies</a></li>
-	<li aria-current="page" class="breadcrumb-item active">Privacy Policy</li>
-</ol>
-</nav>
+[text_area content]
+
 <h1>Web Site Privacy Policy</h1>
 <p>
 	The University of Alberta is committed to providing our staff, students, and visitors with web sites that respect their privacy. This page summarizes the privacy policy and practices for all University of Alberta web sites.
@@ -171,3 +164,15 @@ been inactive (no circulation transactions or fines) for 5 years.
 </p>
 <li><a href="https://www.ualberta.ca/information-and-privacy-office/index.html" target="_blank">University of Alberta Information and Privacy Office</a></li>
 [text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/about">About</a></li>
+	<li class="breadcrumb-item"><a href="/about/policies">Policies</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Privacy Policy</li>
+</ol>
+</nav>
+[text_area sidebar]
+{{ cms:snippet policies-nav }} 

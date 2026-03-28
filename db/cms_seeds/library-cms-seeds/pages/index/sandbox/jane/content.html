@@ -2,14 +2,37 @@
 ---
 label: Jane's sandbox
 layout: non-rich-text
-target_page: 
+target_page:
 categories:
 - sandbox
 is_published: true
-position: 27
+position: 4
 [text_area content]
 <style>
+ 
+  /* major tooltip testing - based on colour of flag, therefore different coloured flags also needed - Ticket#20250410107   */
+  
+/* tooltip on UA dark green #275d38 flag CCID Required */
+.az-flags span.badge[style="background-color:#275d38;"] { position: relative; display: inline-block; cursor: help; } 
+.az-flags span.badge[style="background-color:#275d38;"]::after {
+content: "Requires U of A users to login with current CCID. Community members using the Library's physical facilities are unable to access this resource.";
+position: absolute; top: 150%; left: 130%; display: block; transform: translateX(-50%); width: 276px; background-color: #FFb600; color: #000000; padding: 5px 10px; border-radius: 5px; white-space: nowrap; font-size: 0.984375rem; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out; font-style: normal; font-weight: 400; line-height: 1.5; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; word-break: normal; white-space: normal; word-spacing: normal; line-break: ; word-wrap: break-word; }  
+.az-flags span.badge[style="background-color:#275d38;"]:hover::after { opacity: 1; visibility: visible; }
 
+/* tooltip on UA medium green #007A33 flag Registration Required */
+.az-flags span.badge[style="background-color:#007a33;"] { position: relative; display: inline-block; cursor: help; } 
+.az-flags span.badge[style="background-color:#007a33;"]::after {
+content: "Requires U of A users to register for an individual account (using ualberta.ca email). For help registering, contact the resource's support department or Ask Us.";
+position: absolute; top: 150%; left: 92.5%; display: block; transform: translateX(-50%); width: 276px; background-color: #FFb600; color: #000000; padding: 5px 10px; border-radius: 5px; white-space: nowrap; font-size: 0.984375rem; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out; font-style: normal; font-weight: 400; line-height: 1.5; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; word-break: normal; white-space: normal; word-spacing: normal; line-break: ; word-wrap: break-word; }  
+.az-flags span.badge[style="background-color:#007a33;"]:hover::after { opacity: 1; visibility: visible; }
+
+
+ /* end tooltip testing  */  
+  
+  
+  
+  
+  
 footer .final .social-links {
     display: flex;
     flex-direction: row;
@@ -21,7 +44,40 @@ footer .final .social-links {
 footer .final .social-links a { text-decoration: none; color: #fff; padding: .375rem .5rem; margin: 0 1rem; }
 footer .final .social-links a:hover { color: #f2cd00; }
 
-
+tooltip {.
+    --bs-tooltip-zindex: 1080;
+    --bs-tooltip-max-width: 200px;
+    --bs-tooltip-padding-x: 0.5rem;
+    --bs-tooltip-padding-y: 0.25rem;
+    --bs-tooltip-margin: ;
+    --bs-tooltip-font-size: 0.984375rem;
+    --bs-tooltip-color: #000000;
+    --bs-tooltip-bg: #FFb600;
+    --bs-tooltip-border-radius: var(--bs-border-radius);
+    --bs-tooltip-opacity: 0.9;
+    --bs-tooltip-arrow-width: 0.8rem;
+    --bs-tooltip-arrow-height: 0.4rem;
+    z-index: var(--bs-tooltip-zindex);
+    display: block;
+    margin: var(--bs-tooltip-margin);
+    font-family: var(--bs-font-sans-serif);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    white-space: normal;
+    word-spacing: normal;
+    line-break: auto;
+    font-size: var(--bs-tooltip-font-size);
+    word-wrap: break-word;
+    opacity: 0
+}
 
 </style>
 
@@ -42,12 +98,10 @@ footer .final .social-links a:hover { color: #f2cd00; }
         </div>
      </div>
     </div>
-    
-
-
 
 
 <h1>My Account</h1>
+
 
 <div class="row">		
 <h2><big><em><a href="https://myaccount.library.ualberta.ca/barcode/?neos=true">Login with your Library Barcode and PIN</a></em></big></h2>	</div>
@@ -97,6 +151,16 @@ footer .final .social-links a:hover { color: #f2cd00; }
   
   </div>     </div>
 </footer>
+
+
+<div class="az-flags"><span class="badge rounded-pill" style="background-color:#007a33;">Registration Required</span> </div>
+
+<div class="az-flags"><span class="badge rounded-pill" style="background-color:#275d38;">CCID Required</span></div>
+
+  <div class="az-flags">
+<span class="badge rounded-pill" style="background-color:#f68d2e;">Open Access</span>
+
+</div>
 [text title]
 
 [wysiwyg sidebar]

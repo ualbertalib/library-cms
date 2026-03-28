@@ -2,19 +2,22 @@
 ---
 label: Augustana
 layout: non-rich-text
-target_page: 
+target_page:
 categories: []
 is_published: true
 position: 1
 [text_area content]
- {{ cms:snippet hours-cal-style }} 
 <style>
-.s-lc-mhw-sub-loc>.s-lc-mhw-loc-name{
-  display:block;
- padding-top:10px;
-  background-color:#f5f5f5;
-  }
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-3750, .s-lc-w-lid-5499>.s-lc-w-name {display:none;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-time, .s-lc-allday{font-weight:bold;} 
+  td.s-lc-w-name{padding:5px 5px 5px 0;}
+  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-65px;}
+   .s-lc-w-lid-5500 span.s-lc-allday{margin-left:-55px;} 
+
+  .box{background-color:#fff; padding:10px 20px;}
 </style>
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -22,82 +25,142 @@ position: 1
 <li aria-current="page" class="breadcrumb-item active">Augustana Library</li>
 </ol>
 </nav>
-
+<div class="page-title">
 <h1>
- Augustana Library
+Augustana Library
 </h1>
-<div class="alert alert-info alert-dismissible fade show" role="alert">
-  <i class="fa-sharp fa-solid fa-circle-info"></i> <strong>February 2024 - Summer 2024</strong> <a href="/locations/augustana/library-collections-project">Frequently Asked Questions (FAQs)</a> have been compiled about <a href="/locations/augustana/library-collections-project">the Library Collections Project</a> and the <a href="/locations/augustana/library-collections-project#reno">construction project</a> for new classrooms that will be used for Rehabilitation Medicine master’s programs.
- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
-    
 </div>
-<div class="row">
-  <div class="col-md-4 ual-location-actions">
 
 
+<h2>Visit the library</h2>
+
+
+<div class="row g-0">
+  <div class="col-md-5">
     
-    
-    
-     <p>The Augustana Campus Library supports the research needs of approximately 1000 undergraduate liberal arts and sciences students and 75 teaching faculty.  <a href="#more">More about the Augustana Library</a>. </p>
-    
-    <a href="https://www.ualberta.ca/maps.html?l=53.01329958733568,-112.82418291574407&z=17&campus=augustana_campus&b=forum" class="btn ual-btn mb-3" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to Augustana</a>
-    <a href="https://ualberta.libcal.com/reserve/augustana/spaces" class="btn ual-btn mb-3"><i class="fa-solid fa-chalkboard-user mr-2"></i> Book Study Space in Augustana</a>
-    <a href="https://www.library.ualberta.ca/services/study-area-directory#aug" class="btn ual-btn mb-3"><i class="fa-solid fa-headphones"></i> Augustana Noise / Study Zones</a>
-      <a href="/services/accessibility-services/locations-accessibility#augustana" class="btn ual-btn mb-3"><i class="fa-brands fa-accessible-icon mr-2"></i> Augustana Accessibility Information</a>
-    <a href="https://guides.library.ualberta.ca/augustana/borrowing" class="btn ual-btn mb-3"><i class="fa-solid fa-person-skiing-nordic"></i>Borrow Skis, Display Panels + More</a>
-    
-   <img src="https://sites.library.ualberta.ca/wp-content/uploads/2024/05/augustana-holds-pickup.jpg" class="img-fluid mb-4 rounded" alt="augustana library holds shelf outside library entrance - pickup your holds anytime this summer, even when the library is closed!"/>  
  
+<img src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/augustana-library.jpg" alt="Augustana Library" class="h-md-100">
 
-    
-    <p>Book return available 24/7 outside of Augustana library and there is also a book return available inside, beside the library entrance.
-    </p>
-    
-    {{ cms:snippet policies-location }}
-    
-  
-    
-     </div>
-  <div class="col-md-8">
-    <h2>
-      Augustana Library Hours
-    </h2>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
-<div id="s_lc_mhw_3750_5499"></div> 
+ </div>
+  <div class="col-md-3">
+<div class="box border h-100">
+<h3>
+  Today's Hours
+</h3>
+<script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
+<div id="s_lc_tdh_3750_5499"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_5499 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_5499"), { iid: 3750, lid: 5499, months: 4, show_past: 2, systemTime: false }); 
+var s_lc_tdh_3750_5499 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5499"), { iid: 3750, lid: 5499 }); 
 });
-</script> 
-  </div>
-  </div>
-<hr/>
-<div class="row mt-4">
-  <div class="col-md-9" id="more">
+</script>  
+  
 <p>
-  <img src="https://www2.library.ualberta.ca/2015assets/locations/augustana2.jpg" class="rounded float-start my-2 me-3" alt="Augustana Library">The Augustana Campus Library supports the research needs of approximately 1000 undergraduate liberal arts and sciences students and 75 teaching faculty. Augustana's library boasts large windows and wonderful ravine views. It is a wireless hotspot that provides access to computer workstations, a variety of student work spaces and group rooms, a treadmill desk, as well as the new Learning Commons, which provides many student support services including the Writing Centre.</p> 
-              <p>The Augustana library hosts many public exhibits as well as the <a href="http://guides.library.ualberta.ca/augustana/human-library">Augustana Human Library</a> each academic term.  Information literacy is the prime focus of the Augustana Library which ensures that Augustana graduates are skilled in critical thinking as it relates to information acquisition, assessment and use.  The focus on information literacy is fully integrated into Augustana’s curriculum and skills development initiatives related to graduates being researchers, thinkers and communicators.</p>
-             <p><span class="glyphicon glyphicon-film"></span> Watch our <a href="https://www.youtube.com/watch?v=-i99LvYqw84"> Ask a Librarian</a> videos.</p>	
-
-   <p>
-     You can also find subject specific information in our subject guides:
-    </p>
-   <a href="http://guides.library.ualberta.ca/augustana" class="btn ual-btn mb-3">Augustana Subject Guides</a>
-      
-
-		
+   <a href="/locations/augustana/augustana-monthly-hours">Monthly hours calendar >></a> </p>
+{{ cms:snippet upcoming-closures}}
   </div>
- <div class="col-md-3">     
-        <div class="ual-well">
+      </div>
+ <div class="col-md-4 ps-4">
+   <p class="mb-2 small pt-3 pt-md-0">
+  <i class="fa-solid fa-phone me-2"></i><a href="tel:780-679-1156"> 780-679-1156</a></p>
+    <p class="mb-2 small"><i class="fa-solid fa-envelope me-2"></i><a href="/ask-us/email-us">Email us</a></p>
+ <p class="mb-2 small"><i class="fa-solid fa-user-group me-2"></i><a href="https://guides.library.ualberta.ca/az/library-staff-directory?cf=202:Augustana%20Campus%20Library">Augustana staff</a></p>
+   
+    <p class="mb-2 small">
+      
+      <strong>Augustana Library</strong><br/>
+    
+      4901 46 Avenue<br/>
+      Camrose, AB T4V 2R3<br/>
+       <a href="https://www.ualberta.ca/en/maps.html?l=53.011906,-112.82326&z=17&campus=augustana_campus&b=aufor">View on campus map</a>  <br/>
+    </p>
+ 
+   <p class="mt-2 mt-md-5 mb-2"> <i class="fa-brands fa-accessible-icon me-2"></i><a href="/services/accessibility-services/locations-accessibility#augustana">Augustana accessibility</a></p>
+   <p><i class="fa-solid fa-books me-2"></i><a href="/services/borrowing/returning-renewing#augustana">Book returns</a></p>
+  </div>
+  </div>
 
-         <p><strong>Augustana Forum</strong><br/>4901 46 Avenue<br/>
-Camrose, Alberta, T4V 1E2</p>
-           
-   <p><a href="tel:780-679-1156"> 780-679-1156</a></p>
-<p><a href="https://library.ualberta.ca/ask-us/email-us">Email Us</a></p>    
- <a href="/staff/?building=augustana" class="btn ual-btn"><i class="fa-solid fa-users-medical mr-1"></i> Augustana Staff</a>
-   </div>
-    </div>
+<hr/>
+<div class="row">
+  <h2>Find a Study Space</h2>
+ 
+   <div class="col-md-4">
+       
+    <h3>Study Rooms</h3>
+
+<p>There are 7 bookable study rooms and 3 bookable study booths available on the main floor and basement level of Augustana Library.</p>
+<a href="https://ualberta.libcal.com/reserve/augustana/spaces?_gl=1*1iu3yof*_ga*MTY2NzkwMTczMi4xNzQzNTI4NDI4*_ga_JFD4RYC4BZ*czE3NTYzMTQyMDEkbzE2NyRnMSR0MTc1NjMxODQ4MCRqMzgkbDAkaDA." class="btn btn-green btn-square mt-2">Book a study room or booth</a>
+  </div>
+  <div class="col-md-4">
+    <h3>24/7 Study Space</h3>
+<p>
+The 24/7 study space is accessible through the south Forum entrance after-hours. It is closed for all statutory holidays, and during the summer months. Access through the south Forum doors. <br/>
+  <a href="/services/study-area-directory#aug" class="btn btn-green btn-square mt-2">Study directory and noise zones</a>
+      </p>
+  </div>
+  <div class="col-md-4">
+    <h3>
+      Computer Workstations
+    </h3>
+    <p>
+      Available on a first come, first serve basis, Augustana Library has over 40 Windows computing workstations.<br>
+      <a href="/services/technology/workstations" class="btn btn-green btn-square mt-2">more about computer workstations</a>
+    </p>
+  </div>
+  </div>
+    
+
+
+<hr/>
+<div class="row">
+      <h2>
+      Explore Augustana
+    </h2>
+  <div class="col-md-8">
+ <h3>
+     Nordic Sports Library
+    </h3>
+    <p>
+     Borrow winter sports items like classic cross country skis, ice hockey skates, and snowshoes to make the most of the season. Loan periods are 72 hours, and a waiver and orientation form must be completed before use.<br>
+     <a href="https://guides.library.ualberta.ca/augustana/borrowing" class="mt-2">More about the Nordic Sports Library</a> 
+    </p>
+    <h3>
+     Display Panels
+    </h3>
+    <p>Augustana faculty, staff and student groups may borrow wire mesh display panels from the library for use on-campus.<br>
+      <a href="https://guides.library.ualberta.ca/augustana/borrowing" class="mt-2">More about borrowing Display Panels</a>
+    </p>
+         <h3>
+      Augustana Subject Guides
+    </h3>
+    <p>
+    Start your research by exploring subject-specific subject guides that can guide you to valuable resources including databases, equipment loans, and other how-to guides.<br>
+     
+      <a href="https://guides.library.ualberta.ca/augustana/subject-guides" class="mt-2">Explore Augustana Subject Guides</a>
+    </p>
+    
+  </div>
 </div>
+<p>
+  
+    </p>
+<hr/>
+<div class="row">
+  <div class="col-md-8">
+<h2>About the Library</h2>
+    <p>Augustana Library provides collections and services in support of the research and teaching of students and faculty at Augustana Campus in Camrose. </p>
+    <p>The Library is located in the Forum and boasts large windows and wonderful ravine views. It provides access to computer workstations along with a variety of student work spaces, bookable study rooms, and a treadmill desk. Augustana Library is home to the Nordic Sports Library, where U of A students and staff can borrow cross country skis, snowshoes, and ice skates. Three classrooms and the Writing Centre offices are also located in the Library.</p>
+
+<p class="mb-2">Policies:</p>
+    <ul>
+  <li> <a href="/about/policies/community-expectations/">Community Expectations</a></li>
+   <li>  <a href="/services/study-area-directory">Study Area Directory + Noise Zones</a></li>
+ 
+   <li> <a href="/about/policies/food-and-drink">Food + Drink Policy</a></li>
+    </ul>
+ 
+
+  </div>
+    
+
 [text translated-url]

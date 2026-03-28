@@ -1,0 +1,17 @@
+[attributes]
+---
+label: bookmarklet
+layout: non-rich-text
+target_page:
+categories: []
+is_published: true
+position: 0
+[text translated-url]
+
+[text_area content]
+
+  <h1>Bookmarklet</h1>
+  <p>Drag this link to your bookmarks bar to install the UA Access bookmarklet:</p>
+  <a href="javascript:(function()%7Bfunction%20extractDOI(text)%7Blet%20match%3Dtext%26%26text.match(/10%5C.%5Cd%7B4%2C9%7D%5C%2F%5B%5E%5Cs%22'%3C%3E%26%5D%2B/i)%3Bif(!match)%20return%20null%3Blet%20doi%3Dmatch%5B0%5D%3Bdoi%3Ddoi.replace(/%5E%5B%5E%5Cd%5D*%2810%5C.%5Cd%7B4%2C9%7D%5C%2F%29/,'%24%31')%3Bdoi%3Ddoi.replace(/%5B%5Cs%2E%2C%3B%3A%5D%2B%24/,'')%3Breturn%20doi%3B%7Dlet%20doi%3DextractDOI(window.location.href)%3Bif(!doi)%7Bdoi%3DextractDOI(document.body.innerText)%3B%7Dif(doi)%7Bvar%20openurl%3D'https%3A%2F%2Fualberta.primo.exlibrisgroup.com%2Fdiscovery%2Fopenurl%3Finstitution%3D01UOA_INST%26vid%3D01UOA_INST%3AUOA%26rft_id%3Dinfo%3Adoi%2F'%2BencodeURIComponent(doi)%2B'%26ctx_ver%3DZ39.88-2004'%3Bwindow.location.href%3Dopenurl%3B%7Delse%7Balert('DOI%20not%20found%20in%20URL%20or%20page%20text.')%3B%7D%7D)()">UA Access</a>
+
+
