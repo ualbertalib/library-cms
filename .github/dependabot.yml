@@ -5,6 +5,24 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  groups:
+      production-dependencies:
+        applies-to: version-updates
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        applies-to: version-updates
+        dependency-type: "development"
+        exclude-patterns:
+          - "rubocop*"
+        update-types:
+          - "minor"
+          - "patch"
+      rubocop:
+        patterns:
+          - "rubocop*"
 - package-ecosystem: npm
   directory: "/"
   schedule:
