@@ -11,7 +11,7 @@ gem "mysql2", "~> 0.5.7"
 # Use Puma as the app server
 gem "puma", "~> 8.0"
 # But we use passenger in production
-gem "passenger", "~> 6.0", ">= 6.0.27"
+gem "passenger", "~> 6.1"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
@@ -28,7 +28,7 @@ gem "config"
 gem "rollbar"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.14"
+gem "jbuilder", "~> 2.15"
 
 # Use ActiveStorage variant
 gem "image_processing", "~> 1.14"
