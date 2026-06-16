@@ -1,0 +1,46 @@
+[attributes]
+---
+label: Sperber Monthly Hours
+layout: non-rich-text
+target_page:
+categories: []
+is_published: true
+position: 0
+[text translated-url]
+
+[text_area content]
+{{ cms:snippet hours-cal-style }} 
+<style>
+.s-lc-mhw-sub-loc, .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name {  display:block;  }
+.s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name {  font-size:11px;  margin-top:8px;  }
+  
+/* hiding sublocation ONEcard Access Only (only shows on Library Hours page) */
+.loc_7931 { display: none; }
+  
+/* hiding sublocation title 'ONEcard Access Only Hours' and removing extra padding */
+.loc_8455 .s-lc-mhw-loc-name { display: none; }
+.s-lc-timetxt { padding: 0; }  
+
+</style>
+
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
+  <li class="breadcrumb-item"><a href="/locations/Sperber">Sperber Library</a></li>
+  <li aria-current="page" class="breadcrumb-item active">Sperber Library Monthly Hours</li>
+</ol>
+  
+</nav>
+<h1>
+   Sperber Library Monthly Hours
+</h1>
+<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
+<div id="s_lc_mhw_3750_7918"></div> 
+<script>
+$(function(){ 
+var s_lc_mhw_3750_7918 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_7918"), { iid: 3750, lid: 7918, months: 4, systemTime: false }); 
+});
+</script> 
+
+

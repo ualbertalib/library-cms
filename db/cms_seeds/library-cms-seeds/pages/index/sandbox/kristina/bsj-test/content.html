@@ -1,0 +1,230 @@
+[attributes]
+---
+label: BSJ test
+layout: french-main-outage
+target_page:
+categories:
+- sandbox
+is_published: true
+position: 47
+[text translated-url]
+
+[text_area content]
+<style>
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-7789, .s-lc-w-lid-8170, .s-lc-w-lid-4679>.s-lc-w-name {display:none;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-time, .s-lc-allday{font-weight:bold;} 
+  td.s-lc-w-name{padding:5px 5px 5px 0;}
+  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-65px;}
+</style>
+
+<!-- Script that converts the query string into valid parameter -->
+<script type="text/javascript">
+function searchPrimo() {
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+</script>
+{{ cms:snippet homepage-carousel-styles }}
+
+
+<div class="row row-full-width bg-search pb-4">
+              
+                <div class="col-md-10 offset-md-2">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+                        <div class="pt-3 pt-md-5 pb-md-3">
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
+                                <h2 class="text-uppercase text-white">Effectuer une recherche</h2>
+                               
+                            </div>
+     
+<!-- Search Box -->
+ <form id="simple" name="searchForm" method="get" target="_self" action="https://search.library.ualberta.ca/discovery/search"  onsubmit="searchPrimo()">
+  <!-- Hidden fields for Primo -->
+  <input type="hidden" name="vid" value="01UOA_INST:UOA">
+  <input type="hidden" name="lang" value="fr">
+  <input type="hidden" name="facet" value="rtype,exclude,reviews,lk">
+  <input type="hidden" name="query" id="primoQuery">
+
+<div class="d-flex flex-wrap align-items-stretch input-group input-group-lg">
+
+  <!-- Input field -->
+  <input 
+    type="text" 
+    class="form-control bg-pure-white text-dark rounded-start-1 rounded-end-0" 
+    id="primoQueryTemp" 
+    aria-label="Search query" 
+  />
+
+  <!-- Dropdown -->
+  <div class="custom-select-wrapper">
+    <select 
+      class="form-select rounded-0 py-3 pe-3" 
+      id="search_scope" 
+      name="search_scope" 
+      aria-label="Search scope"
+    >
+      <option value="MyInst_and_CI">Tout</option>
+      <option value="MyInstitution">Catalogue de la bibliothèque</option>
+      <option value="CentralIndex">Articles</option>
+    </select>
+  </div>
+
+  <!-- Search button -->
+  <button 
+    class="btn btn-dark rounded-end-1" 
+    type="submit" 
+    aria-label="Search"
+  >
+    <i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>
+  </button>
+
+  <!-- Line break on small screens only -->
+  <div class="w-100 d-block d-md-none mt-2"></div>
+
+  <!-- Advanced Search link -->
+  <a 
+    class="btn btn-primary advanced-link rounded-end-1 rounded-start-0 pt-md-3 mt-2 mt-md-0 ms-md-2" 
+    href="https://search.library.ualberta.ca/discovery/search?vid=01UOA_INST:UOA&lang=fr&mode=advanced">RECHERCHE AVANCEÉ
+  </a>
+</div>
+
+</form>
+                          
+                      </div>
+                        <div class="ual-tools">
+                         
+                          <p class="text-white"><strong>Autres outils de recherche : </strong></p>
+                            <div class="mt-1">
+                                <a class="btn btn-green btn-outline" href="/databases">Bases de données</a>
+                               <a class="btn btn-green btn-outline" href="https://search.library.ualberta.ca/discovery/jsearch?vid=01UOA_INST:UOA&lang=fr">Périodiques</a>
+                                <a class="btn btn-green btn-outline" href="/google-scholar">Google Scholar</a>
+                               
+                                <a class="btn btn-green btn-outline" href="/subject-guides">Guides par sujet</a>
+                               <a class="btn btn-green btn-outline" href="https://guides.library.ualberta.ca/LibrarySearch">Guide de recherche</a>
+                            </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<div class="row row-full-width bg-ua-teal mt-0">
+  <h2 class="text-center pt-3 h3">Bienvenue dans la Nouvelle Expérience de Recherche en Bibliothèque</h2>
+<p class="text-center">
+  La nouvelle plateforme de services de la bibliothèque est maintenant en ligne, avec une interface de recherche améliorée, un nouveau tableau de bord « Mon compte » et des services améliorés. <a href="/ask-us/email-us" class="bg-transparent">Dites-nous ce que vous en pensez >></a>
+  </p></div>
+
+
+            <div class="row py-4">
+                <div class="col">
+                 <h2 class="text-uppercase">
+                   Ressources et services
+                  </h2>
+                    <div class="mt-4">
+                       <a class="btn btn-green btn-square" href="/how-to-use-the-library">Comment utiliser la bibliothèque</a>
+                        <a class="btn btn-green btn-square" href="https://guides.library.ualberta.ca/bsj/citation">Gestion des références</a>
+                        <a class="btn btn-green btn-square" href="
+                                                                  /services/book-study-spaces">Réserver une salle d'étude</a>
+                        <a class="btn btn-green btn-square" href="/course-materials">Matériels de cours + Listes de lecture</a>
+                        <a class="btn btn-green btn-outline" href="
+                                                               /francais/services">Services de bibliothèque</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row row-full-width bg-ua-gold">
+                <div class="col-md col-12">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+                        <div class="py-5">
+                            <h2 class="text-uppercase">Nos collections</h2>
+                            <p>Explorez la richesse de la collection de la bibliothèque de l'Université de l'Alberta. Au service de la communauté universitaire et du grand public, notre collection comprend plus de sept millions de titres et plus de 10 millions de volumes sous forme imprimée et électronique. Elle répond aux besoins régionaux, nationaux et internationaux en matière de recherche. Avec des milliers de revues spécialisées, des documents de référence et des collections spéciales uniques axées sur les Prairies canadiennes et au-delà. Nous nous engageons à fournir des ressources qui répondent aux besoins actuels et futurs en recherche et en enseignement à l'Université de l'Alberta. <a href="/about/collection" class="bg-transparent">En savoir plus sur nos collections</a></p>
+                            <div class="mt-4">
+                                <a class="btn btn-outline-primary btn-square" href="/digital-initiatives/digital-collections">Collections électroniques</a>
+                                <a class="btn btn-outline-primary btn-square" href="/archives">Archives</a>
+                                <a class="btn btn-outline-primary btn-square" href="https://bpsc.library.ualberta.ca/">Bruce Peel Special Collections</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-block mb-5 mb-md-0">
+                    <div class="card rounded-0 border-0 bg-transparent h-100 d-flex flex-column justify-content-center align-items-center"><img alt="" class="card-img rounded-0" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/671_06309-1.jpg"></div>
+                </div>
+            </div>
+<div class="row mt-0 mb-5">
+                    <div class="col-12 col-sm">
+                                    
+                                            
+                                    
+    <div class="row" id="homepage-our-campus">
+<div class="col">
+<p class="fs-4"><span class="display-2 text-primary">Nos bibliothèques</span> Trouvez votre espace d'étude idéal, utilisez notre équipements multimédias ou discutez avec les membres de notre personnel spécialisé. Nos bibliothèques sont là pour vous aider à réussir vos études. </p>
+<a class="PLACE-HOLDER-LINK-STYLE fw-bold" href="/hours-locations">Heures et localisations</a></div>
+</div>
+<div class="row row-cols-3 row-cols-md-6 justify-content-end g-2 g-md-4">
+<div class="col"><img alt="Sperber" height="900" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/sperber.jpg" width="900"></div>
+<div class="col"><img alt="Rutherford South" height="900" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/hall.jpg" width="900"></div>
+<div class="col"><img alt="DSC" height="900" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/dsc.jpg" width="900"></div>
+</div>                                                                   </div>
+</div>
+<div class="row mt-0 mb-5 row-full-width-no-padding">
+                    <div class="col-12 col-sm">
+                                    
+                                            
+                                    
+    <div class="carousel slide mb-0 mt-0" data-bs-ride="carousel" id="carousel-UAlberta">
+<div class="carousel-indicators"><button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carousel-UAlberta" type="button" aria-current="true"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 6" data-bs-slide-to="5" data-bs-target="#carousel-UAlberta" type="button"></button> </div>
+<div class="carousel-inner">
+    <div class="carousel-item active"><span class="carousel-feature">5.8 million +</span> <br> <span class="long-feature">titres physiques et électroniques</span></div>
+   <div class="carousel-item"><span class="carousel-feature">2.2 million +</span> <br><span class="long-feature">livres électroniques </span></div>
+   <div class="carousel-item"><span class="carousel-feature">565,000+</span> <br> visiteurs par an</div>
+   <div class="carousel-item"><span class="carousel-feature">1,400+</span> <br> <span class="long-feature">bases de données</span></div>
+  <div class="carousel-item"><span class="carousel-feature">66</span> <br> <span class="long-feature">salles d'étude</span></div>
+  <div class="carousel-item"><span class="carousel-feature">8</span> <br> bibliothèques</div>
+
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-UAlberta" type="button"> <span aria-hidden="true" class="carousel-control-prev-icon fas fa-chevron-left"></span> <span class="visually-hidden">Précédent</span> </button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-UAlberta" type="button"> <span aria-hidden="true" class="carousel-control-next-icon fas fa-chevron-right"></span> <span class="visually-hidden">Suivant</span> </button></div>
+
+                      </div>
+                                                                    </div>
+                            </div>
+               <div class="row">
+                <div class="col-md-6 mt-5">
+                    <h2 class="text-uppercase" id="ual-title-news">Nouvelles, événements &amp; ateliers</h2>
+              </div><div class="col-md-6 mt-3">
+              
+                             <div class="row white ms-4">
+
+                             
+            
+              </div></div>         
+                     
+</div>
+                  <div class="row news-events g-2">
+                    
+                  <div class="col-md-6 mb-4">
+                   <div class="row" id="latest-posts">
+             
+                    </div> 
+                      </div>
+
+                  <div class="col-md-6 mb-4">
+<div class="row h-100">
+  <div class="col-md-12 events">
+                  
+                            <div class="card h-97 bg-grey ms-4">
+                               <div class="py-3 px-2">
+                              <span class="card-title h3">Prochains événements &amp; ateliers</span>  
+                            <div id="api_upc_cid_iid3750"></div><script src="https://ualberta.libcal.com/api_events.php?m=upc&cid=&audience=&c=&d=&l=4&tar=0&simple=ul_date&context=object&format=js"> </script>
+                    </div>
+                       </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="row mt-0">
+                  <div class="col-md-6">
+                    <a class="btn btn-green btn-outline" href="https://news.library.ualberta.ca/blog/category/francais/">Actualités</a>
+                      </div>
+                       <div class="col-md-6 ps-2">
+                    <a class="btn btn-green btn-outline ms-5" href="https://ualberta.libcal.com/calendar/events-exhibits/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0">Tous événements &amp; ateliers</a>
+                      </div>
+                  </div>  

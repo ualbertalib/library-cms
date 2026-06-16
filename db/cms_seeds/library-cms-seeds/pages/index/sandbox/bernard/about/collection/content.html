@@ -1,0 +1,334 @@
+[attributes]
+---
+label: Collection
+layout: left-navigation-html
+target_page:
+categories:
+- sandbox
+is_published: true
+position: 10
+[text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+<li class="breadcrumb-item"><a href="/about">About</a></li>
+<li aria-current="page" class="breadcrumb-item active">Collection</li>
+</ol>
+</nav>
+[text_area sidebar]
+ {{cms:snippet charla-about2-nav}}
+
+
+ 	
+[text_area content]
+<style>
+/* ==========================================================================
+   Base & General Styles
+   ========================================================================== */
+.bg-secondary a {
+  color: #6CC24A !important;
+  text-decoration: none;
+}
+
+.bg-secondary ul li {
+  margin-bottom: 1rem;
+}
+
+
+/* ==========================================================================
+   Button Styles
+   ========================================================================== */
+.btn-wide {
+  /* Box Model & Layout */
+  margin: 0;
+  max-width: 245px; /* Default max-width for non-stacked */
+  padding: 0.75rem 35px 0.75rem 1.2rem; /* Initial padding */
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.0); /* Original shadow */
+
+  /* Typography */
+  font-family: "Roboto", serif;
+  font-size: 19px !important;
+  font-weight: 400;
+  text-transform: none !important;
+  line-height: 1.3; /* Default line-height for buttons */
+  color: black;
+
+  /* Content Alignment & Wrapping */
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word; /* Older browser support for word-break */
+  overflow-wrap: break-word; /* Modern word-break */
+  display: flex; /* Flexbox for internal alignment */
+  align-items: center; /* Vertically center text and icon */
+  justify-content: flex-start; /* Align content to the left */
+}
+
+.btn-wide i {
+  color: #8393a9;
+  margin-left: 0.5rem; /* Space between text and icon */
+}
+
+.btn-label {
+  display: inline; /* allows wrapping of text inside the button */
+  white-space: normal; /* ensures text wraps */
+}
+
+.btn-label i {
+  white-space: nowrap; /* keeps icon with its preceding text if possible */
+  margin-left: 0.25rem; /* tightens space for internal icon */
+}
+
+.button-container {
+  background-color: #e4eaf2;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+  height: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  /* Flexbox for inner alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow container content to wrap if needed */
+}
+
+.button-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left; /* Align buttons to the left within the inner container */
+  gap: 0.5rem; /* Horizontal spacing between buttons */
+  row-gap: 0.75rem; /* Vertical spacing between rows of buttons (when they wrap) */
+}
+
+
+/* ==========================================================================
+   Card Styles
+   ========================================================================== */
+.fixed-card {
+  width: 340px;
+  max-width: 100%;
+  margin: 0 auto; /* Center the card */
+}
+
+.fixed-card ul li a {
+  text-decoration: none;
+  margin-bottom: 1rem; /* This style is actually on the anchor, not the li */
+}
+
+.fixed-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card-head {
+  height: 8px;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+  background-color: #ebde95;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  padding: 0; /* Ensures content padding is handled by .p-4 etc. */
+  border-radius: 0;
+  width: 100%;
+
+  /* Flexbox for internal content layout */
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+/* ==========================================================================
+   Priorities Grid (General Grid & Heading Styles)
+   ========================================================================== */
+.priorities-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Gap between columns in the grid */
+}
+
+.priorities-grid .col-lg-6 {
+  flex: 0 0 calc(50% - 15px); /* Two columns on large screens with gap */
+}
+
+.priorities-grid h2 {
+  font-family: "Roboto Slab", serif;
+  color: #353839;
+  font-weight: 600;
+  line-height: 1.2; /* Default line-height for these h2s */
+}
+
+.priorities-grid h4 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  color: black;
+  font-size: clamp(1.5rem, calc(1rem + 1.75vw), 2rem);
+  line-height: clamp(1.5rem, calc(1rem + 2vw), 2rem);
+}
+
+
+/* ==========================================================================
+   Responsive Overrides (Small Screens)
+   ========================================================================== */
+
+/* Medium-Small Screens (up to 768px, typical tablet portrait) */
+@media (max-width: 768px) {
+  /* Button Container & Buttons */
+  .button-container {
+    flex-direction: column; /* Stack the button container content */
+    align-items: stretch; /* Stretch the button container itself to full width within its padding */
+    padding-left: 2rem;   /* Horizontal padding around the button stack */
+    padding-right: 2rem;  /* Horizontal padding around the button stack */
+    padding-top: 1rem; /* Adjust top padding for stacked view */
+    padding-bottom: 1rem; /* Adjust bottom padding for stacked view */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+
+  .button-inner {
+    flex-direction: column; /* Ensure individual buttons stack vertically */
+    align-items: flex-start; /* Align stacked buttons to the left */
+    justify-content: flex-start; /* Ensure content starts from the left */
+    gap: 0; /* Reset horizontal gap, as buttons are full width now */
+    row-gap: 1.5rem; /* Increased vertical space between stacked buttons */
+    width: 100%; /* Ensure inner container takes full width for alignment */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .btn-wide {
+    max-width: 100%; /* Allow buttons to take full width */
+    width: 100%; /* Explicitly set to 100% when stacked */
+    padding: 0.75rem 1.2rem; /* Adjusted padding for full-width buttons */
+    /* text-align: left; (already set in base style, not redundant here) */
+    /* justify-content: flex-start; (already set in base style, not redundant here) */
+  }
+
+  /* Priorities Grid */
+  .priorities-grid.mt-5 {
+    margin-top: 1.5rem !important; /* Reduce the top margin for the card section */
+  }
+}
+
+/* Larger tablet / Small Desktop (up to 991px, typical Bootstrap `md` breakpoint) */
+@media (max-width: 991px) {
+  .priorities-grid .col-lg-6 {
+    flex: 0 0 100%; /* Make grid columns full width */
+  }
+
+  .priorities-grid .row {
+    flex-wrap: wrap; /* Ensure rows wrap */
+  }
+
+  .right-column { /* This class is not in the provided HTML but kept for completeness */
+    border-left: none;
+    padding-left: 20px; /* Changed from unitless 20 */
+    padding-right: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Extra Small Screens (up to 576px, typical phone portrait) */
+@media (max-width: 576px) {
+  h2.mt-5 {
+    line-height: 1.4; /* Increase line-height for readability when wrapping */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+  }
+}
+  /* Very Small Screens (up to 500px - where button text is likely to wrap and reduce padding) */
+@media (max-width: 500px) {
+  .button-inner {
+    row-gap: 2.5rem; /* MORE VERTICAL SPACE between stacked buttons (text wraps here) */
+  }
+
+  .btn-wide {
+    padding-left: 0.5rem;  /* Reduced left padding for very small screens */
+    padding-right: 0.5rem; /* Reduced right padding for very small screens */
+  }
+}
+</style>
+
+
+<div class="row mt-0 mb-0 row-full-width">
+  <h1 class="display-3">Collection</h1>
+
+  <p>The University of Alberta Library collection supports the University’s teaching and research functions and provides information resources for the University community as well as the general public.</p>
+</div>
+
+<div class="row gx-0 gy-0 mt-2 mb-5 ps-0 priorities-grid">
+
+
+  <div class="button-container">
+    <div class="button-inner">
+
+      <a href="/about/collection/recommend-a-purchase" class="btn btn-square btn-wide">
+        <span class="btn-label">Recommend a Purchase <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+
+      <a href="/about/staff/subject-librarians" class="btn btn-square btn-wide">
+        <span class="btn-label">Contact a Subject Librarian <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+
+      <a href="mailto:csu@ualberta.ca" class="btn btn-square btn-wide">
+        <span class="btn-label">Collection Strategies Unit <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+
+      <a href="https://bpsc.library.ualberta.ca/" class="btn btn-square btn-wide">
+        <span class="btn-label">Bruce Peel Special Collections <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+
+
+    </div>
+  </div>
+
+  <div class="container-fluid ps-0 pe-0">
+    <div class="row gx-0 gy-0 mt-5 ps-0 priorities-grid">
+
+      <div class="col-12 col-md-6 col-lg-6 d-flex">
+        <div class="info-card fixed-card">
+          <div class="p-4 p-sm-3 p-md-4">
+            <h4>Policies</h4>
+            <p>The policies and guidelines below are followed in collection decisions made by the University of Alberta
+              Library:</p>
+            <ul>
+              <li><a href="/about/collection/collection-policy/etextbooks">Commercial eTextbooks Generally Cannot Be
+                  Added to Library Collections</a></li>
+              <li><a href="/about/collection/budget">Collections Budget Updates</a></li>
+              <li><a href="/about/collection/collection-policy">Collection Development Policy</a></li>
+              <li><a href="/about/collection/donations/">Gifts and Donations</a></li>
+              <li><a
+                  href="https://docs.google.com/document/d/1nE3tUt6p24Xn-LsCxDQSw5kHVOxYgkg6pBWNQS1uTc8/edit?usp=sharing">Guidelines
+                  for eBook Selection</a></li>
+              <li><a href="/about/collection/disclosure">Statement of Principle on Non-disclosure Clauses in
+                  Licenses</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-6 d-flex">
+        <div class="info-card fixed-card">
+          <div class="p-4 p-sm-3 p-md-4">
+            <h4>Statistics + Data</h4>
+            <p>The University of Alberta Library is committed to transparency and open data. Follow the links below for
+              information on collections expenditures.</p>
+            <ul>
+              <li><a href="https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=doi:10.7939/DVN/TRSK5G">Collections
+                  Budget Expenditures by Vendor</a></li>
+              <li><a href="https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=doi:10.7939/DVN/10979">One
+                  Time Payments for Books by Vendor</a></li>
+              <li><a href="https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=doi:10.7939/DVN/10963">Large
+                  One Time Collections Expenditures</a></li>
+              <li><a href="https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=doi:10.7939/DVN/10844">Subscription
+                  Expenditures</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

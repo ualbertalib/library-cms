@@ -1,17 +1,257 @@
 [attributes]
 ---
 label: Kristina
-layout: non-rich-text
-target_page: 
+layout: english-main
+target_page:
 categories:
 - sandbox
 is_published: true
-position: 54
+position: 6
 [text_area content]
-<h1>
- <b> Greetings from a digital world</b> 
-</h1>
-<div class="alert alert-info" role="alert">
-        Les portes principales de CSJ sont inaccessibles jusqu'à nouvel ordre. Veuillez suivre la signalisation pour accéder au pavillon et à la bibliothèque.
-      </div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.ual-btn, .ual-btn-outline{
+  width:13rem;
+  }
+  .list-group-item{
+    background:transparent;
+  }
+
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-8170, .s-lc-w-lid-4679>.s-lc-w-name, .s-lc-w-lid-7732, .s-lc-w-lid-4610>.s-lc-w-name, .s-lc-w-lid-7931, .s-lc-w-lid-7918>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5499>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-6687>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5700>.s-lc-w-name, .s-lc-w-lid-8170, .s-lc-w-lid-5701>.s-lc-w-name, .s-lc-w-lid-8455>.s-lc-w-name {display:none;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-time, .s-lc-allday{font-weight:bold;} 
+  td.s-lc-w-name{padding:5px 5px 5px 0;}
+  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-70px;}
+  .s-lc-w-lid-5500 span.s-lc-allday{margin-left:-55px;}
+  .s-lc-w-lid-7789 .s-lc-w-name{display:none;}
+ 
+
+</style>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#find">Find</a>
+  <a href="#help">Help</a>
+  <a href="#borrow">Borrow</a>
+  <a href="#facilities">Facilities</a>
+  <a href="#about">About</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Services</button>  
+  </div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+    <!-- Find -->
+   <h2 id="find">
+          Find
+        </h2>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="https://guides.library.ualberta.ca/az/databases">A-Z Databases</a></li>
+      <li class="list-group-item"><a href="/services/course-materials">Course Materials and Reading Lists</a></li>
+  	<li class="list-group-item"><a href="/library">Library Catalog</a></li>
+    <li class="list-group-item"><a href="/about/policies/access-to-electronic-resources">E-Resource Access</a></li> 
+  </ul>
+</div>
+<!--Borrow -->
+<h2 id="borrow">
+          Borrow
+        </h2>
+<h3>
+  Borrowing Material
+</h3>
+<ul class="list-group list-group-flush">
+<li class="list-group-item"><a href="/alumni">Alumni Services</a></li>
+<li class="list-group-item"><a href="/services/distance-students">Distance Services</a></li>
+<li class="list-group-item"><a href="/services/l-pass">L-Pass</a></li>
+</ul>
+           		
+	
+<h3>
+  Request Materials
+</h3>
+<ul class="list-group list-group-flush">
+<li class="list-group-item"><a href="/services/interlibrary-loan">Interlibrary Loan</a></li>
+<li class="list-group-item"><a href="/about/collection/recommend-a-purchase">Recommend a Purchase</a></li>
+</ul>       						
+<!-- Help -->
+<h2 id="help">
+          Help
+        </h2>
+<ul class="list-group list-group-flush">
+  <h3>
+    Research Assistance
+  </h3>
+  <li class="list-group-item"><a href="/ask-us/book-consultation">Ask a Librarian</a></li>
+  <li class="list-group-item"><a href="/services/borrowing">Borrowing Library Materials</a></li>
+</ul>
+  <h3>
+    Cite + Write
+  </h3>
+  
+  <h3>
+    Workshops + Consultations
+  </h3>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><a href="https://ualberta.libcal.com/calendar/workshops/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0">Workshops</a></li> 
+</ul>
+  <h3>
+    Academic Integrity
+  </h3>
+  
+  <h3>
+    Publish
+  </h3>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><a href="/research-support/open-access/apc">Article Processing Charge (APC) Support</a></li>
+   <li class="list-group-item"><a href="/research-support/audio-and-video-curation">Audio and Video Curation</a></li>
+  <li class="list-group-item"><a href="https://www.ualberta.ca/copyright/">Copyright</a></li>
+  <li class="list-group-item pr-0"><a href="/services/library-innovate">Entrepreneurship + Innovation</a></li>
+  <li class="list-group-item"><a href="https://ualberta.scholaris.ca">Institutional Repository (ERA)</a></li>
+  <li class="list-group-item"><a href="/publishing">Library Publishing</a></li>
+  <li class="list-group-item"><a href="/research-support/open-access" >Open Access</a></li>
+  <li class="list-group-item"><a href="/research-support/data-management">Research Data Management (RDM)</a></li>
+   <li class="list-group-item"><a href="/services/research-impact">Research Impact Services</a></li>
+</ul>
+ <!--Facilities-->
+  <h2 id="facilities">
+          Facilities
+        </h2>
+  <h3>
+    Make + Create
+  </h3>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><a href="/services/3dprinting">3D Printing</a></li> 
+  <li class="list-group-item"><a href="/dsc">Digital Scholarship Centre</a></li>
+  <li class="list-group-item"><a href="/services/technology/multimedia-equipment-lending">Multimedia Equipment Lending</a></li>
+</ul>
+  <h3>
+    Rooms + Spaces
+  </h3>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><a href="/services/book-study-spaces">Book a Study Space</a></li>
+  <li class="list-group-item"><a href="/about/policies/study-and-work-space">Noise/Sound Policy</a>
+  </li>
+    <h3>
+      Technology
+    </h3>
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item"><a href="https://www.ualberta.ca/en/information-services-and-technology/services/network-connectivity-services/connect-wifi.html">Wireless Access</a></li>  
+  <li class="list-group-item"><a href="/services/technology/printing-scanning">Copy, Scan + Print</a></li>
+    <li class="list-group-item"><a href="/services/technology/specialized-equipment">Specialized Equipment</a></li>
+    <li class="list-group-item"><a href="https://guides.library.ualberta.ca/generative-ai">Using Generative AI</a></li>
+   <li class="list-group-item"><a href="/services/technology/workstations">Workstations + Software</a></li>
+  </ul>
+  <!--About -->
+ 
+  <h2 id="about">
+          About
+        </h2>
+    <h3>
+    How to Reach Us
+  </h3>
+  <ul class="list-group list-group-flush"></ul>
+  
+  <h3>
+    Initiatives
+     </h3>
+  <ul class="list-group list-group-flush"></ul>
+  
+  <h3>
+    Overview
+  </h3>
+  <ul class="list-group list-group-flush"></ul>
+  
+  <h3>
+    Branches
+  </h3>
+  <ul class="list-group list-group-flush"></ul>
+</ul>
+</body>
+</html> 
 [text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/Francais/services">Nos services</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Services à distance</li>
+</ol>
+</nav>
+[text_area sidebar]
+{{cms:snippet distance-services-nav-fr}}

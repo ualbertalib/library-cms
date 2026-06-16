@@ -1,94 +1,65 @@
 [attributes]
 ---
 label: Natasha
-layout: non-rich-text
-target_page: 
+layout: outage
+target_page:
 categories:
 - sandbox
 is_published: true
-position: 51
+position: 9
 [text_area content]
-<style>
-#lcs_slide_out-9280{
-	display:none;
-}
+{{ cms:snippet homepage-carousel-styles }}
 
-</style>
-<div class="row">
-  <div class="col-12 mb-3">
-<a href="/francais" class="btn ual-btn float-right ual-btn-lang">version française</a>
- 
-
- <!-- bright red emergency banner -->
-    <!--
-  <div class="ual-covid-announce bg-danger text-white col-md-11 mb-3 ml-3 mr-3">
-    <p class="mb-0">
-     Outage alert: June 16-June 22. Due to maintenance, the NEOS public catalogue, ILL services, and My Account will be unavailable. Holds cannot be placed during this outage.</p>
-   </div> 
--->
-    
- <!-- faded red dismissible banner -->
- <!--
-
-<div class="alert alert-danger alert-dismissible fade show mt-2 mb-0" role="alert">
-<strong> Outage alert:</strong> We are currently experiencing problems with our proxy services. E-Resources and search are not available at this time. Please use the <a href="https://neos.library.ualberta.ca//uhtbin/cgisirsi/x/0/0/57/49?user_id=WUAARCHIVE">Public Catalogue</a> for searching.
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-<span aria-hidden="true">&times;</span></button>
-   </div> 
--->
-    
-    
-  </div>
-
- 	<div class="col-md-8">
-  	<div class="card">
-    	<div class="card-header">
-      	<div class="row">
-      		<h2 class="col col-lg-9 mb-0 mt-1">Search the Library</h2>
-    
-          <div class="col col-lg-3">
-          <a href="https://guides.library.ualberta.ca/UALibrariesSearching" class="text-center ual-btn-tips">Search Guide</a>
-          </div>
-       	</div>
-                                        
-			</div>
-  
-  		<div class="card-body py-1 px-2 mb-3">
-        
-
-        <!-- EBSCO Search Box Begins -->
-<style type="text/css">
-  .ebsco-single-search *,.ebsco-single-search *::before,.ebsco-single-search *::after{box-sizing:border-box;font:inherit;margin:0}
-  .ebsco-single-search input,.ebsco-single-search button,.ebsco-single-search select{margin:0}
-  .eb-search-container{display:flex;flex-flow:row wrap;line-height:1.5}
-  .eb-search-container>*{flex:1 100%;padding:12px}
-  .eb-search-container>div>p{font-style:italic; background-color:
- #E8FCBA;font-size:90%;border-radius:5px;}
-  .eb-search-container__title{font-weight:400;font-size:1.5em;letter-spacing:-.05em;text-align:center}
-  .eb-search__box>*{flex:1 100%;line-height:normal}
-  .eb-search__box{border-radius:.25em;display:flex;flex-wrap:wrap;font-size:1.25em}
-  .eb-search__input-bquery{background:#fff;border:1px solid #007c41;border-bottom-color:transparent;border-radius:.25em .25em 0 0;padding:.75em}
-  .eb-search__input-bquery:focus{color:#333}
-  .eb-search__submit-button{-webkit-appearance:button;background:#007c41;border:1px solid #007c41;border-radius:0 0 .25em .25em;box-shadow:0 2px 4px 0 rgba(0,0,0,.20);color:#FFFFFF;cursor:pointer;overflow:visible;padding:.5em 1.25em;text-align:center;white-space:nowrap}
-  .eb-search__submit-text{display:inline-flex;overflow:hidden}
-  .eb-filter-container{padding-bottom:0}
-  .eb-search__label{align-items:center;display:inline-flex;white-space:nowrap;width:100%}
-  .eb-search__input{height:1.1em}
-  .eb-search__span{padding:0 .5em}
-  .eb-adv-search{padding-right:1em;text-align:right;white-space:nowrap}
-  a.eb-adv-search__link{color:#007c41;text-decoration-skip-ink:auto}
-  .eb-sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}
-  @media only screen and (min-width: 768px) {
-    .eb-search-container{padding:.75em}
-    .eb-search__box{flex-wrap:nowrap;height:2.8em;box-shadow:0 2px 4px 0 rgba(0,0,0,.20)}
-    .eb-search__input-bquery{border-bottom-color:#007c41;border-radius:.25em 0 0 .25em;border-right-color:transparent;width:100%}
-    .eb-search__submit-button{border-radius:0 .25em .25em 0;box-shadow:none;flex:0 0 auto}
-    .eb-filter-container{flex:1;padding-left:1em;padding-bottom:.75em}
-    .eb-search__label{width:auto}
-    .eb-adv-search{flex:0 0 auto}
-  }
+ <style>
+.bg-ua-teal{
+  background-color:#6bbbae;
+   }
 </style>
 
+
+    <!-- 
+
+<div class="alert alert-warning alert-dismissible fade show mt-3 mx-3 m-auto" role="alert">
+    <i class="fa-solid fa-triangle-exclamation"></i> <strong>May 14, 2025:</strong> We're currently experiencing issues with access to many eresources. We are working to resolve this as quickly as possible. 
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
+    </div>
+
+
+ This is a placeholder for OUTAGE messages
+
+<div class="alert alert-warning alert-dismissible fade show mt-3 mx-3 m-auto" role="alert">
+    <i class="fa-solid fa-triangle-exclamation"></i> <strong>May 2, 2025:</strong> We're currently experiencing technical issues with library search. We're working to resolve the issue as quickly as possible—thank you for your patience. Please use the <a href="https://neos.library.ualberta.ca/uhtbin/cgisirsi/?ps=z7yK7Cv38N/UAARCHIVES/X/60/1180/X">NEOS catalogue</a> to search for titles.
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
+    </div>
+
+ <div class="alert alert-warning alert-dismissible fade show mt-3 mx-3 m-auto" role="alert">
+    <i class="fa-solid fa-triangle-exclamation"></i> <strong>Outage</strong> January 30, 2025: <a href="https://www.taylorfrancis.com/">Taylor and Francis</a> ebooks are currently inaccessible due to technical issues. The library team is working with the publisher to restore access as soon as possible. Thank you for your patience. 
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
+    </div> 
+
+<div class="alert alert-warning alert-dismissible fade show mt-3 mx-3 m-auto" role="alert">
+    <i class="fa-solid fa-triangle-exclamation"></i> CLOSURE NOTICE: Due to building maintenance and scheduled water shutdown in ECHA, Sperber Library will be closed Saturday, December 7, 2024.
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
+    </div> 
+
+<div class="alert alert-warning alert-dismissible fade show mt-3 mx-3 m-auto" role="alert">
+    <i class="fa-solid fa-triangle-exclamation"></i> <strong>The Rutherford Library North and South</strong> - is closed for maintenance on Saturday, May 10.  Cameron Library remains open.
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
+    </div> -->
+
+<div class="row row-full-width bg-grey">
+                <div class="col-4 d-none d-lg-block">
+                    <div class="card rounded-0 border-0 bg-transparent h-100 d-flex flex-column justify-content-center align-items-center"><img alt="" class="card-img rounded-0" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/UA_057_RGB.png"></div>
+                </div>
+                <div class="col-md col-12">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+                        <div class="pt-4 pb-3">
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
+                                <h2 class="text-uppercase">Search the Library</h2>
+                               
+                            </div>
+ <!-- EBSCO Search Box Begins -->
+                   
 <form action="https://searchbox.ebsco.com/search/"  class="ebsco-single-search">
   <input name="schemaId" value="search" type="hidden" />
   <input name="custid" value="s5940188" type="hidden" />
@@ -99,227 +70,193 @@ position: 51
   <input name="scope" value="site" type="hidden" />
   <input name="site" value="eds-live" type="hidden" />
   <input name="direct" value="true" type="hidden" />
-   
-
-
-  <div class="eb-search-container pb-0">
-    <div class="col-md-9 p-0 ml-4 mt-2">
-        <p class="py-1 px-2" style="color:#000" >CCID required - don't have a CCID? Use our <a href="https://neos.library.ualberta.ca//uhtbin/cgisirsi/x/0/0/57/49?user_id=WUAARCHIVE" target="_blank" style="color:#007c41;"> Public Catalogue</a>.</p>  </div>
-    <div class="eb-search pt-0">
-      <div class="eb-search__box">
-        <label class="eb-sr-only" for="eb-sbb-search-input">Search</label>
-        <input class="eb-search__input-bquery" id="eb-sbb-search-input" name="bquery" type="text" placeholder="Search articles, books, journals, and media" />
-        <button class="eb-search__submit-button" type="submit">
-          <div class="eb-search__submit-text">Search</div>
-        </button>
-      </div>
-    </div>
-
-
-
-  <div class="eb-filter-container pt-0 col-lg-7 pb-2">
-      
-  <label class="eb-search__label" for="catalogOnly">
+    
+ 
+ <label class="mb-1" for="catalogOnly">
         <input class="eb-search__input" id="catalogOnly" name="limiter-fc" value="Y" type="checkbox" />
-           <span class="eb-search__span">Limit your search to the 
-  library catalogue <!--<span data-toggle="tooltip" data-placement="top" title="UofA and partner library physical and online books, journals, and media" style="background-color:#E8FCBA;" class="d-none d-lg-inline">(what's this?)</span>--> </span>
+           <span class="eb-search__span small">
+  Limit search to library catalogue</span>
       </label>
-    </div>
-    <div class="eb-adv-search pt-0 col-lg-5">
-    <a class="eb-adv-search__link" href="https://searchbox.ebsco.com/search/?authtype=ip&schemaId=search&custid=s5940188 &groupid=main&profid=eds&proxy=https%3A%2F%2Flogin.ezproxy.library.ualberta.ca%2Flogin%3Furl%3D%7BtargetURL%7D&setup=1&scope=site&site=eds-live&direct=true">Advanced Search</a>  
-  </div>
-  </div>
+        <div class="search-box">
+
+        <div class="input-wrapper">
+         
+          <input id="eb-sbb-search-input" name="bquery" type="text" placeholder="Search articles, books, journals and media" aria-label="Search articles, books, journals and media" /> </div>
+     <button class="submit-button" type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i> </button>
+        
+         </div>
+<div class="mt-1">
+  
+<a class="small" href="https://searchbox.ebsco.com/search/?authtype=ip&schemaId=search&custid=s5940188 &groupid=main&profid=eds&proxy=https%3A%2F%2Flogin.ezproxy.library.ualberta.ca%2Flogin%3Furl%3D%7BtargetURL%7D&setup=1&scope=site&site=eds-live&direct=true">Advanced Search</a>  |  <a class="small" href="/guest">Guest Catalogue</a> | <a href="https://guides.library.ualberta.ca/UALibrariesSearching" class="small">Search Guide</a>  </div>
 </form>
 <!-- EBSCO Search Box Ends -->
-      
-      		<div class="row mx-4 mb-3 mt-2">
-	<a href="/databases" class="btn ual-btn ual-find-link col mr-2 py-2">Find Databases</a>
-            
-        		<a href="https://resolver.library.ualberta.ca/resolver/journalsearch" class="btn ual-btn ual-find-link col py-2 mr-2">Find eJournals</a>	<a href="/google-scholar" class="btn ual-btn ual-find-link col py-2">
-               Google Scholar
-                </a>
- 					
-        </div>
- 
-   			
+    
+                      </div>
+                        <div>
+                            <p>More Research Tools: </p>
+                            <div class="mt-1">
+                                <a class="btn btn-green btn-outline" href="https://guides.library.ualberta.ca/az/databases">Databases</a>
+                               <a class="btn btn-green btn-outline" href="https://resolver.library.ualberta.ca/resolver/journalsearch">eJournals</a>
+                                <a class="btn btn-green btn-outline" href="/google-scholar">Google Scholar</a>
+                               
+                                <a class="btn btn-green btn-outline" href="/subject-guides">Subject Guides</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+<div class="row row-full-width bg-ua-teal mt-0">
+<h2 class="text-center pt-3 h3">
+  New Library Search is Coming Soon
+</h2>
+  <p class="text-center">On <strong>July 16th, 2025</strong> we are launching a new and improved way to search the library. You may experience some service interruptions. <a href="https://library.ualberta.ca/about/projects/lsp" class="bg-transparent">Learn More</a></p> 
+</div>
+
+            <div class="row py-4">
+                <div class="col">
+                 <h2 class="text-uppercase">
+                   Featured Services
+                  </h2>
+                    <div class="mt-4">
+                      <a class="btn btn-green btn-square" href="/how-to-use-the-library">How to Use the Library</a>
+                        <a class="btn btn-green btn-square" href="https://guides.library.ualberta.ca/citing">Citation Help</a>
+                        <a class="btn btn-green btn-square" href="/services/book-study-spaces">Book a Study Room</a>
+                        <a class="btn btn-green btn-square" href="/course-materials">Course Materials + Reading Lists</a>
+                        <a class="btn btn-green btn-outline" href="/services">All Library Services</a>
+                    </div>
+                </div>
             </div>
-  
-        <div class="row">
-      
-   
-    <div class="col-sm-7">
-     	<div class="card mt-1">
-    	<div class="card-header">
-        <h2>Course Materials &amp; Reading Lists</h2>
-                                        
-			</div>
-  
-  		<div class="card-body py-2 px-2 mb-3">
-        <div class="row no-gutters">
-			 <div class="col-5">
 
-         <a href="https://ualberta.rl.ca.talis.com/index.html" target="_blank" class="btn btn-lg ual-btn mt-2 ml-2 mb-2"> Talis Aspire</a>
-         
-      </div>
-      
-            
-          
-           <div class="col-7 pl-2">
-            <a href="/course-materials/reading-lists" target="_blank" class="d-block mt-2">Creating a Reading List</a>  <a href="/course-materials/reserve-course-materials" target="_blank" class="d-block pb-1 mt-1 mb-2">Reserving Course Materials</a>
-             
-          </div>         
-
-         
-           </div>
-       
-        </div>
-       
-    </div>
-      
-      </div>
-   <div class="col-sm-5">
-
-  
-    
-         <a href="https://guides.library.ualberta.ca/citing" class="btn btn-lg ual-btn d-block mt-1 mb-3">
-            	<i class="fas fa-paperclip"></i> Citations &amp; Reference Management
-              </a>  
-        <a href="/services/book-study-space" class="btn btn-lg ual-btn d-block pb-1"><i class="fas fa-chalkboard-teacher h5" aria-hidden="true"></i>  Book Study Space</a>
- 
-      </div>
-    </div>
-    </div>
-
-  </div>
-  	<div class="col-md-4 mt-4 mt-lg-0">
-     
-   		<div class="card">
-    		<div class="card-header">
-      		<h2 class="mb-1 mt-1">Chat with Us <span class="small float-right"><a href="ask-us">Chat Hours</a></span></h2>
-      	</div>
-     
-      		<div class="card-body p-0">
-
-<div id="libchat_9890352bfb1cefe26defed1035893c23"></div>
-<p class="text-center pt-2 pb-1">
-  
-            <a href="https://ualberta.libanswers.com/">Frequently Asked Questions (FAQs)</a></p>
-        </div>
-        
-      </div>
- 
- 	 	</div>
- 
-	</div>
-</main>
-<div class="ual-ltgreen">
-
-<div class="container">
-	<div class="row">
-       <div class="col-md-4 pt-4 border-right border-success">
-         <span class="ual-news">
-         Library News
-         </span>
-    </div>
-    <div class="col-md-6 bg-light border-top border-bottom border-success">
-    
-       <p class="my-3">
-         
-         University of Alberta Librarian, Allison Sivak is featured in this week's <a href="https://americanlibrariesmagazine.org/blogs/the-scoop/call-number-podcast-services-for-the-incarcerated/" class="ual-news-container">Call Number with American Libraries Podcast</a>: Services for the Incarcerated:  Episode 89</p>
-    </div>
-      <div class="col-md-2 pt-4">
-        <a href="https://news.library.ualberta.ca/" class="btn ual-btn mt-4">More Library News</a>
-      </div>
-    </div>
-    
-    </div>
-  </div>
-
-
-<main class="flex-fill container ual-container">
-
-  	<div class="row">  
-
-<!-- left webtile -->     
-    
-    <div class="col-lg-4">  
- <a href="https://news.library.ualberta.ca/blog/2023/11/20/6th-annual-dont-judge-a-book-by-its-cover-african-authors/"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2023/11/DJAB2023webtileEngFr.jpg" class="img-fluid" alt="Don't Judge a Book by its Cover"/></a>         
-      
-     </div>
- 
-<!-- workshops box --> 
-    
-    <div class="col-lg-4 mt-4 mt-lg-0">
-      <div class="card">
-        <div class="card-header">
-          <h2>
-            <a href="https://ualberta.libcal.com/calendar/events-exhibits/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0" class="text-decoration-none text-white"> Library Workshops <i class="fas fa-arrow-alt-circle-right float-right"></i></a>
-          </h2>
-      	</div>
-        <div class="card-body ual-rss p-2">
-       
-    
-        <div id="api_month_cid7360_7583_6990_5415_iid3750"></div><script type="text/javascript" src="https://ualberta.libcal.com/api_events.php?&m=month&cid=7360_7583_6990_5415&audience=&c=&d=&simple=ul_date&context=object&format=js"> </script>  
-          
-        </div>
-     </div>
-    </div>
-    
-
-<!-- right webtile -->
-    
-        <div class="col-lg-4 mt-4 mt-lg-0">      
-<a href="https://guides.library.ualberta.ca/citing"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2023/11/Citation-webtile-380X380-1-1.jpg" class="img-fluid mb-2" alt="cite your source"/></a>
-     </div> 
-    </div>
-
- <!--	<div class="col-lg-4 mt-4 mt-lg-0 order-md-last">
-      <div class="card">
-        <div class="card-header">
-          <h2>
-           Library News 
-            <a href="https://news.library.ualberta.ca/">
-            	<i class="fas fa-arrow-alt-circle-right float-right mt-1"></i>
-             </a>
-          </h2>
-      </div>
-      <div class="card-body ual-rss p-0">
-            
-      <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="132898/"></script>
-					
-			</div> 
-      </div>
-
-<a href="https://www.library.ualberta.ca/hours-locations"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2023/10/Hours_webtile__Autumn___1_-1.gif" class="img-fluid border border-dark mt-4 mb-2" alt="check hours and locations"/></a>
-     </div>
-     	
-    <div class="col-lg-4 mt-lg-0">
-       <div class="card">
-         
-   
-
- 
- <a href="https://www.library.ualberta.ca/peel"><img src="https://news.library.ualberta.ca/wp-content/uploads/2023/10/Peels-Prairie-Provinces-380-×-400-px.jpg" class="img-fluid faq-border" alt="library faqs"/></a>    -->      
- 
-
-  <div class="ual-yellow-line mt-3 mb-4"></div>
+<!-- Banner
 <div class="row">
-  <div class="col-md-4">
-    <div class="ual-sat ual-bpsc text-center">
-    	<a href="https://bpsc.library.ualberta.ca/">Bruce Peel Special Collections</a>
-    </div>
-  </div>
-    <div class="col-md-4 mt-4 mt-lg-0">
-    	<div class="ual-sat ual-dsc text-center">
-    		<a href="https://dsc.library.ualberta.ca">Digital Scholarship Centre</a>
-      </div>
-  </div>
-  <div class="col-md-4 mt-4 mt-lg-0">
-    	<div class="ual-sat ual-uaa text-center">
-    		<a href="/archives">University of Alberta Archives</a>
-      </div>
-
+<div class="col-12 col-sm mb-5">                              
+<div class="impact-feature card rounded-0 border-dark">
+<div class="py-5 px-5 text-center">
+<p class="serif-font mb-1 fs-5 ">Apply to join the</p>
+<h2 class="text-dark mb-3"><span class="thin-text bg-secondary px-2">2024/25</span> STUDENT LIBRARY ADVISORY COMMITTEE</h2>
+<a class="btn btn-dark rounded-0 text-uppercase" href="/SLAC">Learn More</a></div>
+</div>
     
+<style>           
+.object-fit-cover {
+  object-fit: cover;
+}
+.object-center-center {
+  object-position: center center;
+}
+.impact-feature {
+  background-image: none;
+  background-size: cover;
+  background-color:#6bbbae;
+}
+@media (min-width: 991px) {
+.impact-feature {
+  background-image: url('https://news.library.ualberta.ca/wp-content/uploads/2024/09/SLAC-banner-4-scaled.jpg');
+}
+  }
+</style>
+</div>
+</div>
+END Banner --> 
+
+            <div class="row row-full-width bg-ua-gold">
+                <div class="col-md col-12">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+                        <div class="py-5">
+                            <h2 class="text-uppercase" id="ual-title-coll">Our Collections</h2>
+                            <p>Explore the wealth of knowledge at the University of Alberta Library. Serving the University community and the general public, our vast collections include over 7 million titles and more than 10 million volumes in both print and electronic formats. Our resources support regional, national, and international scholarly needs. With thousands of scholarly journals, comprehensive reference resources and unique special collections focused on the Canadian prairies and beyond, we are committed to providing materials that meet both current and future research and teaching needs at the University of Alberta. <a href="/about/collection" class="bg-transparent">Learn more about our collections</a></p>
+                            <div class="mt-4">
+                                <a class="btn btn-green btn-outline" href="/digital-initiatives/digital-collections">Digitized Collections</a>
+                                <a class="btn btn-green btn-outline" href="/archives">Archives</a>
+                                <a class="btn btn-green btn-outline" href="https://bpsc.library.ualberta.ca">Bruce Peel Special Collections</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-block mb-5 mb-md-0">
+                    <div class="card rounded-0 border-0 bg-transparent h-100 d-flex flex-column justify-content-center align-items-center"><img alt="" class="card-img rounded-0" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/671_06309-1.jpg"></div>
+                </div>
+            </div>
+<div class="row mt-0 mb-5 ">
+                    <div class="col-12 col-sm">
+                                    
+                                            
+                                    
+    <div class="row" id="homepage-our-campus">
+<div class="col">
+<p class="fs-4"><span class="display-2 text-primary">Our Library Locations</span> Find your perfect study space, use our state-of-the-art media facilities, or talk to our expert staff members. Our libraries are here to help you succeed in your academic endeavours. </p>
+<a class="PLACE-HOLDER-LINK-STYLE fw-bold" href="/hours-locations">Hours + Locations</a></div>
+</div>
+<div class="row row-cols-3 row-cols-md-6 justify-content-end g-2 g-md-4">
+<div class="col"><a href="/locations/sperber"><img alt="Sperber" height="900" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/sperber.jpg" width="900"></a></div>
+  <div class="col"><a href="/locations/rutherford"><img alt="Rutherford South" height="900" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/hall.jpg" width="900"></a></div>
+  <div class="col"><a href="/locations/dsc"><img alt="DSC" height="900" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/dsc.jpg" width="900"></a></div>
+</div>
+                                                                   </div>
+                            </div>
+<div class="row mt-0 mb-5 row-full-width-no-padding">
+                    <div class="col-12 col-sm">
+                              
+    <div class="carousel slide mb-0 mt-0" data-bs-ride="carousel" id="carousel-UAlberta">
+<div class="carousel-indicators"><button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carousel-UAlberta" type="button" aria-current="true"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carousel-UAlberta" type="button"></button> <button aria-label="Slide 6" data-bs-slide-to="5" data-bs-target="#carousel-UAlberta" type="button"></button> </div>
+<div class="carousel-inner">
+
+  <div class="carousel-item active"><span class="carousel-feature">5.8 million +</span> <br> <span class="long-feature">print + electronic titles</span></div>
+     <div class="carousel-item"><span class="carousel-feature">2.2 million +</span> <br><span class="long-feature">ebooks</span></div>
+   <div class="carousel-item"><span class="carousel-feature">565,000+</span> <br> annual visitors</div>
+   <div class="carousel-item"><span class="carousel-feature">1,400+</span> <br> <span class="long-feature">online databases</span></div>
+   <div class="carousel-item"><span class="carousel-feature">66</span> <br> <span class="long-feature">bookable spaces</span></div>
+  <div class="carousel-item"><span class="carousel-feature">8</span> <br> library locations</div>
 
 
-<script src="https://ualberta.libanswers.com/load_chat.php?hash=9890352bfb1cefe26defed1035893c23"></script>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-UAlberta" type="button"> <span aria-hidden="true" class="carousel-control-prev-icon fas fa-chevron-left"></span> <span class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-UAlberta" type="button"> <span aria-hidden="true" class="carousel-control-next-icon fas fa-chevron-right"></span> <span class="visually-hidden">Next</span> </button></div>
+                   </div>
+                                                                    </div>
+                            </div>
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <h2 class="text-uppercase" id="ual-title-news">News, Events &amp; Workshops</h2>
+              </div><div class="col-md-6 mt-3">
+              
+                             <div class="row white ms-4">
+ <div class="col-md-8">    
+                        <p class="p-2 pe-0 mb-0"><span class="fw-bold">Library Services Platform Migration</span> The Library will introduce a new way to search in July 2025!</p>
+    </div>
+                                <div class="col-md-4 pt-2"><a href="/about/projects/lsp" class="btn btn-green btn-square w-100 m-0">about the migration project</a>
+                         </div>    
+            
+              </div></div>         
+                     
+</div>
+                  <div class="row news-events g-2">
+                    
+                  <div class="col-md-6 mb-4">
+                   <div class="row" id="latest-posts">
+                      <!-- NEWS ITEMS are pulled into this div -->
+                    </div> 
+                      </div>
+
+                  <div class="col-md-6 mb-4">
+<div class="row h-100">
+  <div class="col-md-12 ms-4">
+                  
+                            <div class="card h-97 bg-grey">
+                               <div class="py-3 px-2">
+                              <span class="card-title h3">Upcoming Events &amp; Workshops</span>  
+                            <div id="api_upc_cid_iid3750"></div><script src="https://ualberta.libcal.com/api_events.php?m=upc&cid=&audience=&c=&d=&l=4&tar=0&simple=ul_date&context=object&format=js"> </script>
+                    </div>
+                       </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="row mt-0">
+                  <div class="col-md-6">
+                    <a class="btn btn-green btn-outline" href="https://news.library.ualberta.ca/">All News</a>
+                      </div>
+                       <div class="col-md-6 ps-2">
+                    <a class="btn btn-green btn-outline ms-5" href="https://ualberta.libcal.com/calendar/events-exhibits/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0">All Events &amp; Workshops</a>
+                      </div>
+                  </div>
+                  </div>
+
+[text translated-url]

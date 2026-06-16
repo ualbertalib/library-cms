@@ -2,12 +2,24 @@
 ---
 label: Sperber
 layout: non-rich-text
-target_page: 
+target_page:
 categories: []
 is_published: true
-position: 11
+position: 10
+[text translated-url]
+
 [text_area content]
-  {{ cms:snippet hours-cal-style }} 
+    <style>
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-7931, .s-lc-w-lid-7918>.s-lc-w-name {display:none;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-time, .s-lc-allday{font-weight:bold;} 
+  td.s-lc-w-name{padding:5px 5px 5px 0;}
+  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-65px;}
+      .box{background-color:#fff; padding:10px 20px;}
+      
+ /* hiding dash that shows when subdept has no hours */
+.s-lc-w-lid-8455 .s-lc-w-time .no_time, .s-lc-w-lid-8455 .s-lc-w-name { display: none; }
+</style>
 
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
@@ -16,76 +28,148 @@ position: 11
 <li aria-current="page" class="breadcrumb-item active">Sperber Library</li>
 </ol>
 </nav>
-
+<div class="page-title">
 <h1>
- Geoffrey + Robyn Sperber <span class="h3">Health Sciences Library</span>
+Sperber Library
 </h1>
-<div class="alert alert-info alert-dismissible fade show" role="alert">
-  <i class="fa-sharp fa-solid fa-circle-info"></i> Monday to Thursday from 7pm to 9pm ECHA is only accessible with a ONECard at the NW doors (doors closest to the Jubilee Auditorium). ECHA NE (main) doors lock at 7pm. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
-    
 </div>
-<div class="row">
-  <div class="col-md-4 ual-location-actions pr-4">
 
-    <p>The Sperber Health Sciences Library offers modern library services and collections, features an exhibit display of the <a href="https://ualberta.ca/museums/museum-collections/dentistry-collection.html">Dentistry Museum Collection</a>, and accommodates various learning and collaboration needs. <a href="#more">More about the Sperber Library</a></p>
-   <a href=" https://ualberta.libcal.com/reserve/spaces/health" class="btn ual-btn mb-3"><i class="fa-solid fa-chalkboard-user mr-2"></i> Book Study Space in Sperber</a>
-    <a href="https://www.ualberta.ca/maps.html?l=53.521607,-113.526508&z=17&campus=north_campus&b=echa" class="btn ual-btn mb-3" target="_blank"><i class="fa-solid fa-map-location-dot mr-2"></i> Map and Directions to Sperber</a>
-    <a href="/services/study-area-directory/#sperb" class="btn ual-btn mb-3"><i class="fa-solid fa-headphones mr-2"></i> Sperber Noise / Study Zones</a>
-        <a href="/locations/sperber/indigenous-learning-space" class="btn ual-btn mb-3"><img src="https://sites.library.ualberta.ca/wp-content/uploads/2023/08/bear.png" class="pr-2" width="30px" />Indigenous Learning Space</a>
-    <a href="/services/3dprinting" class="btn ual-btn mb-3"><i class="fa-solid fa-cubes mr-2"></i>Sperber Library - 3D Printing</a>
-     <a href="/locations/sperber/media-lab" class="btn ual-btn mb-3"><i class="fa-solid fa-headphones mr-2"></i> Sperber Library - Media Lab</a>
-    <a href="/locations/sperber/virtual-reality-lab" class="btn ual-btn mb-3"><i class="fa-solid fa-vr-cardboard mr-2"></i> Sperber Library - Virtual Reality Lab</a>
-   
 
+<h2>Visit the library</h2>
+
+
+<div class="row g-0">
+  <div class="col-md-5">
     
-     </div>
-  <div class="col-md-8 mx-auto">
-  
-    <h2>
-      Sperber Hours 
-    </h2>
-   
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
-<div id="s_lc_mhw_3750_7918"></div> 
+ 
+<img src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/sperber-library-51-2800x1700-1-scaled.jpg" alt="Sperber Library" class="h-md-100">
+
+ </div>
+  <div class="col-md-3">
+<div class="box border h-100">
+<h3>
+  Today's Hours
+</h3>
+<script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
+<div id="s_lc_tdh_3750_7918"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_7918 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_7918"), { iid: 3750, lid: 7918, months: 4, show_past: 2,  systemTime: false }); 
+var s_lc_tdh_3750_7918 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_7918"), { iid: 3750, lid: 7918 }); 
 });
-</script>
+</script> 
+  
+<p>
+ 
+ <a href="/locations/sperber/sperber-monthly-hours">Monthly hours calendar >></a> </p>
+{{ cms:snippet upcoming-closures}}
+  </div>
+      </div>
+ <div class="col-md-4 ps-4">
+   <p class="mb-2 small pt-3 pt-md-0">
+  <i class="fa-solid fa-phone me-2"></i><a href="tel:780-492-7947">780-492-7947</a></p>
+    <p class="mb-2 small"><i class="fa-solid fa-envelope me-2"></i><a href="/ask-us/email-us">Email us</a></p>
+ <p class="mb-2 small"><i class="fa-solid fa-user-group me-2"></i><a href="https://guides.library.ualberta.ca/az/library-staff-directory?cf=202:Sperber%20Health%20Sciences%20Library">Sperber staff</a></p>
+   
+    <p class="mb-2 small">
+      
+      <strong>Sperber Library</strong><br/>
+    
+     1-120 Dianne and Irving Kipnes Health Research Academy<br/>
+      11405 87 Avenue NW<br/>
+      Edmonton, AB, T6G 1C9<br/>
+       <a href="https://www.ualberta.ca/en/maps.html?l=53.521607,-113.526508&z=17&campus=north_campus&b=kipnes">View on campus map</a>  <br/>
+    </p>
+ 
+   <p class="mt-2 mt-md-5 mb-2"> <i class="fa-brands fa-accessible-icon me-2"></i><a href="/services/accessibility-services/locations-accessibility#sperber">Sperber accessibility</a></p>
+   <p><i class="fa-solid fa-books me-2"></i><a href="/services/borrowing/returning-renewing#north">Book returns</a></p>
   </div>
   </div>
-
-
-
-
 
 <hr/>
-<div class="row mt-4">
-  <div class="col-md-8">
-    <p id="more"><img src="https://www2.library.ualberta.ca/2015assets/sperber-89.jpg" class="rounded float-start my-2 me-3" width="320px"/>The entrance to the  Health Sciences Library is on the ground level of the Edmonton Clinic Health Academy (ECHA) building directly across from the Starbucks. Do you have questions? <a href="/askus">Ask Us</a> for help! </p>
-  
-    {{ cms:snippet policies-location }}
+<div class="row">
+  <h2>Find a Study Space</h2>
+  <div class="col-md-4">
     
+    <h3>Study Rooms</h3>
 
-   <p>
-     You can also find subject specific information in our  <a href="https://guides.library.ualberta.ca/health">Health Sciences Guides</a>.
+<p>Need a space for you or your group to work? There are 22 bookable study rooms 
+  available on the main and lower level of Sperber Library.</p>
+<a href="https://ualberta.libcal.com/reserve/spaces/health" class="btn btn-green btn-square mt-2">Book a study room</a>
+  </div>
+  <div class="col-md-4">
+     <h3>
+        Indigenous Learning Space
+       </h3>
+     <p class="mb-3">
+       The Indigenous Learning Space is a meeting place in which the community can learn through Indigenous pedagogies and ways of knowing. Booking is required.<br>
+     <a href="/locations/sperber/indigenous-learning-space" class="btn btn-green btn-square mt-2">more about The Indigenous Learning Space</a>
+        </p>
+  </div>
+  <div class="col-md-4">
+    <h3>
+      Computer Workstations
+    </h3>
+    <p>
+      Available on a first come, first serve basis, Sperber Library Windows computing workstations located on the main floor.<br>
+      <a href="/services/technology/workstations" class="btn btn-green btn-square mt-2">more about computer workstations</a>
     </p>
- </div>
+  </div>
 
- <div class="col-md-4 ">   
-   <div class="ual-well">
-     
- 
-  <h4>Sperber Library</h4>
-      <p>1-120 Edmonton Clinic Health Academy (ECHA)<br/>
-11405 87 Avenue NW<br/>
-Edmonton, Alberta T6G 1C9 </p>
-
+<hr/>
+     <h2>
+    Explore Sperber
+     </h2>
+   <div class="col-md-8">
+    <h3>
+      Mediated 3D Printing
+    </h3>
+    <p>
+      Sperber Library is one of two libraries that offer mediated 3D printing services. This service is free to University of Alberta students, faculty, and staff wanting to print a 3D object for educational purposes.<br>
+      <a href="/services/3dprinting" class="mt-2">More about mediated 3D Printing</a>
+    </p>
     
-   <p><a href="tel:780-492-7947"> 780-492-7947</a></p>
-<p><a href="https://library.ualberta.ca/ask-us/email-us">Email Us</a></p>   
- <a href="/staff/?building=sperber" class="btn ual-btn"><i class="fa-solid fa-users-medical mr-1"></i> Sperber Staff</a>
-   </div>
-     </div>
-[text translated-url]
+   <h3>
+     Media Lab
+    </h3>
+    <p class="mb-3">
+      The Media Lab is fully equipped with state-of-the-art equipment for your audio and video recording needs. Located in room L1-148. Booking is required.<br>
+      <a href="/locations/sperber/media-lab" class="mt-2">More about media lab</a>
+    </p>
+ 
+    <h3>
+      Virtual Reality (VR) Lab
+    </h3>
+    <p class="mb-3">
+      A versatile space for learning, experimentation, and immersive content exploration. Located in room L1-150A. Booking is required.<br>
+      <a href="/locations/sperber/virtual-reality-lab" class="mt-2">More about VR lab</a>
+    </p>
+     
+      <h3>
+      Indigenous Healing Collection
+    </h3>
+     <p>
+       The Indigenous Healing Collection is located on the main floor of the Sperber Library and encompasses works about the peoples of the land now known as Canada, as well as those from regions where indigenous cultures were overshadowed by processes like colonization.<br>
+        <a href="https://search.library.ualberta.ca/discovery/search?query=any,contains,9*,AND&tab=LibraryCatalog&search_scope=sperber&vid=01UOA_INST:UOA&facet=location_code,include,9116%E2%80%93112461500009116%E2%80%93indig%20heal&lang=en&mode=advanced&offset=0" class="mt-2">Browse the collection</a>
+     </p>
+ 
+  </div>
+</div>
+
+<hr/>
+<div class="row">
+  <div class="col-md-10">
+<h2>About the Library</h2>
+<p>Named after Geoffery + Robyn Sperber, the Sperber Health Sciences Library provides collections and services in support of the research and teaching of the faculties in the College of Health Sciences: Nursing, Medicine + Dentistry, Pharmacy + Pharmacutical Sciences and Kinesiology, Sport + Recreation. Featuring an exhibit display of the <a href="https://www.ualberta.ca/en/museums/museum-collections/dentistry-collection.html">Dentistry Museum Collection</a>. Sperber Library also accommodates various learning and collaboration needs.</p>
+
+
+<p class="mb-2">Policies:</p>
+    <ul>
+  <li> <a href="/about/policies/community-expectations/">Community Expectations</a></li>
+   <li>  <a href="/services/study-area-directory">Study Area Directory + Noise Zones</a></li>
+   <li> <a href="/about/policies/food-and-drink">Food + Drink Policy</a></li>
+    </ul>
+ 
+ 
+  </div>
+</div>
+
