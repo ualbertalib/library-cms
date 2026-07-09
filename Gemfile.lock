@@ -100,7 +100,6 @@ GEM
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
     base64 (0.3.0)
-    benchmark (0.5.0)
     bigdecimal (4.1.2)
     bindex (0.8.1)
     bootsnap (1.24.6)
@@ -153,9 +152,7 @@ GEM
     htmlentities (4.4.2)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    image_processing (1.14.0)
-      mini_magick (>= 4.9.5, < 6)
-      ruby-vips (>= 2.0.17, < 3)
+    image_processing (2.0.2)
     io-console (0.8.2)
     irb (1.18.0)
       pp (>= 0.6.0)
@@ -195,8 +192,7 @@ GEM
     mimemagic (0.4.3)
       nokogiri (~> 1)
       rake
-    mini_magick (5.2.0)
-      benchmark
+    mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
     minitest (6.0.6)
@@ -335,9 +331,6 @@ GEM
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
     ruby-progressbar (1.13.0)
-    ruby-vips (2.2.3)
-      ffi (~> 1.12)
-      logger
     rubyzip (3.4.1)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -424,7 +417,7 @@ DEPENDENCIES
   config
   cssbundling-rails
   htmlentities
-  image_processing (~> 1.14)
+  image_processing (~> 2.0)
   jbuilder (~> 2.15)
   jsbundling-rails
   listen (>= 3.0.5, < 3.11)
