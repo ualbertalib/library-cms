@@ -1,0 +1,38 @@
+[attributes]
+---
+label: Left Navigation French
+app_layout: basic
+position: 8
+[content]
+<div class="row">
+<div class="container">
+{{ cms:textarea breadcrumbs }}
+<div class="row left-nav-row">
+		<div class="nav-wrapper col-12 col-lg-3">
+
+				<button aria-controls="leftNav" aria-expanded="false" class="btn btn-left-nav left-nav-toggle px-4 collapsed" data-bs-toggle="collapse" href="#leftNav" role="button" type="button">Dans cette section</button>
+
+				<div class="left-nav-lists collapse" id="leftNav" style="">
+				
+					<div class="left-nav">
+						{{ cms:textarea sidebar }}					
+					</div>
+				</div>
+			</div>								
+ 	<div class='col-lg-9'> {{ cms:wysiwyg content }}</div>
+</div>
+  </div>
+</div>
+[js]
+
+[css]
+@import "/cms-css/1/english-main.css";
+.left-nav-row .nav-wrapper {
+    margin-top: 1rem;
+}
+.left-nav h3, .left-nav p {
+    padding: 0 20px;
+}
+.left-nav h3{
+	padding-top:10px;
+}

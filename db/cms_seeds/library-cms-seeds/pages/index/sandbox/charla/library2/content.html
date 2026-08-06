@@ -1,0 +1,492 @@
+[attributes]
+---
+label: Library2
+layout: english-main
+target_page:
+categories:
+- sandbox
+is_published: true
+position: 6
+[text translated-url]
+
+[text_area content]
+<Style>
+  /* --- Existing Styles --- */
+  .btn:hover {
+    background-color: #f2cd00;
+    color: black;
+    border-color: #f2cd00; /* Optional: match border to background */
+  }
+  .card {
+    border: none; /* Remove card outlines */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    ;
+  }
+   .card-header {
+    border-bottom: none;
+    border-top: none;
+    background-color: #f2cd00;
+    height: 50px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: none;
+    line-height: .5; /* Reduce line height */
+    box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.08); /* Softer, more subtle shadow */
+    color: #007A33;
+    font-size: .05rem;
+    font-weight: normal;
+  }
+  .cropped-img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+   .list-group-item {
+    border: none !important; /* Removes horizontal lines */
+    background-color: transparent !important; /* Removes grey shading */
+   }
+
+   .list-group-item a {
+    color: #000; /* Optional: make sure links are readable */
+    text-decoration: none;
+   }
+
+   .list-group-item a:hover {
+    text-decoration: underline; /* Optional: visual cue for hover */
+   }
+      .dropdown-toggle {
+       padding-left: 0rem; /* Adjust text padding to the left */
+       padding-right: 5rem; /* Adjust text padding to the right */
+     }
+   .s-lc-w-today { border-spacing: 0; border-collapse: collapse; width: 100%; }.s-lc-w-today td, .s-lc-w-today th { padding: 8px 5px; }
+  .s-lc-w-head { text-align: center; border-bottom: 1px solid #ddd; }
+  .s-lc-w-loading { margin-top: 80px; text-align: center; }
+  .s-lc-w-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+  .s-lc-w-btn { line-height: 1.5; border-radius: 3px; display: inline-block; padding: 3px 6px; margin-bottom: 0; font-size: 13px; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; touch-action: manipulation; cursor: pointer; user-select: none; border: 1px solid #ccc; color: #333; background-color: #fff; }
+  .s-lc-w-btn:active, .s-lc-w-btn:hover { color: #333; background-color: #d4d4d4; border-color: #8c8c8c; }
+  .s-lc-w-previous { float: left;}
+  .s-lc-w-next { float: right; }
+  .s-lc-w-location td { font-weight: bold; }
+  .s-lc-w-department .s-lc-w-name { padding-left: 5px; }
+  .s-lc-w-times { border-bottom: 1px solid #ddd; }
+  .s-lc-w-today-view-link { text-decoration: none; }
+  .s-lc-w-today-view-all { padding: 8px 5px;
+   }
+  #latest-posts .card {
+   background-color: #7BA4DB;
+  }
+
+  /* --- Flexbox Alignment Styles --- */
+   .hours-news-row {
+       display: flex;
+       align-items: stretch; /* Make columns equal height */
+     }
+     .hours-left,
+     .news-right {
+       display: flex; /* Make columns themselves flex containers */
+       flex-direction: column; /* Stack content vertically */
+     }
+
+     /* Wrapper inside left column to manage flex */
+     .hours-content-wrapper {
+       display: flex;
+       flex-direction: column;
+       height: 100%; /* Fill the height of the parent column */
+       flex-grow: 1; /* Allow this wrapper to grow */
+     }
+     /* Make the hours card grow */
+     .hours-card-grow {
+        flex-grow: 1; /* Takes up available space */
+        display: flex; /* Needed if card itself needs internal flex */
+        flex-direction: column; /* Needed if card itself needs internal flex */
+     }
+
+
+     /* Wrapper inside right column (already existed) */
+     .news-right-inner {
+       display: flex;
+       flex-direction: column;
+       height: 100%; /* Fill the height of the parent column */
+     }
+     /* Make the news card grow (already existed) */
+     .news-card-grow {
+       flex-grow: 1;
+       display: flex;
+       flex-direction: column;
+     }
+
+ </Style>
+
+ <div class="row row-full-width bg-grey pb-0 mb-0">
+               <div class="col-4 d-none d-lg-block">
+                   <div class="card rounded-0 border-0 bg-transparent h-100 d-flex flex-column justify-content-center align-items-center shadow-none"><img alt="" class="card-img rounded-0" src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/UA_057_RGB.png"></div>
+               </div>
+               <div class="col-md col-12">
+                   <div class="h-100 d-flex flex-column justify-content-center">
+                       <div class="py-5">
+                           <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
+                               <h2 class="text-uppercase">Search the Library</h2>
+
+                           </div>
+  <form action="https://searchbox.ebsco.com/search/"  class="ebsco-single-search">
+   <input name="schemaId" value="search" type="hidden" />
+   <input name="custid" value="s5940188" type="hidden" />
+   <input name="groupid" value="main" type="hidden" />
+   <input name="profid" value="eds" type="hidden" />
+   <input name="authtype" value="ip" type="hidden" />
+   <input name="proxy" value="https://login.ezproxy.library.ualberta.ca/login?url={targetURL}" type="hidden" />
+   <input name="scope" value="site" type="hidden" />
+   <input name="site" value="eds-live" type="hidden" />
+   <input name="direct" value="true" type="hidden" />
+
+
+  <label class="mb-1" for="catalogOnly">
+       <input class="eb-search__input" id="catalogOnly" name="limiter-fc" value="Y" type="checkbox" />
+          <span class="eb-search__span small">
+   Limit search to library catalogue</span>
+     </label>
+       <div class="search-box">
+
+       <div class="input-wrapper d-flex">
+
+
+       <input
+
+            id="eb-sbb-search-input" name="bquery" type="text" placeholder="Search articles, books, journals and media" aria-label="Search articles, books, journals and media" /> </div>
+     <button class="submit-button" type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass" ></i> </button>
+
+
+        </div>
+  <div class="mt-1">
+
+  <a class="small" href="https://searchbox.ebsco.com/search/?authtype=ip&schemaId=search&custid=s5940188 &groupid=main&profid=eds&proxy=https%3A%2F%2Flogin.ezproxy.library.ualberta.ca%2Flogin%3Furl%3D%7BtargetURL%7D&setup=1&scope=site&site=eds-live&direct=true">Advanced Search</a>  |  <a class="small" href="/guest">Guest Catalogue</a> | <a href="https://guides.library.ualberta.ca/UALibrariesSearching" class="small">Search Guide</a>  </div>
+  </form>
+
+  <div class="mt-1">
+  <a class="btn btn-outline shadow rounded" href="https://guides.library.ualberta.ca/az/databases">Databases</a>
+  <a class="btn btn-outline shadow rounded" href="https://resolver.library.ualberta.ca/resolver/journalsearch">
+   eJournals</a>
+  <a class="btn btn-outline shadow rounded" href="/google-scholar">Google Scholar</a>
+  <a class="btn btn-outline shadow rounded" href="/subject-guides">Subject Guides</a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="row pt-5 pb-2">
+  <div class="col">
+  <h2 class="text-uppercase">Featured Services</h2>
+  <div class="mt-4 ml-1">
+   <a class="btn btn-green btn-square shadow" href="/how-to-use-the-library">How to Use the Library</a>
+   <a class="btn btn-green btn-square shadow" href="https://guides.library.ualberta.ca/citing">Citation Help</a>
+   <a class="btn btn-green btn-square shadow" href="/services/book-study-spaces">Book a Study Room</a>
+   <a class="btn btn-green btn-square shadow" href="/course-materials">Course Materials + Reading Lists</a>
+                </div>
+               </div>
+             </div>
+
+
+  <div class="container-fluid py-4">
+   <div class="row g-2">
+
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Visit Us</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseVisit" aria-expanded="false" aria-controls="collapseVisit">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseVisit">
+           <div class="card-body">
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="#">Book a Study Space</a></li>
+               <li class="list-group-item"><a href="#">Library Hours</a></li>
+               <li class="list-group-item"><a href="#">Library Locations</a></li>
+               <li class="list-group-item"><a href="#">Study Spaces Explained</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Consultations + Workshops</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseConsultations" aria-expanded="false" aria-controls="collapseConsultations">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseConsultations">
+           <div class="card-body">
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="#">Book Consultation</a></li>
+               <li class="list-group-item"><a href="#">Workshops</a></li>
+               <li class="list-group-item"><a href="#">GIS Support</a></li>
+               <li class="list-group-item"><a href="#">Tutorials</a></li>
+               <li class="list-group-item"><a href="#">Events Calendar</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Library Basics</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseLibraryBasics" aria-expanded="false" aria-controls="collapseLibraryBasics">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseLibraryBasics">
+           <div class="card-body">
+             <div class="row">
+               <div class="col-md-6">
+                 <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><a href="#">Accessibility Services</a></li>
+                   <li class="list-group-item"><a href="#">Account Inquiry</a></li>
+                   <li class="list-group-item"><a href="#">Alumni Services</a></li>
+                   <li class="list-group-item"><a href="#">Ask Us</a></li>
+                   <li class="list-group-item"><a href="#">Borrower Services</a></li>
+                 </ul>
+               </div>
+               <div class="col-md-6">
+                 <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><a href="#">L-Pass</a></li>
+                   <li class="list-group-item"><a href="#">Checkout</a></li>
+                   <li class="list-group-item"><a href="#">Off-Campus Access</a></li>
+                   <li class="list-group-item"><a href="#">Reference Services</a></li>
+                   <li class="list-group-item"><a href="#">Tutorials</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Research + Publishing Support</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseResearch" aria-expanded="false" aria-controls="collapseResearch">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseResearch">
+           <div class="card-body">
+             <div class="row">
+               <div class="col-md-6">
+                 <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><a href="#">APC Support</a></li>
+                   <li class="list-group-item"><a href="#">Citation Guides</a></li>
+                   <li class="list-group-item"><a href="#">Consultations</a></li>
+                   <li class="list-group-item"><a href="#">Copyright</a></li>
+                   <li class="list-group-item"><a href="#">ERA</a></li>
+                 </ul>
+               </div>
+               <div class="col-md-6">
+                 <ul class="list-group list-group-flush">
+                   <li class="list-group-item"><a href="#">Open Access</a></li>
+                   <li class="list-group-item"><a href="#">Publishing</a></li>
+                   <li class="list-group-item"><a href="#">RDM</a></li>
+                   <li class="list-group-item"><a href="#">Research Impact</a></li>
+                   <li class="list-group-item"><a href="#">Systematic Reviews</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Digital Preservation + Collections</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapsePreservation" aria-expanded="false" aria-controls="collapsePreservation">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapsePreservation">
+           <div class="card-body">
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="#">Data Services</a></li>
+               <li class="list-group-item"><a href="#">Digital Collections</a></li>
+               <li class="list-group-item"><a href="#">Digital Preservation</a></li>
+               <li class="list-group-item"><a href="#">Digitization</a></li>
+               <li class="list-group-item"><a href="#">Web Archiving</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Technology</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseTechnology" aria-expanded="false" aria-controls="collapseTechnology">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseTechnology">
+           <div class="card-body">
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="#">3D Printing</a></li>
+               <li class="list-group-item"><a href="#">Media Equipment</a></li>
+               <li class="list-group-item"><a href="#">Workstations</a></li>
+               <li class="list-group-item"><a href="#">AI Tools</a></li>
+               <li class="list-group-item"><a href="#">DSC Resources</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-md-6">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">Teaching Support</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseTeaching" aria-expanded="false" aria-controls="collapseTeaching">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseTeaching">
+           <div class="card-body">
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="#">eClass Integration</a></li>
+               <li class="list-group-item"><a href="#">Copyright</a></li>
+               <li class="list-group-item"><a href="#">Course Materials</a></li>
+               <li class="list-group-item"><a href="#">OER</a></li>
+               <li class="list-group-item"><a href="#">Library Instruction</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+
+   <div class="col-md-6 mb-5">
+       <div class="card">
+         <div class="card-header bg-grey d-flex justify-content-between align-items-center">
+           <h2 class="mb-0">About</h2>
+           <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+             data-bs-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
+             <i class="fa-solid fa-chevron-down"></i>
+           </button>
+         </div>
+         <div class="collapse" id="collapseAbout">
+           <div class="card-body">
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><a href="#">3D Printing</a></li>
+               <li class="list-group-item"><a href="#">Media Equipment</a></li>
+               <li class="list-group-item"><a href="#">Workstations</a></li>
+               <li class="list-group-item"><a href="#">AI Tools</a></li>
+               <li class="list-group-item"><a href="#">DSC Resources</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+
+
+
+
+  <div class="container-fluid px-2 mt-5">
+   <div class="row g-0 hours-news-row"> <div class="col-lg-4 hours-left" style="background-color: #275D38;">
+       <div class="p-4 pe-0 hours-content-wrapper">
+         <h2 class="text-uppercase mb-2 mt-1" style="color: #F2CD00;">Hours</h2>
+         <div class="card shadow rounded bg-grey hours-card-grow">
+           <div class="card-body d-flex flex-column justify-content-between"> <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+             <script src="https://ualberta.libcal.com/js/hours_today.js"></script>
+             <div id="s_lc_tdh_3750_0"></div>
+             <script>
+               $(function () {
+                 var s_lc_tdh_3750_0 = new $.LibCalTodayHours($("#s_lc_tdh_3750_0"), {
+                   iid: 3750,
+                   lid: 0,
+                 });
+               });
+             </script>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <div class="col-lg-8 news-right" style="background-color: #275D38;">
+       <div class="p-4 news-right-inner"> <h2 class="text-uppercase mb-2 mt-1" style="color: #F2CD00;">News, Events &amp; Workshops</h2>
+         <div class="d-flex flex-column flex-grow-1">
+
+
+           <div class="card p-3 mb-3" style="background-color: #F2CD00;">
+               <div class="row g-0">
+                 <div class="col-md-8">
+                   <p class="p-3 pe-0 mb-0">
+                     <span class="fw-bold">Library Services Platform Migration</span> The Library will introduce a new way to search in July 2025!
+                   </p>
+                 </div>
+                 <div class="col-md-4 pt-3 d-flex align-items-center justify-content-md-end justify-content-start"> <a href="/about/projects/lsp" class="btn btn-green btn-square shadow w-auto me-3" >about the migration project</a>
+                 </div>
+               </div>
+             </div>
+
+
+
+           <div class="card p-3 mb-3 news-card-grow" style="background-color: #F5F5F5;"> <span class="card-title h3">News</span>
+             <div class="row h-100" id="latest-posts">
+               <div class="col-12"><p>News Item 1...</p><p>News Item 2...</p><p>News Item 3...</p></div>
+             </div>
+           </div>
+
+           <div class="card" style="background-color: #F5F5F5;"> <div class="py-4 px-3">
+               <span class="card-title h3">Upcoming Events &amp; Workshops</span>
+               <div id="api_upc_cid_iid3750"></div>
+               <script src="https://ualberta.libcal.com/api_events.php?m=upc&amp;cid=&amp;audience=&amp;c=&amp;d=&amp;l=4&amp;tar=0&amp;simple=ul_date&amp;context=object&amp;format=js"></script>
+             </div>
+           </div>
+
+         </div> </div>
+     </div>
+
+   </div> </div> <div class="container-fluid bg-ua-gold px-0 py-0 mt-5">
+   <div class="container px-0">
+     <div class="row g-0 align-items-center px-5">
+       <div class="col-lg-8">
+         <h2 class="text-uppercase" id="ual-title-coll">Our Collections</h2>
+         <p>
+           Explore the wealth of knowledge at the University of Alberta Library. Serving the University community and the general public, our vast collections include over 7 million titles and more than 10 million volumes in both print and electronic formats. Our resources support regional, national, and international scholarly needs. With thousands of scholarly journals, comprehensive reference resources, and unique special collections focused on the Canadian prairies and beyond, we are committed to providing materials that meet both current and future research and teaching needs at the University of Alberta.
+           <a href="/about/collection" class="bg-transparent">Learn more about our collections</a>
+         </p>
+         <div class="mt-4">
+           <a class="btn btn-green btn-outline shadow" href="/digital-initiatives/digital-collections">Digitized Collections</a>
+           <a class="btn btn-green btn-outline shadow" href="/archives">Archives</a>
+           <a class="btn btn-green btn-outline shadow" href="https://bpsc.library.ualberta.ca">Bruce Peel Special Collections</a>
+         </div>
+       </div>
+       <div class="col-lg-4 text-center">
+         <img src="https://sites.library.ualberta.ca/wp-content/uploads/2024/06/671_06309-1.jpg" alt="Collection Image" class="img-fluid rounded-0" />
+       </div>
+     </div>
+   </div>
+  </div>
