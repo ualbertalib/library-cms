@@ -152,7 +152,7 @@ GEM
     htmlentities (4.4.2)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    image_processing (2.0.2)
+    image_processing (2.0.3)
     io-console (0.8.2)
     irb (1.18.0)
       pp (>= 0.6.0)
@@ -228,7 +228,7 @@ GEM
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
-    passenger (6.1.5)
+    passenger (6.1.8)
       logger (>= 1.7.0)
       rack (>= 1.6.13)
       rackup (>= 1.0.1)
