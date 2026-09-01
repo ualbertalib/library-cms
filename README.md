@@ -48,3 +48,25 @@ So if you make a change to the CMS seed data, you must drop the test DB for your
 ![image](https://github.com/user-attachments/assets/28428b92-5e93-4cfc-860a-c51692087bdd)
 
 ![image](https://github.com/user-attachments/assets/47d199ff-0712-43ac-b997-0d8633c4eb83)
+
+## Updating seeds
+
+Note: The current version of the CMS contains a bug in the import rake task where if two seeds have the same last directory in the path, for example, "a/b/ccc" and "x/y/ccc" then one will overwrite the other. Given the pending end-of-life of this CMS, an update to a fixed fork of the CMS Gem is not being undertaken. Instead, the seed data is being modified to account for the bug to allow testing of the paths that remain after the partial migration away from this platform.
+
+To export seeds, run the following on the production server which will export the data into the "db/cms_seeds/tmp/2026-09-01" directory
+
+``` bash
+bundle exec rake comfy:cms_seeds:export[ualberta-libraries,/tmp/2026-09-01/]
+```
+
+Seed import contains a bug where if two routes have the same last directory name in the path, for example "a/b/ccc" and "z/y/ccc" then one is overwritten during import. Therefore, the seeds in the repository remove some paths.
+
+Remove the following directories:
+
++ pages/index/sandbox (to avoid sandbox content collisions with in-use path)
++ pages/index/archived-content
++ pages/index/locations/archives (to avoid conflicts with the pages/index/archives)
+
+Update the `db/cms_seeds/library-cms-seeds` in the git repository.
+
+More details are in `unixDoc/Procedures/ExporingCMS.html`
