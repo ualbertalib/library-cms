@@ -9,17 +9,21 @@ position: 0
 [text translated-url]
 
 [text_area content]
-  {{ cms:snippet hours-cal-style }} 
+ {{ cms:snippet hours-cal-style }} 
 <style>
-.s-lc-mhw-sub-loc, .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-  display:block;
-  }
-  .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-      font-size:11px;
-    margin-top:8px;
-  }
-    
+/* showing sublocation name but hiding top level name */
+.s-lc-mhw-sub-loc > .s-lc-mhw-loc-name { display:block; }
+.s-lc-mhw-loc-name { display:none; } 
+/* hides sublocation hours if they are closed */
+.s-lc-mhw-sub-loc:has(> .s-lc-closed) { display: none; }
+/* hides top level hours if they are custom text - should probably make this byap */  
+.s-lc-mhw-loc:not(.s-lc-mhw-sub-loc)>.s-lc-timetxt { display: none; }    
+/* hiding duplicate onecard access only dept */
+.s-lc-mhw-loc>.loc_8667 { display:none; } 
+/* hiding duplicate basement dept */
+.s-lc-mhw-loc>.loc_8669 { display:none; }  
 </style>
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -30,13 +34,13 @@ position: 0
   
 </nav>
 <h1>
-   Cameron Library Hours - Monthly View
+   Cameron Library Monthly Hours
 </h1>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 <script src="https://ualberta.libcal.com/js/hours_month.js?002"></script> 
 <div id="s_lc_mhw_3750_4610"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_4610 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_4610"), { iid: 3750, lid: 4610, months: 4, show_past: 2,  systemTime: false }); 
+var s_lc_mhw_3750_4610 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_4610"), { iid: 3750, lid: 4610, months: 4, show_past: 1,  systemTime: false }); 
 });
 </script> 

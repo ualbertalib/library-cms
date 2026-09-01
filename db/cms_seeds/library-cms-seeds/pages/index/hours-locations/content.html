@@ -5,24 +5,42 @@ layout: non-rich-text
 target_page:
 categories: []
 is_published: true
-position: 15
+position: 14
 [text_area content]
 <style>
-.ual-btn, .ual-btn-outline{
-  width:13rem;
-  }
-  .list-group-item{
-    background:transparent;
-  }
+.ual-btn, .ual-btn-outline{ width:13rem; }
+.list-group-item{ background:transparent; }
+.sticky-top {   z-index:2; }
 
-  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-8170, .s-lc-w-lid-4679>.s-lc-w-name, .s-lc-w-lid-7732, .s-lc-w-lid-4610>.s-lc-w-name, .s-lc-w-lid-7931, .s-lc-w-lid-7918>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5499>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-6687>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5700>.s-lc-w-name, .s-lc-w-lid-8170, .s-lc-w-lid-5701>.s-lc-w-name, .s-lc-w-lid-8455>.s-lc-w-name {display:none;}
-  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
-  .s-lc-time, .s-lc-allday{font-weight:bold;} 
-  td.s-lc-w-name{padding:5px 5px 5px 0;}
-  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-70px;}
-  .s-lc-w-lid-5500 span.s-lc-allday{margin-left:-55px;}
-  .s-lc-w-lid-7789 .s-lc-w-name{display:none;}
- 
+/* libcal widget css - to confirm */
+.s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-8170, .s-lc-w-lid-4679>.s-lc-w-name, .s-lc-w-lid-4610>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5499>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-6687>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5700>.s-lc-w-name, .s-lc-w-lid-8170, .s-lc-w-lid-5701>.s-lc-w-name, #s-lc-w-loc-7918 { display:none; }
+.s-lc-w-time, .s-lc-w-name { font-size:18px; }
+.s-lc-time, .s-lc-byap { font-weight:bold; } 
+.s-lc-w-lid-8250 span.s-lc-allday{margin-left:0px;}
+.s-lc-w-lid-5500 span.s-lc-allday{margin-left:-55px;}
+.s-lc-w-lid-7789 .s-lc-w-name{display:none;}
+
+/* hiding ruth departments used on calendar page */
+.s-lc-w-lid-8648 { display:none; }
+.s-lc-w-lid-7789 { display:none; }
+.s-lc-w-lid-8170 { display:none; }
+
+/* department padding and font weight */
+.s-lc-w-department th.s-lc-w-name, .s-lc-w-department td.s-lc-w-time { padding-top:8px; font-weight:normal; }
+.s-lc-w-department .s-lc-time { font-weight:normal; }
+.s-lc-w-department th.s-lc-w-name { padding-right:5px; } 
+
+/* hiding duplicate libcal depts */
+.s-lc-w-lid-7732 { display:none; } /* cam onecard */
+.s-lc-w-lid-7931 { display:none; } /* sperb onecard */  
+.s-lc-w-lid-8250 { display:none; } /* cam basement */
+
+/* hiding NAMES of libcal depts used on this page */
+.s-lc-w-lid-8667>.s-lc-w-name { display:none; } /* cam onecard */
+.s-lc-w-lid-8455>.s-lc-w-name { display:none; } /* sperb onecard */ 
+.s-lc-w-lid-8669>.s-lc-w-name { display:none; } /* cam basement */
+.s-lc-w-lid-8673>.s-lc-w-name { display:none; } /* ruth south */
+.s-lc-w-lid-8648>.s-lc-w-name { display:none; } /* ruth north onecard */
 
 </style>
 
@@ -47,41 +65,35 @@ position: 15
     
 <div class="row">
   
-<div class="col-12">
-    
-<div class="text-bg-light p-2">   
-<div class="col">
-<h5>Library Locations by Campus</h5>
-<div class="col"><a href="#north">North Campus</a> | <a href="#csj">Campus Saint-Jean</a> | <a href="#augustana">Augustana Campus</a> | <a href="#south">South Campus</a> | <a href="https://ualberta.libcal.com/hours">All library hours</a>
-  </div>
-</div>
-    </div>
+<div class="col-lg-9">
   
     <div class="row">
       <div class="col">
         <h2 id="north">
           North Campus
         </h2>
-        
-         <div class="row pt-3">
+    
+          <div class="row pt-3">
+      
+       
   <div class="col-sm-2">
   <div class="library-photo">
   <div class="content">
     <img src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/Rutherford-Library220x165.png" alt="Rutherford Library" class="rounded img-fluid ms-lg-3 mb-3">
 		</div>
     </div>
-    </div>
-           
-    <div class="col-sm-9">
+            </div>
+       <div class="col-sm-9">
     <div class="title">
     <div class="content">
       <h3><a href="/locations/rutherford">Rutherford Library</a>
       </h3>
  
- <p class="mb-1">
-   Today's Hours:
-      </p>
-<div id="s_lc_tdh_3750_4679"></div> 
+ 
+     
+   <p class="mb-1" >Rutherford North:</p>
+      <div id="s_lc_tdh_3750_4679"></div> 
+      
 <script>
 $(function(){ 
 var s_lc_tdh_3750_4679 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4679"), { iid: 3750, lid: 4679 }); 
@@ -90,7 +102,16 @@ var s_lc_tdh_3750_4679 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4679"), { iid
       <p class="mt-2">  <a href="https://library.ualberta.ca/locations/rutherford/rutherford-monthly-hours">View monthly hours</a> | <a href="https://ualberta.libcal.com/reserve/rutherford">Book study rooms</a></p>
     </div>
     </div>
-    </div>
+            </div>
+      
+  <!-- div class="col-sm-5">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+The Rutherford Reading Room (South) will be closed on Wednesday, December 17 from 12:00pm to 5:00pm.
+
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div -->
+         </div>        
+         
         </div>
 
         <hr/>
@@ -170,8 +191,11 @@ var s_lc_tdh_3750_7918 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_7918"), { iid
       <h3><a href="/locations/bpsc">Bruce Peel Special Collections</a>
       </h3>
       
-      <p>
+      <p class="mb-1">
         By Appointment
+      </p>
+            <p class="mb-1"><strong>
+        Closed April 1 - September 1</strong>
       </p>
 <p>
   <a href="https://bpsc.library.ualberta.ca">BPSC website</a>
@@ -181,7 +205,7 @@ var s_lc_tdh_3750_7918 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_7918"), { iid
     </div>
         </div>
       </div>
-    </div>
+    
     
       <hr/>  
         <div class="row pt-3">
@@ -211,7 +235,7 @@ var s_lc_tdh_3750_6687 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_6687"), { iid
     </div>
     </div>
     </div>
-    </div>
+    
         <hr/>
          <div class="row pt-3">
   <div class="col-sm-2">
@@ -233,11 +257,11 @@ var s_lc_tdh_3750_6687 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_6687"), { iid
       </p></div></div></div>
       
       <div class="col-sm-6"> <div class="alert alert-warning" role="alert">
-        The Weir Library is now managed by the Law Faculty and you can access the Law Library by tapping your OneCard. The space is open to all University of Alberta students and staff during Law Centre hours. <a href="https://www.ualberta.ca/en/law/student-services/weir-library.html">More information >></a></div></div>
+        The Weir Library is now managed by the Law Faculty and you can access the Law Library by tapping your ONEcard. The space is open to all University of Alberta students and staff during Law Centre hours. <a href="https://www.ualberta.ca/en/law/student-services/weir-library.html">More information >></a></div></div>
   
     </div>
     </div>
-    </div>
+    
   
         <hr/>
         <div class="row pt-3">
@@ -262,7 +286,7 @@ $(function(){
 var s_lc_tdh_3750_5700 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5700"), { iid: 3750, lid: 5700 }); 
 });
 </script>
-      <p class="mt-2"><a href="https://library.ualberta.ca/locations/stjosephs/stjosephs-monthly-hours">View monthly hours</a></p>
+      <p class="mt-2"><a href="https://library.ualberta.ca/locations/stjosephs/stjoseph-monthly-hours">View monthly hours</a></p>
 
     </div>
     </div>
@@ -281,27 +305,43 @@ var s_lc_tdh_3750_5700 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5700"), { iid
 		</div>
     </div>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-4">
     <div class="title">
     <div class="content">
       <h3><a href="/locations/bsj">Bibliothèque Saint-Jean</a>
       </h3>
+
        <p class="mb-1">
    Today's Hours:
       </p>
-          <div id="s_lc_tdh_3750_5701"></div> 
+      <div>
+        <strong>Closed</strong>
+      </div>
+         <!-- <div id="s_lc_tdh_3750_5701"></div> 
 <script>
 $(function(){ 
 var s_lc_tdh_3750_5701 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5701"), { iid: 3750, lid: 5701 }); 
 });
-</script> 
+</script> -->
        <p class="mt-2">  <a href="https://library.ualberta.ca/locations/bsj/bsj-monthly-hours">View monthly hours</a> | <a href="https://ualberta.libcal.com/reserve/bsj?_gl=1*1vsc1xa*_ga*MTk4NDIxOTIxLjE3NTk4NzgyNzU.*_ga_JFD4RYC4BZ*czE3NTk4ODU3NjAkbzIkZzEkdDE3NTk4OTAyMDQkajUkbDAkaDA.">Book study rooms</a></p>
-  
+        
 		</div>
     </div>
     </div>
-    </div>
+<!-- Beginning of announcement section--> 
+<div class="col-sm-6">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+<!--BSJ will be closed on February 19th for emergency water shut-off repairs.-->
+      BSJ will be closed through the spring and summer. <a href="/locations/bsj">For more information >></a>
+<hr>
+<!--La bibliothèque Saint-Jean sera fermée le 19 février en raison d'une coupure d'eau domestique imprévue.-->
+      La bibliothèque Saint-Jean sera fermée durant le printemps et l'été. <a href="/locations/bsj">Pour plus d'informations >></a>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    </div >
+<!-- End announcement -->          
         <hr/>
+
         <h2 id="augustana" class="mt-3">
           Augustana Campus
         </h2>
@@ -359,7 +399,7 @@ var s_lc_tdh_3750_5499 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5499"), { iid
     </div>
     </div>
     </div>
-    </div>
+          </div></div>
         <hr/>
         <div class="row pt-3">
   <div class="col-sm-2">
@@ -382,11 +422,28 @@ var s_lc_tdh_3750_5499 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5499"), { iid
   <a href="/archives">Archives website</a>
       </p>
     </div>
-    </div>
-    </div>
-  </div>
+      </div>
+          </div></div></div>
+<div class="col-3">
 
-                                        
+
+ 
+    <div class="page-links bg-grey p-3 pb-2 mb-3 sticky-top persistent-sidebar d-none d-md-block">
+<h4>Library Locations by Campus:</h4>
+
+       <ul class="list-unstyled">
+<li class="border-bottom py-2"><a href="#north">North Campus</a><br/> 
+       </li>
+          <li class="border-bottom py-2"><a href="#csj">Campus Saint-Jean</a> </li>
+          <li class="border-bottom py-2"><a href="#augustana">Augustana Campus</a> </li>
+         <li class="border-bottom py-2"><a href="#south">South Campus</a></li>
+         <li class="border-bottom py-2"><a href="https://ualberta.libcal.com/hours">All Library Locations</a></li>
+          <li class="pt-2"><a href="/locations/holidays-closures">Holidays + Closures</a></li>
+          
+</ul>
+   </div></div>
+</div>
+
     <script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
 [text title]
 <h1>Hours &amp; Locations<div>      <a href="https://ualberta.libcal.com/hours/">All Library Hours</a> |    <a href="https://www.ualberta.ca/covid-19/campus-safety/index.html">HealthyU Essentials</a></div> </h1>

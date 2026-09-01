@@ -20,26 +20,29 @@ position: 3
 [text_area sidebar]
 {{ cms:snippet borrowing-navigation }}
 [text_area content]
-<h1>
- Returning + Renewing Materials
-    </h1>
-<div class="text-bg-light p-2">   
-<div class="col">
-<h5>On this page</h5>
-<div class="col">Where to return library materials: <a href="#north">North Campus</a> | <a href="#csj">Campus Saint-Jean</a> | <a href="#augustana">Augustana Campus</a> <br/> <a href="#recalls">Recalls</a> | <a href="#reminders">Email Reminders + Notifications</a>
-  </div>
-</div>
-</div>
-    <h2 class="pt-3">
-  Where to return library materials
+<style>
+.sticky-top {
+    z-index:2;
+}
+</style>
+
+<span class="title"><h1 class="title mb-0">
+  
+ 
+ Returning + Renewing Material
+  </h1></span>
+<div class="row">
+<div class="col-md-9">
+   <h2 class="pt-3">
+  Returning library materials
 </h2>
 <p class="mb-0">
   You can return books to any <a href="/hours-locations">University of Alberta Library Service Desks</a> or at any of our conveniently located drop-off boxes.</p>
+  <p class="mt-2">
+    Please advise library staff if you are returning an item by mail by emailing: askus@ualberta.libanswers.com
+  </p>
 <div class="row mt-0">
-<div class="col-12">
-   
 
-    </div>
    <div class="row">
       <h3 id="north" class="mb-0">
           North Campus
@@ -155,7 +158,7 @@ position: 3
             
          
     <h3 id="csj" class="mb-0">
-          Campus Saint-Jean
+          Campus Saint-Jean 
         </h3>
         <h4 class="mb-0"><a href="/locations/bsj">Bibliothèque Saint-Jean Library</a></h4>
              </div>
@@ -227,8 +230,7 @@ position: 3
           Recalls
         </h2>
 
-  <p>
-    If requested by others, your borrowed items will be recalled:</p>
+  <p>Borrowed material will be recalled if requested by another user.</p>
 <ul>
 <li>If a book that you are borrowing gets recalled, you will receive an email with the Subject:  "Library Due Date Update"</li>
 <li>You have 7 days to return the recalled item(s)</li>
@@ -236,21 +238,75 @@ position: 3
   <li>Library account is blocked after 1 day over the recall due date</li>
 </ul>
 <hr/>
-<h2 id="reminders">Email Reminders and Notifications</h2>
+<h2 id="renew">Renewals</h2>
+<p>
+  Renewal dates are dependant on borrower type as outlined on the <a href="https://www.library.ualberta.ca/services/borrowing/loan-periods">Loan Periods website</a>.
+  </p>
+  <ul>
+  <li>Automatic renewals are in place for current U of A student and employees as well as Alumni.
+  </li>
+<li>
+  Other borrowers can renew library material through <a href="https://search.library.ualberta.ca/discovery/account?vid=01UOA_INST:UOA&section=overview">My Account</a> or by the <a href="https://www.library.ualberta.ca/ask-us">Ask Us</a> methods.
+  </li>
+
+  </ul>
+<hr/>
+<h2 id="notice">
+  Notifications
+</h2>
+<p>
+  Email notifications are sent to inform users that items are ready for hold pickup, recalled, coming due and overdue. 
+</p>
+<p>
+  Coming due notifications are sent according to this schedule:
+</p>
 <ul>
     <li>Due date reminder (2 days before)</li>
     <li>Due date reminder (on due date)</li>
+</ul>
+<p>
+  Recalled notifications:
+</p>
+<ul>
+<li>If a book that you are borrowing gets recalled, you will receive an email with the Subject:  "Library Due Date Update"</li>
+<li>You have 7 days to return the recalled item(s) and the new due date will be indicated on the recall notification email.</li>
+<li>Recall notices are not sent for items that are already overdue</li>
+  <li>Library account is blocked after 1 day over the recall due date</li>
+</ul>
+<p>
+  Overdue notifications:
+</p>
+
   <ul>
-    
- 
-    <li>For UA Students, Employees, and Alumni, your item will be automatically renewed if you do not return it. Automatic renewals will continue until the 24-month maximum borrowing period has been reached.</li>
-    <li>Items that have been recalled and have holds on them will not be automatically renewed. You will be notified if other users have holds at time of borrowing or by a recall notice.</li>
-    <li>For NEOS and Community Borrowers, you must manually renew any items that you want to borrow for longer. Any items that have been requested by other library users cannot be renewed. Please check the <a href="/services/borrowing/loan-periods">loan periods</a> for your User Group or <a href="/ask-us">Ask Us</a> to find out renewal limits.</li>
-     </ul>
-    <li>Overdue items reminder (at 2 / 21 / 28 days overdue)</li>
-    <li>31 days overdue (7 days before and on the day the Lost Item Charge will block your account. $150/item.)</li>
-    <li>Recalled item (UA Students &amp; Employees only): 7 days to return it</li>
-    <li>Course Materials (UA Students &amp; Employees only): Due time sent at time of check-out. Block applied at 31 minutes overdue.</li>
-    <li>Hold ready for pick-up</li>
+       <li>Overdue items reminders are sent at 2 / 21 / 28 days overdue mark.</li>
+    <li>At 31 days overdue, items are considered Lost. Overdue reminders are sent 7 days before and on the day the Lost Item Charge will block your account. The charge for Lost items is $150/item.</li>
+   
+    <li>Course Materials (UA Students + Employees only): Due time sent at time of check-out. Block applied at 31 minutes overdue.</li>
+
     <li>Monthly summary of fines owed</li>
 </ul>
+<hr/>
+<p>
+  Use <a href="https://search.library.ualberta.ca/discovery/account?vid=01UOA_INST:UOA&section=overview">My Account</a> to check the status of Loans, Holds + Requests, view Notices and Pay Fees.
+</p>
+</div>
+
+
+<div class="col-3">
+
+    <div class="page-links bg-grey p-3 pb-2 mb-3 sticky-top persistent-sidebar d-none d-md-block">
+<h4>On this page:</h4>
+
+       <ul class="list-unstyled">
+
+          <li class="border-bottom py-2"><a href="#recalls">Recalls</a></li>
+         <li class="border-bottom py-2"><a href="#renew">Renewals</a></li>
+          <li class="pt-2"><a href="#notice">Notifications</a></li>
+          
+</ul>
+    </div>
+</div>
+    
+</div>
+
+

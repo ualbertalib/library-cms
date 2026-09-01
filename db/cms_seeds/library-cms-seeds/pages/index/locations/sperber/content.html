@@ -1,7 +1,7 @@
 [attributes]
 ---
 label: Sperber
-layout: non-rich-text
+layout: english-main
 target_page:
 categories: []
 is_published: true
@@ -10,7 +10,7 @@ position: 10
 
 [text_area content]
     <style>
-  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-7931, .s-lc-w-lid-7918>.s-lc-w-name {display:none;}
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-7918>.s-lc-w-name {display:none;}
   .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
   .s-lc-time, .s-lc-allday{font-weight:bold;} 
   td.s-lc-w-name{padding:5px 5px 5px 0;}
@@ -19,8 +19,15 @@ position: 10
       
  /* hiding dash that shows when subdept has no hours */
 .s-lc-w-lid-8455 .s-lc-w-time .no_time, .s-lc-w-lid-8455 .s-lc-w-name { display: none; }
-</style>
 
+/* department padding and font weight */
+.s-lc-w-department th.s-lc-w-name, .s-lc-w-department td.s-lc-w-time { padding-top:8px; font-weight:normal; }
+
+/* hiding duplicate onecard access only dept */  
+.s-lc-w-lid-7931 { display:none; }  
+</style>
+<div class="row">
+<div class="container">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -58,7 +65,7 @@ var s_lc_tdh_3750_7918 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_7918"), { iid
 });
 </script> 
   
-<p>
+<p class="mt-2" >
  
  <a href="/locations/sperber/sperber-monthly-hours">Monthly hours calendar >></a> </p>
 {{ cms:snippet upcoming-closures}}
@@ -173,3 +180,4 @@ var s_lc_tdh_3750_7918 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_7918"), { iid
   </div>
 </div>
 
+  </div></div>

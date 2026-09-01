@@ -101,6 +101,7 @@ var qsRegex;
 var filterFns = {};
 var $grid = $('.grid').isotope({
   itemSelector: '.item',
+  layoutMode: 'vertical', 
   filter: function() {
     var $this = $(this);
     var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
@@ -400,4 +401,10 @@ footer a:hover{
 }
 .bg-peel{
   background-color:#007c41;
+}
+.grid .item {
+  width: 80%;
+  float: none;
+  display: block;
+  margin-bottom: 15px; /* adjust spacing as needed */
 }

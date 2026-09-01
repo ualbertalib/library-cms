@@ -5,19 +5,20 @@ app_layout: basic
 position: 2
 [content]
 <div class="ualberta-alert alert alert-warning border-0" id="ualbertaAlert" role="alert">
-  <div class="d-flex">
-  <p class="mb-0 lh-base">    
-    <i class="fa-solid fa-circle-info me-3"></i> 
-<p>
-  La bibliothèque de l'Université de l'Alberta sera fermée le 30 septembre à l'occasion de la Journée nationale de la vérité et de la réconciliation.
-           Le sous-sol de la bibliothèque Cameron sera ouverte (par accès avec ONEcard uniquement).
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button>
-    </p>
-<br/>
+  <div class="row">
+    
+  
+  <p class="mb-1">
+    <i class="fas fa-exclamation-triangle mr-1"></i> 
+
+    <strong>Horaire de printemps et d'été</strong> : à compter du 26 avril 2026, la bibliothèque de l'Université de l'Alberta passera à l’horaire de printemps et d'été.<br/><br/>
+
+Pour plus de détails, rendez-vous sur la page <a href="/locations/holidays-closures">jours fériés et fermetures</a>.
+
+   
+    <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button></p>
      </div>
-  </div>  
-
-
+</div>
 <header>
             <div class="wca">
                 <div class="blade-wrapper standard">
@@ -139,7 +140,7 @@ position: 2
                             <a href="/services/book-study-spaces">Réserver une salle d'étude</a>
                         </li>
                       <li>
-                            <a href="/services/accessibility-services">Accessibilité</a>
+                            <a href="/accessibility">Accessibilité</a>
                         </li>
                         <li>
                             <a href="/about/policies/study-and-work-space">Bruit + zones d'étude</a>
@@ -190,7 +191,7 @@ position: 2
                             <a href="/about/policies">Nos politiques</a>
                         </li>
                                               <li>
-                            <a href="/privacy">Déclaration de confidentialité</a>
+                            <a href="https://www.ualberta.ca/en/privacy.html">Déclaration de confidentialité</a>
                         </li>
                        <li>
                             <a href="https://www.ualberta.ca/faculty-and-staff/copyright/index.html">Droit d'auteur</a>
@@ -329,7 +330,7 @@ $(function() {
 async function fetchLatestBlogPosts() {
   try {
     // Fetch data from the API endpoint excluding "FRANÇAIS" category
-    const response = await fetch('https://news.library.ualberta.ca/wp-json/wp/v2/posts?categories=122&per_page=2&_embed');
+    const response = await fetch('https://news.library.ualberta.ca/wp-json/wp/v2/posts?categories=122,643&per_page=2&_embed');
     if (!response.ok) {
       throw new Error('Failed to fetch blog posts');
     }

@@ -11,20 +11,17 @@ position: 0
 [text_area content]
 {{ cms:snippet hours-cal-style }} 
 <style>
-.s-lc-mhw-sub-loc, .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-  display:block;
-  }
-  .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-      font-size:11px;
-    margin-top:8px;
-  }
-    
+/* showing sublocation name but hiding top level name */
+.s-lc-mhw-sub-loc > .s-lc-mhw-loc-name { display:block; }
+.s-lc-mhw-loc-name { display:none; } 
 </style>
+
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
 <li class="breadcrumb-item"><a href="/locations">Hours + Locations</a></li>
-  <li class="breadcrumb-item"><a href="/locations/Sperber">St. Joseph's Library</a></li>
+  <li class="breadcrumb-item"><a href="/locations/stjosephs">St. Joseph's Library</a></li>
   <li aria-current="page" class="breadcrumb-item active">St. Joseph's Library Monthly Hours</li>
 </ol>
   
@@ -36,7 +33,7 @@ position: 0
 <div id="s_lc_mhw_3750_5700"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_5700 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_5700"), { iid: 3750, lid: 5700, months: 4, systemTime: false }); 
+var s_lc_mhw_3750_5700 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_5700"), { iid: 3750, lid: 5700, months: 4, show_past: 1, systemTime: false }); 
 });
 </script> 
 

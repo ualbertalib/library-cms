@@ -10,10 +10,39 @@ position: 0
 <!-- Script that converts the query string into valid parameter -->
 <script type="text/javascript">
 function searchPrimo() {
-document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.getElementById("primoQuery").value = "" + document.getElementById("primoQueryTemp").value;
 document.forms["searchForm"].submit();
 }
 </script>
+ <style>
+    body { background: #f0f0f0; }
+    .pill-group { border-radius: 10px; overflow: hidden; }
+    .pill-group .form-control,
+    .pill-group .form-select,
+    .pill-group .btn { border-radius: 0 !important; }
+    .pill-group .form-control { border-right: 0; }
+    .pill-group .form-select { border-left: 0; border-right: 0; }
+    @media (max-width: 576px) {
+    #simple .d-flex {
+      flex-wrap: wrap;
+    }
+    #simple .input-group.pill-group {
+      flex: 1 1 100%;
+      order: 1;
+      height: 52px;
+    }
+    #simple .input-group.pill-group .form-control {
+      height: 52px;
+      font-size: 1.1rem;
+    }
+    #simple #search_scope {
+      order: 0;
+    }
+    #simple a.text-nowrap {
+      order: 2;
+    }
+  }
+  </style>
 
 {{ cms:snippet homepage-carousel-styles }}
 
@@ -30,60 +59,65 @@ document.forms["searchForm"].submit();
                             </div>
      
 <!-- Search Box -->
- <form id="simple" name="searchForm" method="get" target="_self" action="https://search.library.ualberta.ca/discovery/search"  onsubmit="searchPrimo()">
-  <!-- Hidden fields for Primo -->
-  <input type="hidden" name="vid" value="01UOA_INST:UOA">
+<form
+  id="simple"
+  name="searchForm"
+  method="get"
+  target="_self"
+  action="https://ualberta.primo.exlibrisgroup.com/nde/search"
+  onsubmit="searchPrimo()"
+>
+  <input type="hidden" name="vid" value="01UOA_INST:UOA_NDE">
   <input type="hidden" name="lang" value="en">
   <input type="hidden" name="facet" value="rtype,exclude,reviews,lk">
   <input type="hidden" name="query" id="primoQuery">
 
-<div class="d-flex flex-wrap align-items-stretch input-group input-group-lg">
+  <div class="d-flex align-items-center gap-2">
 
-  <!-- Input field -->
-  <input 
-    type="text" 
-    class="form-control bg-pure-white text-dark rounded-start-1 rounded-end-0" 
-    id="primoQueryTemp" 
-    aria-label="Search query" 
-  />
-
-  <!-- Dropdown -->
-  <div class="custom-select-wrapper">
-    <select 
-      class="form-select rounded-0 py-3 pe-3" 
-      id="search_scope" 
-      name="search_scope" 
+    <!-- Scope dropdown (standalone pill) -->
+    <select
+      class="form-select pill-group flex-shrink-0"
+      id="search_scope"
+      name="search_scope"
       aria-label="Search scope"
+      style="width:250px; height:42px; padding-left:10px;"
+      onchange="
+        const tabMap = {
+          'MyInst_and_CI': 'Everything',
+          'MyInstitution': 'LibraryCatalog',
+          'CentralIndex': 'CentralIndex'
+        };
+        document.getElementById('tab').value = tabMap[this.value];
+      "
     >
       <option value="MyInst_and_CI">Everything</option>
       <option value="MyInstitution">Library Catalogue</option>
       <option value="CentralIndex">Articles</option>
     </select>
+    <input type="hidden" id="tab" name="tab" value="Everything">
+
+    <!-- Search input + button (joined pill) -->
+    <div class="input-group pill-group flex-grow-1 overflow-hidden border bg-white">
+      <input
+        type="text"
+        class="form-control border-0 shadow-none bg-white ps-3"
+        id="primoQueryTemp"
+        aria-label="Search query"
+      >
+      <button class="btn border-0 px-3" type="submit" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Advanced Search link -->
+    <a
+      class="text-nowrap text-light small"
+      href="https://ualberta.primo.exlibrisgroup.com/nde/search?vid=01UOA_INST:UOA_NDE&lang=en&mode=advanced"
+    >Advanced Search</a>
+
   </div>
-
-  <!-- Search button -->
-  <button 
-    class="btn btn-dark rounded-end-1" 
-    type="submit" 
-    aria-label="Search"
-  >
-    <i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>
-  </button>
-
-  <!-- Line break on small screens only -->
-  <div class="w-100 d-block d-md-none mt-2"></div>
-
-  <!-- Advanced Search link -->
-  <a 
-    class="btn btn-primary advanced-link rounded-end-1 rounded-start-0 pt-md-3 mt-2 mt-md-0 ms-md-2" 
-    href="https://search.library.ualberta.ca/discovery/search?vid=01UOA_INST:UOA&lang=en&mode=advanced"
-  >
-    ADVANCED SEARCH
-  </a>
-</div>
-
 </form>
-                          
+                
                       </div>
                         <div class="ual-tools">
                             <p class="text-white"><strong>More Research Tools:</strong> </p>
@@ -98,11 +132,12 @@ document.forms["searchForm"].submit();
                         </div>
                     </div>
                 </div>
-</div> <div class="row row-full-width bg-ua-teal mt-0">
-  <h2 class="text-center pt-3 h3">Welcome to the New Library Search Experience</h2>
+</div> 
+<!--<div class="row row-full-width bg-ua-teal mt-0">
+  <h2 class="text-center pt-3 h3">Library Survey has been extended!</h2>
 <p class="text-center">
-  The new Library Services Platform is now live, featuring an enhanced search interface, a new My Account dashboard and improved services.<br/> <a href="/ask-us/email-us" class="bg-transparent">Let us know what you think >></a>
-  </p></div>
+  There's still time to share your feedback! The library survey has been extended to March 11th.<br/> <a href="https://alterlinepanel.questionpro.eu/a/TakeSurvey?tt=/34cqAGfPiwi7B5TNkPYGQ%3D%3D " class="bg-transparent fw-bold">Take the survey >></a>
+  </p></div>-->
 
             <div class="row py-4">
                 <div class="col">
@@ -141,7 +176,7 @@ document.forms["searchForm"].submit();
                                     
                                             
                                     
-    <div class="row" id="homepage-our-campus">
+  <!--  <div class="row" id="homepage-our-campus">
 <div class="col">
 <p class="fs-4"><span class="display-2 text-primary">Our Library Locations</span> Find your perfect study space, use our state-of-the-art media facilities, or talk to our expert staff members. Our libraries are here to help you succeed in your academic endeavours. </p>
 <a class="PLACE-HOLDER-LINK-STYLE fw-bold" href="/hours-locations">Hours + Locations</a></div>
@@ -171,10 +206,11 @@ document.forms["searchForm"].submit();
 <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-UAlberta" type="button"> <span aria-hidden="true" class="carousel-control-prev-icon fas fa-chevron-left"></span> <span class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-UAlberta" type="button"> <span aria-hidden="true" class="carousel-control-next-icon fas fa-chevron-right"></span> <span class="visually-hidden">Next</span> </button></div>
                    </div>
                                                                     </div>
-                            </div>
+                            </div>-->
             <div class="row">
                 <div class="col mt-5">
-                    <h2 class="text-uppercase" id="ual-title-news">News, Events &amp; Workshops</h2>
+                    <h2 class="text-uppercase" id="ual-title-news">News, Events + Workshops</h2>
+                
                   <div class="row news-events g-2">
                     
                   <div class="col-md-6 mb-4">
@@ -189,8 +225,10 @@ document.forms["searchForm"].submit();
                   
                             <div class="card h-97 bg-grey">
                                <div class="py-3 px-2">
-                              <span class="card-title h3">Upcoming Events &amp; Workshops</span>  
-                            <div id="api_upc_cid_iid3750"></div><script src="https://ualberta.libcal.com/api_events.php?m=upc&cid=&audience=&c=&d=&l=4&tar=0&simple=ul_date&context=object&format=js"> </script>
+                              <span class="card-title h3">Upcoming Events and Workshops</span>  
+                 
+              <div id="api_upc_cid7360_7583_6990_5415_8467_iid3750"></div><script src="https://ualberta.libcal.com/api_events.php?m=upc&cid=7360_7583_6990_5415_8467&audience=&c=&d=&tags=&l=5&tar=0&bs=0&simple=ul_date&context=object&format=js"> </script>
+                                
                     </div>
                        </div>
                     </div>
@@ -201,7 +239,7 @@ document.forms["searchForm"].submit();
                     <a class="btn btn-green btn-outline" href="https://news.library.ualberta.ca/">All News</a>
                       </div>
                        <div class="col-md-6 ps-2">
-                    <a class="btn btn-green btn-outline ms-5" href="https://ualberta.libcal.com/calendar/events-exhibits/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0">All Events &amp; Workshops</a>
+                    <a class="btn btn-green btn-outline ms-5" href="https://ualberta.libcal.com/calendar/events-exhibits/?cid=-1&t=d&d=0000-00-00&cal=-1&inc=0">All Events and Workshops</a>
                       </div>
                   </div>
                   </div>

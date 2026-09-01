@@ -1,6 +1,6 @@
 [attributes]
 ---
-label: rutherford monthly hours
+label: Rutherford Library Monthly Hours
 layout: non-rich-text
 target_page:
 categories: []
@@ -9,20 +9,16 @@ position: 0
 [text translated-url]
 
 [text_area content]
-  {{ cms:snippet hours-cal-style }} 
+{{ cms:snippet hours-cal-style }} 
 <style>
-.s-lc-mhw-sub-loc, .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-  display:block;
-  }
-  .s-lc-mhw-sub-loc >  .s-lc-mhw-loc-name{
-      font-size:11px;
-    margin-top:8px;
-  }
-  .loc_7789{
-    display:none;
-  }
-    
+/* hides hours if they are custom text - should probably make this byap */  
+.s-lc-mhw-loc>.s-lc-timetxt { display: none; }    
+/* hides odd numbered "closed" sublocation hours  */
+.s-lc-mhw-sub-loc:has(> .s-lc-closed):nth-child(odd) { display: none; }
+/* hiding duplicate ruth south dept */
+.s-lc-mhw-loc>.loc_8673 { display:none; }  
 </style>
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -39,7 +35,7 @@ position: 0
 <div id="s_lc_mhw_3750_4679"></div> 
 <script>
 $(function(){ 
-var s_lc_mhw_3750_4679 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_4679"), { iid: 3750, lid: 4679, months: 4, systemTime: false }); 
+var s_lc_mhw_3750_4679 = new $.LibCalHoursCal( $("#s_lc_mhw_3750_4679"), { iid: 3750, lid: 4679, months: 4, show_past: 1, systemTime: false }); 
 });
 </script> 
 

@@ -1,21 +1,31 @@
 [attributes]
 ---
 label: Cameron
-layout: non-rich-text
+layout: english-main
 target_page:
 categories: []
 is_published: true
 position: 4
 [text_area content]
 <style>
-  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-7732, .s-lc-w-lid-4610>.s-lc-w-name {display:none;}
+    .box{background-color:#fff; padding:10px 20px;}
+  .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-4610>.s-lc-w-name {display:none;}
   .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
   .s-lc-time, .s-lc-allday{font-weight:bold;} 
   td.s-lc-w-name{padding:5px 5px 5px 0;}
-  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-65px;}
-  .box{background-color:#fff; padding:10px 20px;}
+  .s-lc-w-lid-8250 span.s-lc-allday{margin-left:-1px;}
+  
+/* hiding duplicate onecard access only dept */
+.s-lc-w-lid-7732 { display:none; } 
+.s-lc-w-lid-8250 { display:none; } /* cam basement */  
+/* hiding NAME of onecard access only dept */
+.s-lc-w-lid-8667>.s-lc-w-name { display:none; } 
+.s-lc-w-lid-8669>.s-lc-w-name { display:none; } /* cam basement */
+/* department padding and font weight */
+.s-lc-w-department th.s-lc-w-name, .s-lc-w-department td.s-lc-w-time { padding-top:8px; font-weight:normal; }
 </style>
-
+<div class="row">
+<div class="container">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -28,9 +38,16 @@ position: 4
 Cameron Library
 </h1>
 </div>
-
-
 <h2>Visit the library</h2>
+<div class="ualberta-alert alert alert-warning border-0" id="ualbertaAlert" role="alert">
+  <div class="row">
+
+  <p>
+    <i class="fas fa-exclamation-triangle mr-1"></i> 
+    Cameron 4th floor is temporarily closed due to construction.</p>   <p class="mb-0">To the access the physical maps collection, please contact <a href="mailto:data@ualberta.ca">data@ualberta.ca</a>. For all other assistance <a href="ask-us">Ask Us</a>.
+<button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"><i class="fa-solid fa-square-x"></i></button></p>
+  </div></div>
+
 
 
 <div class="row g-0">
@@ -53,7 +70,7 @@ var s_lc_tdh_3750_4610 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4610"), { iid
 });
 </script>  
   
-<p>
+<p class="mt-2">
   
  <a href="/locations/cameron/cameron-monthly-hours">Monthly hours calendar >></a> </p>
 {{ cms:snippet upcoming-closures}}
@@ -69,7 +86,8 @@ var s_lc_tdh_3750_4610 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4610"), { iid
       
       <strong>Cameron Library</strong><br/>
     
-      University of Alberta, 11208 89 Avenue<br/>
+     11231 Saskatchewan Drive,<br/>
+      University of Alberta,<br/>
       Edmonton, AB, T6G 2J8<br/>
        <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl">View on campus map</a>  <br/>
     </p>
@@ -170,7 +188,7 @@ var s_lc_tdh_3750_4610 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4610"), { iid
   </div>
 </div>
 
-
+  </div></div>
 [text translated-url]
 
 [text_area breadcrumbs]

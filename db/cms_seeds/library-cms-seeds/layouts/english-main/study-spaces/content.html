@@ -1,0 +1,678 @@
+[attributes]
+---
+label: Study Spaces
+app_layout: basic
+position: 7
+[content]
+<div class="row">
+<div class="container">
+{{ cms:textarea content }}
+  </div></div>
+[js]
+// Library Study Space Finder Application - Zone-based version
+
+// Zone data embedded directly
+const zoneData = [
+    {
+        "library": "Augustana Library",
+        "zone_type": "discussion",
+        "location": "Main Floor",
+        "location_more_info": "",
+        "features": {
+            "seating": "Variety of tables, chairs, and soft seating near power outlets",
+            "computers": 40,
+            "wireless": "UWS wireless service",
+            "bookable_spaces": true,
+            "study_rooms": 7,
+            "study_booths": 3,
+            "booking_url": "https://ualberta.libcal.com/reserve/augustana/"
+        }
+    },
+    {
+        "library": "Augustana Library",
+        "zone_type": "quiet",
+        "location": "Lower Level",
+        "location_more_info": "",
+        "features": {
+            "seating": "Variety of tables, chairs, and soft seating near power outlets",
+            "wireless": "UWS wireless service",
+            "bookable_spaces": false
+        }
+    },
+    {
+        "library": "Bibliothèque Saint-Jean",
+        "zone_type": "discussion",
+        "location": "Main Floor",
+        "location_more_info": "Près des points de service (comptoir d'accueil et imprimante)",
+        "features": {
+            "computers": 6,
+            "software": ["Windows Office", "Antidote 9"],
+            "wireless": true
+        }
+    },
+    {
+        "library": "Bibliothèque Saint-Jean",
+        "zone_type": "quiet",
+        "location": "Main Floor",
+        "location_more_info": "Study carrels and tables - Isoloirs et tables des collections générales et pédagogiques",
+        "features": {
+            "study_carrels": 48,
+            "adjustable_desks": 2,
+            "large_tables": true
+        }
+    },
+    {
+        "library": "Bibliothèque Saint-Jean",
+        "zone_type": "group_study",
+        "location": "Group Study Rooms",
+        "location_more_info": "",
+        "features": {
+            "group_study_rooms": 5,
+            "capacity": "2 to 6 people",
+            "equipment": "Tables and whiteboards",
+            "lcd_rooms": ["1-12F", "1-12H"],
+            "booking_required": true,
+            "booking_url": "https://biblio.ualberta.ca/services/book-study-space"
+        }
+    },
+    {
+        "library": "Bibliothèque Saint-Jean",
+        "zone_type": "silent",
+        "location": "Silent Study Room",
+        "location_more_info": "",
+        "features": {
+            "silent_study_room": 1
+        }
+    },
+    {
+        "library": "Cameron Library",
+        "zone_type": "discussion",
+        "location": "Main Floor, 2nd Floor",
+        "location_more_info": "Common Area on 2nd Floor",
+        "features": {
+            "computers": "Over 350",
+            "wireless": "UWS wireless service (entire building)",
+            "seating": "Table seating with plug-ins",
+            "soft_seating": true
+        }
+    },
+    {
+        "library": "Cameron Library",
+        "zone_type": "quiet",
+        "location": "Basement",
+        "location_more_info": "Knowledge Common and Study Hall",
+        "features": {
+            "workstations": ["Individual workstations", "Group workstations"],
+            "study_carrels": true,
+            "wireless": "UWS wireless service"
+        }
+    },
+    {
+        "library": "Cameron Library",
+        "zone_type": "silent",
+        "location": "3rd Floor",
+        "location_more_info": "",
+        "features": {
+            "wireless": "UWS wireless service",
+            "study_carrels": true
+        }
+    },
+    {
+        "library": "Cameron Library",
+        "zone_type": "group_study",
+        "location": "Main Floor and Basement",
+        "location_more_info": "Bookable group study and presentation preparation rooms",
+        "features": {
+            "bookable_rooms": 18,
+            "room_location": "Main floor and basement",
+            "equipment": ["Computers", "LCD displays"],
+            "wireless": "UWS wireless service",
+            "booking_url": "https://ualberta.libcal.com/reserve/cameron"
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "discussion",
+        "location": "North Main Floor, 2nd Floor, 4th Floor",
+        "location_more_info": "",
+        "features": {
+            "study_spaces": "Over 700 study spaces on 5 floors",
+            "laptop_stations": 30,
+            "computing_workstations": 110,
+            "wireless": true
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "quiet",
+        "location": "North 3rd Floor",
+        "location_more_info": "Note that Room 3-112 is a silent study room",
+        "features": {
+            "study_spaces": true,
+            "wireless": true
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "silent",
+        "location": "North 5th Floor, Room 3-112",
+        "location_more_info": "5th floor and Room 3-112 on the 3rd Floor",
+        "features": {
+            "study_spaces": true,
+            "wireless": true
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "group_study",
+        "location": "North Group Study Rooms",
+        "location_more_info": "",
+        "features": {
+            "group_study_rooms": 7,
+            "bookable": true,
+            "booking_url": "https://ualberta.libcal.com/reserve/rutherford"
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "special",
+        "location": "North 3rd Floor",
+        "location_more_info": "Family Corner",
+        "features": {
+            "family_corner": true,
+            "access": "OneCard Access once registered with the Dean of Students",
+            "description": "Child friendly space for Students and Staff who parent",
+            "info_url": {
+            "text": "More information about the Family Corner",
+            "url": "https://library.ualberta.ca/locations/rutherford/family-corner"
+        }
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "discussion",
+        "location": "South 2nd Floor Foyer",
+        "location_more_info": "",
+        "features": {
+            "study_spaces": "Just under 500 study spaces",
+            "wireless": true
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "quiet",
+        "location": "South 2nd Floor Reading Room",
+        "location_more_info": "",
+        "features": {
+            "study_spaces": true,
+            "wireless": true
+        }
+    },
+    {
+        "library": "Rutherford Library",
+        "zone_type": "computer_lab",
+        "location": "South 2nd Floor",
+        "location_more_info": "IST Computer Labs: Room 2-03 and 2-05a",
+        "features": {
+            "computer_labs": 2,
+            "total_workstations": 50,
+              "info_url": {
+            "text": "More information about IST Labs",
+            "url": "https://www.ualberta.ca/en/information-services-and-technology/services/labs-classrooms/lab-details.html"
+        }
+        }
+    },
+    {
+        "library": "Sperber Library",
+        "zone_type": "discussion",
+        "location": "Level 1 - East Side",
+        "location_more_info": "Outside of the Teaching + Learning and Maker Labs, Teaching and Learning Lab (if available), Maker Lab (if available), Entrance area by service desk and the stairs",
+        "features": {
+            "seating": "Table seating with electrical outlets",
+            "teaching_lab": true,
+            "maker_lab": true
+        }
+    },
+    {
+        "library": "Sperber Library",
+        "zone_type": "quiet",
+        "location": "Level 1",
+        "location_more_info": "Level 1: West side by the Indigenous Learning Space and Indigenous Healing Collection;",
+        "features": {
+            "seating": "Table seating with electrical outlets",
+        }
+    },
+    {
+        "library": "Sperber Library",
+        "zone_type": "quiet",
+        "location": "Lower Level",
+        "location_more_info": "Lower Level: Around the stairs",
+        "features": {
+            "seating": "Table seating with electrical outlets",
+        }
+    },
+    {
+        "library": "Sperber Library",
+        "zone_type": "silent",
+        "location": "Lower Level",
+        "location_more_info": "Back half starting at the RC 424.7 book stacks and study room L1-152A (includes the south end's long hall). Look for the red Silent Zone signage.",
+        "features": {
+            "seating": true,
+            "silent_study_room": "L1-152A"
+        }
+    },
+         {
+        "library": "Sperber Library",
+        "zone_type": "special",
+        "location": "Level 1",
+        "location_more_info": "Indigenous Learning Space",
+        "features": {
+            "access": "Booking is required",
+            "description": "Provides a space where the community can learn through Indigenous pedagogies",
+            "info_url": {
+            "text": "More information about the Indigenous Learning Space",
+            "url": "https://library.ualberta.ca/locations/sperber/indigenous-learning-space"
+        }
+        }
+   },
+    {
+        "library": "Sperber Library",
+        "zone_type": "group_study",
+        "location": "Bookable Study Rooms",
+        "location_more_info": "Individual and group bookable study rooms available",
+        "features": {
+            "group_study_rooms": 12,
+            "individual_study_rooms": 10,
+            "bookable_rooms": true,
+            "equipment": "Monitors that connect to laptops",
+            "accessories": "Remote control and connector cables available at service desk",
+            "booking_url": "https://ualberta.libcal.com/spaces?lid=2950"
+        },
+
+    }
+];
+
+// Library information URLs
+const libraryUrls = {
+    "Augustana Library": "https://www.ualberta.ca/augustana/services/library/index.html",
+    "Bibliothèque Saint-Jean": "https://library.ualberta.ca/locations/bsj",
+    "Cameron Library": "https://library.ualberta.ca/locations/cameron",
+    "Rutherford North": "https://library.ualberta.ca/locations/rutherford",
+    "Rutherford South": "https://library.ualberta.ca/locations/rutherford",
+    "Sperber Library": "https://library.ualberta.ca/locations/sperber"
+};
+
+let filteredZones = [];
+
+// DOM Elements - will be initialized when DOM is ready
+let librarySelect;
+let noiseLevelSelect;
+let hasComputers;
+let hasBookableRooms;
+let resetFiltersBtn;
+let zoneContainer;
+let resultsCount;
+let noResults;
+
+// Populate the library select dropdown
+function populateLibrarySelect() {
+    // Get unique library names
+    const uniqueLibraries = [...new Set(zoneData.map(zone => zone.library))].sort();
+    
+    uniqueLibraries.forEach(library => {
+        const option = document.createElement('option');
+        option.value = library;
+        option.textContent = library;
+        librarySelect.appendChild(option);
+    });
+}
+
+// Attach event listeners to filter controls
+function attachEventListeners() {
+    librarySelect.addEventListener('change', filterZones);
+    noiseLevelSelect.addEventListener('change', filterZones);
+    hasComputers.addEventListener('change', filterZones);
+    hasBookableRooms.addEventListener('change', filterZones);
+    resetFiltersBtn.addEventListener('click', resetFilters);
+}
+
+// Helper function to check if zone has computers
+function zoneHasComputers(zone) {
+    return zone.features?.computers || 
+           zone.features?.computing_workstations || 
+           zone.features?.laptop_stations ||
+           zone.features?.computer_labs ||
+           zone.zone_type === 'computer_lab';
+}
+
+// Helper function to check if zone has bookable rooms
+function zoneHasBookableRooms(zone) {
+    return zone.features?.bookable_spaces || 
+           zone.features?.bookable_rooms ||
+           zone.features?.bookable ||
+           zone.features?.booking_required;
+}
+
+// Helper function to check if zone is for group study
+function isGroupStudyZone(zone) {
+    return zone.zone_type === 'group_study' ||
+           zone.features?.group_study_rooms ||
+           zone.features?.group_rooms;
+}
+
+// Filter zones based on selected criteria
+function filterZones() {
+    const selectedLibrary = librarySelect.value;
+    const selectedNoiseLevel = noiseLevelSelect.value;
+    const needsComputers = hasComputers.checked;
+    const needsBookableRooms = hasBookableRooms.checked;
+
+    filteredZones = zoneData.filter(zone => {
+        // Filter by library name
+        if (selectedLibrary !== 'all' && zone.library !== selectedLibrary) {
+            return false;
+        }
+
+        // Filter by noise level/zone type
+        if (selectedNoiseLevel !== 'all' && zone.zone_type !== selectedNoiseLevel) {
+            return false;
+        }
+
+        // Filter by computers
+        if (needsComputers && !zoneHasComputers(zone)) {
+            return false;
+        }
+
+        // Filter by bookable rooms
+        if (needsBookableRooms && !zoneHasBookableRooms(zone)) {
+            return false;
+        }
+
+        return true;
+    });
+
+    renderZones();
+}
+
+// Reset all filters to default
+function resetFilters() {
+    librarySelect.value = 'all';
+    noiseLevelSelect.value = 'all';
+    hasComputers.checked = false;
+    hasBookableRooms.checked = false;
+    filterZones();
+}
+
+// Get zone badge styling
+function getZoneBadge(zoneType) {
+    const badges = {
+        'discussion': { icon: 'fa-solid fa-volume-high', class: 'zone-discussion', label: 'Discussion Zone' },
+        'quiet': { icon: 'fa-solid fa-volume-low', class: 'zone-quiet', label: 'Quiet Zone' },
+        'silent': { icon: 'fa-solid fa-volume-xmark', class: 'zone-silent', label: 'Silent Zone' },
+        'group_study': { icon: 'fa-solid fa-users', class: 'zone-group', label: 'Group Study' },
+        'computer_lab': { icon: 'fa-solid fa-desktop', class: 'zone-computer', label: 'Computer Lab' },
+        'special': { icon: 'fa-solid fa-star', class: 'zone-special', label: 'Special Area' }
+    };
+    
+    return badges[zoneType] || { icon: 'fa-solid fa-thumbtack', class: 'zone-default', label: zoneType };
+}
+
+// Render features for a zone
+function renderFeatures(features) {
+    if (!features || Object.keys(features).length === 0) return '';
+
+    // Check if this zone has bookable rooms
+    const hasBookingUrl = features.booking_url;
+    const bookingUrl = features.booking_url;
+    
+    // Count total rooms for display
+    let roomCount = '';
+    if (features.group_study_rooms && features.individual_study_rooms) {
+        roomCount = `${features.group_study_rooms} group rooms, ${features.individual_study_rooms} individual rooms`;
+    } else if (features.group_study_rooms) {
+        roomCount = `${features.group_study_rooms} room${features.group_study_rooms > 1 ? 's' : ''}`;
+    } else if (features.bookable_rooms && typeof features.bookable_rooms === 'number') {
+        roomCount = `${features.bookable_rooms} room${features.bookable_rooms > 1 ? 's' : ''}`;
+    } else if (features.study_rooms) {
+        if (features.study_booths) {
+            roomCount = `${features.study_rooms} study rooms, ${features.study_booths} study booths`;
+        } else {
+            roomCount = `${features.study_rooms} study room${features.study_rooms > 1 ? 's' : ''}`;
+        }
+    }
+
+    let html = `<div class="mt-3">`;
+    
+    // Add booking call-to-action if available
+    if (hasBookingUrl && roomCount) {
+        html += `
+            <div class="alert alert-success border-success mb-3">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        <h4 class="h6 mb-1 fw-bold text-success">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Bookable Study Rooms
+                        </h4>
+                        <p class="mb-0 small text-success-emphasis">${roomCount} total</p>
+                    </div>
+                    <a href="${bookingUrl}" target="_blank" class="btn btn-success btn-sm">
+                        <i class="fa-solid fa-up-right-from-square me-1"></i>
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        `;
+    }
+    
+    html += `
+        <h5 class="h6d-flex align-items-center mb-2">
+            <i class="fa-solid fa-list-check me-2"></i>
+            Features
+        </h5>
+        <ul class="feature-list mb-0">
+    `;
+
+    for (const [key, value] of Object.entries(features)) {
+        // Skip booking_url and info_url as we've already displayed them
+        if (key === 'booking_url' || key === 'info_url') continue;
+        
+        // Skip room counts as we've displayed them in the booking section
+        if (hasBookingUrl && (key === 'group_study_rooms' || key === 'individual_study_rooms' || 
+            key === 'bookable_rooms' || key === 'study_rooms' || key === 'study_booths')) {
+            continue;
+        }
+        
+        if (typeof value === 'object' && !Array.isArray(value)) {
+            html += `<li><span class="feature-key text-capitalize">${key.replace(/_/g, ' ')}: </span>${formatObject(value)}</li>`;
+        } else if (Array.isArray(value)) {
+            html += `<li><span class="feature-key text-capitalize">${key.replace(/_/g, ' ')}: </span>${value.join(', ')}</li>`;
+        } else if (value === true) {
+            html += `<li><span class="feature-key text-capitalize">${key.replace(/_/g, ' ')}</span></li>`;
+        } else {
+            html += `<li><span class="feature-key text-capitalize">${key.replace(/_/g, ' ')}: </span>${value}</li>`;
+        }
+    }
+
+    // Add info link as the last list item if available
+    if (features.info_url) {
+        let linkText = '';
+        let linkUrl = '';
+        
+        // Support both string URL and object with text + url
+        if (typeof features.info_url === 'string') {
+            linkUrl = features.info_url;
+            linkText = 'More information about this location';
+        } else if (typeof features.info_url === 'object' && features.info_url.text && features.info_url.url) {
+            linkText = features.info_url.text;
+            linkUrl = features.info_url.url;
+        }
+        
+        if (linkUrl) {
+            html += `<li><a href="${linkUrl}" target="_blank" class="text-primary">${linkText} <i class="fa-solid fa-up-right-from-square ms-1"></i></a></li>`;
+        }
+    }
+
+    html += `</ul></div>`;
+    return html;
+}
+
+// Format object for display
+function formatObject(obj) {
+    const entries = Object.entries(obj);
+    if (entries.length === 0) return 'N/A';
+    
+    return entries.map(([k, v]) => {
+        const displayValue = Array.isArray(v) ? v.join(', ') : v;
+        return `${k.replace(/_/g, ' ')}: ${displayValue}`;
+    }).join('; ');
+}
+
+// Helper function to get campus for a library
+function getCampus(libraryName) {
+    if (libraryName.includes('Rutherford') || libraryName.includes('Cameron') || libraryName.includes('Sperber')) {
+        return 'North Campus';
+    } else if (libraryName.includes('Augustana')) {
+        return 'Augustana Campus';
+    } else if (libraryName.includes('Saint-Jean')) {
+        return 'Campus Saint-Jean';
+    }
+    return 'Other';
+}
+
+// Helper function to get campus color
+function getCampusColor(campus) {
+    const colors = {
+        'North Campus': '#3B82F6', // Blue
+        'Augustana Campus': '#10B981', // Green
+        'Campus Saint-Jean': '#F59E0B' // Orange
+    };
+    return colors[campus] || '#6B7280';
+}
+
+// Render all filtered zones grouped by campus and library
+function renderZones() {
+    // Update results count
+    resultsCount.innerHTML = `Showing <strong>${filteredZones.length}</strong> of <strong>${zoneData.length}</strong>  study zones`;
+
+    // Clear container
+    zoneContainer.innerHTML = '';
+
+    if (filteredZones.length > 0) {
+        noResults.classList.add('d-none');
+        
+        // Group zones by library first
+        const zonesByLibrary = {};
+        filteredZones.forEach(zone => {
+            if (!zonesByLibrary[zone.library]) {
+                zonesByLibrary[zone.library] = [];
+            }
+            zonesByLibrary[zone.library].push(zone);
+        });
+        
+        // Then group libraries by campus
+        const campusOrder = ['North Campus', 'Augustana Campus', 'Campus Saint-Jean'];
+        const librariesByCampus = {};
+        
+        for (const [libraryName, zones] of Object.entries(zonesByLibrary)) {
+            const campus = getCampus(libraryName);
+            if (!librariesByCampus[campus]) {
+                librariesByCampus[campus] = {};
+            }
+            librariesByCampus[campus][libraryName] = zones;
+        }
+        
+        // Render each campus section in order
+        campusOrder.forEach(campus => {
+            if (librariesByCampus[campus]) {
+                const campusColor = getCampusColor(campus);
+                zoneContainer.innerHTML += `
+                    <div class="col-12 mb-3">
+                        <div class="campus-divider">
+                            <h2 class="campus-header ps-2">
+                               
+                                <i class="fa-solid fa-location-dot me-2"></i>${campus}
+                            </h2>
+                        </div>
+                    </div>
+                `;
+                
+                // Render libraries within this campus
+                for (const [libraryName, zones] of Object.entries(librariesByCampus[campus])) {
+                    zoneContainer.innerHTML += renderLibrarySection(libraryName, zones);
+                }
+            }
+        });
+    } else {
+        noResults.classList.remove('d-none');
+    }
+}
+
+// Render a library section with its zones
+function renderLibrarySection(libraryName, zones) {
+    const zonesHtml = zones.map(zone => renderZoneCard(zone)).join('');
+    const libraryUrl = libraryUrls[libraryName];
+    
+    // Create library name - with link if URL exists, otherwise just text
+    const libraryNameHtml = libraryUrl 
+        ? `<a href="${libraryUrl}" target="_blank" class="text-decoration-none text-dark">${libraryName}</a>`
+        : libraryName;
+    
+    return `
+        <div class="col-12">
+            <div class="library-section">
+                <div class="library-header">
+                    <div class="d-flex align-items-center">
+                       
+                        <h3 class="mb-0"><i class="fa-solid fa-building text-primary me-2"></i>${libraryNameHtml}</h3>
+                    </div>
+                    
+                </div>
+                <div class="row g-3 mt-0">
+                    ${zonesHtml}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Render a single zone card (without library name)
+function renderZoneCard(zone) {
+    const badge = getZoneBadge(zone.zone_type);
+    
+    return `
+        <div class="col-12 col-md-6">
+            <div class="card zone-card h-100">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <h4>${zone.location}</h4>
+                        ${zone.location_more_info ? `<p class="text-muted small">${zone.location_more_info}</p>` : ''}
+                        <div class="zone-badge ${badge.class} d-inline-flex align-items-center">
+                            <i class="${badge.icon} me-2"></i>
+                            <span class="fw-semibold">${badge.label}</span>
+                        </div>
+                    </div>
+                    ${renderFeatures(zone.features)}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Initialize the app when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize DOM element references
+    librarySelect = document.getElementById('librarySelect');
+    noiseLevelSelect = document.getElementById('noiseLevelSelect');
+    hasComputers = document.getElementById('hasComputers');
+    hasBookableRooms = document.getElementById('hasBookableRooms');
+    resetFiltersBtn = document.getElementById('resetFilters');
+    zoneContainer = document.getElementById('libraryContainer');
+    resultsCount = document.getElementById('resultsCount');
+    noResults = document.getElementById('noResults');
+    
+    // Initialize the app
+    populateLibrarySelect();
+    filterZones();
+    attachEventListeners();
+});
+[css]
+@import "/cms-css/1/english-main.css"

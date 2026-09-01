@@ -10,12 +10,20 @@ position: 9
 
 [text_area content]
 <style>
+  .box{background-color:#fff; padding:10px 20px;}
   .s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-8170, .s-lc-w-lid-4679>.s-lc-w-name {display:none;}
-  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:15px;}
+  .s-lc-w-time, .s-lc-w-name{font-size:18px; margin-bottom:5px;}
   .s-lc-time, .s-lc-allday{font-weight:bold;} 
   td.s-lc-w-name{padding:5px 5px 5px 0;}
   .s-lc-w-lid-7789 .s-lc-w-name{display:none;}
-  .box{background-color:#fff; padding:10px 20px;}
+
+.s-lc-w-department th.s-lc-w-name, .s-lc-w-department td.s-lc-w-time { padding-top:5px; }
+  
+/* hiding ruth dept onecard access only */
+.s-lc-w-lid-8648 { display:none; }  
+
+/* hiding name of ruth south dept */
+.s-lc-w-lid-8673>.s-lc-w-name { display:none; }  
 </style>
 
 <nav aria-label="breadcrumb">
@@ -29,16 +37,11 @@ position: 9
 <h1>
 Rutherford Library
 </h1>
-</div>
-<!--<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  Rutherford Library North will be closed on <strong>Saturday, September 20th</strong> for scheduled water system maintenance. <a href="/sandbox/natasha/holidays-closures">More information >></a>
 
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>-->
 
 <h2>Visit the library</h2>
 
-
+</div>
 <div class="row g-0">
   <div class="col-md-5">
     
@@ -51,18 +54,23 @@ Rutherford Library
 <h3>
   Today's Hours
 </h3>
+ <p class="mb-1">Rutherford North: </p>
+  
 <script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
-<div id="s_lc_tdh_3750_4679"></div> 
+<div id="s_lc_tdh_3750_4679"></div>
+  
 <script>
 $(function(){ 
 var s_lc_tdh_3750_4679 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4679"), { iid: 3750, lid: 4679 }); 
 });
 </script> 
   
-<p>
+<p class="mt-2">
  <a href="/locations/rutherford/rutherford-monthly-hours">Monthly hours calendar >></a> </p>
+
+
 {{ cms:snippet upcoming-closures}}
-  </div>
+    </div>
       </div>
  <div class="col-md-4 ps-4">
    <p class="mb-2 small pt-3 pt-md-0">
@@ -105,9 +113,7 @@ var s_lc_tdh_3750_4679 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4679"), { iid
 
 <h3>Late Night Study</h3>
 <p>
-  <strong>Starting November 17, 2025</strong> <br/>
-Rutherford North 1st floor. <br/>
-ONEcard required for entry after 9pm.</p>
+Late night study availalble at   <a href="https://library.ualberta.ca/locations/cameron">Cameron library</a></p> 
     <a href="/services/study-area-directory#ruth" class="btn btn-green btn-square mt-3">Study directory and noise zones</a>
 </div>
 
