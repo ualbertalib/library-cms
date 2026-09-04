@@ -2,16 +2,52 @@
 ---
 label: Hours + Locations
 layout: non-rich-text
-target_page: 
+target_page:
 categories: []
 is_published: true
 position: 14
 [text_area content]
 <style>
-.ual-btn, .ual-btn-outline{
-  width:13rem;
-  }
+.ual-btn, .ual-btn-outline{ width:13rem; }
+.list-group-item{ background:transparent; }
+.sticky-top {   z-index:2; }
+
+/* libcal widget css - to confirm */
+.s-lc-w-head, .s-lc-w-sr-only, .s-lc-w-today-view-all, .s-lc-w-lid-8170, .s-lc-w-lid-4679>.s-lc-w-name, .s-lc-w-lid-4610>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5499>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-6687>.s-lc-w-name, .s-lc-w-lid-3750, .s-lc-w-lid-5700>.s-lc-w-name, .s-lc-w-lid-8170, .s-lc-w-lid-5701>.s-lc-w-name, #s-lc-w-loc-7918 { display:none; }
+.s-lc-w-time, .s-lc-w-name { font-size:18px; }
+.s-lc-time, .s-lc-byap { font-weight:bold; } 
+.s-lc-w-lid-8250 span.s-lc-allday{margin-left:0px;}
+.s-lc-w-lid-5500 span.s-lc-allday{margin-left:-55px;}
+.s-lc-w-lid-7789 .s-lc-w-name{display:none;}
+
+/* hiding ruth departments used on calendar page */
+.s-lc-w-lid-8648 { display:none; }
+.s-lc-w-lid-7789 { display:none; }
+.s-lc-w-lid-8170 { display:none; }
+
+/* department padding and font weight */
+.s-lc-w-department th.s-lc-w-name, .s-lc-w-department td.s-lc-w-time { padding-top:8px; font-weight:normal; }
+.s-lc-w-department .s-lc-time { font-weight:normal; }
+.s-lc-w-department th.s-lc-w-name { padding-right:5px; } 
+
+/* hiding duplicate libcal depts */
+.s-lc-w-lid-7732 { display:none; } /* cam onecard */
+.s-lc-w-lid-7931 { display:none; } /* sperb onecard */  
+.s-lc-w-lid-8250 { display:none; } /* cam basement */
+
+/* hiding NAMES of libcal depts used on this page */
+.s-lc-w-lid-8667>.s-lc-w-name { display:none; } /* cam onecard */
+.s-lc-w-lid-8455>.s-lc-w-name { display:none; } /* sperb onecard */ 
+.s-lc-w-lid-8669>.s-lc-w-name { display:none; } /* cam basement */
+.s-lc-w-lid-8673>.s-lc-w-name { display:none; } /* ruth south */
+.s-lc-w-lid-8648>.s-lc-w-name { display:none; } /* ruth north onecard */
+
 </style>
+
+
+
+
+
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb bg-white">
 <li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
@@ -20,312 +56,395 @@ position: 14
 </ol>
 </nav>
 
-
-<div class="row left-nav-row">
-  <div class="nav-wrapper col-12 col-lg-3">
-
-
-
-  {{ cms:snippet hours-location-nav }}
-
-
-      </div>
-
-  <div class="col-md-9">
+    
+    
     <h1>
-  Library Hours + Locations
+ Hours + Locations
 
     </h1>
-   <ul class="list-group list-group-horizontal small">
-      <li class="list-group-item"><a href="#archives">Archives</a>
-      <li class="list-group-item"><a href="#augustana">Augustana</a></li>
-      <li class="list-group-item"><a href="#bsj">BSJ</a></li>
-      <li class="list-group-item"><a href="#bpsc">BPSC</a></li>
-      <li class="list-group-item"><a href="#cameron">Cameron</a></li>
-      <li class="list-group-item"><a href="#dsc">DSC</a></li>
-      <li class="list-group-item"><a href="#sperber">Sperber</a></li>
-      <li class="list-group-item"><a href="#rcrf">RCRF</a></li>
-      <li class="list-group-item"><a href="#rutherford">Rutherford</a></li>
-      <li class="list-group-item"><a href="#stjoes">St. Joseph's</a></li>
-      <li class="list-group-item"><a href="#weir">Weir</a></li>
-    </ul>
     
-  <div class="row pt-3">
-  <div class="col-sm-3">
+<div class="row">
+  
+<div class="col-lg-9">
+  
+    <div class="row">
+      <div class="col">
+        <h2 id="north">
+          North Campus
+        </h2>
+    
+          <div class="row pt-3">
+      
+       
+  <div class="col-sm-2">
   <div class="library-photo">
   <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/07/AugNew-Hours-Locations.png" alt="University of Alberta Augustana Library" class="rounded float-left img-fluid">
+    <img src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/Rutherford-Library220x165.png" alt="Rutherford Library" class="rounded img-fluid ms-lg-3 mb-3">
 		</div>
     </div>
-    </div>
-    <div class="col-sm-9">
+            </div>
+       <div class="col-sm-9">
     <div class="title">
     <div class="content">
-      <h2 id="augustana"><a href="/locations/augustana">Augustana Library</a>
-      </h2>
-       <a href="/locations/augustana" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>Augustana Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.01329958733568,-112.82418291574407&z=17&campus=augustana_campus&b=forum" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to Augustana</a>
-
-    </div>
-    </div>
-    </div>
-    </div>
+      <h3><a href="/locations/rutherford">Rutherford Library</a>
+      </h3>
  
-<hr/>
+ 
+     
+   <p class="mb-1" >Rutherford North:</p>
+      <div id="s_lc_tdh_3750_4679"></div> 
+      
+<script>
+$(function(){ 
+var s_lc_tdh_3750_4679 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4679"), { iid: 3750, lid: 4679 }); 
+});
+</script> 
+      <p class="mt-2">  <a href="https://library.ualberta.ca/locations/rutherford/rutherford-monthly-hours">View monthly hours</a> | <a href="https://ualberta.libcal.com/reserve/rutherford">Book study rooms</a></p>
+    </div>
+    </div>
+            </div>
+      
+  <!-- div class="col-sm-5">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+The Rutherford Reading Room (South) will be closed on Wednesday, December 17 from 12:00pm to 5:00pm.
 
-  <div class="row pt-3">
-  <div class="col-sm-3">
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div -->
+         </div>        
+         
+        </div>
+
+        <hr/>
+         <div class="row pt-3">
+  <div class="col-sm-2">
   <div class="library-photo">
   <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/2-1.png" alt="Bibliothèque Saint-Jean" class="rounded float-left img-fluid">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/Cameron-Library-Entrance220x165-1.png" alt="Cameron Library" class="rounded img-fluid ms-lg-3 mb-3">
 		</div>
     </div>
     </div>
     <div class="col-sm-9">
     <div class="title">
     <div class="content">
-      <h2 id="bsj"><a href="/locations/bsj">Bibliothèque Saint-Jean</a>
-      </h2>
-      <div class="alert alert-info" role="alert">
-        Les portes principales de CSJ sont inaccessibles jusqu'à nouvel ordre. Veuillez suivre la signalisation pour accéder au pavillon et à la bibliothèque.
+      <h3><a href="/locations/cameron">Cameron Library</a>
+      </h3>
+   <p class="mb-1">
+   Today's Hours:
+      </p>
+     <div id="s_lc_tdh_3750_4610"></div> 
+<script>
+$(function(){ 
+var s_lc_tdh_3750_4610 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_4610"), { iid: 3750, lid: 4610 }); 
+});
+</script> 
+     
+      <p class="mt-2">  <a href="https://library.ualberta.ca/locations/cameron/cameron-monthly-hours">View monthly hours</a> | <a href="https://ualberta.libcal.com/reserve/cameron">Book study rooms</a></p>
+		</div>
+    </div>
+    </div>
+    </div>
+   <hr/>
+   <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/Sperber-Library220x165.png" alt="Sperber Library" class="rounded img-fluid ms-lg-3 mb-3">
+		</div>
+    </div>
+    </div>
+    
+    <div class="col-sm-9">
+    <div class="title">
+    <div class="content">
+      <h3><a href="/locations/sperber">Sperber Library</a>
+      </h3>
+      <p class="mb-1">
+   Today's Hours:
+      </p>
+  
+      
+     <div id="s_lc_tdh_3750_7918"></div> 
+<script>
+$(function(){ 
+var s_lc_tdh_3750_7918 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_7918"), { iid: 3750, lid: 7918 }); 
+});
+</script>
+   
+        <p class="mt-2">  <a href="https://library.ualberta.ca/locations/sperber/sperber-monthly-hours">View monthly hours</a> | <a href="https://ualberta.libcal.com/reserve/spaces/health">Book study rooms</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+<hr/>
+        <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/3-1.png" alt="Bruce Peel Special Collections" class="rounded img-fluid ms-lg-3 mb-3">
+		</div>
+    </div>
+    </div>
+       
+    <div class="col-sm-9">
+    <div class="title">
+    <div class="content">
+      <h3><a href="/locations/bpsc">Bruce Peel Special Collections</a>
+      </h3>
+      
+      <p class="mb-1">
+        By Appointment
+      </p>
+            <p class="mb-1"><strong>
+        Closed April 1 - September 1</strong>
+      </p>
+<p>
+  <a href="https://bpsc.library.ualberta.ca">BPSC website</a>
+      </p>
+		</div>
+    </div>
+    </div>
+        </div>
       </div>
-      <div class="library-hours-new">
-      <div class="content">
-        <a href="/locations/bsj" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>BSJ Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.52163,-113.468835&z=17&campus=campus_saint_jean&b=csjmcm" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to BSJ</a>
+    
+    
+      <hr/>  
+        <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/5.png" alt="Digital Scholarship Centre" class="rounded img-fluid ms-lg-3 mb-3">
+		</div>
+    </div>
+    </div>
+    <div class="col-sm-9">
+    <div class="title">
+    <div class="content">
+      <h3><a href="/locations/dsc">Digital Scholarship Centre (DSC)</a>
+      </h3>
+      <p class="mb-1">
+   Today's Hours:
+      </p>
+      <div id="s_lc_tdh_3750_6687"></div> 
+<script>
+$(function(){ 
+var s_lc_tdh_3750_6687 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_6687"), { iid: 3750, lid: 6687 }); 
+});
+</script>
+         <p class="mt-2">  <a href="https://library.ualberta.ca/locations/dsc/dsc-monthly-hours">View monthly hours</a> | <a href="/dsc/spaces">DSC Spaces</a></p>
+      
+    </div>
+    </div>
+    </div>
+    
+        <hr/>
+         <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/Weir-Library220x165-1.png" alt="Weir Law Library" class="rounded img-fluid ms-lg-3 mb-3">
+		</div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div class="title">
+    <div class="content">
+      <h3><a href="https://www.ualberta.ca/en/law/student-services/weir-library.html">Weir Law Library <i class="fa-solid fa-arrow-up-right-from-square fs-6"></i></a> 
+      </h3>
+      
+  
+<p>
+  The Weir Law Library is open during<br><a href="https://www.ualberta.ca/en/facilities/law-centre.html">Law Centre Building Hours</a>
+      </p></div></div></div>
+      
+      <div class="col-sm-6"> <div class="alert alert-warning" role="alert">
+        The Weir Library is now managed by the Law Faculty and you can access the Law Library by tapping your ONEcard. The space is open to all University of Alberta students and staff during Law Centre hours. <a href="https://www.ualberta.ca/en/law/student-services/weir-library.html">More information >></a></div></div>
+  
+    </div>
+    </div>
+    
+  
+        <hr/>
+        <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/St.-Josephs-Library220x165.png" alt="St. Joseph's College Library" class="rounded img-fluid ms-lg-3 mb-3">
+		</div>
+    </div>
+    </div>
+    <div class="col-sm-9">
+    <div class="title">
+    <div class="content">
+      <h3><a href="/locations/stjosephs">St. Joseph's College Library</a>
+      </h3>
+      <p class="mb-1">
+   Today's Hours:
+      </p>
+      <div id="s_lc_tdh_3750_5700"></div> 
+<script>
+$(function(){ 
+var s_lc_tdh_3750_5700 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5700"), { iid: 3750, lid: 5700 }); 
+});
+</script>
+      <p class="mt-2"><a href="https://library.ualberta.ca/locations/stjosephs/stjoseph-monthly-hours">View monthly hours</a></p>
+
+    </div>
+    </div>
+    </div>
+    </div>
+        <hr/>
+    <h2 id="csj" class="mt-3">
+          Campus Saint-Jean
+        </h2>    
+       
+        <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/BSJ-Campus-Saint-Jean220x165.png" alt="Bibliothèque Saint-Jean" class="rounded img-fluid ms-lg-3 mb-3">
+		</div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div class="title">
+    <div class="content">
+      <h3><a href="/locations/bsj">Bibliothèque Saint-Jean</a>
+      </h3>
+
+       <p class="mb-1">
+   Today's Hours:
+      </p>
+      <div>
+        <strong>Closed</strong>
+      </div>
+         <!-- <div id="s_lc_tdh_3750_5701"></div> 
+<script>
+$(function(){ 
+var s_lc_tdh_3750_5701 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5701"), { iid: 3750, lid: 5701 }); 
+});
+</script> -->
+       <p class="mt-2">  <a href="https://library.ualberta.ca/locations/bsj/bsj-monthly-hours">View monthly hours</a> | <a href="https://ualberta.libcal.com/reserve/bsj?_gl=1*1vsc1xa*_ga*MTk4NDIxOTIxLjE3NTk4NzgyNzU.*_ga_JFD4RYC4BZ*czE3NTk4ODU3NjAkbzIkZzEkdDE3NTk4OTAyMDQkajUkbDAkaDA.">Book study rooms</a></p>
         
 		</div>
     </div>
     </div>
-    </div>
-    </div>
-    </div>
-  
- <hr/>   
-    
-  <div class="row pt-3">
-  <div class="col-sm-3">
+<!-- Beginning of announcement section--> 
+<div class="col-sm-6">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+<!--BSJ will be closed on February 19th for emergency water shut-off repairs.-->
+      BSJ will be closed through the spring and summer. <a href="/locations/bsj">For more information >></a>
+<hr>
+<!--La bibliothèque Saint-Jean sera fermée le 19 février en raison d'une coupure d'eau domestique imprévue.-->
+      La bibliothèque Saint-Jean sera fermée durant le printemps et l'été. <a href="/locations/bsj">Pour plus d'informations >></a>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    </div >
+<!-- End announcement -->          
+        <hr/>
+
+        <h2 id="augustana" class="mt-3">
+          Augustana Campus
+        </h2>
+        <div class="row pt-3">
+  <div class="col-sm-2">
   <div class="library-photo">
   <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/3-1.png" alt="Bruce Peel Special Collections" class="rounded float-left img-fluid">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2025/08/Augustana-Library220x165.png" alt="University of Alberta Augustana Library" class="rounded img-fluid ms-lg-3 mb-3">
 		</div>
     </div>
     </div>
     <div class="col-sm-9">
     <div class="title">
     <div class="content">
-      <h2 id="bpsc"><a href="/locations/bpsc">Bruce Peel Special Collections</a>
-      </h2>
+      <h3><a href="/locations/augustana">Augustana Library</a>
+      </h3>
+      <p class="mb-1">
+   Today's Hours:
+      </p>
+       <div id="s_lc_tdh_3750_5499"></div> 
+<script>
+$(function(){ 
+var s_lc_tdh_3750_5499 = new $.LibCalTodayHours( $("#s_lc_tdh_3750_5499"), { iid: 3750, lid: 5499 }); 
+});
+</script>
+     <p class="mt-2"><a href="https://library.ualberta.ca/locations/augustana/augustana-monthly-hours">View monthly calendar</a> | <a href="https://ualberta.libcal.com/reserve/spaces/augustana">Book study space</a></p>
+
+    </div>
+    </div>
+    </div>
+    </div>
+       <hr/> 
+        <h2 id="south" class="mt-3">
+          South Campus
+        </h2>
       
-      <div class="content">
-        <a href="/locations/bpsc" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-circle-info"></i>BPSC More Info</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.525651,-113.521659&z=17&campus=north_campus&b=rs" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to BPSC</a>
-
+        <div class="row pt-3">
+  <div class="col-sm-2">
+  <div class="library-photo">
+  <div class="content">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/7.png" alt="RCRF" class="rounded img-fluid ms-lg-3 mb-3">
 		</div>
-    </div>
-    </div>
     </div>
     </div>
    
-  
-  <hr/>  
-
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/4-1.png" alt="Cameron Library" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
     <div class="col-sm-9">
     <div class="title">
     <div class="content">
-      <h2 id="cameron"><a href="/locations/cameron">Cameron, Science + Engineering Library</a>
-      </h2>
-      <a href="/locations/cameron" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>Cameron Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to Cameron</a>
-		</div>
-    </div>
-    </div>
-    </div>
-   
-  
-    
-<hr/>
-  
-   
-    
+      <h3><a href="/locations/rcrf">Research + Collections Resource Facility (RCRF)</a>
+      </h3>
+      <p>
+        By Appointment
+      </p>
 
-  <div class="row pt-3">
-  <div class="col-sm-3">
+    </div>
+    </div>
+    </div>
+          </div></div>
+        <hr/>
+        <div class="row pt-3">
+  <div class="col-sm-2">
   <div class="library-photo">
   <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/5.png" alt="Digital Scholarship Centre" class="rounded float-left img-fluid">
+    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/7.png" alt="University of Alberta Archives" class="rounded img-fluid ms-lg-3 mb-3">
 		</div>
     </div>
     </div>
+
     <div class="col-sm-9">
     <div class="title">
     <div class="content">
-      <h2 id="dsc"><a href="/locations/dsc">Digital Scholarship Centre (DSC)</a>
-      </h2>
-      <a href="/locations/dsc" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>DSC Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.526783,-113.523708&z=17&campus=north_campus&b=cl" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to DSC</a>
+      <h3><a href="/locations/archives">University of Alberta Archives</a>
+      </h3>
+     <p>
+        By Appointment
+      </p>
+<p>
+  <a href="/archives">Archives website</a>
+      </p>
     </div>
-    </div>
-    </div>
-    </div>
-
-  <hr/>
-
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/6.png" alt="Sperber Library" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
-    
-    <div class="col-sm-9">
-    <div class="title">
-    <div class="content">
-      <h2 id="sperber"><a href="/locations/sperber">Geoffrey + Robyn Sperber, Health Sciences Library</a>
-      </h2>
-      <div class="alert alert-info" role="alert">
-        <strong>Monday to Thursday from 7pm – 9pm ECHA is only accessible with a ONECard</strong> at the NW doors (doors closest to the Jubilee Auditorium). ECHA NE (main) doors lock at 7pm.
       </div>
-      <a href="/locations/sperber" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>Sperber Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.521607,-113.526508&z=17&campus=north_campus&b=echa" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to Sperber</a>
-    </div>
-    </div>
-    </div>
-    </div>
+          </div></div></div>
+<div class="col-3">
 
 
-<hr/>
-    
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/7.png" alt="RCRF" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
-   
-    <div class="col-sm-9">
-    <div class="title">
-    <div class="content">
-      <h2 id="rcrf"><a href="/locations/rcrf">Research + Collections Resource Facility (RCRF)</a>
-      </h2>
-      <a href="/locations/rcrf" class="btn ual-btn d-block mb-2" role="button"><i class="fa-regular fa-calendar-check"></i>RCRF Book Appointment</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.49968,-113.529905&z=17&campus=south_campus&b=RCRF" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to RCRF</a>
-    </div>
-    </div>
-    </div>
-    </div>
  
-<hr/>
+    <div class="page-links bg-grey p-3 pb-2 mb-3 sticky-top persistent-sidebar d-none d-md-block">
+<h4>Library Locations by Campus:</h4>
 
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/8.png" alt="Rutherford Library" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
-    <div class="col-sm-9">
-    <div class="title">
-    <div class="content">
-      <h2 id="rutherford"><a href="/locations/rutherford">Rutherford, Humanities, Social Sciences + Education Library</a>
-      </h2>
-     <div class="alert alert-info" role="alert">
-  Rutherford North + South doors close 15 minutes before closing time with no re-entry permitted.
+       <ul class="list-unstyled">
+<li class="border-bottom py-2"><a href="#north">North Campus</a><br/> 
+       </li>
+          <li class="border-bottom py-2"><a href="#csj">Campus Saint-Jean</a> </li>
+          <li class="border-bottom py-2"><a href="#augustana">Augustana Campus</a> </li>
+         <li class="border-bottom py-2"><a href="#south">South Campus</a></li>
+         <li class="border-bottom py-2"><a href="https://ualberta.libcal.com/hours">All Library Locations</a></li>
+          <li class="pt-2"><a href="/locations/holidays-closures">Holidays + Closures</a></li>
+          
+</ul>
+   </div></div>
 </div>
-      <a href="/locations/rutherford" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>Rutherford Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.526133,-113.521653&z=17&campus=north_campus&b=rn" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to Rutherford</a>
-    </div>
-    </div>
-    </div>
-    </div>
-  
-  <hr/>  
-  
 
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/9.png" alt="St. Joseph's College Library" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
-    <div class="col-sm-9">
-    <div class="title">
-    <div class="content">
-      <h2 id="stjoes"><a href="/locations/stjosephs">St. Joseph's College Library</a>
-      </h2>
-      <a href="/locations/stjosephs" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>St. Joseph's Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.524506,-113.524577&z=17&campus=north_campus&b=sj" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to St. Joseph's</a>
-    </div>
-    </div>
-    </div>
-    </div>
-  
-<hr/>
-    
-    
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/7.png" alt="University of Alberta Archives" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
-
-    <div class="col-sm-9">
-    <div class="title">
-    <div class="content">
-      <h2 id="archives"><a href="/locations/archives">University of Alberta Archives</a>
-      </h2>
-      <a href="/locations/archives" class="btn ual-btn d-block mb-2" role="button"><i class="fa-regular fa-calendar-check"></i>Archives Book Appointment</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.49968,-113.529905&z=17&campus=south_campus&b=RCRF" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to Archives</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    
-    <hr/>
-
-  <div class="row pt-3">
-  <div class="col-sm-3">
-  <div class="library-photo">
-  <div class="content">
-    <img loading="lazy" src="https://news.library.ualberta.ca/wp-content/uploads/2024/04/10.png" alt="Weir Law Library" class="rounded float-left img-fluid">
-		</div>
-    </div>
-    </div>
-    <div class="col-sm-9">
-    <div class="title">
-    <div class="content">
-      <h2 id="weir"><a href="/locations/weir">Weir, Law Library</a>
-      </h2>
-      <a href="/locations/weir" class="btn ual-btn d-block mb-2" role="button"><i class="fa-solid fa-clock"></i>Weir Hours</a>
-        <a href="https://www.ualberta.ca/maps.html?l=53.524286,-113.518569&z=17&campus=north_campus&b=lc" class="btn ual-btn-outline d-block" target="_blank"><i class="fa-solid fa-location-dot"></i> Map to Weir</a>
-    </div>
-    </div>
-    </div>
-    </div>
- 
-
-</div>
-    </div>
-    
+    <script src="https://ualberta.libcal.com/js/hours_today.js"></script> 
 [text title]
 <h1>Hours &amp; Locations<div>      <a href="https://ualberta.libcal.com/hours/">All Library Hours</a> |    <a href="https://www.ualberta.ca/covid-19/campus-safety/index.html">HealthyU Essentials</a></div> </h1>
 [text_area nav_column]

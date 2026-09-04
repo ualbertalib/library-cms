@@ -1,20 +1,13 @@
 [attributes]
 ---
 label: Food and Drink Policy
-layout: secondary-pages
-target_page: 
+layout: left-navigation-html
+target_page:
 categories: []
 is_published: true
 position: 4
-[wysiwyg content]
-<nav aria-label="breadcrumb">
-<ol class="breadcrumb bg-white">
-	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
-	<li class="breadcrumb-item"><a href="/about">About</a></li>
-	<li class="breadcrumb-item"><a href="/about/policies">Policies</a></li>
-	<li aria-current="page" class="breadcrumb-item active">Food and Drink Policy</li>
-</ol>
-</nav><h1>Food + Drink Policy</h1><p>Our goal is to ensure a welcoming and comfortable learning environment for all who use our Library facilities.
+[text_area content]
+<h1>Food + Drink Policy</h1><p>Our goal is to ensure a welcoming and comfortable learning environment for all who use our Library facilities.
 </p><h4>What is permitted?</h4><ul>
 	<li>Cold snack foods may be consumed in the Library.</li>
 	<li>Hot and cold drinks with lids or in spill-proof cups/screw-top bottles are acceptable.</li>
@@ -32,3 +25,15 @@ position: 4
 </p><p><small><em>Last reviewed and approved by Public Service Council on August 12, 2022.</em></small>
 </p>
 [text translated-url]
+
+[text_area breadcrumbs]
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white">
+	<li class="breadcrumb-item"><a href="/"><span aria-label="Home" class="fa-solid fa-house" aria-hidden="true"></span></a></li>
+	<li class="breadcrumb-item"><a href="/about">About</a></li>
+	<li class="breadcrumb-item"><a href="/about/policies">Policies</a></li>
+	<li aria-current="page" class="breadcrumb-item active">Food and Drink Policy</li>
+</ol>
+</nav>
+[text_area sidebar]
+{{ cms:snippet policies-nav }} 
