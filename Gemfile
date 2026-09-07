@@ -11,7 +11,7 @@ gem "mysql2", "~> 0.5.7"
 # Use Puma as the app server
 gem "puma", "~> 8.0"
 # But we use passenger in production
-gem "passenger", "~> 6.1"
+gem "passenger", "~> 6.2"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
@@ -31,7 +31,7 @@ gem "rollbar"
 gem "jbuilder", "~> 2.15"
 
 # Use ActiveStorage variant
-gem "image_processing", "~> 2.0"
+gem "image_processing", "~> 2.1"
 
 gem "comfortable_mexican_sofa", github: "restarone/comfortable-mexican-sofa", tag: "3.5"
 

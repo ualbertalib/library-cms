@@ -102,8 +102,8 @@ GEM
     base64 (0.3.0)
     bigdecimal (4.1.2)
     bindex (0.8.1)
-    bootsnap (1.24.6)
-      msgpack (~> 1.2)
+    bootsnap (1.25.0)
+      msgpack (~> 1.5)
     builder (3.3.0)
     byebug (13.0.0)
       reline (>= 0.6.0)
@@ -152,7 +152,7 @@ GEM
     htmlentities (4.4.2)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    image_processing (2.0.2)
+    image_processing (2.1.0)
     io-console (0.8.2)
     irb (1.18.0)
       pp (>= 0.6.0)
@@ -198,7 +198,7 @@ GEM
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    msgpack (1.8.3)
+    msgpack (1.8.4)
     mysql2 (0.5.7)
       bigdecimal
     net-imap (0.6.6)
@@ -228,7 +228,7 @@ GEM
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
-    passenger (6.1.5)
+    passenger (6.2.0)
       logger (>= 1.7.0)
       rack (>= 1.6.13)
       rackup (>= 1.0.1)
@@ -244,7 +244,7 @@ GEM
     puma (8.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.2.6)
+    rack (3.2.7)
     rack-session (2.1.2)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -417,12 +417,12 @@ DEPENDENCIES
   config
   cssbundling-rails
   htmlentities
-  image_processing (~> 2.0)
+  image_processing (~> 2.1)
   jbuilder (~> 2.15)
   jsbundling-rails
   listen (>= 3.0.5, < 3.11)
   mysql2 (~> 0.5.7)
-  passenger (~> 6.1)
+  passenger (~> 6.2)
   puma (~> 8.0)
   rails (~> 8.1.1)
   rdoc (>= 6.6.3.1)
