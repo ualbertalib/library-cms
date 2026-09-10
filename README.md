@@ -9,13 +9,15 @@ This is the CMS for the University of Alberta Libraries website. It uses Comfy M
 ## Development environment
 
 + Ruby < 3.5
-+ Rails 7.0.x
++ Rails 8.1.x
 + MariaDB 5.5
 + Docker and docker-compose
-+ yarn 
++ yarn
 + nodejs v18+
 
 ## Requirements
+
+Update: As of August 2026, ActiveStorage is not being used (images are located outside the CMS).
 
 File attachments are handled by ActiveStorage. You will need to copy over database migrations by running rails active_storage:install
 To resize attached images you'll need to have ImageMagic installed.
@@ -40,8 +42,30 @@ bundle exec rails test
 
 This will execute all the test cases and provide you with the test results.
 
-NOTE: We preload the test database with all the seed CMS data (pages/layouts/etc) before tests are ran. This happens only once. 
-So if you make a change to the CMS seed data, you must drop the test DB for your changes to be reflected in the test database.
+NOTE: We preload the test database with all the seed CMS data (pages/layouts/etc) before tests are run. This happens only once.
+Therefore, if you make a change to the CMS seed data, you must drop the test DB for your changes to be reflected in the test database.
+
+### Manual testing
+
+As part of the August 2026 partial migration of content from this CMS tool to the centrally managed CMS, most of the routes available in the CMS (and seed data) are redirected by production server to the central CMS. See [CR1345](https://monitor.library.ualberta.ca/unixDoc/Change/2026/Q3/CR1345.html) for details.
+
+Manual testing should focus on the routes that are not being redirected (i.e., retained in the Library CMS) which include:
+
++ /admin (admin route)
++ /archives
++ /peel
++ /staffhub
++ /cms-css/1/archives.css
++ /cms-css/1/english-main.css
++ /cms-css/1/peel-prairie-provinces.css
++ /cms-css/1/left-navigation-html.css
++ /assets/ (Rails generated assets used mainly by the admin route)
+
+The above is not an exhaustive list.
+
+These routes should be manually tested when building releases of Library CMS.
+
+The CMS seed data stored in this repository is not regularly updated from production.
 
 ## Features
 
