@@ -17,7 +17,7 @@
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.5.4",
     "bootstrap": "^5.3.8",
-    "bootstrap-icons": "^1.13.1",
+    "bootstrap-icons": "^1.13.2",
     "nodemon": "^3.1.14",
     "postcss": "^8.5.29",
     "postcss-cli": "^11.0.1",
