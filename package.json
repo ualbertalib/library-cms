@@ -16,7 +16,7 @@
     "@hotwired/turbo-rails": "^8.0.23",
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.5.4",
-    "bootstrap": "^5.3.8",
+    "bootstrap": "^5.3.9",
     "bootstrap-icons": "^1.13.1",
     "nodemon": "^3.1.14",
     "postcss": "^8.5.29",
