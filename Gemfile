@@ -22,6 +22,7 @@ gem "jsbundling-rails"
 gem "sprockets-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
+gem "json", "~> 2.3"
 
 gem "config"
 
